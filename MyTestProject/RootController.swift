@@ -60,4 +60,8 @@ class RootController: FPBaseController,UITableViewDelegate {
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
         return .Portrait
     }
+    
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
 }

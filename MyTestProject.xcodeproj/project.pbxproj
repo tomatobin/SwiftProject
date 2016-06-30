@@ -22,9 +22,9 @@
 		860EB8D01D24C6D80020736D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860EB8CF1D24C6D80020736D /* UIKit.framework */; };
 		860EB8D21D24C6E00020736D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860EB8D11D24C6E00020736D /* AudioToolbox.framework */; };
 		860EB8D51D24C7660020736D /* AudioToolboxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860EB8D41D24C7660020736D /* AudioToolboxController.swift */; };
-		860EB8D71D24DCCA0020736D /* cowsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 860EB8D61D24DCCA0020736D /* cowsound.mp3 */; };
-		860EB8D91D24DCCF0020736D /* pigsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 860EB8D81D24DCCF0020736D /* pigsound.mp3 */; };
-		860EB8DB1D24DCD50020736D /* roostersound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 860EB8DA1D24DCD50020736D /* roostersound.mp3 */; };
+		860EB8E21D24EF950020736D /* cowsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 860EB8DF1D24EF950020736D /* cowsound.mp3 */; };
+		860EB8E31D24EF950020736D /* pigsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 860EB8E01D24EF950020736D /* pigsound.mp3 */; };
+		860EB8E41D24EF950020736D /* roostersound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 860EB8E11D24EF950020736D /* roostersound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,9 +45,9 @@
 		860EB8CF1D24C6D80020736D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		860EB8D11D24C6E00020736D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		860EB8D41D24C7660020736D /* AudioToolboxController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioToolboxController.swift; sourceTree = "<group>"; };
-		860EB8D61D24DCCA0020736D /* cowsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = cowsound.mp3; path = Assets.xcassets/Sounds/cowsound.dataset/cowsound.mp3; sourceTree = "<group>"; };
-		860EB8D81D24DCCF0020736D /* pigsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = pigsound.mp3; path = Assets.xcassets/Sounds/pigsound.dataset/pigsound.mp3; sourceTree = "<group>"; };
-		860EB8DA1D24DCD50020736D /* roostersound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = roostersound.mp3; path = Assets.xcassets/Sounds/roostersound.dataset/roostersound.mp3; sourceTree = "<group>"; };
+		860EB8DF1D24EF950020736D /* cowsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cowsound.mp3; sourceTree = "<group>"; };
+		860EB8E01D24EF950020736D /* pigsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pigsound.mp3; sourceTree = "<group>"; };
+		860EB8E11D24EF950020736D /* roostersound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = roostersound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +94,7 @@
 				860EB8B11D24BCC10020736D /* Assets.xcassets */,
 				860EB8B31D24BCC10020736D /* LaunchScreen.storyboard */,
 				860EB8B61D24BCC10020736D /* Info.plist */,
-				860EB8D61D24DCCA0020736D /* cowsound.mp3 */,
-				860EB8D81D24DCCF0020736D /* pigsound.mp3 */,
-				860EB8DA1D24DCD50020736D /* roostersound.mp3 */,
+				860EB8DE1D24EF800020736D /* Resources */,
 			);
 			path = MyTestProject;
 			sourceTree = "<group>";
@@ -151,6 +149,16 @@
 				860EB8D41D24C7660020736D /* AudioToolboxController.swift */,
 			);
 			path = AudioToolbox;
+			sourceTree = "<group>";
+		};
+		860EB8DE1D24EF800020736D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				860EB8DF1D24EF950020736D /* cowsound.mp3 */,
+				860EB8E01D24EF950020736D /* pigsound.mp3 */,
+				860EB8E11D24EF950020736D /* roostersound.mp3 */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,12 +220,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				860EB8D71D24DCCA0020736D /* cowsound.mp3 in Resources */,
-				860EB8D91D24DCCF0020736D /* pigsound.mp3 in Resources */,
+				860EB8E21D24EF950020736D /* cowsound.mp3 in Resources */,
+				860EB8E31D24EF950020736D /* pigsound.mp3 in Resources */,
 				860EB8B51D24BCC10020736D /* LaunchScreen.storyboard in Resources */,
 				860EB8B21D24BCC10020736D /* Assets.xcassets in Resources */,
 				860EB8B01D24BCC10020736D /* Main.storyboard in Resources */,
-				860EB8DB1D24DCD50020736D /* roostersound.mp3 in Resources */,
+				860EB8E41D24EF950020736D /* roostersound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
