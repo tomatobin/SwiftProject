@@ -11,10 +11,21 @@ import AudioToolbox
 
 class AudioToolboxController: FPBaseController {
 
+    @IBOutlet weak var btnCow: UIButton!
+    @IBOutlet weak var btnCock: UIButton!
+    @IBOutlet weak var btnPig: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        btnCow.layer.cornerRadius = 60
+        btnCock.layer.cornerRadius = 60
+        btnPig.layer.cornerRadius = 60
+        
+        btnCow.layer.masksToBounds = true
+        btnCock.layer.masksToBounds = true
+        btnPig.layer.masksToBounds = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,6 +44,24 @@ class AudioToolboxController: FPBaseController {
         if let identifier = sender.accessibilityIdentifier {
            let dic = ["cow": "cowsound", "cock": "roostersound", "pig": "pigsound"]
             self.playAudio(dic[identifier]!)
+            self.startAnimation(sender)
+            
+//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) {
+//                sender.layer.removeAllAnimations()
+//            }
         }
+    }
+    
+    func startAnimation(view: UIView){
+        let animation = CABasicAnimation(keyPath: "transform.rotation.z")
+        animation.fromValue = 0
+        animation.toValue = Double(rand()%2 + 1) *  M_PI / 6
+        animation.duration = 2
+        animation.repeatCount = 1
+        animation.autoreverses = false
+        animation.removedOnCompletion = false
+        animation.fillMode = kCAFillModeForwards
+        animation.beginTime = CACurrentMediaTime();
+        view.layer.addAnimation(animation, forKey: "rotate")
     }
 }

@@ -51,7 +51,7 @@ extension UIColor{
     }
     
     private static func fp_colorComponet(fromString: String, start: NSInteger, length: NSInteger)->CGFloat{
-        let startIndex = fromString.startIndex 
+        let startIndex = fromString.startIndex.advancedBy(start)
         let toIndex = fromString.startIndex.advancedBy((start + length))
         var subString = fromString.substringToIndex(toIndex)
         subString = subString.substringFromIndex(startIndex)

@@ -69,19 +69,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hW3-X8-SsY">
-                                <rect key="frame" x="183" y="415" width="234" height="130"/>
+                                <rect key="frame" x="240" y="410" width="120" height="120"/>
                                 <accessibility key="accessibilityConfiguration" identifier="pig"/>
                                 <state key="normal" backgroundImage="pig_1571615c"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                        <integer key="value" value="75"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="self.layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onPlayAction:" destination="AIR-O9-civ" eventType="touchUpInside" id="GOi-S1-o4Z"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ap2-Mr-NzF">
-                                <rect key="frame" x="183" y="235" width="234" height="130"/>
+                                <rect key="frame" x="240" y="240" width="120" height="120"/>
                                 <accessibility key="accessibilityConfiguration" identifier="cock"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="51p-to-NVp"/>
-                                    <constraint firstAttribute="width" constant="234" id="8AO-pi-zSM"/>
+                                    <constraint firstAttribute="height" constant="120" id="51p-to-NVp"/>
+                                    <constraint firstAttribute="width" constant="120" id="8AO-pi-zSM"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="Raising Roosters With Laying Hens"/>
                                 <connections>
@@ -89,9 +95,15 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLs-qP-cHb">
-                                <rect key="frame" x="183" y="80" width="234" height="130"/>
+                                <rect key="frame" x="240" y="95" width="120" height="120"/>
                                 <accessibility key="accessibilityConfiguration" identifier="cow"/>
                                 <state key="normal" backgroundImage="Cow_female_black_white"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                        <integer key="value" value="75"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="self.layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onPlayAction:" destination="AIR-O9-civ" eventType="touchUpInside" id="Zc1-Rh-GU1"/>
                                 </connections>
@@ -111,6 +123,11 @@
                             <constraint firstItem="hW3-X8-SsY" firstAttribute="width" secondItem="Ap2-Mr-NzF" secondAttribute="width" id="z37-V0-LvE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnCock" destination="Ap2-Mr-NzF" id="WQn-Gq-JI2"/>
+                        <outlet property="btnCow" destination="YLs-qP-cHb" id="NkC-YW-Um9"/>
+                        <outlet property="btnPig" destination="hW3-X8-SsY" id="DZz-Le-7wB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cvy-DZ-6Xv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
