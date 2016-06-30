@@ -30,7 +30,7 @@ class FPTableViewCell: UITableViewCell,FPTableViewCellProtocol {
         self.backgroundView = UIView()
         
         let bgView = UIView()
-        bgView.backgroundColor = UIColor.orangeColor()
+        bgView.backgroundColor = UIColor.lightGrayColor()
         self.selectedBackgroundView = bgView
     }
     

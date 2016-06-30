@@ -21,10 +21,11 @@
 		860EB8CD1D24BD720020736D /* RootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860EB8CC1D24BD720020736D /* RootController.swift */; };
 		860EB8D01D24C6D80020736D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860EB8CF1D24C6D80020736D /* UIKit.framework */; };
 		860EB8D21D24C6E00020736D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860EB8D11D24C6E00020736D /* AudioToolbox.framework */; };
-		860EB8D51D24C7660020736D /* AudioToolboxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860EB8D41D24C7660020736D /* AudioToolboxController.swift */; };
 		860EB8E21D24EF950020736D /* cowsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 860EB8DF1D24EF950020736D /* cowsound.mp3 */; };
 		860EB8E31D24EF950020736D /* pigsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 860EB8E01D24EF950020736D /* pigsound.mp3 */; };
 		860EB8E41D24EF950020736D /* roostersound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 860EB8E11D24EF950020736D /* roostersound.mp3 */; };
+		860EB8E61D24FF830020736D /* AudioToolboxRootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860EB8E51D24FF830020736D /* AudioToolboxRootController.swift */; };
+		860EB8E81D25019D0020736D /* AudioServicesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860EB8E71D25019D0020736D /* AudioServicesController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,10 +45,11 @@
 		860EB8CC1D24BD720020736D /* RootController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootController.swift; sourceTree = "<group>"; };
 		860EB8CF1D24C6D80020736D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		860EB8D11D24C6E00020736D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		860EB8D41D24C7660020736D /* AudioToolboxController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioToolboxController.swift; sourceTree = "<group>"; };
 		860EB8DF1D24EF950020736D /* cowsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cowsound.mp3; sourceTree = "<group>"; };
 		860EB8E01D24EF950020736D /* pigsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pigsound.mp3; sourceTree = "<group>"; };
 		860EB8E11D24EF950020736D /* roostersound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = roostersound.mp3; sourceTree = "<group>"; };
+		860EB8E51D24FF830020736D /* AudioToolboxRootController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioToolboxRootController.swift; sourceTree = "<group>"; };
+		860EB8E71D25019D0020736D /* AudioServicesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioServicesController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +148,8 @@
 		860EB8D31D24C6F90020736D /* AudioToolbox */ = {
 			isa = PBXGroup;
 			children = (
-				860EB8D41D24C7660020736D /* AudioToolboxController.swift */,
+				860EB8E51D24FF830020736D /* AudioToolboxRootController.swift */,
+				860EB8E71D25019D0020736D /* AudioServicesController.swift */,
 			);
 			path = AudioToolbox;
 			sourceTree = "<group>";
@@ -236,15 +239,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				860EB8E61D24FF830020736D /* AudioToolboxRootController.swift in Sources */,
 				860EB8CA1D24BD4F0020736D /* FPTableDataSource.swift in Sources */,
 				860EB8CB1D24BD4F0020736D /* FPTableViewCell.swift in Sources */,
 				860EB8BF1D24BD2B0020736D /* FPNavigaionController.swift in Sources */,
 				860EB8AD1D24BCC10020736D /* ViewController.swift in Sources */,
-				860EB8D51D24C7660020736D /* AudioToolboxController.swift in Sources */,
 				860EB8AB1D24BCC10020736D /* AppDelegate.swift in Sources */,
 				860EB8CD1D24BD720020736D /* RootController.swift in Sources */,
 				860EB8BE1D24BD2B0020736D /* FPBaseController.swift in Sources */,
 				860EB8C91D24BD4F0020736D /* ColorLog.swift in Sources */,
+				860EB8E81D25019D0020736D /* AudioServicesController.swift in Sources */,
 				860EB8C81D24BD4F0020736D /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

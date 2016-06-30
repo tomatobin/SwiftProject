@@ -1,5 +1,5 @@
 //
-//  AudioToolboxController.swift
+//  AudioServicesController.swift
 //  MyTestProject
 //
 //  Created by jiangbin on 16/6/30.
@@ -9,7 +9,7 @@
 import UIKit
 import AudioToolbox
 
-class AudioToolboxController: FPBaseController {
+class AudioServicesController: FPBaseController {
 
     @IBOutlet weak var btnCow: UIButton!
     @IBOutlet weak var btnCock: UIButton!
@@ -17,7 +17,7 @@ class AudioToolboxController: FPBaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         btnCow.layer.cornerRadius = 60
         btnCock.layer.cornerRadius = 60
@@ -27,12 +27,12 @@ class AudioToolboxController: FPBaseController {
         btnCock.layer.masksToBounds = true
         btnPig.layer.masksToBounds = true
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     func playAudio(soundName: String){
         var soundId = SystemSoundID()
         let resourcePath = NSBundle.mainBundle().pathForResource(soundName, ofType: "mp3")
@@ -42,13 +42,13 @@ class AudioToolboxController: FPBaseController {
     
     @IBAction func onPlayAction(sender: UIButton) {
         if let identifier = sender.accessibilityIdentifier {
-           let dic = ["cow": "cowsound", "cock": "roostersound", "pig": "pigsound"]
+            let dic = ["cow": "cowsound", "cock": "roostersound", "pig": "pigsound"]
             self.playAudio(dic[identifier]!)
             self.startAnimation(sender)
             
-//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) {
-//                sender.layer.removeAllAnimations()
-//            }
+            //            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) {
+            //                sender.layer.removeAllAnimations()
+            //            }
         }
     }
     
