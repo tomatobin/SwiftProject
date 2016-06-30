@@ -50,6 +50,7 @@
                     <connections>
                         <outlet property="tableView" destination="a2R-P5-mCk" id="wo4-sX-V70"/>
                         <segue destination="Xqn-6J-xSc" kind="show" identifier="PushToAudioToolbox" id="gMH-qU-Q3U"/>
+                        <segue destination="Py1-WH-DLm" kind="show" identifier="PushToAVFoundation" id="9lG-aS-Fe5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Um2-5c-6CN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -88,7 +89,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mYq-RI-5Sj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="971" y="-370"/>
+            <point key="canvasLocation" x="979" y="-276"/>
+        </scene>
+        <!--AVFoundation-->
+        <scene sceneID="9Ha-Wh-ght">
+            <objects>
+                <viewController title="AVFoundation" id="Py1-WH-DLm" customClass="AVFoundationRootController" customModule="MyTestProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YSs-Wg-c2I"/>
+                        <viewControllerLayoutGuide type="bottom" id="uU9-Dv-0Xv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jjo-a1-uBF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PTt-Ai-X9q">
+                                <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PTt-Ai-X9q" firstAttribute="height" secondItem="Jjo-a1-uBF" secondAttribute="height" id="1TO-ga-mKY"/>
+                            <constraint firstItem="PTt-Ai-X9q" firstAttribute="leading" secondItem="Jjo-a1-uBF" secondAttribute="leading" id="8Zh-VP-bQi"/>
+                            <constraint firstItem="PTt-Ai-X9q" firstAttribute="width" secondItem="Jjo-a1-uBF" secondAttribute="width" id="dHz-O7-KUJ"/>
+                            <constraint firstItem="PTt-Ai-X9q" firstAttribute="top" secondItem="YSs-Wg-c2I" secondAttribute="bottom" id="mZD-3n-rXi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="PTt-Ai-X9q" id="wK9-Jx-jsW"/>
+                        <segue destination="ON1-Pg-LZe" kind="show" identifier="PushToAudioSession" id="AuZ-yr-qS4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WXR-a0-UsP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031" y="456"/>
         </scene>
         <!--AudioService-->
         <scene sceneID="9TU-kV-94R">
@@ -166,6 +201,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cvy-DZ-6Xv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1894" y="-434"/>
+        </scene>
+        <!--AVAudioSession-->
+        <scene sceneID="dFL-Hz-sBQ">
+            <objects>
+                <viewController title="AVAudioSession" id="ON1-Pg-LZe" customClass="AVAudioSessionController" customModule="MyTestProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Slr-jX-h0j"/>
+                        <viewControllerLayoutGuide type="bottom" id="vvx-2h-QTK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tjN-XK-L6s">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jo5-vc-dG9" customClass="PlayButton" customModule="MyTestProject" customModuleProvider="target">
+                                <rect key="frame" x="260" y="196" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="BNu-HY-wah"/>
+                                    <constraint firstAttribute="width" constant="80" id="kNQ-W0-DaI"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPlayAction:" destination="ON1-Pg-LZe" eventType="touchUpInside" id="yT8-Zq-jkb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jo5-vc-dG9" firstAttribute="centerY" secondItem="tjN-XK-L6s" secondAttribute="centerY" constant="-64" id="I0y-wf-np0"/>
+                            <constraint firstItem="jo5-vc-dG9" firstAttribute="centerX" secondItem="tjN-XK-L6s" secondAttribute="centerX" id="dKM-2x-n4F"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnPlay" destination="jo5-vc-dG9" id="6my-Pw-eBD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nNo-QJ-s03" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1948" y="244"/>
         </scene>
     </scenes>
     <resources>

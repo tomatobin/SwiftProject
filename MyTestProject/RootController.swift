@@ -18,7 +18,7 @@ class RootController: FPBaseController,UITableViewDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        data = ["AudioToolbox" : "PushToAudioToolbox"]
+        data = ["AVFoundation": "PushToAVFoundation", "AudioToolbox" : "PushToAudioToolbox"]
         
         self.configureTableView()
     }
