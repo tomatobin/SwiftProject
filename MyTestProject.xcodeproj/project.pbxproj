@@ -27,6 +27,7 @@
 		860EB8E41D24EF950020736D /* roostersound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 860EB8E11D24EF950020736D /* roostersound.mp3 */; };
 		860EB8E61D24FF830020736D /* AudioToolboxRootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860EB8E51D24FF830020736D /* AudioToolboxRootController.swift */; };
 		860EB8E81D25019D0020736D /* AudioServicesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860EB8E71D25019D0020736D /* AudioServicesController.swift */; };
+		8616759C1D264C30001EE809 /* libpop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8616759B1D264C30001EE809 /* libpop.a */; };
 		865BE2D21D25181400D1AD83 /* AVFoundationRootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865BE2D11D25181400D1AD83 /* AVFoundationRootController.swift */; };
 		865BE2D41D25187100D1AD83 /* AVAudioSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865BE2D31D25187100D1AD83 /* AVAudioSessionController.swift */; };
 		865BE2D61D251A7100D1AD83 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865BE2D51D251A7100D1AD83 /* AVFoundation.framework */; };
@@ -58,6 +59,8 @@
 		860EB8E11D24EF950020736D /* roostersound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = roostersound.mp3; sourceTree = "<group>"; };
 		860EB8E51D24FF830020736D /* AudioToolboxRootController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioToolboxRootController.swift; sourceTree = "<group>"; };
 		860EB8E71D25019D0020736D /* AudioServicesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioServicesController.swift; sourceTree = "<group>"; };
+		8616759B1D264C30001EE809 /* libpop.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpop.a; path = "../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/pop/libpop.a"; sourceTree = "<group>"; };
+		861675A61D264F4A001EE809 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		865BE2D11D25181400D1AD83 /* AVFoundationRootController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVFoundationRootController.swift; sourceTree = "<group>"; };
 		865BE2D31D25187100D1AD83 /* AVAudioSessionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVAudioSessionController.swift; sourceTree = "<group>"; };
 		865BE2D51D251A7100D1AD83 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -72,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8616759C1D264C30001EE809 /* libpop.a in Frameworks */,
 				865BE2D61D251A7100D1AD83 /* AVFoundation.framework in Frameworks */,
 				860EB8D21D24C6E00020736D /* AudioToolbox.framework in Frameworks */,
 				860EB8D01D24C6D80020736D /* UIKit.framework in Frameworks */,
@@ -160,6 +164,8 @@
 		860EB8CE1D24C6C20020736D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				861675A61D264F4A001EE809 /* AudioUnit.framework */,
+				8616759B1D264C30001EE809 /* libpop.a */,
 				865BE2D51D251A7100D1AD83 /* AVFoundation.framework */,
 				860EB8D11D24C6E00020736D /* AudioToolbox.framework */,
 				860EB8CF1D24C6D80020736D /* UIKit.framework */,
@@ -476,8 +482,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: mobile dahua (62BRLUN9V2)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/pop\"",
+					"./iosrender/**",
+				);
 				INFOPLIST_FILE = MyTestProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iosrender",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dahuatech.MyTestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "0928c607-e31f-4a87-b44e-2eb8afc68463";
@@ -490,8 +507,19 @@
 			baseConfigurationReference = 5EE5F991111B4F41E0289859 /* Pods-MyTestProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/pop\"",
+					"./iosrender/**",
+				);
 				INFOPLIST_FILE = MyTestProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iosrender",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dahuatech.MyTestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "0928c607-e31f-4a87-b44e-2eb8afc68463";

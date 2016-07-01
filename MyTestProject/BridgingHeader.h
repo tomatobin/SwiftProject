@@ -10,5 +10,4 @@
 #define BridgingHeader_h
 
 #import "POP.h"
-
 #endif /* BridgingHeader_h */

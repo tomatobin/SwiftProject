@@ -8,10 +8,16 @@
 
 import UIKit
 import AVFoundation
+import AudioUnit
+
+//导入MediaPlayer，为了显示锁屏信息
+import MediaPlayer
 
 class AVAudioSessionController: FPBaseController,AVAudioPlayerDelegate {
     
     var audioPlayer: AVAudioPlayer!
+    
+    //MPMoviePlayerController
 
     @IBOutlet weak var btnPlay: PlayButton!
     override func viewDidLoad() {
@@ -29,7 +35,7 @@ class AVAudioSessionController: FPBaseController,AVAudioPlayerDelegate {
     
     func initAudioSession(){
         let audioSession = AVAudioSession.sharedInstance()
-        try! audioSession.setCategory(AVAudioSessionCategoryPlayback)
+        try! audioSession.setCategory(AVAudioSessionCategoryPlayback) //AVAudioSessionCategorySoloAmbient AVAudioSessionCategoryPlayback
         try! audioSession.setActive(true)
     }
     
@@ -49,7 +55,28 @@ class AVAudioSessionController: FPBaseController,AVAudioPlayerDelegate {
         else{
             btnPlay.setButtonState(.Playing, animated: true)
             audioPlayer.play()
+            self.showPlayInfo()
         }
     }
 
+    func showPlayInfo(){
+        
+        //如果不接收控制信息，会导致锁屏时显示不了信息
+        UIApplication.sharedApplication().beginReceivingRemoteControlEvents()
+        
+        // 直接使用defaultCenter来获取MPNowPlayingInfoCenter的默认唯一实例
+        let infoCenter = MPNowPlayingInfoCenter.defaultCenter()
+        
+        let albumArt = MPMediaItemArtwork(image: UIImage(named: "Liekkas")!)
+
+        // 通过配置nowPlayingInfo的值来更新锁屏界面的信息
+        infoCenter.nowPlayingInfo = [
+            // 歌曲名
+            MPMediaItemPropertyTitle : "Liekkas",
+            // 艺术家名
+            MPMediaItemPropertyArtist : "Sofia Jannok",
+            
+            MPMediaItemPropertyArtwork: albumArt
+        ]
+    }
 }
