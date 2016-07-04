@@ -17,7 +17,8 @@ class AVFoundationRootController: FPBaseController,UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        data = ["AudioSession" : "PushToAudioSession"]
+        data = ["AudioSession" : "PushToAudioSession",
+                "AudioRecorder": "PushToAudioRecorder"]
         self.configureTableView()
     }
     

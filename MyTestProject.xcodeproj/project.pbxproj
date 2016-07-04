@@ -33,6 +33,8 @@
 		865BE2D61D251A7100D1AD83 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865BE2D51D251A7100D1AD83 /* AVFoundation.framework */; };
 		865BE2D81D251D6800D1AD83 /* Liekkas.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 865BE2D71D251D6800D1AD83 /* Liekkas.mp3 */; };
 		865BE2DE1D25304200D1AD83 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865BE2DD1D25304200D1AD83 /* PlayButton.swift */; };
+		866ED0991D2A75610098C40B /* AudioRecorderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866ED0981D2A75610098C40B /* AudioRecorderController.swift */; };
+		866ED09E1D2A797C0098C40B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866ED09D1D2A797C0098C40B /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,8 @@
 		865BE2D71D251D6800D1AD83 /* Liekkas.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Liekkas.mp3; sourceTree = "<group>"; };
 		865BE2D91D25301500D1AD83 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		865BE2DD1D25304200D1AD83 /* PlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
+		866ED0981D2A75610098C40B /* AudioRecorderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorderController.swift; sourceTree = "<group>"; };
+		866ED09D1D2A797C0098C40B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EDD1B47144B1A1B020647C03 /* libPods-MyTestProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyTestProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				866ED09E1D2A797C0098C40B /* Foundation.framework in Frameworks */,
 				8616759C1D264C30001EE809 /* libpop.a in Frameworks */,
 				865BE2D61D251A7100D1AD83 /* AVFoundation.framework in Frameworks */,
 				860EB8D21D24C6E00020736D /* AudioToolbox.framework in Frameworks */,
@@ -164,6 +169,7 @@
 		860EB8CE1D24C6C20020736D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				866ED09D1D2A797C0098C40B /* Foundation.framework */,
 				861675A61D264F4A001EE809 /* AudioUnit.framework */,
 				8616759B1D264C30001EE809 /* libpop.a */,
 				865BE2D51D251A7100D1AD83 /* AVFoundation.framework */,
@@ -199,6 +205,7 @@
 			children = (
 				865BE2D11D25181400D1AD83 /* AVFoundationRootController.swift */,
 				865BE2D31D25187100D1AD83 /* AVAudioSessionController.swift */,
+				866ED0981D2A75610098C40B /* AudioRecorderController.swift */,
 			);
 			path = AVFoundation;
 			sourceTree = "<group>";
@@ -359,6 +366,7 @@
 				860EB8CB1D24BD4F0020736D /* FPTableViewCell.swift in Sources */,
 				860EB8BF1D24BD2B0020736D /* FPNavigaionController.swift in Sources */,
 				865BE2D41D25187100D1AD83 /* AVAudioSessionController.swift in Sources */,
+				866ED0991D2A75610098C40B /* AudioRecorderController.swift in Sources */,
 				860EB8AD1D24BCC10020736D /* ViewController.swift in Sources */,
 				860EB8AB1D24BCC10020736D /* AppDelegate.swift in Sources */,
 				860EB8CD1D24BD720020736D /* RootController.swift in Sources */,
