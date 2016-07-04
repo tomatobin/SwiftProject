@@ -324,6 +324,7 @@
                     </view>
                     <connections>
                         <outlet property="audioPowerProgress" destination="8O8-Fy-Txi" id="YV3-ex-t8H"/>
+                        <outlet property="btnPlay" destination="Uzv-2K-PcR" id="1fE-Ek-UDd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3aD-5l-HGA" userLabel="First Responder" sceneMemberID="firstResponder"/>

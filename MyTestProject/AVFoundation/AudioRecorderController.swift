@@ -15,6 +15,7 @@ class AudioRecorderController: FPBaseController, AVAudioRecorderDelegate, AVAudi
     var audioPlayer: AVAudioPlayer?
     var timer: NSTimer!
     
+    @IBOutlet weak var btnPlay: UIButton!
     @IBOutlet weak var audioPowerProgress: UIProgressView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,7 @@ class AudioRecorderController: FPBaseController, AVAudioRecorderDelegate, AVAudi
         // Do any additional setup after loading the view.
         self.initAudioRecorder()
         self.initTimer()
+        self.audioPowerProgress.setProgress(0, animated: false)
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -91,22 +93,50 @@ class AudioRecorderController: FPBaseController, AVAudioRecorderDelegate, AVAudi
             self.audioPlayer!.stop()
         }
         
-        if !self.audioRecorder.recording {
-            self.audioRecorder.record()
+        //重新初始化录音
+        self.initAudioRecorder()
+        
+        if self.audioRecorder.record() {
+            ColorLog.green("Start recording....")
+            self.timer.fireDate = NSDate.distantPast()
+        }
+        else{
+            ColorLog.red("Start recording failed...")
         }
     }
     
     @IBAction func onStopAction(sender: AnyObject) {
-        self.audioRecorder.stop()
+        self.timer.fireDate = NSDate.distantFuture()
+        
         if self.audioPlayer != nil {
             self.audioPlayer!.stop()
         }
+        
+        if self.audioRecorder != nil {
+            self.audioRecorder.stop()
+        }
+        
+        self.audioRecorder = nil
+        self.audioPlayer = nil
     }
     
     @IBAction func onPlayAction(sender: AnyObject) {
-        self.audioRecorder.stop()
-        self.initAudioPlayer()
-        self.audioPlayer?.play()
+        self.timer.fireDate = NSDate.distantFuture()
+        
+        if ((self.audioPlayer?.playing) != nil) {
+            btnPlay.setImage(UIImage(named: "play"), forState: .Normal)
+            self.audioPlayer?.pause()
+        }
+        else{
+            
+            if self.audioRecorder != nil {
+                self.audioRecorder.stop()
+            }
+            
+            self.initAudioPlayer()
+            self.audioPlayer?.play()
+            btnPlay.setImage(UIImage(named: "pause"), forState: .Normal)
+        }
     }
     
     //MARK: - Private
