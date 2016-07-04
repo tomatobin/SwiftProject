@@ -62,6 +62,6 @@ class RootController: FPBaseController,UITableViewDelegate {
     }
     
     override func shouldAutorotate() -> Bool {
-        return false
+        return true
     }
 }
