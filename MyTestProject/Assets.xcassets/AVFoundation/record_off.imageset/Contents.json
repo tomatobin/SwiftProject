@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "lyj_luzhian.png",
+      "filename" : "lyj_lyan.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "lyj_luzhian@2x.png",
+      "filename" : "lyj_lyan@2x.png",
       "scale" : "2x"
     },
     {

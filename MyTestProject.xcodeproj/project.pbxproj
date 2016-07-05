@@ -35,6 +35,7 @@
 		865BE2DE1D25304200D1AD83 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865BE2DD1D25304200D1AD83 /* PlayButton.swift */; };
 		866ED0991D2A75610098C40B /* AudioRecorderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866ED0981D2A75610098C40B /* AudioRecorderController.swift */; };
 		866ED09E1D2A797C0098C40B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866ED09D1D2A797C0098C40B /* Foundation.framework */; };
+		86CC8F921D2B409F00D8FC81 /* FPFileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CC8F911D2B409F00D8FC81 /* FPFileHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		865BE2DD1D25304200D1AD83 /* PlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		866ED0981D2A75610098C40B /* AudioRecorderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorderController.swift; sourceTree = "<group>"; };
 		866ED09D1D2A797C0098C40B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		86CC8F911D2B409F00D8FC81 /* FPFileHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPFileHelper.swift; sourceTree = "<group>"; };
 		EDD1B47144B1A1B020647C03 /* libPods-MyTestProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyTestProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				860EB8C41D24BD4F0020736D /* ColorLog.swift */,
+				86CC8F911D2B409F00D8FC81 /* FPFileHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				860EB8E61D24FF830020736D /* AudioToolboxRootController.swift in Sources */,
 				865BE2DE1D25304200D1AD83 /* PlayButton.swift in Sources */,
 				860EB8CA1D24BD4F0020736D /* FPTableDataSource.swift in Sources */,
+				86CC8F921D2B409F00D8FC81 /* FPFileHelper.swift in Sources */,
 				865BE2D21D25181400D1AD83 /* AVFoundationRootController.swift in Sources */,
 				860EB8CB1D24BD4F0020736D /* FPTableViewCell.swift in Sources */,
 				860EB8BF1D24BD2B0020736D /* FPNavigaionController.swift in Sources */,

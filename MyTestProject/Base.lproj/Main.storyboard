@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zFW-Gd-sEp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zFW-Gd-sEp">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -261,7 +261,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozM-JT-CgF">
                                 <rect key="frame" x="157" y="463" width="52" height="52"/>
-                                <state key="normal" image="record_on"/>
+                                <state key="normal" image="record_off"/>
                                 <connections>
                                     <action selector="onRecordAction:" destination="HDF-MT-oXg" eventType="touchUpInside" id="dDH-Eq-usr"/>
                                 </connections>
@@ -325,6 +325,7 @@
                     <connections>
                         <outlet property="audioPowerProgress" destination="8O8-Fy-Txi" id="YV3-ex-t8H"/>
                         <outlet property="btnPlay" destination="Uzv-2K-PcR" id="1fE-Ek-UDd"/>
+                        <outlet property="btnRecord" destination="ozM-JT-CgF" id="Jo0-8i-8pV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3aD-5l-HGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -338,7 +339,7 @@
         <image name="pig_1571615c" width="460" height="288"/>
         <image name="play" width="52" height="52"/>
         <image name="record_bg" width="320" height="480"/>
-        <image name="record_on" width="52" height="52"/>
+        <image name="record_off" width="52" height="52"/>
         <image name="stop" width="52" height="52"/>
     </resources>
 </document>
