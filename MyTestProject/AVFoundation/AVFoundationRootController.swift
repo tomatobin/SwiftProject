@@ -18,7 +18,8 @@ class AVFoundationRootController: FPBaseController,UITableViewDelegate {
         super.viewDidLoad()
         
         data = ["AudioSession" : "PushToAudioSession",
-                "AudioRecorder": "PushToAudioRecorder"]
+                "AudioRecorder": "PushToAudioRecorder",
+                "CameraCapture": "PushToCamera"]
         self.configureTableView()
     }
     

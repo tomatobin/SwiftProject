@@ -121,6 +121,7 @@
                         <outlet property="tableView" destination="PTt-Ai-X9q" id="wK9-Jx-jsW"/>
                         <segue destination="ON1-Pg-LZe" kind="show" identifier="PushToAudioSession" id="AuZ-yr-qS4"/>
                         <segue destination="HDF-MT-oXg" kind="show" identifier="PushToAudioRecorder" id="D3L-oo-itH"/>
+                        <segue destination="4ZW-sR-SpC" kind="show" identifier="PushToCamera" id="t9c-Dc-abX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WXR-a0-UsP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -242,7 +243,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nNo-QJ-s03" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1948" y="244"/>
+            <point key="canvasLocation" x="2932" y="-70"/>
         </scene>
         <!--AVAudioRecorder-->
         <scene sceneID="RYW-oe-LL0">
@@ -330,12 +331,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3aD-5l-HGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1957" y="1023"/>
+            <point key="canvasLocation" x="2932" y="635"/>
+        </scene>
+        <!--CameraCapture-->
+        <scene sceneID="DHU-0Y-z8C">
+            <objects>
+                <viewController title="CameraCapture" id="4ZW-sR-SpC" customClass="CameraCaptureController" customModule="MyTestProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qz1-RK-uTL"/>
+                        <viewControllerLayoutGuide type="bottom" id="M8h-bd-Ib7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8SK-kh-H67">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uNV-IG-4lS">
+                                <rect key="frame" x="0.0" y="159" width="600" height="282"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera_focus_red" translatesAutoresizingMaskIntoConstraints="NO" id="Ipa-qk-zgf">
+                                        <rect key="frame" x="254" y="87" width="71" height="69"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uNV-IG-4lS" firstAttribute="leading" secondItem="8SK-kh-H67" secondAttribute="leadingMargin" constant="-20" id="duP-CF-3U8"/>
+                            <constraint firstItem="uNV-IG-4lS" firstAttribute="width" secondItem="8SK-kh-H67" secondAttribute="width" id="teR-cv-hZh"/>
+                            <constraint firstItem="M8h-bd-Ib7" firstAttribute="top" secondItem="uNV-IG-4lS" secondAttribute="bottom" constant="162" id="umC-vE-FJg"/>
+                            <constraint firstItem="uNV-IG-4lS" firstAttribute="top" secondItem="Qz1-RK-uTL" secondAttribute="bottom" constant="92" id="vj5-xz-xJN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="uNV-IG-4lS" id="XNL-hY-AX4"/>
+                        <outlet property="focusCursor" destination="Ipa-qk-zgf" id="Yhm-ec-8VI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sLu-ih-YDw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2932" y="1393"/>
         </scene>
     </scenes>
     <resources>
         <image name="Cow_female_black_white" width="2700" height="1803"/>
         <image name="Raising Roosters With Laying Hens" width="1000" height="926"/>
+        <image name="camera_focus_red" width="76" height="76"/>
         <image name="pig_1571615c" width="460" height="288"/>
         <image name="play" width="52" height="52"/>
         <image name="record_bg" width="320" height="480"/>

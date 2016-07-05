@@ -36,6 +36,7 @@
 		866ED0991D2A75610098C40B /* AudioRecorderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866ED0981D2A75610098C40B /* AudioRecorderController.swift */; };
 		866ED09E1D2A797C0098C40B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866ED09D1D2A797C0098C40B /* Foundation.framework */; };
 		86CC8F921D2B409F00D8FC81 /* FPFileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CC8F911D2B409F00D8FC81 /* FPFileHelper.swift */; };
+		86CC8F971D2B54AA00D8FC81 /* CameraCaptureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CC8F961D2B54AA00D8FC81 /* CameraCaptureController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		866ED0981D2A75610098C40B /* AudioRecorderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorderController.swift; sourceTree = "<group>"; };
 		866ED09D1D2A797C0098C40B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		86CC8F911D2B409F00D8FC81 /* FPFileHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPFileHelper.swift; sourceTree = "<group>"; };
+		86CC8F961D2B54AA00D8FC81 /* CameraCaptureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraCaptureController.swift; sourceTree = "<group>"; };
 		EDD1B47144B1A1B020647C03 /* libPods-MyTestProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyTestProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -209,6 +211,7 @@
 				865BE2D11D25181400D1AD83 /* AVFoundationRootController.swift */,
 				865BE2D31D25187100D1AD83 /* AVAudioSessionController.swift */,
 				866ED0981D2A75610098C40B /* AudioRecorderController.swift */,
+				86CC8F961D2B54AA00D8FC81 /* CameraCaptureController.swift */,
 			);
 			path = AVFoundation;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				866ED0991D2A75610098C40B /* AudioRecorderController.swift in Sources */,
 				860EB8AD1D24BCC10020736D /* ViewController.swift in Sources */,
 				860EB8AB1D24BCC10020736D /* AppDelegate.swift in Sources */,
+				86CC8F971D2B54AA00D8FC81 /* CameraCaptureController.swift in Sources */,
 				860EB8CD1D24BD720020736D /* RootController.swift in Sources */,
 				860EB8BE1D24BD2B0020736D /* FPBaseController.swift in Sources */,
 				860EB8C91D24BD4F0020736D /* ColorLog.swift in Sources */,
