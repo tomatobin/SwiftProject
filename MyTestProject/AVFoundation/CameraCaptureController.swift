@@ -17,12 +17,15 @@ class CameraCaptureController: FPBaseController {
     var captureStillImageOutput: AVCaptureStillImageOutput! //照片输出流
     var captureVideoPreviewLayer: AVCaptureVideoPreviewLayer! //相机拍摄预览图层
     
+    @IBOutlet weak var captureImageView: UIImageView!
     @IBOutlet weak var btnFlipCamera: UIButton!
     @IBOutlet weak var focusCursor: UIImageView! //聚集光标
     @IBOutlet weak var containerView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.focusCursor.alpha = 0
+        self.captureImageView.alpha = 0
+        self.captureImageView.frame = CGRect(x: 0, y: 55, width: self.view.bounds.width, height: self.containerView.bounds.height)
         
         self.setupCapture()
         self.addGestureRecognizer()
@@ -144,6 +147,19 @@ class CameraCaptureController: FPBaseController {
         }
     }
     
+    //MARK: - Animations
+    func showCaptureImageViewAnimated(){
+        self.captureImageView.transform = CGAffineTransformMakeScale(1.4, 1.4)
+        self.captureImageView.alpha = 1
+        
+        UIView.animateWithDuration(0.5, animations: {
+            self.captureImageView.transform = CGAffineTransformIdentity
+            self.captureImageView.alpha = 0
+            }, completion: {_ in
+            self.captureImageView.alpha = 0
+        })
+    }
+    
     //MARK: - Actions
     @IBAction func onFlipCameraAction(sender: AnyObject) {
         let currentDevice = self.captureDeviceInput.device
@@ -171,5 +187,19 @@ class CameraCaptureController: FPBaseController {
         }catch{
             ColorLog.red("切换前后摄像头失败")
         }
+    }
+    
+    @IBAction func onCaptureAction(sender: AnyObject) {
+        //根据设备输出获得连接
+        let captureConnection = self.captureStillImageOutput.connectionWithMediaType(AVMediaTypeVideo)
+        self.captureStillImageOutput.captureStillImageAsynchronouslyFromConnection(captureConnection, completionHandler: {(imageDataSampleBuffer, error) in
+            if imageDataSampleBuffer != nil{
+                let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer)
+                let image = UIImage(data: imageData)
+                self.captureImageView.image = image
+                self.showCaptureImageViewAnimated()
+                //UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil) //保存到相册中
+            }
+        })
     }
 }
