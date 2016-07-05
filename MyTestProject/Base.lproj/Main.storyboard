@@ -345,25 +345,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uNV-IG-4lS">
-                                <rect key="frame" x="0.0" y="159" width="600" height="282"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Jx-Fn-Tem">
+                                <rect key="frame" x="0.0" y="64" width="600" height="55"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahz-By-mlg">
+                                        <rect key="frame" x="533" y="9" width="37" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="NSF-zv-FWc"/>
+                                            <constraint firstAttribute="width" constant="37" id="juN-IW-inV"/>
+                                        </constraints>
+                                        <state key="normal" image="flip_camera"/>
+                                        <connections>
+                                            <action selector="onFlipCameraAction:" destination="4ZW-sR-SpC" eventType="touchUpInside" id="6Mm-Cv-d3V"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.13520971709999999" green="0.70652822260000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ahz-By-mlg" secondAttribute="trailing" constant="30" id="ZDy-L1-13d"/>
+                                    <constraint firstItem="ahz-By-mlg" firstAttribute="centerY" secondItem="2Jx-Fn-Tem" secondAttribute="centerY" id="f3Y-kT-3FZ"/>
+                                    <constraint firstAttribute="height" constant="55" id="fmh-EO-M0j"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uNV-IG-4lS">
+                                <rect key="frame" x="0.0" y="120" width="600" height="320"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera_focus_red" translatesAutoresizingMaskIntoConstraints="NO" id="Ipa-qk-zgf">
                                         <rect key="frame" x="254" y="87" width="71" height="69"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="mRp-GW-mvH"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uNV-IG-4lS" firstAttribute="leading" secondItem="8SK-kh-H67" secondAttribute="leadingMargin" constant="-20" id="duP-CF-3U8"/>
+                            <constraint firstItem="uNV-IG-4lS" firstAttribute="top" secondItem="2Jx-Fn-Tem" secondAttribute="bottom" constant="1" id="UyM-h7-h9B"/>
+                            <constraint firstItem="2Jx-Fn-Tem" firstAttribute="leading" secondItem="8SK-kh-H67" secondAttribute="leadingMargin" constant="-20" id="YhK-Pz-f9T"/>
+                            <constraint firstItem="2Jx-Fn-Tem" firstAttribute="top" secondItem="Qz1-RK-uTL" secondAttribute="bottom" id="bNx-MA-fq1"/>
+                            <constraint firstItem="uNV-IG-4lS" firstAttribute="leading" secondItem="8SK-kh-H67" secondAttribute="leading" id="duP-CF-3U8"/>
                             <constraint firstItem="uNV-IG-4lS" firstAttribute="width" secondItem="8SK-kh-H67" secondAttribute="width" id="teR-cv-hZh"/>
                             <constraint firstItem="M8h-bd-Ib7" firstAttribute="top" secondItem="uNV-IG-4lS" secondAttribute="bottom" constant="162" id="umC-vE-FJg"/>
                             <constraint firstItem="uNV-IG-4lS" firstAttribute="top" secondItem="Qz1-RK-uTL" secondAttribute="bottom" constant="92" id="vj5-xz-xJN"/>
+                            <constraint firstItem="2Jx-Fn-Tem" firstAttribute="width" secondItem="8SK-kh-H67" secondAttribute="width" id="x9P-OV-jgd"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="vj5-xz-xJN"/>
+                                <exclude reference="umC-vE-FJg"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="btnFlipCamera" destination="ahz-By-mlg" id="sl1-mS-grQ"/>
                         <outlet property="containerView" destination="uNV-IG-4lS" id="XNL-hY-AX4"/>
                         <outlet property="focusCursor" destination="Ipa-qk-zgf" id="Yhm-ec-8VI"/>
                     </connections>
@@ -377,6 +413,7 @@
         <image name="Cow_female_black_white" width="2700" height="1803"/>
         <image name="Raising Roosters With Laying Hens" width="1000" height="926"/>
         <image name="camera_focus_red" width="76" height="76"/>
+        <image name="flip_camera" width="37" height="37"/>
         <image name="pig_1571615c" width="460" height="288"/>
         <image name="play" width="52" height="52"/>
         <image name="record_bg" width="320" height="480"/>

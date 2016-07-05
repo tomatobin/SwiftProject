@@ -17,12 +17,15 @@ class CameraCaptureController: FPBaseController {
     var captureStillImageOutput: AVCaptureStillImageOutput! //照片输出流
     var captureVideoPreviewLayer: AVCaptureVideoPreviewLayer! //相机拍摄预览图层
     
+    @IBOutlet weak var btnFlipCamera: UIButton!
     @IBOutlet weak var focusCursor: UIImageView! //聚集光标
     @IBOutlet weak var containerView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.focusCursor.alpha = 0
         
         self.setupCapture()
+        self.addGestureRecognizer()
     }
     
     func setupCapture(){
@@ -65,12 +68,11 @@ class CameraCaptureController: FPBaseController {
         captureVideoPreviewLayer = AVCaptureVideoPreviewLayer.init(session: captureSession)
         let layer = self.containerView.layer
         layer.masksToBounds = true
-        captureVideoPreviewLayer.frame = self.containerView.bounds
+        captureVideoPreviewLayer.frame = layer.bounds
         captureVideoPreviewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
         
         //将视频预览层添加到界面中
         layer.insertSublayer(captureVideoPreviewLayer, below: focusCursor.layer)
-        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -139,6 +141,35 @@ class CameraCaptureController: FPBaseController {
        
         }catch{
             ColorLog.red("设置设备属性过程发生错误")
+        }
+    }
+    
+    //MARK: - Actions
+    @IBAction func onFlipCameraAction(sender: AnyObject) {
+        let currentDevice = self.captureDeviceInput.device
+        let currenPositon = currentDevice.position
+        
+        var toChangeDevice = AVCaptureDevice?()
+        var toChangePosition = AVCaptureDevicePosition.Front
+        if currenPositon == .Unspecified || currenPositon == .Front {
+            toChangePosition = .Back
+        }
+        
+        toChangeDevice = self.getCameraDevice(toChangePosition)
+        
+        //获得要调整的设备输入对象
+        do{
+            let toChangeDeviceInput = try AVCaptureDeviceInput.init(device: toChangeDevice)
+            self.captureSession.beginConfiguration()
+            self.captureSession.removeInput(self.captureDeviceInput)
+            if self.captureSession.canAddInput(toChangeDeviceInput) {
+                self.captureSession.addInput(toChangeDeviceInput)
+                self.captureDeviceInput = toChangeDeviceInput
+                ColorLog.green("切换前后摄像头成功")
+            }
+            self.captureSession.commitConfiguration()
+        }catch{
+            ColorLog.red("切换前后摄像头失败")
         }
     }
 }
