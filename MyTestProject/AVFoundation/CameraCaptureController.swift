@@ -14,13 +14,14 @@ typealias PropertyChangeBlock = (AVCaptureDevice) -> Void
 class CameraCaptureController: FPBaseController {
     var captureSession: AVCaptureSession! //负责输入和输出设置之间的数据传递
     var captureDeviceInput: AVCaptureDeviceInput! //负责从AVCaptureDevice获得输入数据
-    var captureStillImageOutput: AVCaptureStillImageOutput! //照片输出流
+    var captureStillImageOutput: AVCaptureStillImageOutput! //照片输出流 [AVCaptureMovieFileOutput]视频输出流
     var captureVideoPreviewLayer: AVCaptureVideoPreviewLayer! //相机拍摄预览图层
     
     @IBOutlet weak var captureImageView: UIImageView!
     @IBOutlet weak var btnFlipCamera: UIButton!
     @IBOutlet weak var focusCursor: UIImageView! //聚集光标
     @IBOutlet weak var containerView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.focusCursor.alpha = 0

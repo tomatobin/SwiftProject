@@ -26,11 +26,26 @@ class AVAudioSessionController: FPBaseController,AVAudioPlayerDelegate {
         // Do any additional setup after loading the view.
         self.initAudioSession()
         self.initAudioPlayer()
+        self.addNotifications() //添加耳机监听事件
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.stopAudioPlayer()
+        self.removeNotifications()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func addNotifications(){
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(routeChanged), name: AVAudioSessionRouteChangeNotification, object: nil)
+    }
+    
+    func removeNotifications(){
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     func initAudioSession(){
@@ -45,6 +60,19 @@ class AVAudioSessionController: FPBaseController,AVAudioPlayerDelegate {
         audioPlayer = try! AVAudioPlayer.init(contentsOfURL: fileURL)
         audioPlayer.delegate = self
         audioPlayer.prepareToPlay() //预播放
+    }
+    
+    func stopAudioPlayer(){
+        if audioPlayer != nil {
+            audioPlayer.stop()
+            audioPlayer = nil
+        }
+    }
+    
+    func routeChanged(notification: NSNotification){
+        let dictionary = notification.userInfo
+        let changeReason = dictionary![AVAudioSessionRouteChangeReasonKey]?.unsignedIntValue
+        ColorLog.green("Change Reason:\(changeReason)") // AVAudioSessionRouteChangeReason
     }
     
     @IBAction func onPlayAction(sender: AnyObject) {
@@ -78,5 +106,18 @@ class AVAudioSessionController: FPBaseController,AVAudioPlayerDelegate {
             
             MPMediaItemPropertyArtwork: albumArt
         ]
+    }
+    
+    //MARK: - AVAudioPlayerDelegate
+    func audioPlayerBeginInterruption(player: AVAudioPlayer) {
+        ColorLog.green("Receive interrupt...")
+    }
+    
+    func audioPlayerEndInterruption(player: AVAudioPlayer) {
+        ColorLog.green("End interrupt...")
+    }
+    
+    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
+        ColorLog.green("Music play over...")
     }
 }
