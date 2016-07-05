@@ -345,28 +345,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uNV-IG-4lS">
-                                <rect key="frame" x="0.0" y="120" width="600" height="390"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zwe-Rx-fWV" userLabel="BottomView">
+                                <rect key="frame" x="0.0" y="525" width="600" height="75"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera_focus_red" translatesAutoresizingMaskIntoConstraints="NO" id="Ipa-qk-zgf">
-                                        <rect key="frame" x="254" y="87" width="71" height="69"/>
-                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLD-hX-dcC">
+                                        <rect key="frame" x="270" y="8" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="5l9-eo-YPo"/>
+                                            <constraint firstAttribute="width" constant="60" id="ZnK-m1-Edr"/>
+                                        </constraints>
+                                        <state key="normal" image="screenshot_clear"/>
+                                        <connections>
+                                            <action selector="onCaptureAction:" destination="4ZW-sR-SpC" eventType="touchUpInside" id="PtS-Rh-WJs"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.13520971709999999" green="0.70652822260000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="390" id="Ijr-3O-oTt"/>
-                                    <constraint firstAttribute="height" constant="400" id="mRp-GW-mvH"/>
+                                    <constraint firstItem="OLD-hX-dcC" firstAttribute="centerY" secondItem="Zwe-Rx-fWV" secondAttribute="centerY" id="Iat-hl-QTR"/>
+                                    <constraint firstAttribute="height" constant="75" id="M7f-EP-xEq"/>
+                                    <constraint firstItem="OLD-hX-dcC" firstAttribute="centerX" secondItem="Zwe-Rx-fWV" secondAttribute="centerX" id="bye-pq-lEl"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="mRp-GW-mvH"/>
-                                    </mask>
-                                </variation>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mv3-cm-Oz2">
-                                <rect key="frame" x="0.0" y="105" width="600" height="390"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Jx-Fn-Tem">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Jx-Fn-Tem" userLabel="TopView">
                                 <rect key="frame" x="0.0" y="64" width="600" height="55"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahz-By-mlg">
@@ -388,27 +389,26 @@
                                     <constraint firstAttribute="height" constant="55" id="fmh-EO-M0j"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zwe-Rx-fWV">
-                                <rect key="frame" x="0.0" y="525" width="600" height="75"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uNV-IG-4lS">
+                                <rect key="frame" x="0.0" y="120" width="600" height="390"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLD-hX-dcC">
-                                        <rect key="frame" x="270" y="8" width="60" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="5l9-eo-YPo"/>
-                                            <constraint firstAttribute="width" constant="60" id="ZnK-m1-Edr"/>
-                                        </constraints>
-                                        <state key="normal" image="screenshot_clear"/>
-                                        <connections>
-                                            <action selector="onCaptureAction:" destination="4ZW-sR-SpC" eventType="touchUpInside" id="PtS-Rh-WJs"/>
-                                        </connections>
-                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera_focus_red" translatesAutoresizingMaskIntoConstraints="NO" id="Ipa-qk-zgf">
+                                        <rect key="frame" x="254" y="87" width="71" height="69"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mv3-cm-Oz2">
+                                        <rect key="frame" x="0.0" y="-8" width="600" height="390"/>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.13520971709999999" green="0.70652822260000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="OLD-hX-dcC" firstAttribute="centerY" secondItem="Zwe-Rx-fWV" secondAttribute="centerY" id="Iat-hl-QTR"/>
-                                    <constraint firstAttribute="height" constant="75" id="M7f-EP-xEq"/>
-                                    <constraint firstItem="OLD-hX-dcC" firstAttribute="centerX" secondItem="Zwe-Rx-fWV" secondAttribute="centerX" id="bye-pq-lEl"/>
+                                    <constraint firstAttribute="height" constant="390" id="Ijr-3O-oTt"/>
+                                    <constraint firstAttribute="height" constant="400" id="mRp-GW-mvH"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="mRp-GW-mvH"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -25,10 +25,21 @@ class CameraCaptureController: FPBaseController {
         super.viewDidLoad()
         self.focusCursor.alpha = 0
         self.captureImageView.alpha = 0
-        self.captureImageView.frame = CGRect(x: 0, y: 55, width: self.view.bounds.width, height: self.containerView.bounds.height)
+        self.captureImageView.frame = CGRect(x: 0, y: 55, width: self.view.bounds.width, height: self.containerView.bounds.height + 64)
+        self.captureImageView.backgroundColor = UIColor.redColor()
         
         self.setupCapture()
         self.addGestureRecognizer()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.captureSession.startRunning()
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.captureSession.stopRunning()
     }
     
     func setupCapture(){
@@ -76,16 +87,6 @@ class CameraCaptureController: FPBaseController {
         
         //将视频预览层添加到界面中
         layer.insertSublayer(captureVideoPreviewLayer, below: focusCursor.layer)
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        self.captureSession.startRunning()
-    }
-    
-    override func viewDidDisappear(animated: Bool) {
-        super.viewDidDisappear(animated)
-        self.captureSession.stopRunning()
     }
     
     func getCameraDevice(position: AVCaptureDevicePosition) -> AVCaptureDevice? {
@@ -149,14 +150,13 @@ class CameraCaptureController: FPBaseController {
     
     //MARK: - Animations
     func showCaptureImageViewAnimated(){
-        self.captureImageView.transform = CGAffineTransformMakeScale(1.4, 1.4)
         self.captureImageView.alpha = 1
-        
-        UIView.animateWithDuration(0.5, animations: {
+        UIView.transitionWithView(self.captureImageView, duration: 1.0, options: .CurveEaseInOut, animations: {
+            self.captureImageView.alpha = 0
+            self.captureImageView.transform = CGAffineTransformMakeScale(1.4, 1.4)
+        }, completion: {_ in
+            self.captureImageView.alpha = 0
             self.captureImageView.transform = CGAffineTransformIdentity
-            self.captureImageView.alpha = 0
-            }, completion: {_ in
-            self.captureImageView.alpha = 0
         })
     }
     
