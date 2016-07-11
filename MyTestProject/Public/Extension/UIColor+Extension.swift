@@ -9,6 +9,26 @@
 import UIKit
 
 extension UIColor{
+    class func fp_mainBlueColor()->UIColor?{
+        return self.fp_colorWithHexString("4EA7F2")
+    }
+    
+    class func fp_mainBgColor() -> UIColor? {
+        return self.fp_colorWithHexString("EFEFF4")
+    }
+    
+    class func fp_darkBgColor() -> UIColor? {
+        return self.fp_colorWithHexString("3D3B3E")
+    }
+    
+    class func fp_mainRedColor() -> UIColor? {
+        return self.fp_colorWithHexString("FF5454")
+    }
+    
+    class func fp_darkTextColor() -> UIColor? {
+        return self.fp_colorWithHexString("4A4A4A")
+    }
+    
     class func fp_colorWithHexString(hexString: String)->UIColor?{
         let colorString = hexString.stringByReplacingOccurrencesOfString("#", withString: "") .uppercaseString
         var alpha = CGFloat?(), red = CGFloat?(), green = CGFloat?(), blue = CGFloat?()

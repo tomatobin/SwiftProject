@@ -35,6 +35,10 @@
 		865BE2DE1D25304200D1AD83 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865BE2DD1D25304200D1AD83 /* PlayButton.swift */; };
 		866ED0991D2A75610098C40B /* AudioRecorderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866ED0981D2A75610098C40B /* AudioRecorderController.swift */; };
 		866ED09E1D2A797C0098C40B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866ED09D1D2A797C0098C40B /* Foundation.framework */; };
+		869E3DE61D338F87000D2858 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869E3DE51D338F87000D2858 /* Constant.swift */; };
+		86A8E65D1D33888E00EF9F26 /* TransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A8E65C1D33888E00EF9F26 /* TransitionController.swift */; };
+		86A8E6601D33897800EF9F26 /* Transition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86A8E65E1D33897800EF9F26 /* Transition.storyboard */; };
+		86A8E6621D338A1400EF9F26 /* ViewTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A8E6611D338A1400EF9F26 /* ViewTransitionController.swift */; };
 		86CC8F921D2B409F00D8FC81 /* FPFileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CC8F911D2B409F00D8FC81 /* FPFileHelper.swift */; };
 		86CC8F971D2B54AA00D8FC81 /* CameraCaptureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CC8F961D2B54AA00D8FC81 /* CameraCaptureController.swift */; };
 /* End PBXBuildFile section */
@@ -73,6 +77,10 @@
 		865BE2DD1D25304200D1AD83 /* PlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		866ED0981D2A75610098C40B /* AudioRecorderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorderController.swift; sourceTree = "<group>"; };
 		866ED09D1D2A797C0098C40B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		869E3DE51D338F87000D2858 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		86A8E65C1D33888E00EF9F26 /* TransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionController.swift; sourceTree = "<group>"; };
+		86A8E65F1D33897800EF9F26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Transition.storyboard; sourceTree = "<group>"; };
+		86A8E6611D338A1400EF9F26 /* ViewTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewTransitionController.swift; sourceTree = "<group>"; };
 		86CC8F911D2B409F00D8FC81 /* FPFileHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPFileHelper.swift; sourceTree = "<group>"; };
 		86CC8F961D2B54AA00D8FC81 /* CameraCaptureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraCaptureController.swift; sourceTree = "<group>"; };
 		EDD1B47144B1A1B020647C03 /* libPods-MyTestProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyTestProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +124,7 @@
 		860EB8A91D24BCC10020736D /* MyTestProject */ = {
 			isa = PBXGroup;
 			children = (
+				86A8E65B1D33884F00EF9F26 /* Transition */,
 				865BE2CD1D2517F300D1AD83 /* AVFoundation */,
 				860EB8D31D24C6F90020736D /* AudioToolbox */,
 				860EB8C01D24BD4E0020736D /* Public */,
@@ -125,6 +134,7 @@
 				860EB8BC1D24BD2B0020736D /* FPBaseController.swift */,
 				860EB8BD1D24BD2B0020736D /* FPNavigaionController.swift */,
 				860EB8AE1D24BCC10020736D /* Main.storyboard */,
+				86A8E65E1D33897800EF9F26 /* Transition.storyboard */,
 				860EB8B11D24BCC10020736D /* Assets.xcassets */,
 				860EB8B31D24BCC10020736D /* LaunchScreen.storyboard */,
 				860EB8B61D24BCC10020736D /* Info.plist */,
@@ -158,6 +168,7 @@
 			children = (
 				860EB8C41D24BD4F0020736D /* ColorLog.swift */,
 				86CC8F911D2B409F00D8FC81 /* FPFileHelper.swift */,
+				869E3DE51D338F87000D2858 /* Constant.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -222,6 +233,15 @@
 				865BE2DD1D25304200D1AD83 /* PlayButton.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		86A8E65B1D33884F00EF9F26 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				86A8E65C1D33888E00EF9F26 /* TransitionController.swift */,
+				86A8E6611D338A1400EF9F26 /* ViewTransitionController.swift */,
+			);
+			path = Transition;
 			sourceTree = "<group>";
 		};
 		F37164E92E92FF569EBC90C0 /* Pods */ = {
@@ -307,6 +327,7 @@
 				860EB8B21D24BCC10020736D /* Assets.xcassets in Resources */,
 				860EB8B01D24BCC10020736D /* Main.storyboard in Resources */,
 				860EB8E41D24EF950020736D /* roostersound.mp3 in Resources */,
+				86A8E6601D33897800EF9F26 /* Transition.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,12 +386,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86A8E65D1D33888E00EF9F26 /* TransitionController.swift in Sources */,
 				860EB8E61D24FF830020736D /* AudioToolboxRootController.swift in Sources */,
 				865BE2DE1D25304200D1AD83 /* PlayButton.swift in Sources */,
 				860EB8CA1D24BD4F0020736D /* FPTableDataSource.swift in Sources */,
 				86CC8F921D2B409F00D8FC81 /* FPFileHelper.swift in Sources */,
 				865BE2D21D25181400D1AD83 /* AVFoundationRootController.swift in Sources */,
 				860EB8CB1D24BD4F0020736D /* FPTableViewCell.swift in Sources */,
+				869E3DE61D338F87000D2858 /* Constant.swift in Sources */,
 				860EB8BF1D24BD2B0020736D /* FPNavigaionController.swift in Sources */,
 				865BE2D41D25187100D1AD83 /* AVAudioSessionController.swift in Sources */,
 				866ED0991D2A75610098C40B /* AudioRecorderController.swift in Sources */,
@@ -381,6 +404,7 @@
 				860EB8BE1D24BD2B0020736D /* FPBaseController.swift in Sources */,
 				860EB8C91D24BD4F0020736D /* ColorLog.swift in Sources */,
 				860EB8E81D25019D0020736D /* AudioServicesController.swift in Sources */,
+				86A8E6621D338A1400EF9F26 /* ViewTransitionController.swift in Sources */,
 				860EB8C81D24BD4F0020736D /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,6 +426,14 @@
 				860EB8B41D24BCC10020736D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		86A8E65E1D33897800EF9F26 /* Transition.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86A8E65F1D33897800EF9F26 /* Base */,
+			);
+			name = Transition.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -506,6 +538,7 @@
 					"./iosrender/**",
 				);
 				INFOPLIST_FILE = MyTestProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -531,6 +564,7 @@
 					"./iosrender/**",
 				);
 				INFOPLIST_FILE = MyTestProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

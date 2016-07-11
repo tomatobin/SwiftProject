@@ -1,29 +1,25 @@
 //
-//  RootController.swift
+//  TransitionController.swift
 //  MyTestProject
 //
-//  Created by jiangbin on 16/6/30.
+//  Created by jiangbin on 16/7/11.
 //  Copyright © 2016年 iblue. All rights reserved.
 //
 
 import UIKit
 
-class RootController: FPBaseController,UITableViewDelegate {
-
+class TransitionController: FPBaseController,UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     var dataSource: FPTableDataSource!
     var data: Dictionary<String,String>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        data = ["AVFoundation": "PushToAVFoundation", "AudioToolbox" : "PushToAudioToolbox",
-                "Transition": "PushToTransition"]
         
+        data = ["ViewTransition" : "PushToViewTransition"]
         self.configureTableView()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -43,10 +39,12 @@ class RootController: FPBaseController,UITableViewDelegate {
         tableView.delegate = self
         tableView.reloadData()
     }
-    
+}
+
+extension TransitionController{
     //MARK: - UITableViewDelegate
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-         return FPTableViewCell.cellHeight()
+        return FPTableViewCell.cellHeight()
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -56,13 +54,5 @@ class RootController: FPBaseController,UITableViewDelegate {
             let pushSegue = allValues[indexPath.row]
             self.performSegueWithIdentifier(pushSegue, sender: nil)
         }
-    }
-    
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        return .Portrait
-    }
-    
-    override func shouldAutorotate() -> Bool {
-        return true
     }
 }
