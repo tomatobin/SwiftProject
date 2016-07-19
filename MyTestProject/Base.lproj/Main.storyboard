@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zFW-Gd-sEp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zFW-Gd-sEp">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -52,6 +52,7 @@
                         <segue destination="Xqn-6J-xSc" kind="show" identifier="PushToAudioToolbox" id="gMH-qU-Q3U"/>
                         <segue destination="Py1-WH-DLm" kind="show" identifier="PushToAVFoundation" id="9lG-aS-Fe5"/>
                         <segue destination="hXo-JU-mZC" kind="show" identifier="PushToTransition" id="yAI-O5-Uix"/>
+                        <segue destination="xNV-DV-qjF" kind="show" identifier="PushToWidgets" id="drS-Cr-gY4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Um2-5c-6CN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -453,7 +454,15 @@
                 <viewControllerPlaceholder storyboardName="Transition" id="hXo-JU-mZC" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cx7-Zo-hkN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1021" y="1273"/>
+            <point key="canvasLocation" x="1045.5" y="1107"/>
+        </scene>
+        <!--Widgets-->
+        <scene sceneID="XSu-EZ-gyL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Widgets" id="xNV-DV-qjF" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tKD-HS-KDP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="292" y="1430"/>
         </scene>
     </scenes>
     <resources>

@@ -27,11 +27,22 @@ class FPBaseController: UIViewController {
         self.tabBarController?.tabBar.translucent = false
         
         self.view.backgroundColor = UIColor.fp_colorWithHexString("EFEFF4")
+        
+        //导航栏
+        if let button = self.naviRightButton() {
+            let rightItem = UIBarButtonItem(customView: button)
+            self.navigationItem.rightBarButtonItem = rightItem
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //Navigation
+    func naviRightButton() -> UIButton? {
+        return nil;
     }
     
     //MARK: Public Methods

@@ -10,4 +10,7 @@
 #define BridgingHeader_h
 
 #import "POP.h"
+#import "MBProgressHUD.h"
+#import "SDImageCache.h"
+#import "UIImage+GIF.h"
 #endif /* BridgingHeader_h */

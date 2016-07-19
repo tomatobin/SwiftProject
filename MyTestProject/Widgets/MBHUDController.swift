@@ -1,32 +1,38 @@
 //
-//  RootController.swift
+//  MBHUDController.swift
 //  MyTestProject
 //
-//  Created by jiangbin on 16/6/30.
+//  Created by jiangbin on 16/7/19.
 //  Copyright © 2016年 iblue. All rights reserved.
 //
 
 import UIKit
 
-class RootController: FPBaseController,UITableViewDelegate {
+class MBHUDController: FPBaseController,UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var dataSource: FPTableDataSource!
-    var data: Dictionary<String,String>!
+    var data: Dictionary<String,Selector>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        data = ["AVFoundation": "PushToAVFoundation", "AudioToolbox" : "PushToAudioToolbox",
-                "Transition": "PushToTransition", "Widgets": "PushToWidgets"]
         
+        data = ["ShowGif" : #selector(showGifLoading)]
         self.configureTableView()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func naviRightButton() -> UIButton? {
+        let button = UIButton(type: .System)
+        button.frame = CGRect(x: 0, y: 0, width: 64, height: 44)
+        button.setTitle("Dismiss", forState: .Normal)
+        button.setTitleColor(UIColor.fp_mainRedColor(), forState: .Normal)
+        button.addTarget(self, action: #selector(dismissHud), forControlEvents: .TouchUpInside)
+        return button
     }
     
     func configureTableView(){
@@ -44,25 +50,27 @@ class RootController: FPBaseController,UITableViewDelegate {
         tableView.reloadData()
     }
     
+    func dismissHud() {
+        FPHudUtility.hideGifLoading()
+        MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+    }
+    
+    func showGifLoading() {
+        let hud = FPHudUtility.showGifLoading(self.view, gifName: "Loading_carton.gif")
+        hud.hide(true, afterDelay: 20.0)
+    }
+}
+
+extension MBHUDController{
     //MARK: - UITableViewDelegate
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-         return FPTableViewCell.cellHeight()
+        return FPTableViewCell.cellHeight()
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        let allValues = Array(data.values) as Array<String>
-        if indexPath.row < allValues.count {
-            let pushSegue = allValues[indexPath.row]
-            self.performSegueWithIdentifier(pushSegue, sender: nil)
-        }
-    }
-    
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        return .Portrait
-    }
-    
-    override func shouldAutorotate() -> Bool {
-        return true
+        let values = Array(data.values)
+        let selector = values[indexPath.row] as Selector
+        self.performSelector(selector)
     }
 }
