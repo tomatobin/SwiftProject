@@ -13,11 +13,22 @@ class MBHUDController: FPBaseController,UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     var dataSource: FPTableDataSource!
     var data: Dictionary<String,Selector>!
+    var timer: NSTimer?
+    var progress = Float(0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        data = ["ShowGif" : #selector(showGifLoading)]
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: #selector(timerProcess), userInfo: nil, repeats: true)
+        timer?.fireDate = NSDate.distantFuture()
+        
+        data = ["Show Gif" : #selector(showGifLoading),
+                "Show Message": #selector(showTxtHud),
+                "Show Wating Normal": #selector(showWatingNormal),
+                "Show Wating Determinate": #selector(showWatingDeterminate),
+                "Show Wating AnnularDeterminate": #selector(showWatingNormalAnnularDeterminate),
+                "Show Wating DeterminateHorizontalBar": #selector(showWatingDeterminateHorizontalBar)]
+        
         self.configureTableView()
     }
     
@@ -51,6 +62,7 @@ class MBHUDController: FPBaseController,UITableViewDelegate {
     }
     
     func dismissHud() {
+        self.timer?.fireDate = NSDate.distantFuture()
         FPHudUtility.hideGifLoading()
         MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
     }
@@ -58,6 +70,44 @@ class MBHUDController: FPBaseController,UITableViewDelegate {
     func showGifLoading() {
         let hud = FPHudUtility.showGifLoading(self.view, gifName: "Loading_rabbit") //不可以添加gif后缀
         hud.hide(true, afterDelay: 20.0)
+    }
+    
+    func showTxtHud() {
+        FPHudUtility.showMsg("Requesting...")
+    }
+    
+    func showWatingNormal() {
+        self.showWating(.Indeterminate)
+    }
+    
+    func showWatingDeterminate() {
+        self.showWating(.Determinate)
+    }
+    
+    func showWatingNormalAnnularDeterminate() {
+        self.showWating(.AnnularDeterminate)
+    }
+    
+    func showWatingDeterminateHorizontalBar() {
+        self.showWating(.DeterminateHorizontalBar)
+    }
+    
+    func showWating(hudMode: MBProgressHUDMode) {
+        self.progress = 0
+        self.timer?.fireDate = NSDate.distantPast()
+        let hud = FPHudUtility.showWating(self.view, text: "Loading...", hudMode: hudMode)
+        hud.yOffset = -Float(FP_NAVI_HEIGHT)
+    }
+    
+    //MARK: Timer
+    func timerProcess(timer: NSTimer) {
+        self.progress += 0.025
+        FPHudUtility.updateProgressHud(self.progress)
+        
+        if self.progress >= 1 {
+            self.timer?.fireDate = NSDate.distantFuture()
+            self.dismissHud()
+        }
     }
 }
 
