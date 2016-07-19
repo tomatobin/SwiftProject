@@ -56,7 +56,7 @@ class MBHUDController: FPBaseController,UITableViewDelegate {
     }
     
     func showGifLoading() {
-        let hud = FPHudUtility.showGifLoading(self.view, gifName: "Loading_carton.gif")
+        let hud = FPHudUtility.showGifLoading(self.view, gifName: "Loading_rabbit") //不可以添加gif后缀
         hud.hide(true, afterDelay: 20.0)
     }
 }

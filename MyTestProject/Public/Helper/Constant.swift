@@ -8,3 +8,4 @@
 
 let FP_SCREEN_WIDTH   = UIScreen.mainScreen().bounds.width
 let FP_SCREEN_HEIGHT  = UIScreen.mainScreen().bounds.height
+let FP_NAVI_HEIGHT    = CGFloat(64)

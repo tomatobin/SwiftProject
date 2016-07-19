@@ -15,7 +15,7 @@ class FPHudUtility: NSObject {
     class func showGifLoading(superView: UIView, gifName named: String) -> MBProgressHUD {
         let image = UIImage.sd_animatedGIFNamed(named)
         let imageView = UIImageView(image: image)
-        imageView.frame = CGRect(x: 0, y: 0, width: 120, height: 90)
+        imageView.frame = CGRect(x: 0, y: 0, width: 200, height: 130)
         if let hud = sharedInstance.gifHud {
             ColorLog.red("Alread has a gif loading hud...")
             hud.customView = imageView
@@ -24,9 +24,11 @@ class FPHudUtility: NSObject {
         
         let hud = MBProgressHUD.showHUDAddedTo(superView, animated: true)
         hud.mode = .CustomView
+        hud.color = UIColor.blackColor().colorWithAlphaComponent(0.7)
         hud.removeFromSuperViewOnHide = true
         hud.customView = imageView
-        hud.color = UIColor.blackColor().colorWithAlphaComponent(0.85)
+        //hud.labelText = "努力加载中..."
+        hud.yOffset = Float(-FP_NAVI_HEIGHT)
         sharedInstance.gifHud = hud
         return hud
     }
