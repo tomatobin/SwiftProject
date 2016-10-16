@@ -17,7 +17,7 @@ class WidgetsController: FPBaseController,UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        data = ["MBProgressHUD" : "PushToMBProgressHUD"]
+        data = ["MBProgressHUD" : "PushToMBProgressHUD", "CustomWidgets": "PushToCustomWidgets"]
         self.configureTableView()
     }
     

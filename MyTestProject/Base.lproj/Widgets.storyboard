@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="W5M-c6-B6C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="W5M-c6-B6C">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
@@ -33,6 +33,7 @@
                     <connections>
                         <outlet property="tableView" destination="oF9-TD-yLD" id="qAj-We-vxM"/>
                         <segue destination="kxl-2F-pkS" kind="show" identifier="PushToMBProgressHUD" id="6Rg-Up-Wu6"/>
+                        <segue destination="cLW-GB-yhu" kind="show" identifier="PushToCustomWidgets" id="TLh-Si-oFf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eh5-pZ-7Sq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -71,6 +72,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bh9-BS-cMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="496" y="1017"/>
+        </scene>
+        <!--Custom Widgets Controller-->
+        <scene sceneID="OWt-FZ-Chc">
+            <objects>
+                <viewController id="cLW-GB-yhu" customClass="CustomWidgetsController" customModule="MyTestProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gMy-A0-Uxv"/>
+                        <viewControllerLayoutGuide type="bottom" id="6jo-Uh-Y0j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6zU-KG-01N">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ggQ-S6-tyB" customClass="FPStarsView" customModule="MyTestProject" customModuleProvider="target">
+                                <rect key="frame" x="20" y="94" width="223" height="34"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.77647058820000003" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="starsView" destination="ggQ-S6-tyB" id="wlm-ol-rEU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r6W-3P-svD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="517" y="1721"/>
         </scene>
     </scenes>
 </document>

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		168617B01D8D49F797293535 /* libPods-MyTestProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD1B47144B1A1B020647C03 /* libPods-MyTestProject.a */; };
+		4E39425C1DB3A25D00980579 /* FPStarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39425B1DB3A25D00980579 /* FPStarsView.swift */; };
+		4E39425E1DB3A38300980579 /* CustomWidgetsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39425D1DB3A38300980579 /* CustomWidgetsController.swift */; };
 		860EB8AB1D24BCC10020736D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860EB8AA1D24BCC10020736D /* AppDelegate.swift */; };
 		860EB8AD1D24BCC10020736D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860EB8AC1D24BCC10020736D /* ViewController.swift */; };
 		860EB8B01D24BCC10020736D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860EB8AE1D24BCC10020736D /* Main.storyboard */; };
@@ -50,6 +52,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E39425B1DB3A25D00980579 /* FPStarsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPStarsView.swift; sourceTree = "<group>"; };
+		4E39425D1DB3A38300980579 /* CustomWidgetsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomWidgetsController.swift; sourceTree = "<group>"; };
 		5EE5F991111B4F41E0289859 /* Pods-MyTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTestProject/Pods-MyTestProject.release.xcconfig"; sourceTree = "<group>"; };
 		849898BD5A042CF962BB3771 /* Pods-MyTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTestProject/Pods-MyTestProject.debug.xcconfig"; sourceTree = "<group>"; };
 		860EB8A71D24BCC10020736D /* MyTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,6 +251,7 @@
 		865BE2DC1D25304200D1AD83 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4E39425B1DB3A25D00980579 /* FPStarsView.swift */,
 				865BE2DD1D25304200D1AD83 /* PlayButton.swift */,
 			);
 			path = View;
@@ -266,6 +271,7 @@
 			children = (
 				86D188D41D3DAC250031D32C /* WidgetsController.swift */,
 				86D188D91D3DAD430031D32C /* MBHUDController.swift */,
+				4E39425D1DB3A38300980579 /* CustomWidgetsController.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -425,6 +431,7 @@
 				865BE2D21D25181400D1AD83 /* AVFoundationRootController.swift in Sources */,
 				860EB8CB1D24BD4F0020736D /* FPTableViewCell.swift in Sources */,
 				869E3DE61D338F87000D2858 /* Constant.swift in Sources */,
+				4E39425C1DB3A25D00980579 /* FPStarsView.swift in Sources */,
 				86D188D21D3DA97C0031D32C /* FPHudUtility.swift in Sources */,
 				860EB8BF1D24BD2B0020736D /* FPNavigaionController.swift in Sources */,
 				865BE2D41D25187100D1AD83 /* AVAudioSessionController.swift in Sources */,
@@ -438,6 +445,7 @@
 				860EB8E81D25019D0020736D /* AudioServicesController.swift in Sources */,
 				86A8E6621D338A1400EF9F26 /* ViewTransitionController.swift in Sources */,
 				860EB8C81D24BD4F0020736D /* UIColor+Extension.swift in Sources */,
+				4E39425E1DB3A38300980579 /* CustomWidgetsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,7 +577,7 @@
 			baseConfigurationReference = 849898BD5A042CF962BB3771 /* Pods-MyTestProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: mobile dahua (62BRLUN9V2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tingchao Zhang (SHVGB9AP99)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -584,9 +592,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/iosrender",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dahuatech.MyTestProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tomatobin.MyTestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0928c607-e31f-4a87-b44e-2eb8afc68463";
+				PROVISIONING_PROFILE = "a1870e11-dd24-4cf0-8a9d-30d5b7db3ee1";
 				SWIFT_OBJC_BRIDGING_HEADER = MyTestProject/BridgingHeader.h;
 			};
 			name = Debug;
@@ -596,6 +604,7 @@
 			baseConfigurationReference = 5EE5F991111B4F41E0289859 /* Pods-MyTestProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tingchao Zhang (SHVGB9AP99)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -610,9 +619,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/iosrender",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dahuatech.MyTestProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tomatobin.MyTestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0928c607-e31f-4a87-b44e-2eb8afc68463";
+				PROVISIONING_PROFILE = "a1870e11-dd24-4cf0-8a9d-30d5b7db3ee1";
 				SWIFT_OBJC_BRIDGING_HEADER = MyTestProject/BridgingHeader.h;
 			};
 			name = Release;
