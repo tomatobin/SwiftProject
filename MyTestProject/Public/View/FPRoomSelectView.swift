@@ -59,23 +59,22 @@ class FPRoomSelectView: UIView {
             
             if line % 2 == 0 { //对应第1行、3、5等
                 for index in 0 ..< countInLine {
-                    let roomIndex = 2*index + 1
+                    let roomIndex = 2*index
                     frame = CGRectOffset(frame, self.gridWidth - 1, 0)
                     let gridView = FPRoomGridView(frame: frame)
                     gridView.gridInfo = self.gridInfo[roomIndex]
                     gridView.gridInfo.gridDirection = .Down
-                    gridView.gridInfo.number = roomIndex
+                    gridView.gridInfo.gridState = .Selected
                     gridView.updateRoomGrid()
                     self.addSubview(gridView)
                 }
             } else {
                 for index in 0 ..< countInLine {
-                    let roomIndex = 2*index
+                    let roomIndex = 2*index + 1
                     frame = CGRectOffset(frame, self.gridWidth - 1, 0)
                     let gridView = FPRoomGridView(frame: frame)
                     gridView.gridInfo = self.gridInfo[roomIndex]
                     gridView.gridInfo.gridDirection = .Up
-                    gridView.gridInfo.number = roomIndex
                     gridView.updateRoomGrid()
                     self.addSubview(gridView)
                 }
