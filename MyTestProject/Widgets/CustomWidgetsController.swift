@@ -15,6 +15,7 @@ class CustomWidgetsController: FPBaseController {
         super.viewDidLoad()
         
         self.initStarsView()
+        self.initRoomSelectView()
     }
     
     func initStarsView () {
@@ -24,7 +25,7 @@ class CustomWidgetsController: FPBaseController {
     }
     
     func initRoomSelectView () {
-        self.roomSelectView.backgroundColor = UIColor.fp_mainBgColor()
-        self.roomSelectView.setNeedsLayout()
+        self.roomSelectView.backgroundColor = UIColor.fp_mainBlueColor()
+        self.roomSelectView.updateView()
     }
 }
