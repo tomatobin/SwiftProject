@@ -12,7 +12,7 @@ class FPStarsView: UIView {
     
     /// 星星数组
     private var stars = Array<UIImageView>()
-    private var starSize = CGFloat(24)
+    private var starSize = CGFloat(15)
     
     override init(frame: CGRect) {
         super.init(frame: frame)

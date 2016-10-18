@@ -30,6 +30,10 @@
 		860EB8E61D24FF830020736D /* AudioToolboxRootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860EB8E51D24FF830020736D /* AudioToolboxRootController.swift */; };
 		860EB8E81D25019D0020736D /* AudioServicesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860EB8E71D25019D0020736D /* AudioServicesController.swift */; };
 		8616759C1D264C30001EE809 /* libpop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8616759B1D264C30001EE809 /* libpop.a */; };
+		8631A61C1DB6309C0035C197 /* FPDrawRoomSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8631A61B1DB6309C0035C197 /* FPDrawRoomSelectView.swift */; };
+		8631A61E1DB63DF50035C197 /* FPRoomSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8631A61D1DB63DF50035C197 /* FPRoomSelectView.swift */; };
+		8631A6201DB63E4D0035C197 /* FPRoomGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8631A61F1DB63E4D0035C197 /* FPRoomGridView.swift */; };
+		8631A6221DB63E870035C197 /* FPRoomGridInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8631A6211DB63E870035C197 /* FPRoomGridInfo.swift */; };
 		865BE2D21D25181400D1AD83 /* AVFoundationRootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865BE2D11D25181400D1AD83 /* AVFoundationRootController.swift */; };
 		865BE2D41D25187100D1AD83 /* AVAudioSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865BE2D31D25187100D1AD83 /* AVAudioSessionController.swift */; };
 		865BE2D61D251A7100D1AD83 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865BE2D51D251A7100D1AD83 /* AVFoundation.framework */; };
@@ -79,6 +83,10 @@
 		860EB8E71D25019D0020736D /* AudioServicesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioServicesController.swift; sourceTree = "<group>"; };
 		8616759B1D264C30001EE809 /* libpop.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpop.a; path = "../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/pop/libpop.a"; sourceTree = "<group>"; };
 		861675A61D264F4A001EE809 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		8631A61B1DB6309C0035C197 /* FPDrawRoomSelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPDrawRoomSelectView.swift; sourceTree = "<group>"; };
+		8631A61D1DB63DF50035C197 /* FPRoomSelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPRoomSelectView.swift; sourceTree = "<group>"; };
+		8631A61F1DB63E4D0035C197 /* FPRoomGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPRoomGridView.swift; sourceTree = "<group>"; };
+		8631A6211DB63E870035C197 /* FPRoomGridInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPRoomGridInfo.swift; sourceTree = "<group>"; };
 		865BE2D11D25181400D1AD83 /* AVFoundationRootController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVFoundationRootController.swift; sourceTree = "<group>"; };
 		865BE2D31D25187100D1AD83 /* AVAudioSessionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVAudioSessionController.swift; sourceTree = "<group>"; };
 		865BE2D51D251A7100D1AD83 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -197,6 +205,7 @@
 			children = (
 				860EB8C61D24BD4F0020736D /* FPTableDataSource.swift */,
 				860EB8C71D24BD4F0020736D /* FPTableViewCell.swift */,
+				8631A6211DB63E870035C197 /* FPRoomGridInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,6 +262,9 @@
 			children = (
 				4E39425B1DB3A25D00980579 /* FPStarsView.swift */,
 				865BE2DD1D25304200D1AD83 /* PlayButton.swift */,
+				8631A61B1DB6309C0035C197 /* FPDrawRoomSelectView.swift */,
+				8631A61D1DB63DF50035C197 /* FPRoomSelectView.swift */,
+				8631A61F1DB63E4D0035C197 /* FPRoomGridView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -424,6 +436,7 @@
 				86A8E65D1D33888E00EF9F26 /* TransitionController.swift in Sources */,
 				860EB8E61D24FF830020736D /* AudioToolboxRootController.swift in Sources */,
 				86D188DA1D3DAD430031D32C /* MBHUDController.swift in Sources */,
+				8631A6201DB63E4D0035C197 /* FPRoomGridView.swift in Sources */,
 				865BE2DE1D25304200D1AD83 /* PlayButton.swift in Sources */,
 				86D188D51D3DAC250031D32C /* WidgetsController.swift in Sources */,
 				860EB8CA1D24BD4F0020736D /* FPTableDataSource.swift in Sources */,
@@ -434,6 +447,7 @@
 				4E39425C1DB3A25D00980579 /* FPStarsView.swift in Sources */,
 				86D188D21D3DA97C0031D32C /* FPHudUtility.swift in Sources */,
 				860EB8BF1D24BD2B0020736D /* FPNavigaionController.swift in Sources */,
+				8631A61E1DB63DF50035C197 /* FPRoomSelectView.swift in Sources */,
 				865BE2D41D25187100D1AD83 /* AVAudioSessionController.swift in Sources */,
 				866ED0991D2A75610098C40B /* AudioRecorderController.swift in Sources */,
 				860EB8AD1D24BCC10020736D /* ViewController.swift in Sources */,
@@ -442,10 +456,12 @@
 				860EB8CD1D24BD720020736D /* RootController.swift in Sources */,
 				860EB8BE1D24BD2B0020736D /* FPBaseController.swift in Sources */,
 				860EB8C91D24BD4F0020736D /* ColorLog.swift in Sources */,
+				8631A6221DB63E870035C197 /* FPRoomGridInfo.swift in Sources */,
 				860EB8E81D25019D0020736D /* AudioServicesController.swift in Sources */,
 				86A8E6621D338A1400EF9F26 /* ViewTransitionController.swift in Sources */,
 				860EB8C81D24BD4F0020736D /* UIColor+Extension.swift in Sources */,
 				4E39425E1DB3A38300980579 /* CustomWidgetsController.swift in Sources */,
+				8631A61C1DB6309C0035C197 /* FPDrawRoomSelectView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
