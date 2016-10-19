@@ -13,4 +13,5 @@
 #import "MBProgressHUD.h"
 #import "SDImageCache.h"
 #import "UIImage+GIF.h"
+#import "Masonry.h"
 #endif /* BridgingHeader_h */

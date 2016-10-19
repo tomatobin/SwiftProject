@@ -34,6 +34,7 @@
 		8631A61E1DB63DF50035C197 /* FPRoomSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8631A61D1DB63DF50035C197 /* FPRoomSelectView.swift */; };
 		8631A6201DB63E4D0035C197 /* FPRoomGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8631A61F1DB63E4D0035C197 /* FPRoomGridView.swift */; };
 		8631A6221DB63E870035C197 /* FPRoomGridInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8631A6211DB63E870035C197 /* FPRoomGridInfo.swift */; };
+		8631A62F1DB73BB50035C197 /* LCPanoTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8631A62E1DB73BB50035C197 /* LCPanoTopView.swift */; };
 		865BE2D21D25181400D1AD83 /* AVFoundationRootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865BE2D11D25181400D1AD83 /* AVFoundationRootController.swift */; };
 		865BE2D41D25187100D1AD83 /* AVAudioSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865BE2D31D25187100D1AD83 /* AVAudioSessionController.swift */; };
 		865BE2D61D251A7100D1AD83 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865BE2D51D251A7100D1AD83 /* AVFoundation.framework */; };
@@ -87,6 +88,7 @@
 		8631A61D1DB63DF50035C197 /* FPRoomSelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPRoomSelectView.swift; sourceTree = "<group>"; };
 		8631A61F1DB63E4D0035C197 /* FPRoomGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPRoomGridView.swift; sourceTree = "<group>"; };
 		8631A6211DB63E870035C197 /* FPRoomGridInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPRoomGridInfo.swift; sourceTree = "<group>"; };
+		8631A62E1DB73BB50035C197 /* LCPanoTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LCPanoTopView.swift; sourceTree = "<group>"; };
 		865BE2D11D25181400D1AD83 /* AVFoundationRootController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVFoundationRootController.swift; sourceTree = "<group>"; };
 		865BE2D31D25187100D1AD83 /* AVAudioSessionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVAudioSessionController.swift; sourceTree = "<group>"; };
 		865BE2D51D251A7100D1AD83 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -260,6 +262,7 @@
 		865BE2DC1D25304200D1AD83 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8631A62E1DB73BB50035C197 /* LCPanoTopView.swift */,
 				4E39425B1DB3A25D00980579 /* FPStarsView.swift */,
 				865BE2DD1D25304200D1AD83 /* PlayButton.swift */,
 				8631A61B1DB6309C0035C197 /* FPDrawRoomSelectView.swift */,
@@ -454,6 +457,7 @@
 				860EB8AB1D24BCC10020736D /* AppDelegate.swift in Sources */,
 				86CC8F971D2B54AA00D8FC81 /* CameraCaptureController.swift in Sources */,
 				860EB8CD1D24BD720020736D /* RootController.swift in Sources */,
+				8631A62F1DB73BB50035C197 /* LCPanoTopView.swift in Sources */,
 				860EB8BE1D24BD2B0020736D /* FPBaseController.swift in Sources */,
 				860EB8C91D24BD4F0020736D /* ColorLog.swift in Sources */,
 				8631A6221DB63E870035C197 /* FPRoomGridInfo.swift in Sources */,

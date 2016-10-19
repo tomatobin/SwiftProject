@@ -10,12 +10,14 @@ class CustomWidgetsController: FPBaseController {
 
     @IBOutlet weak var starsView: FPStarsView!
     @IBOutlet weak var roomSelectView: FPRoomSelectView!
+    @IBOutlet weak var panoTopView: LCPanoTopView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.initStarsView()
         self.initRoomSelectView()
+        self.initPanoTopView()
     }
     
     func initStarsView () {
@@ -27,5 +29,10 @@ class CustomWidgetsController: FPBaseController {
     func initRoomSelectView () {
         self.roomSelectView.backgroundColor = UIColor.fp_mainBlueColor()
         self.roomSelectView.updateView()
+    }
+    
+    func initPanoTopView() {
+        self.panoTopView.backgroundColor = UIColor.whiteColor()
+        self.panoTopView.disableButton(.Left)
     }
 }
