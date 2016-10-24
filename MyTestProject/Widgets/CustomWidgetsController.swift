@@ -28,7 +28,7 @@ class CustomWidgetsController: FPBaseController {
     
     func initRoomSelectView () {
         self.roomSelectView.backgroundColor = UIColor.fp_mainBlueColor()
-        self.roomSelectView.updateView()
+        self.roomSelectView.updateView(.Strip)
     }
     
     func initPanoTopView() {
