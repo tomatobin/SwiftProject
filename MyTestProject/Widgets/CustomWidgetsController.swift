@@ -11,6 +11,7 @@ class CustomWidgetsController: FPBaseController {
     @IBOutlet weak var starsView: FPStarsView!
     @IBOutlet weak var roomSelectView: FPRoomSelectView!
     @IBOutlet weak var panoTopView: LCPanoTopView!
+    @IBOutlet weak var bazierButtoin: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,7 @@ class CustomWidgetsController: FPBaseController {
         self.initStarsView()
         self.initRoomSelectView()
         self.initPanoTopView()
+        self.initBazierButton()
     }
     
     func initStarsView () {
@@ -34,5 +36,19 @@ class CustomWidgetsController: FPBaseController {
     func initPanoTopView() {
         self.panoTopView.backgroundColor = UIColor.whiteColor()
         self.panoTopView.disableButton(.Left)
+    }
+    
+    func initBazierButton() {
+        self.startAnimation()
+    }
+    
+    func startAnimation() {
+        let animation = CABasicAnimation(keyPath: "transform.rotation.z")
+        animation.toValue = NSNumber(double: 0.5)
+        animation.duration = 0.5
+        animation.autoreverses = true
+        animation.repeatCount = Float(INT_MAX)
+        animation.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseOut)
+        self.bazierButtoin.layer.addAnimation(animation, forKey: "rotate")
     }
 }
