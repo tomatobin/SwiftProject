@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="W5M-c6-B6C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="W5M-c6-B6C">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -35,6 +35,7 @@
                         <outlet property="tableView" destination="oF9-TD-yLD" id="qAj-We-vxM"/>
                         <segue destination="kxl-2F-pkS" kind="show" identifier="PushToMBProgressHUD" id="6Rg-Up-Wu6"/>
                         <segue destination="cLW-GB-yhu" kind="show" identifier="PushToCustomWidgets" id="TLh-Si-oFf"/>
+                        <segue destination="ldk-G6-H6j" kind="presentation" identifier="PresentBlur" id="nv5-h3-d6E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eh5-pZ-7Sq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -73,6 +74,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bh9-BS-cMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="496" y="1017"/>
+        </scene>
+        <!--Blur Controller-->
+        <scene sceneID="yHK-9r-TdV">
+            <objects>
+                <viewController id="ldk-G6-H6j" customClass="FPBlurController" customModule="MyTestProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t6x-dg-l12"/>
+                        <viewControllerLayoutGuide type="bottom" id="hob-oT-0fE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="St7-pw-a9m">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T3H-e2-6h6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="446" y="2553"/>
         </scene>
         <!--Custom Widgets Controller-->
         <scene sceneID="OWt-FZ-Chc">
@@ -146,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r6W-3P-svD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="517" y="1721"/>
+            <point key="canvasLocation" x="723" y="1698"/>
         </scene>
     </scenes>
     <resources>

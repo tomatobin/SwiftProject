@@ -20,6 +20,10 @@ class CustomWidgetsController: FPBaseController {
         self.initRoomSelectView()
         self.initPanoTopView()
         self.initBazierButton()
+        
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
+//            self.presentBlurController()
+//        })
     }
     
     func initStarsView () {
@@ -39,6 +43,7 @@ class CustomWidgetsController: FPBaseController {
     }
     
     func initBazierButton() {
+        self.bazierButtoin.addTarget(self, action: #selector(presentBlurController), forControlEvents: .TouchUpInside)
         self.startAnimation()
     }
     
@@ -50,5 +55,11 @@ class CustomWidgetsController: FPBaseController {
         animation.repeatCount = Float(INT_MAX)
         animation.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseOut)
         self.bazierButtoin.layer.addAnimation(animation, forKey: "rotate")
+    }
+    
+    func presentBlurController() {
+        let blurController = FPBlurController()
+        blurController.setTransionStyle()
+        self.presentViewController(blurController, animated: true, completion: nil)
     }
 }

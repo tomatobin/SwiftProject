@@ -46,6 +46,7 @@
 		86A8E65D1D33888E00EF9F26 /* TransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A8E65C1D33888E00EF9F26 /* TransitionController.swift */; };
 		86A8E6601D33897800EF9F26 /* Transition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86A8E65E1D33897800EF9F26 /* Transition.storyboard */; };
 		86A8E6621D338A1400EF9F26 /* ViewTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A8E6611D338A1400EF9F26 /* ViewTransitionController.swift */; };
+		86C448441DCABF940024E427 /* FPBlurController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C448431DCABF940024E427 /* FPBlurController.swift */; };
 		86CC8F921D2B409F00D8FC81 /* FPFileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CC8F911D2B409F00D8FC81 /* FPFileHelper.swift */; };
 		86CC8F971D2B54AA00D8FC81 /* CameraCaptureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CC8F961D2B54AA00D8FC81 /* CameraCaptureController.swift */; };
 		86D188D21D3DA97C0031D32C /* FPHudUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D188D11D3DA97C0031D32C /* FPHudUtility.swift */; };
@@ -101,6 +102,7 @@
 		86A8E65C1D33888E00EF9F26 /* TransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionController.swift; sourceTree = "<group>"; };
 		86A8E65F1D33897800EF9F26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Transition.storyboard; sourceTree = "<group>"; };
 		86A8E6611D338A1400EF9F26 /* ViewTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewTransitionController.swift; sourceTree = "<group>"; };
+		86C448431DCABF940024E427 /* FPBlurController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPBlurController.swift; sourceTree = "<group>"; };
 		86CC8F911D2B409F00D8FC81 /* FPFileHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPFileHelper.swift; sourceTree = "<group>"; };
 		86CC8F961D2B54AA00D8FC81 /* CameraCaptureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraCaptureController.swift; sourceTree = "<group>"; };
 		86D188D11D3DA97C0031D32C /* FPHudUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPHudUtility.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				86D188D41D3DAC250031D32C /* WidgetsController.swift */,
 				86D188D91D3DAD430031D32C /* MBHUDController.swift */,
 				4E39425D1DB3A38300980579 /* CustomWidgetsController.swift */,
+				86C448431DCABF940024E427 /* FPBlurController.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				869E3DE61D338F87000D2858 /* Constant.swift in Sources */,
 				4E39425C1DB3A25D00980579 /* FPStarsView.swift in Sources */,
 				86D188D21D3DA97C0031D32C /* FPHudUtility.swift in Sources */,
+				86C448441DCABF940024E427 /* FPBlurController.swift in Sources */,
 				860EB8BF1D24BD2B0020736D /* FPNavigaionController.swift in Sources */,
 				8631A61E1DB63DF50035C197 /* FPRoomSelectView.swift in Sources */,
 				865BE2D41D25187100D1AD83 /* AVAudioSessionController.swift in Sources */,

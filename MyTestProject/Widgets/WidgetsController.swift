@@ -17,7 +17,7 @@ class WidgetsController: FPBaseController,UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        data = ["MBProgressHUD" : "PushToMBProgressHUD", "CustomWidgets": "PushToCustomWidgets"]
+        data = ["MBProgressHUD" : "PushToMBProgressHUD", "CustomWidgets": "PushToCustomWidgets", "BlurEffect": "PresentBlur"]
         self.configureTableView()
     }
     
@@ -32,6 +32,7 @@ class WidgetsController: FPBaseController,UITableViewDelegate {
         let allKeys = Array(data.keys)
         dataSource = FPTableDataSource.init(cellItems: allKeys, cellIdentifier: identifier, configureCell: {(cell, item) in
             let testCell = cell as! FPTableViewCell
+            testCell.imageView?.image = UIImage(named: "star_yellow")
             testCell.configureForCell(item)
         })
         
@@ -54,6 +55,13 @@ extension WidgetsController{
         if indexPath.row < allValues.count {
             let pushSegue = allValues[indexPath.row]
             self.performSegueWithIdentifier(pushSegue, sender: nil)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let controller = segue.destinationViewController as? FPBlurController {
+            controller.modalPresentationStyle = .OverFullScreen
+            controller.modalTransitionStyle = .CrossDissolve
         }
     }
 }
