@@ -55,6 +55,8 @@
 		86D188DA1D3DAD430031D32C /* MBHUDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D188D91D3DAD430031D32C /* MBHUDController.swift */; };
 		86D188E11D3DB7560031D32C /* Loading_rabbit.gif in Resources */ = {isa = PBXBuildFile; fileRef = 86D188E01D3DB7560031D32C /* Loading_rabbit.gif */; };
 		86D188E31D3DB7E30031D32C /* Loading_carton.gif in Resources */ = {isa = PBXBuildFile; fileRef = 86D188E21D3DB7E30031D32C /* Loading_carton.gif */; };
+		86E1ED951E0A2C0400261402 /* FPFliterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1ED941E0A2C0400261402 /* FPFliterCell.swift */; };
+		86E1ED9A1E0A2C3C00261402 /* FliterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1ED991E0A2C3C00261402 /* FliterController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +113,8 @@
 		86D188D91D3DAD430031D32C /* MBHUDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBHUDController.swift; sourceTree = "<group>"; };
 		86D188E01D3DB7560031D32C /* Loading_rabbit.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Loading_rabbit.gif; sourceTree = "<group>"; };
 		86D188E21D3DB7E30031D32C /* Loading_carton.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Loading_carton.gif; sourceTree = "<group>"; };
+		86E1ED941E0A2C0400261402 /* FPFliterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPFliterCell.swift; sourceTree = "<group>"; };
+		86E1ED991E0A2C3C00261402 /* FliterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FliterController.swift; sourceTree = "<group>"; };
 		EDD1B47144B1A1B020647C03 /* libPods-MyTestProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyTestProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -264,6 +268,7 @@
 		865BE2DC1D25304200D1AD83 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				86E1ED941E0A2C0400261402 /* FPFliterCell.swift */,
 				8631A62E1DB73BB50035C197 /* LCPanoTopView.swift */,
 				4E39425B1DB3A25D00980579 /* FPStarsView.swift */,
 				865BE2DD1D25304200D1AD83 /* PlayButton.swift */,
@@ -290,6 +295,7 @@
 				86D188D91D3DAD430031D32C /* MBHUDController.swift */,
 				4E39425D1DB3A38300980579 /* CustomWidgetsController.swift */,
 				86C448431DCABF940024E427 /* FPBlurController.swift */,
+				86E1ED991E0A2C3C00261402 /* FliterController.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -333,12 +339,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = iblue;
 				TargetAttributes = {
 					860EB8A61D24BCC10020736D = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = WJ93U6KJY4;
+						LastSwiftMigration = 0810;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -448,6 +455,8 @@
 				860EB8CA1D24BD4F0020736D /* FPTableDataSource.swift in Sources */,
 				86CC8F921D2B409F00D8FC81 /* FPFileHelper.swift in Sources */,
 				865BE2D21D25181400D1AD83 /* AVFoundationRootController.swift in Sources */,
+				86E1ED9A1E0A2C3C00261402 /* FliterController.swift in Sources */,
+				86E1ED951E0A2C0400261402 /* FPFliterCell.swift in Sources */,
 				860EB8CB1D24BD4F0020736D /* FPTableViewCell.swift in Sources */,
 				869E3DE61D338F87000D2858 /* Constant.swift in Sources */,
 				4E39425C1DB3A25D00980579 /* FPStarsView.swift in Sources */,
@@ -525,8 +534,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -571,8 +582,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -591,6 +604,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -600,9 +614,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 849898BD5A042CF962BB3771 /* Pods-MyTestProject.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Tingchao Zhang (SHVGB9AP99)";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -620,6 +634,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a1870e11-dd24-4cf0-8a9d-30d5b7db3ee1";
 				SWIFT_OBJC_BRIDGING_HEADER = MyTestProject/BridgingHeader.h;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -627,9 +642,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5EE5F991111B4F41E0289859 /* Pods-MyTestProject.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tingchao Zhang (SHVGB9AP99)";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -647,6 +662,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a1870e11-dd24-4cf0-8a9d-30d5b7db3ee1";
 				SWIFT_OBJC_BRIDGING_HEADER = MyTestProject/BridgingHeader.h;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};

@@ -55,7 +55,7 @@ class AudioServicesController: FPBaseController {
     func startAnimation(view: UIView){
         let animation = CABasicAnimation(keyPath: "transform.rotation.z")
         animation.fromValue = 0
-        animation.toValue = Double(rand()%2 + 1) *  M_PI / 6
+        animation.toValue = Double(arc4random()%2 + 1) *  M_PI / 6
         animation.duration = 2
         animation.repeatCount = 1
         animation.autoreverses = false

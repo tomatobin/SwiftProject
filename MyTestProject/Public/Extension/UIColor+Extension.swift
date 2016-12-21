@@ -9,24 +9,40 @@
 import UIKit
 
 extension UIColor{
-    class func fp_mainBlueColor()->UIColor?{
-        return self.fp_colorWithHexString("4EA7F2")
+    class func fp_mainBlueColor()->UIColor {
+        return self.fp_colorWithHexString("4EA7F2")!
     }
     
-    class func fp_mainBgColor() -> UIColor? {
-        return self.fp_colorWithHexString("EFEFF4")
+    class func fp_mainBgColor() -> UIColor {
+        return self.fp_colorWithHexString("EDEDED")!
     }
     
-    class func fp_darkBgColor() -> UIColor? {
-        return self.fp_colorWithHexString("3D3B3E")
+    class func fp_separatorColor() -> UIColor {
+        return self.fp_colorWithHexString("EDEDED")!
     }
     
-    class func fp_mainRedColor() -> UIColor? {
-        return self.fp_colorWithHexString("FF5454")
+    class func fp_darkBgColor() -> UIColor {
+        return self.fp_colorWithHexString("3D3B3E")!
     }
     
-    class func fp_darkTextColor() -> UIColor? {
-        return self.fp_colorWithHexString("4A4A4A")
+    class func fp_darkBlackColor() -> UIColor {
+        return self.fp_colorWithHexString("323132")!
+    }
+    
+    class func fp_mainRedColor() -> UIColor {
+        return self.fp_colorWithHexString("FF5454")!
+    }
+    
+    class func fp_darkTextColor() -> UIColor {
+        return self.fp_colorWithHexString("4A4A4A")!
+    }
+    
+    class func fp_lightTextColor() -> UIColor {
+        return self.fp_colorWithHexString("9B9B9B")!
+    }
+    
+    class func fp_yellowColor() -> UIColor {
+        return self.fp_colorWithHexString("EEC61F")!
     }
     
     class func fp_colorWithHexString(hexString: String)->UIColor?{
@@ -66,7 +82,7 @@ extension UIColor{
             return nil
             
         }
-
+        
         return UIColor(red: red!, green: green!, blue: blue!, alpha: alpha!)
     }
     

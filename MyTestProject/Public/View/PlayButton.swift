@@ -94,17 +94,17 @@ class PlayButton: UIButton {
         let context = UIGraphicsGetCurrentContext()
         
         // 3
-        CGContextMoveToPoint(context, 0.0, 0.0)
-        CGContextAddLineToPoint(context, width, h1)
-        CGContextAddLineToPoint(context, width, height - h1)
-        CGContextAddLineToPoint(context, 0.0, height)
-        CGContextMoveToPoint(context, rect.width - width, h1)
-        CGContextAddLineToPoint(context, rect.width, h2)
-        CGContextAddLineToPoint(context, rect.width, height - h2)
-        CGContextAddLineToPoint(context, rect.width - width, height - h1)
+        CGContextMoveToPoint(context!, 0.0, 0.0)
+        CGContextAddLineToPoint(context!, width, h1)
+        CGContextAddLineToPoint(context!, width, height - h1)
+        CGContextAddLineToPoint(context!, 0.0, height)
+        CGContextMoveToPoint(context!, rect.width - width, h1)
+        CGContextAddLineToPoint(context!, rect.width, h2)
+        CGContextAddLineToPoint(context!, rect.width, height - h2)
+        CGContextAddLineToPoint(context!, rect.width - width, height - h1)
         
         // 4
-        CGContextSetFillColorWithColor(context, tintColor.CGColor)
-        CGContextFillPath(context)
+        CGContextSetFillColorWithColor(context!, tintColor.CGColor)
+        CGContextFillPath(context!)
     }
 }

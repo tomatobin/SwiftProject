@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="W5M-c6-B6C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="W5M-c6-B6C">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Widgets Controller-->
@@ -14,15 +18,15 @@
                         <viewControllerLayoutGuide type="bottom" id="VBV-jO-13C"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fYB-aj-zBt">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oF9-TD-yLD">
-                                <rect key="frame" x="0.0" y="64" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="667"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="oF9-TD-yLD" firstAttribute="width" secondItem="fYB-aj-zBt" secondAttribute="width" id="MAh-oZ-WAD"/>
                             <constraint firstItem="oF9-TD-yLD" firstAttribute="leading" secondItem="fYB-aj-zBt" secondAttribute="leading" id="QuO-fH-xeQ"/>
@@ -36,11 +40,45 @@
                         <segue destination="kxl-2F-pkS" kind="show" identifier="PushToMBProgressHUD" id="6Rg-Up-Wu6"/>
                         <segue destination="cLW-GB-yhu" kind="show" identifier="PushToCustomWidgets" id="TLh-Si-oFf"/>
                         <segue destination="ldk-G6-H6j" kind="presentation" identifier="PresentBlur" id="nv5-h3-d6E"/>
+                        <segue destination="PZg-k6-LSt" kind="show" identifier="PushToFliter" id="bQk-a7-UfX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eh5-pZ-7Sq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-386" y="1362"/>
+            <point key="canvasLocation" x="-836" y="1352"/>
+        </scene>
+        <!--Fliter Controller-->
+        <scene sceneID="EAe-2W-2PZ">
+            <objects>
+                <viewController id="PZg-k6-LSt" customClass="FliterController" customModule="MyTestProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rGN-sT-fQI"/>
+                        <viewControllerLayoutGuide type="bottom" id="TBY-oF-aFv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YzI-Iw-zoX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fIj-4A-94c">
+                                <rect key="frame" x="0.0" y="64" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fIj-4A-94c" firstAttribute="leading" secondItem="YzI-Iw-zoX" secondAttribute="leading" id="T97-4L-hup"/>
+                            <constraint firstItem="fIj-4A-94c" firstAttribute="width" secondItem="YzI-Iw-zoX" secondAttribute="width" id="cxe-Q1-LK1"/>
+                            <constraint firstItem="fIj-4A-94c" firstAttribute="top" secondItem="rGN-sT-fQI" secondAttribute="bottom" id="eBC-x3-aou"/>
+                            <constraint firstItem="fIj-4A-94c" firstAttribute="height" secondItem="YzI-Iw-zoX" secondAttribute="height" id="sLZ-ah-QNI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="fIj-4A-94c" id="amQ-I5-fzZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ye-le-Apg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="685.60000000000002" y="1593.5532233883059"/>
         </scene>
         <!--Controller-->
         <scene sceneID="ZPF-xP-276">
@@ -51,15 +89,15 @@
                         <viewControllerLayoutGuide type="bottom" id="Qcp-U0-37Z"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aOZ-8V-cSv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2ZH-2j-J3k">
-                                <rect key="frame" x="0.0" y="64" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="667"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2ZH-2j-J3k" firstAttribute="leading" secondItem="aOZ-8V-cSv" secondAttribute="leading" id="7LT-3s-HMI"/>
                             <constraint firstItem="2ZH-2j-J3k" firstAttribute="height" secondItem="aOZ-8V-cSv" secondAttribute="height" id="ZmR-pX-8RS"/>
@@ -73,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bh9-BS-cMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="496" y="1017"/>
+            <point key="canvasLocation" x="644" y="-672"/>
         </scene>
         <!--Blur Controller-->
         <scene sceneID="yHK-9r-TdV">
@@ -84,14 +122,14 @@
                         <viewControllerLayoutGuide type="bottom" id="hob-oT-0fE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="St7-pw-a9m">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T3H-e2-6h6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="446" y="2553"/>
+            <point key="canvasLocation" x="686" y="858"/>
         </scene>
         <!--Custom Widgets Controller-->
         <scene sceneID="OWt-FZ-Chc">
@@ -102,34 +140,34 @@
                         <viewControllerLayoutGuide type="bottom" id="6jo-Uh-Y0j"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6zU-KG-01N">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggQ-S6-tyB" customClass="FPStarsView" customModule="MyTestProject" customModuleProvider="target">
-                                <rect key="frame" x="20" y="94" width="223" height="34"/>
-                                <color key="backgroundColor" red="0.93333333330000001" green="0.77647058820000003" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="16" y="94" width="223" height="34"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.77647058820000003" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="223" id="cpS-TR-txM"/>
                                     <constraint firstAttribute="height" constant="34" id="tAz-pg-m0U"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RYg-Kw-rwJ" customClass="FPRoomSelectView" customModule="MyTestProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="163" width="600" height="200"/>
-                                <color key="backgroundColor" red="0.76470588240000004" green="0.76470588240000004" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="163" width="375" height="200"/>
+                                <color key="backgroundColor" red="0.76470588240000004" green="0.76470588240000004" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="PM5-HF-og7"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nm3-qQ-02W" customClass="LCPanoTopView" customModule="MyTestProject" customModuleProvider="target">
-                                <rect key="frame" x="27" y="387" width="140" height="30"/>
-                                <color key="backgroundColor" red="0.93333333330000001" green="0.77647058820000003" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="23" y="387" width="140" height="30"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.77647058820000003" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="98f-oe-y9R"/>
                                     <constraint firstAttribute="height" constant="30" id="OQX-3u-DkY"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVS-qm-LfS" userLabel="Wave">
-                                <rect key="frame" x="306" y="87" width="48" height="48"/>
+                                <rect key="frame" x="302" y="87" width="48" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Wmd-zm-Chq"/>
                                     <constraint firstAttribute="width" constant="48" id="yRV-OZ-aGQ"/>
@@ -137,7 +175,7 @@
                                 <state key="normal" image="Search"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="nm3-qQ-02W" firstAttribute="leading" secondItem="6zU-KG-01N" secondAttribute="leadingMargin" constant="7" id="0hq-je-fjK"/>
                             <constraint firstItem="lVS-qm-LfS" firstAttribute="top" secondItem="gMy-A0-Uxv" secondAttribute="bottom" constant="23" id="0on-Nf-OiR"/>
@@ -165,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r6W-3P-svD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="723" y="1698"/>
+            <point key="canvasLocation" x="686" y="128"/>
         </scene>
     </scenes>
     <resources>

@@ -28,7 +28,7 @@ class CustomWidgetsController: FPBaseController {
     
     func initStarsView () {
         self.starsView.backgroundColor = UIColor.whiteColor()
-        let score = rand() % 6
+        let score = arc4random() % 6
         self.starsView.setScore(Int(score), animated: true)
     }
     
