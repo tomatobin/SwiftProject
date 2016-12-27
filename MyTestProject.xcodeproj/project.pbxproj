@@ -40,6 +40,7 @@
 		865BE2D61D251A7100D1AD83 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865BE2D51D251A7100D1AD83 /* AVFoundation.framework */; };
 		865BE2D81D251D6800D1AD83 /* Liekkas.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 865BE2D71D251D6800D1AD83 /* Liekkas.mp3 */; };
 		865BE2DE1D25304200D1AD83 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865BE2DD1D25304200D1AD83 /* PlayButton.swift */; };
+		866EC2FF1E1289EA00FDA308 /* FPTextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866EC2FE1E1289EA00FDA308 /* FPTextViewPlaceholder.swift */; };
 		866ED0991D2A75610098C40B /* AudioRecorderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866ED0981D2A75610098C40B /* AudioRecorderController.swift */; };
 		866ED09E1D2A797C0098C40B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866ED09D1D2A797C0098C40B /* Foundation.framework */; };
 		869E3DE61D338F87000D2858 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869E3DE51D338F87000D2858 /* Constant.swift */; };
@@ -98,6 +99,7 @@
 		865BE2D71D251D6800D1AD83 /* Liekkas.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Liekkas.mp3; sourceTree = "<group>"; };
 		865BE2D91D25301500D1AD83 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		865BE2DD1D25304200D1AD83 /* PlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
+		866EC2FE1E1289EA00FDA308 /* FPTextViewPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPTextViewPlaceholder.swift; sourceTree = "<group>"; };
 		866ED0981D2A75610098C40B /* AudioRecorderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorderController.swift; sourceTree = "<group>"; };
 		866ED09D1D2A797C0098C40B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		869E3DE51D338F87000D2858 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				8631A61B1DB6309C0035C197 /* FPDrawRoomSelectView.swift */,
 				8631A61D1DB63DF50035C197 /* FPRoomSelectView.swift */,
 				8631A61F1DB63E4D0035C197 /* FPRoomGridView.swift */,
+				866EC2FE1E1289EA00FDA308 /* FPTextViewPlaceholder.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				86CC8F971D2B54AA00D8FC81 /* CameraCaptureController.swift in Sources */,
 				860EB8CD1D24BD720020736D /* RootController.swift in Sources */,
 				8631A62F1DB73BB50035C197 /* LCPanoTopView.swift in Sources */,
+				866EC2FF1E1289EA00FDA308 /* FPTextViewPlaceholder.swift in Sources */,
 				860EB8BE1D24BD2B0020736D /* FPBaseController.swift in Sources */,
 				860EB8C91D24BD4F0020736D /* ColorLog.swift in Sources */,
 				8631A6221DB63E870035C197 /* FPRoomGridInfo.swift in Sources */,
