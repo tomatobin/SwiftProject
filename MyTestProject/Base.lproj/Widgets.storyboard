@@ -158,7 +158,7 @@
                                     <constraint firstAttribute="height" constant="200" id="PM5-HF-og7"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nm3-qQ-02W" customClass="LCPanoTopView" customModule="MyTestProject" customModuleProvider="target">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nm3-qQ-02W" customClass="LCPanoTopView" customModule="MyTestProject" customModuleProvider="target">
                                 <rect key="frame" x="23" y="387" width="140" height="30"/>
                                 <color key="backgroundColor" red="0.93333333330000001" green="0.77647058820000003" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -174,6 +174,16 @@
                                 </constraints>
                                 <state key="normal" image="Search"/>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="i4K-od-RKX" customClass="FPTextViewPlaceholder" customModule="MyTestProject">
+                                <rect key="frame" x="67.5" y="162" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="2jN-ge-F7r"/>
+                                    <constraint firstAttribute="width" constant="240" id="Fth-dZ-5Wc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -181,14 +191,19 @@
                             <constraint firstItem="lVS-qm-LfS" firstAttribute="top" secondItem="gMy-A0-Uxv" secondAttribute="bottom" constant="23" id="0on-Nf-OiR"/>
                             <constraint firstItem="RYg-Kw-rwJ" firstAttribute="leading" secondItem="6zU-KG-01N" secondAttribute="leading" id="7R4-E4-Cyh"/>
                             <constraint firstItem="ggQ-S6-tyB" firstAttribute="top" secondItem="gMy-A0-Uxv" secondAttribute="bottom" constant="30" id="DO0-tw-IxT"/>
+                            <constraint firstItem="i4K-od-RKX" firstAttribute="centerX" secondItem="6zU-KG-01N" secondAttribute="centerX" id="Jsm-Ot-IHc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RYg-Kw-rwJ" secondAttribute="trailing" constant="-20" id="RqI-89-Ted"/>
                             <constraint firstItem="lVS-qm-LfS" firstAttribute="leading" secondItem="ggQ-S6-tyB" secondAttribute="trailing" constant="63" id="RvI-is-nzE"/>
+                            <constraint firstItem="i4K-od-RKX" firstAttribute="top" secondItem="ggQ-S6-tyB" secondAttribute="bottom" constant="34" id="cXM-YS-MUA"/>
                             <constraint firstAttribute="leadingMargin" secondItem="ggQ-S6-tyB" secondAttribute="leading" id="e3e-72-D3s"/>
                             <constraint firstItem="nm3-qQ-02W" firstAttribute="top" secondItem="RYg-Kw-rwJ" secondAttribute="bottom" constant="24" id="gbr-en-Wxe"/>
                             <constraint firstItem="RYg-Kw-rwJ" firstAttribute="width" secondItem="6zU-KG-01N" secondAttribute="width" id="mQ6-ad-0XZ"/>
                             <constraint firstItem="RYg-Kw-rwJ" firstAttribute="top" secondItem="ggQ-S6-tyB" secondAttribute="bottom" constant="35" id="mwV-Ls-zWK"/>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="RYg-Kw-rwJ"/>
+                            </mask>
                             <mask key="constraints">
                                 <exclude reference="RqI-89-Ted"/>
                             </mask>
@@ -199,6 +214,7 @@
                         <outlet property="panoTopView" destination="nm3-qQ-02W" id="zLW-Vv-eDF"/>
                         <outlet property="roomSelectView" destination="RYg-Kw-rwJ" id="8hG-XJ-gws"/>
                         <outlet property="starsView" destination="ggQ-S6-tyB" id="wlm-ol-rEU"/>
+                        <outlet property="textView" destination="i4K-od-RKX" id="iAg-jw-Cgt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r6W-3P-svD" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -22,7 +22,8 @@ class FPTextViewPlaceholder: UITextView {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(textDidChanged), name: UITextViewTextDidChangeNotification, object: nil)
     }
     
     func textDidChanged() {
@@ -42,7 +43,8 @@ class FPTextViewPlaceholder: UITextView {
             attrs[NSFontAttributeName] = self.font!
         }
         
-        self.placeholder?.drawInRect(CGRect(x: 5, y: 5, width: self.bounds.width, height: self.bounds.height), withAttributes: attrs)
+        self.placeholder?.drawInRect(CGRect(x: 5, y: 5, width: self.bounds.width - 5, height: self.bounds.height - 5),
+                                     withAttributes: attrs)
     }
     
     deinit {

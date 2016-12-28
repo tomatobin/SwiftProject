@@ -12,6 +12,7 @@ class CustomWidgetsController: FPBaseController {
     @IBOutlet weak var roomSelectView: FPRoomSelectView!
     @IBOutlet weak var panoTopView: LCPanoTopView!
     @IBOutlet weak var bazierButtoin: UIButton!
+    @IBOutlet weak var textView: FPTextViewPlaceholder!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,7 @@ class CustomWidgetsController: FPBaseController {
         self.initRoomSelectView()
         self.initPanoTopView()
         self.initBazierButton()
+        self.initTextView()
         
 //        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
 //            self.presentBlurController()
@@ -61,5 +63,9 @@ class CustomWidgetsController: FPBaseController {
         let blurController = FPBlurController()
         blurController.setTransionStyle()
         self.presentViewController(blurController, animated: true, completion: nil)
+    }
+    
+    func initTextView() {
+        self.textView.placeholder = "这是一个自带PlaceHolder的TextView，是不是很不错的啊~"
     }
 }
