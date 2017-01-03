@@ -12,10 +12,10 @@ class FPDrawRoomSelectView: UIView {
     var totalCount = Int(30)
     
     /// 单格的宽度及高度
-    private var gridWidth = CGFloat(37), gridHeight = CGFloat(38)
+    fileprivate var gridWidth = CGFloat(37), gridHeight = CGFloat(38)
     
     /// 单格的左右间距
-    private var gridPadding = CGFloat(10)
+    fileprivate var gridPadding = CGFloat(10)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,8 +30,8 @@ class FPDrawRoomSelectView: UIView {
         
     }
     
-    override func drawRect(rect: CGRect) {
-        super.drawRect(rect)
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
         let downImage = UIImage(named: "room_down_unselect")
         let upImage = UIImage(named: "room_up_disable")
         let countInLine = self.gridsCountInLine()
@@ -43,13 +43,13 @@ class FPDrawRoomSelectView: UIView {
     
             if line % 2 == 0 { //对应第1行、3、5等
                 for _ in 0 ..< countInLine {
-                    downImage?.drawInRect(frame)
-                    frame = CGRectOffset(frame, self.gridWidth - 1, 0)
+                    downImage?.draw(in: frame)
+                    frame = frame.offsetBy(dx: self.gridWidth - 1, dy: 0)
                 }
             } else {
                 for _ in 0 ..< countInLine {
-                    upImage?.drawInRect(frame)
-                    frame = CGRectOffset(frame, self.gridWidth - 1, 0)
+                    upImage?.draw(in: frame)
+                    frame = frame.offsetBy(dx: self.gridWidth - 1, dy: 0)
                 }
             }
         }

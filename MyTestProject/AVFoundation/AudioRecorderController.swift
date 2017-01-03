@@ -13,7 +13,7 @@ class AudioRecorderController: FPBaseController, AVAudioRecorderDelegate, AVAudi
 
     var audioRecorder: AVAudioRecorder?
     var audioPlayer: AVAudioPlayer?
-    var timer: NSTimer!
+    var timer: Timer!
     
     @IBOutlet weak var btnRecord: UIButton!
     @IBOutlet weak var btnPlay: UIButton!
@@ -26,7 +26,7 @@ class AudioRecorderController: FPBaseController, AVAudioRecorderDelegate, AVAudi
         self.audioPowerProgress.setProgress(0, animated: false)
     }
     
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         if timer != nil {
             timer.invalidate()
@@ -36,21 +36,21 @@ class AudioRecorderController: FPBaseController, AVAudioRecorderDelegate, AVAudi
     
     func initTimer(){
         if timer == nil {
-            timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector:  #selector(AudioRecorderController.audioPowerChange), userInfo: nil, repeats: true)
-            timer.fireDate = NSDate.distantFuture()
+            timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector:  #selector(AudioRecorderController.audioPowerChange), userInfo: nil, repeats: true)
+            timer.fireDate = Date.distantFuture
         }
     }
     
     //MARK: - Recorder & Player
     func audioPowerChange(){
         var power = Float(-160)
-        if audioRecorder?.recording != nil {
+        if audioRecorder?.isRecording != nil {
             audioRecorder!.updateMeters() //更新测量值
-            power = audioRecorder!.averagePowerForChannel(0) //第一个通道音频，强度-160~0
+            power = audioRecorder!.averagePower(forChannel: 0) //第一个通道音频，强度-160~0
         }
-        else if audioPlayer?.playing != nil{
+        else if audioPlayer?.isPlaying != nil{
             audioPlayer!.updateMeters() //更新测量值
-            power = audioPlayer!.averagePowerForChannel(0) //第一个通道音频，强度-160~0
+            power = audioPlayer!.averagePower(forChannel: 0) //第一个通道音频，强度-160~0
         }
         
         ColorLog.green("Power:\(power)")
@@ -58,7 +58,7 @@ class AudioRecorderController: FPBaseController, AVAudioRecorderDelegate, AVAudi
         self.audioPowerProgress.setProgress(progress, animated: true)
     }
     
-    func setAudionSession(category: String){
+    func setAudionSession(_ category: String){
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setCategory(category)
         try! audioSession.setActive(true)
@@ -67,17 +67,17 @@ class AudioRecorderController: FPBaseController, AVAudioRecorderDelegate, AVAudi
     func initAudioRecorder(){
         self.setAudionSession(AVAudioSessionCategoryPlayAndRecord)
         let pathURL = self.filePath() //创建录音文件保存路径
-        let dicSettings = [AVFormatIDKey: NSNumber(unsignedInt: kAudioFormatLinearPCM), //格式
-                           AVSampleRateKey: NSNumber(unsignedInt: 16000),  //设置录音采样率
-                           AVNumberOfChannelsKey: NSNumber(unsignedInt: 2), //设置通道,这里采用单声道
-                           AVLinearPCMBitDepthKey: NSNumber(unsignedInt: 16), //每个采样点位数,分为8、16、24、32
-                           AVLinearPCMIsFloatKey: NSNumber(bool: true), //是否使用浮点数采样
+        let dicSettings = [AVFormatIDKey: NSNumber(value: kAudioFormatLinearPCM as UInt32), //格式
+                           AVSampleRateKey: NSNumber(value: 16000 as UInt32),  //设置录音采样率
+                           AVNumberOfChannelsKey: NSNumber(value: 2 as UInt32), //设置通道,这里采用单声道
+                           AVLinearPCMBitDepthKey: NSNumber(value: 16 as UInt32), //每个采样点位数,分为8、16、24、32
+                           AVLinearPCMIsFloatKey: NSNumber(value: true as Bool), //是否使用浮点数采样
                            ] as Dictionary<String,AnyObject>
         do{
-            self.audioRecorder = try AVAudioRecorder.init(URL: pathURL, settings: dicSettings)
+            self.audioRecorder = try AVAudioRecorder.init(url: pathURL, settings: dicSettings)
             self.audioRecorder!.delegate = self
-            self.audioRecorder!.peakPowerForChannel(0)
-            self.audioRecorder!.meteringEnabled = true // 如果要监控声波则必须设置为YES
+            self.audioRecorder!.peakPower(forChannel: 0)
+            self.audioRecorder!.isMeteringEnabled = true // 如果要监控声波则必须设置为YES
         }catch{
             self.audioRecorder = nil
         }
@@ -85,17 +85,17 @@ class AudioRecorderController: FPBaseController, AVAudioRecorderDelegate, AVAudi
     
     func initAudioPlayer() -> Bool {
         let fileURL = self.filePath()
-        if !FPFileHelper.isFileExsited(fileURL.relativePath!) {
+        if !FPFileHelper.isFileExsited(fileURL.relativePath) {
             ColorLog.red("Error: File is not existed...")
             return false
         }
         
         do{
             self.setAudionSession(AVAudioSessionCategoryPlayback) //播放时需要重新设置Category为Playback，否则会导致非常小
-            audioPlayer = try AVAudioPlayer.init(contentsOfURL: fileURL)
+            audioPlayer = try AVAudioPlayer.init(contentsOf: fileURL)
             audioPlayer!.delegate = self
             audioPlayer!.volume = 1.0
-            audioPlayer!.meteringEnabled = true // 如果要监控声波则必须设置为YES
+            audioPlayer!.isMeteringEnabled = true // 如果要监控声波则必须设置为YES
             audioPlayer!.prepareToPlay() //预播放
             return true
         }
@@ -106,7 +106,7 @@ class AudioRecorderController: FPBaseController, AVAudioRecorderDelegate, AVAudi
     }
     
     //MARK: - Actions
-    @IBAction func onRecordAction(sender: AnyObject) {
+    @IBAction func onRecordAction(_ sender: AnyObject) {
         self.stopPlayer()
         if self.audioRecorder == nil {
             self.initAudioRecorder() //重新初始化录音
@@ -117,28 +117,28 @@ class AudioRecorderController: FPBaseController, AVAudioRecorderDelegate, AVAudi
             return;
         }
         
-        if !self.audioRecorder!.recording  {
+        if !self.audioRecorder!.isRecording  {
             ColorLog.green("Start recording....")
             self.audioRecorder!.record()
-            btnRecord.setImage(UIImage(named: "record_on"), forState: .Normal)
-            self.timer.fireDate = NSDate.distantPast()
+            btnRecord.setImage(UIImage(named: "record_on"), for: UIControlState())
+            self.timer.fireDate = Date.distantPast
         }
         else{
             ColorLog.green("Pause recording....")
             self.audioRecorder!.pause()
-            btnRecord.setImage(UIImage(named: "record_off"), forState: .Normal)
-            self.timer.fireDate = NSDate.distantFuture()
+            btnRecord.setImage(UIImage(named: "record_off"), for: UIControlState())
+            self.timer.fireDate = Date.distantFuture
         }
     }
     
-    @IBAction func onStopAction(sender: AnyObject) {
-        self.timer.fireDate = NSDate.distantFuture()
+    @IBAction func onStopAction(_ sender: AnyObject) {
+        self.timer.fireDate = Date.distantFuture
         self.stopRecorder()
         self.stopPlayer()
         self.audioPowerProgress.setProgress(0, animated: true)
     }
     
-    @IBAction func onPlayAction(sender: AnyObject) {
+    @IBAction func onPlayAction(_ sender: AnyObject) {
         self.stopRecorder()
         if self.audioPlayer == nil {
             if !self.initAudioPlayer() {
@@ -147,12 +147,12 @@ class AudioRecorderController: FPBaseController, AVAudioRecorderDelegate, AVAudi
             }
         }
         
-        if self.audioPlayer!.playing == false
+        if self.audioPlayer!.isPlaying == false
         {
             //继续播放
             if self.audioPlayer!.play() {
-                btnPlay.setImage(UIImage(named: "pause"), forState: .Normal)
-                self.timer.fireDate = NSDate.distantPast()
+                btnPlay.setImage(UIImage(named: "pause"), for: UIControlState())
+                self.timer.fireDate = Date.distantPast
                 ColorLog.green("Play succeed....")
             }
             else{
@@ -162,18 +162,18 @@ class AudioRecorderController: FPBaseController, AVAudioRecorderDelegate, AVAudi
         else
         {
             //暂停播放
-            btnPlay.setImage(UIImage(named: "play"), forState: .Normal)
+            btnPlay.setImage(UIImage(named: "play"), for: UIControlState())
             self.audioPlayer?.pause()
-            self.timer.fireDate = NSDate.distantFuture()
+            self.timer.fireDate = Date.distantFuture
         }
     }
     
     //MARK: - Private
-    func filePath() -> NSURL {
-        var path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).last
-        path = path?.stringByAppendingString("/myRecord.caf")
+    func filePath() -> URL {
+        var path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last
+        path = (path)! + "/myRecord.caf"
         ColorLog.green("File path: \(path)")
-        let url  = NSURL(fileURLWithPath: path!)
+        let url  = URL(fileURLWithPath: path!)
         return url
     }
     
@@ -184,7 +184,7 @@ class AudioRecorderController: FPBaseController, AVAudioRecorderDelegate, AVAudi
         }
         
         //Reset the button image
-        btnRecord.setImage(UIImage(named: "record_off"), forState: .Normal)
+        btnRecord.setImage(UIImage(named: "record_off"), for: UIControlState())
     }
     
     func stopPlayer(){
@@ -194,16 +194,16 @@ class AudioRecorderController: FPBaseController, AVAudioRecorderDelegate, AVAudi
         }
         
         //Reset the button image
-        btnPlay.setImage(UIImage(named: "play"), forState: .Normal)
+        btnPlay.setImage(UIImage(named: "play"), for: UIControlState())
     }
     
     //MARK: - Delegate
-    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         ColorLog.green("Record finished!")
         self.stopRecorder()
     }
     
-    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         ColorLog.green("Play finished")
         self.stopPlayer()
     }

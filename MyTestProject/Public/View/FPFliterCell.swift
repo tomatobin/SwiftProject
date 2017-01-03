@@ -8,7 +8,7 @@
 
 import UIKit
 
-typealias FPFliterCellClick = (index: Int) -> Void
+typealias FPFliterCellClick = (_ index: Int) -> Void
 
 class FPFliterCell: UITableViewCell {
 
@@ -24,7 +24,7 @@ class FPFliterCell: UITableViewCell {
     var margin = CGFloat(15)
     var space = CGFloat(28)
     
-    private var filterButtons = Array<UIButton>()
+    fileprivate var filterButtons = Array<UIButton>()
     
     class func cellIdentifier() -> String {
         return "FPFliterCell"
@@ -35,13 +35,13 @@ class FPFliterCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
-    func configCell(titles: Array<String>) {
+    func configCell(_ titles: Array<String>) {
         let btnWidth = (self.bounds.width - 2*margin - CGFloat(numberInLine - 1)*space) / CGFloat(numberInLine)
         let btnHeight = CGFloat(40)
         
@@ -49,14 +49,14 @@ class FPFliterCell: UITableViewCell {
         
         if self.filterButtons.count == 0 {
             for index in 0...numberInLine {
-                let button = UIButton(type: .Custom)
+                let button = UIButton(type: .custom)
                 
                 if titles.count > index {
-                    button.setTitle(titles[index], forState: .Normal)
+                    button.setTitle(titles[index], for: UIControlState())
                 }
                 
                 button.tag = index
-                button.addTarget(self, action: #selector(onButtonAction), forControlEvents: .TouchUpInside)
+                button.addTarget(self, action: #selector(onButtonAction), for: .touchUpInside)
                 self.contentView.addSubview(button)
                 self.filterButtons.append(button)
             }
@@ -68,42 +68,42 @@ class FPFliterCell: UITableViewCell {
             xOrigin += (btnWidth + space)
             
             if button.tag == selectedIndex {
-                button.selected = true
+                button.isSelected = true
             }
             
-            self.configButtonStyle(button, selected: button.selected)
+            self.configButtonStyle(button, selected: button.isSelected)
         }
     }
     
-    func configButtonStyle(button: UIButton, selected: Bool) {
+    func configButtonStyle(_ button: UIButton, selected: Bool) {
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 5
         button.layer.borderWidth = 1
         
         if selected {
-            button.layer.borderColor = UIColor.clearColor().CGColor
+            button.layer.borderColor = UIColor.clear.cgColor
             button.backgroundColor = UIColor.fp_yellowColor()
-            button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            button.setTitleColor(UIColor.white, for: UIControlState())
         } else{
-            button.layer.borderColor = UIColor.fp_separatorColor().CGColor
-            button.backgroundColor = UIColor.whiteColor()
-            button.setTitleColor(UIColor.fp_darkTextColor(), forState: .Normal)
+            button.layer.borderColor = UIColor.fp_separatorColor().cgColor
+            button.backgroundColor = UIColor.white
+            button.setTitleColor(UIColor.fp_darkTextColor(), for: UIControlState())
         }
     }
     
-    func onButtonAction(button: UIButton) {
+    func onButtonAction(_ button: UIButton) {
         
         //取消其他按钮的选中状态
         for childButton in self.filterButtons {
-            childButton.selected = false
+            childButton.isSelected = false
             self.configButtonStyle(childButton, selected: false)
         }
         
-        button.selected = !button.selected
-        self.configButtonStyle(button, selected: button.selected)
+        button.isSelected = !button.isSelected
+        self.configButtonStyle(button, selected: button.isSelected)
         
         if button.tag != self.selectedIndex && self.clickBlock != nil {
-            self.clickBlock!(index: button.tag)
+            self.clickBlock!(button.tag)
         }
         
         self.selectedIndex = button.tag

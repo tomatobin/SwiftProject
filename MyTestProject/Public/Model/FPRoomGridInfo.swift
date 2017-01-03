@@ -7,19 +7,19 @@
 //
 
 enum FPRoomGirdType {
-    case Room
-    case Elevator
+    case room
+    case elevator
 }
 
 enum FPRoomGridState {
-    case Normal
-    case Selected
-    case Disabled
+    case normal
+    case selected
+    case disabled
 }
 
 enum FPRoomGridDirection {
-    case Up
-    case Down
+    case up
+    case down
 }
 
 class FPRoomGridInfo: NSObject {
@@ -29,9 +29,9 @@ class FPRoomGridInfo: NSObject {
     var number: Int
     
     override init() {
-        self.gridType = .Room
-        self.gridState = .Normal
-        self.gridDirection = .Down
+        self.gridType = .room
+        self.gridState = .normal
+        self.gridDirection = .down
         self.number = 1
     }
     
@@ -43,22 +43,22 @@ class FPRoomGridInfo: NSObject {
     func image() -> UIImage {
         
         var imageName = "room_down_unselect"
-        if gridDirection == .Up {
+        if gridDirection == .up {
             switch gridState {
-            case .Normal:
+            case .normal:
                 imageName = "room_down_unselect"
-            case .Selected:
+            case .selected:
                 imageName = "room_down_select"
-            case .Disabled:
+            case .disabled:
                 imageName = "room_down_disable"
             }
         } else {
             switch gridState {
-            case .Normal:
+            case .normal:
                 imageName = "room_up_unselect"
-            case .Selected:
+            case .selected:
                 imageName = "room_up_select"
-            case .Disabled:
+            case .disabled:
                 imageName = "room_up_disable"
             }
         }
@@ -72,7 +72,7 @@ class FPRoomGridInfo: NSObject {
      - returns: 文字
      */
     func text() -> String {
-        if gridType == .Room {
+        if gridType == .room {
             return String(format: "%02d", number)
         }
         

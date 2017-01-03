@@ -638,7 +638,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a1870e11-dd24-4cf0-8a9d-30d5b7db3ee1";
 				SWIFT_OBJC_BRIDGING_HEADER = MyTestProject/BridgingHeader.h;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -666,7 +666,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a1870e11-dd24-4cf0-8a9d-30d5b7db3ee1";
 				SWIFT_OBJC_BRIDGING_HEADER = MyTestProject/BridgingHeader.h;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

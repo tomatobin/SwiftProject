@@ -15,27 +15,27 @@ struct ColorLog {
     static let RESET_BG = ESCAPE + "bg;" // Clear any background color
     static let RESET = ESCAPE + ";"     // Clear any foreground or background color
     
-    static func red<T>(object: T) {
+    static func red<T>(_ object: T) {
         print("\(ESCAPE)fg255,0,0;\(object)\(RESET)")
     }
     
-    static func green<T>(object: T) {
+    static func green<T>(_ object: T) {
         print("\(ESCAPE)fg0,255,0;\(object)\(RESET)")
     }
     
-    static func blue<T>(object: T) {
+    static func blue<T>(_ object: T) {
         print("\(ESCAPE)fg0,0,255;\(object)\(RESET)")
     }
     
-    static func yellow<T>(object: T) {
+    static func yellow<T>(_ object: T) {
         print("\(ESCAPE)fg255,255,0;\(object)\(RESET)")
     }
     
-    static func purple<T>(object: T) {
+    static func purple<T>(_ object: T) {
         print("\(ESCAPE)fg255,0,255;\(object)\(RESET)")
     }
     
-    static func cyan<T>(object: T) {
+    static func cyan<T>(_ object: T) {
         print("\(ESCAPE)fg0,255,255;\(object)\(RESET)")
     }
 }

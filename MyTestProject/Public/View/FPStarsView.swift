@@ -11,8 +11,8 @@ import Foundation
 class FPStarsView: UIView {
     
     /// 星星数组
-    private var stars = Array<UIImageView>()
-    private var starSize = CGFloat(15)
+    fileprivate var stars = Array<UIImageView>()
+    fileprivate var starSize = CGFloat(15)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,7 +24,7 @@ class FPStarsView: UIView {
         self.initUIWidget()
     }
     
-    private func initUIWidget() {
+    fileprivate func initUIWidget() {
         let y = (self.bounds.height - self.starSize) / 2.0
         var frame = CGRect(x: 0, y: y, width: self.starSize, height: self.starSize)
         
@@ -35,7 +35,7 @@ class FPStarsView: UIView {
             self.addSubview(imageView)
             self.stars.append(imageView)
             
-            frame = CGRectOffset(frame, self.starSize + 5, 0)
+            frame = frame.offsetBy(dx: self.starSize + 5, dy: 0)
         }
     }
 
@@ -45,7 +45,7 @@ class FPStarsView: UIView {
      - parameter score: 范围0-5
      - parameter animated: 是否动画依次展示
      */
-    func setScore(score: Int, animated:Bool) {
+    func setScore(_ score: Int, animated:Bool) {
         var validScore = score
         if score < 0 {
             validScore = 0
@@ -54,14 +54,14 @@ class FPStarsView: UIView {
         }
         
         var index = 0
-        var delayTime = NSTimeInterval(0)
+        var delayTime = TimeInterval(0)
         for imageView in self.stars {
             let imagename = index < validScore ? "star_yellow" : "star_gray"
             imageView.image = UIImage(named: imagename)
             
             if animated {
                 imageView.alpha = 0
-                UIView.animateWithDuration(0.3, delay: delayTime, options: .CurveLinear, animations: {
+                UIView.animate(withDuration: 0.3, delay: delayTime, options: .curveLinear, animations: {
                     imageView.alpha = 1
                     }, completion: nil)
             }

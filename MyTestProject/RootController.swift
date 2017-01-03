@@ -33,36 +33,36 @@ class RootController: FPBaseController,UITableViewDelegate {
         let identifier = FPTableViewCell.cellIdentifier()
         
         let allKeys = Array(data.keys)
-        dataSource = FPTableDataSource.init(cellItems: allKeys, cellIdentifier: identifier, configureCell: {(cell, item) in
+        dataSource = FPTableDataSource.init(cellItems: allKeys as Array<AnyObject>, cellIdentifier: identifier, configureCell: {(cell, item) in
             let testCell = cell as! FPTableViewCell
             testCell.configureForCell(item)
         })
         
-        tableView.registerClass(FPTableViewCell.self, forCellReuseIdentifier: identifier)
+        tableView.register(FPTableViewCell.self, forCellReuseIdentifier: identifier)
         tableView.dataSource = dataSource
         tableView.delegate = self
         tableView.reloadData()
     }
     
     //MARK: - UITableViewDelegate
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
          return FPTableViewCell.cellHeight()
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let allValues = Array(data.values) as Array<String>
         if indexPath.row < allValues.count {
             let pushSegue = allValues[indexPath.row]
-            self.performSegueWithIdentifier(pushSegue, sender: nil)
+            self.performSegue(withIdentifier: pushSegue, sender: nil)
         }
     }
     
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        return .Portrait
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        return .portrait
     }
     
-    override func shouldAutorotate() -> Bool {
+    override var shouldAutorotate : Bool {
         return true
     }
 }

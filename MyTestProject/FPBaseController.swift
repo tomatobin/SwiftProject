@@ -10,7 +10,7 @@ import UIKit
 
 class FPBaseController: UIViewController {
     
-    private var rotateLocked = Bool(false) //初始化不锁屏
+    fileprivate var rotateLocked = Bool(false) //初始化不锁屏
     
     deinit{
         print("💔💔 %@ deinit 💔💔", NSStringFromClass(self.classForCoder))
@@ -22,9 +22,9 @@ class FPBaseController: UIViewController {
         //Assure view below navigation bar
         self.extendedLayoutIncludesOpaqueBars = true
         self.automaticallyAdjustsScrollViewInsets = true
-        self.edgesForExtendedLayout = .None
-        self.navigationController?.navigationBar.translucent = false
-        self.tabBarController?.tabBar.translucent = false
+        self.edgesForExtendedLayout = UIRectEdge()
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.tabBarController?.tabBar.isTranslucent = false
         
         self.view.backgroundColor = UIColor.fp_colorWithHexString("EFEFF4")
         
@@ -55,11 +55,11 @@ class FPBaseController: UIViewController {
     }
     
     //MARK: Rotate
-    override func shouldAutorotate() -> Bool {
+    override var shouldAutorotate : Bool {
         return self.rotateLocked
     }
     
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        return .Portrait
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        return .portrait
     }
 }

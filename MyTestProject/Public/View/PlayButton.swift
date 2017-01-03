@@ -14,17 +14,17 @@ import Foundation
 POP allows us to create animatable property — and that is exactly what we are going to do. We will create a CGFloat variable named animationValue and will animate it from 1.0 to 0.0 when the button state changes from Paused to Playing, and animate from 0.0 to 1.0 when the button state changes from Playing to Paused. Every time the value has changed we will call setNeedsDisplay which will force our view to redraw.
 */
 enum PlayButtonState {
-    case Paused
-    case Playing
+    case paused
+    case playing
     
     var value: CGFloat {
-        return (self == .Paused) ? 1.0 : 0.0
+        return (self == .paused) ? 1.0 : 0.0
     }
 }
 
 class PlayButton: UIButton {
-    private(set) var buttonState = PlayButtonState.Paused
-    private var animationValue: CGFloat = 1.0 {
+    fileprivate(set) var buttonState = PlayButtonState.paused
+    fileprivate var animationValue: CGFloat = 1.0 {
         didSet {
             setNeedsDisplay()
         }
@@ -32,7 +32,7 @@ class PlayButton: UIButton {
     
     // MARK: -
     // MARK: Methods
-    func setButtonState(buttonState: PlayButtonState, animated: Bool) {
+    func setButtonState(_ buttonState: PlayButtonState, animated: Bool) {
         // 1
         if self.buttonState == buttonState {
             return
@@ -40,8 +40,8 @@ class PlayButton: UIButton {
         self.buttonState = buttonState
         
         // 2
-        if pop_animationForKey("animationValue") != nil {
-            pop_removeAnimationForKey("animationValue")
+        if pop_animation(forKey: "animationValue") != nil {
+            pop_removeAnimation(forKey: "animationValue")
         }
         
         // 3
@@ -51,27 +51,27 @@ class PlayButton: UIButton {
         
         // 4
         if animated {
-            let animation: POPBasicAnimation = POPBasicAnimation()
-            if let property = POPAnimatableProperty.propertyWithName("animationValue", initializer: { (prop: POPMutableAnimatableProperty!) -> Void in
-                prop.readBlock = { (object: AnyObject!, values: UnsafeMutablePointer<CGFloat>) -> Void in
-                    if let button = object as? PlayButton {
-                        values[0] = button.animationValue
-                    }
-                }
-                prop.writeBlock = { (object: AnyObject!, values: UnsafePointer<CGFloat>) -> Void in
-                    if let button = object as? PlayButton {
-                        button.animationValue = values[0]
-                    }
-                }
-                prop.threshold = 0.01
-            }) as? POPAnimatableProperty {
-                animation.property = property
-            }
-            animation.fromValue = NSNumber(float: Float(self.animationValue))
-            animation.toValue = NSNumber(float: Float(toValue))
-            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
-            animation.duration = 0.25
-            pop_addAnimation(animation, forKey: "percentage")
+//            let animation: POPBasicAnimation = POPBasicAnimation()
+//            if let property = POPAnimatableProperty.property(withName: "animationValue", initializer: { (prop: POPMutableAnimatableProperty!) -> Void in
+//                prop.readBlock = { (object: AnyObject!, values: UnsafeMutablePointer<CGFloat>) -> Void in
+//                    if let button = object as? PlayButton {
+//                        values[0] = button.animationValue
+//                    }
+//                }
+//                prop.writeBlock = { (object: AnyObject!, values: UnsafePointer<CGFloat>) -> Void in
+//                    if let button = object as? PlayButton {
+//                        button.animationValue = values[0]
+//                    }
+//                }
+//                prop.threshold = 0.01
+//            }) as? POPAnimatableProperty {
+//                animation.property = property
+//            }
+//            animation.fromValue = NSNumber(value: Float(self.animationValue) as Float)
+//            animation.toValue = NSNumber(value: Float(toValue) as Float)
+//            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+//            animation.duration = 0.25
+//            pop_add(animation, forKey: "percentage")
         } else {
             animationValue = toValue
         }
@@ -79,8 +79,8 @@ class PlayButton: UIButton {
     
     // MARK: -
     // MARK: Draw
-    override func drawRect(rect: CGRect) {
-        super.drawRect(rect)
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
         
         // 1
         let height = rect.height
@@ -94,17 +94,17 @@ class PlayButton: UIButton {
         let context = UIGraphicsGetCurrentContext()
         
         // 3
-        CGContextMoveToPoint(context!, 0.0, 0.0)
-        CGContextAddLineToPoint(context!, width, h1)
-        CGContextAddLineToPoint(context!, width, height - h1)
-        CGContextAddLineToPoint(context!, 0.0, height)
-        CGContextMoveToPoint(context!, rect.width - width, h1)
-        CGContextAddLineToPoint(context!, rect.width, h2)
-        CGContextAddLineToPoint(context!, rect.width, height - h2)
-        CGContextAddLineToPoint(context!, rect.width - width, height - h1)
+        context!.move(to: CGPoint(x: 0.0, y: 0.0))
+        context!.addLine(to: CGPoint(x: width, y: h1))
+        context!.addLine(to: CGPoint(x: width, y: height - h1))
+        context!.addLine(to: CGPoint(x: 0.0, y: height))
+        context!.move(to: CGPoint(x: rect.width - width, y: h1))
+        context!.addLine(to: CGPoint(x: rect.width, y: h2))
+        context!.addLine(to: CGPoint(x: rect.width, y: height - h2))
+        context!.addLine(to: CGPoint(x: rect.width - width, y: height - h1))
         
         // 4
-        CGContextSetFillColorWithColor(context!, tintColor.CGColor)
-        CGContextFillPath(context!)
+        context!.setFillColor(tintColor.cgColor)
+        context!.fillPath()
     }
 }

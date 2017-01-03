@@ -45,11 +45,11 @@ extension UIColor{
         return self.fp_colorWithHexString("EEC61F")!
     }
     
-    class func fp_colorWithHexString(hexString: String)->UIColor?{
-        let colorString = hexString.stringByReplacingOccurrencesOfString("#", withString: "") .uppercaseString
-        var alpha = CGFloat?(), red = CGFloat?(), green = CGFloat?(), blue = CGFloat?()
+    class func fp_colorWithHexString(_ hexString: String)->UIColor?{
+        let colorString = hexString.replacingOccurrences(of: "#", with: "").uppercased()
+        var alpha = CGFloat(0), red = CGFloat(0), green = CGFloat(0), blue = CGFloat(0)
         
-        switch colorString.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) {
+        switch colorString.lengthOfBytes(using: String.Encoding.utf8) {
         case 3: //#RGB
             alpha   = 1.0
             red     = self.fp_colorComponet(colorString, start: 0, length: 1)
@@ -83,17 +83,17 @@ extension UIColor{
             
         }
         
-        return UIColor(red: red!, green: green!, blue: blue!, alpha: alpha!)
+        return UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
     
-    private static func fp_colorComponet(fromString: String, start: NSInteger, length: NSInteger)->CGFloat{
-        let startIndex = fromString.startIndex.advancedBy(start)
-        let toIndex = fromString.startIndex.advancedBy((start + length))
-        var subString = fromString.substringToIndex(toIndex)
-        subString = subString.substringFromIndex(startIndex)
+    fileprivate static func fp_colorComponet(_ fromString: String, start: NSInteger, length: NSInteger)->CGFloat{
+        let startIndex = fromString.characters.index(fromString.startIndex, offsetBy: start)
+        let toIndex = fromString.characters.index(fromString.startIndex, offsetBy: (start + length))
+        var subString = fromString.substring(to: toIndex)
+        subString = subString.substring(from: startIndex)
         let fullHex = length == 2 ? subString : String(format: "%@%@", subString, subString)
         var hexComponent: UInt32 = 0x0
-        NSScanner.init(string: fullHex).scanHexInt(&hexComponent)
+        Scanner.init(string: fullHex).scanHexInt32(&hexComponent)
         return CGFloat(hexComponent) / 255.0
     }
 }

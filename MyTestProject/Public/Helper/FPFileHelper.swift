@@ -9,7 +9,7 @@
 import Foundation
 
 class FPFileHelper: NSObject {
-    static func isFileExsited(path: String) -> Bool {
-        return NSFileManager.defaultManager().fileExistsAtPath(path)
+    static func isFileExsited(_ path: String) -> Bool {
+        return FileManager.default.fileExists(atPath: path)
     }
 }

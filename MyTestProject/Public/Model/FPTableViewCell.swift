@@ -9,7 +9,7 @@
 import UIKit
 
 protocol FPTableViewCellProtocol {
-    func configureForCell(item: AnyObject);
+    func configureForCell(_ item: AnyObject);
 }
 
 class FPTableViewCell: UITableViewCell,FPTableViewCellProtocol {
@@ -19,18 +19,18 @@ class FPTableViewCell: UITableViewCell,FPTableViewCellProtocol {
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
-    func configureForCell(item: AnyObject) {
+    func configureForCell(_ item: AnyObject) {
         self.textLabel!.text = item as? String
         self.backgroundView = UIView()
         
         let bgView = UIView()
-        bgView.backgroundColor = UIColor.lightGrayColor()
+        bgView.backgroundColor = UIColor.lightGray
         self.selectedBackgroundView = bgView
     }
     

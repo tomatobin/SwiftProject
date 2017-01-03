@@ -27,18 +27,18 @@ class CameraCaptureController: FPBaseController {
         self.focusCursor.alpha = 0
         self.captureImageView.alpha = 0
         self.captureImageView.frame = CGRect(x: 0, y: 55, width: self.view.bounds.width, height: self.containerView.bounds.height + 64)
-        self.captureImageView.backgroundColor = UIColor.redColor()
+        self.captureImageView.backgroundColor = UIColor.red
         
         self.setupCapture()
         self.addGestureRecognizer()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.captureSession.startRunning()
     }
     
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         self.captureSession.stopRunning()
     }
@@ -52,7 +52,7 @@ class CameraCaptureController: FPBaseController {
         }
         
         //获得输入设备
-        let captureDevice = self.getCameraDevice(.Back)
+        let captureDevice = self.getCameraDevice(.back)
         if captureDevice == nil {
             ColorLog.red("获取后置摄像头错误")
             return;
@@ -90,10 +90,10 @@ class CameraCaptureController: FPBaseController {
         layer.insertSublayer(captureVideoPreviewLayer, below: focusCursor.layer)
     }
     
-    func getCameraDevice(position: AVCaptureDevicePosition) -> AVCaptureDevice? {
-        let cameras = AVCaptureDevice.devicesWithMediaType(AVMediaTypeVideo)
-        for camera in cameras {
-            if camera.position == position {
+    func getCameraDevice(_ position: AVCaptureDevicePosition) -> AVCaptureDevice? {
+        let cameras = AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo)
+        for camera in cameras! {
+            if (camera as AnyObject).position == position {
                 return camera as? AVCaptureDevice
             }
         }
@@ -107,42 +107,42 @@ class CameraCaptureController: FPBaseController {
         self.containerView.addGestureRecognizer(tapGesture)
     }
     
-    func tapScreen(gestureRecognizer: UITapGestureRecognizer) {
-        let point = gestureRecognizer.locationInView(self.containerView)
-        let cameraPoint = self.captureVideoPreviewLayer.captureDevicePointOfInterestForPoint(point)
+    func tapScreen(_ gestureRecognizer: UITapGestureRecognizer) {
+        let point = gestureRecognizer.location(in: self.containerView)
+        let cameraPoint = self.captureVideoPreviewLayer.captureDevicePointOfInterest(for: point)
         self.adjustFoucusCursorPosition(point)
-        self.focusCursor(.AutoFocus, exposureMode: .AutoExpose, point: cameraPoint)
+        self.focusCursor(.autoFocus, exposureMode: .autoExpose, point: cameraPoint)
     }
     
-    func adjustFoucusCursorPosition(point: CGPoint){
+    func adjustFoucusCursorPosition(_ point: CGPoint){
         self.focusCursor.center = point
-        self.focusCursor.transform = CGAffineTransformMakeScale(1.5, 1.5)
+        self.focusCursor.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
         self.focusCursor.alpha = 1
         
-        UIView.animateWithDuration(0.3, animations: {
-            self.focusCursor.transform = CGAffineTransformIdentity
+        UIView.animate(withDuration: 0.3, animations: {
+            self.focusCursor.transform = CGAffineTransform.identity
         }, completion: {_ in
             self.focusCursor.alpha = 0
         })
     }
     
-    func focusCursor(focusMode: AVCaptureFocusMode, exposureMode: AVCaptureExposureMode, point: CGPoint){
+    func focusCursor(_ focusMode: AVCaptureFocusMode, exposureMode: AVCaptureExposureMode, point: CGPoint){
         self.changeDeviceProperty{ captureDevice in
             if captureDevice.isFocusModeSupported(focusMode){
-                captureDevice.focusMode = .AutoFocus
+                captureDevice.focusMode = .autoFocus
             }
             if captureDevice.isExposureModeSupported(exposureMode){
-                captureDevice.exposureMode = .AutoExpose
+                captureDevice.exposureMode = .autoExpose
             }
         }
     }
     
-    func changeDeviceProperty(propertyChange: PropertyChangeBlock){
+    func changeDeviceProperty(_ propertyChange: PropertyChangeBlock){
         let captureDevice = self.captureDeviceInput.device
         do{
-            try captureDevice.lockForConfiguration()
-            propertyChange(captureDevice)
-            captureDevice.unlockForConfiguration()
+            try captureDevice?.lockForConfiguration()
+            propertyChange(captureDevice!)
+            captureDevice?.unlockForConfiguration()
        
         }catch{
             ColorLog.red("设置设备属性过程发生错误")
@@ -152,24 +152,24 @@ class CameraCaptureController: FPBaseController {
     //MARK: - Animations
     func showCaptureImageViewAnimated(){
         self.captureImageView.alpha = 1
-        UIView.transitionWithView(self.captureImageView, duration: 1.0, options: .CurveEaseInOut, animations: {
+        UIView.transition(with: self.captureImageView, duration: 1.0, options: UIViewAnimationOptions(), animations: {
             self.captureImageView.alpha = 0
-            self.captureImageView.transform = CGAffineTransformMakeScale(1.4, 1.4)
+            self.captureImageView.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
         }, completion: {_ in
             self.captureImageView.alpha = 0
-            self.captureImageView.transform = CGAffineTransformIdentity
+            self.captureImageView.transform = CGAffineTransform.identity
         })
     }
     
     //MARK: - Actions
-    @IBAction func onFlipCameraAction(sender: AnyObject) {
+    @IBAction func onFlipCameraAction(_ sender: AnyObject) {
         let currentDevice = self.captureDeviceInput.device
-        let currenPositon = currentDevice.position
+        let currenPositon = currentDevice?.position
         
-        var toChangeDevice = AVCaptureDevice?()
-        var toChangePosition = AVCaptureDevicePosition.Front
-        if currenPositon == .Unspecified || currenPositon == .Front {
-            toChangePosition = .Back
+        var toChangeDevice = AVCaptureDevice(uniqueID: "back")
+        var toChangePosition = AVCaptureDevicePosition.front
+        if currenPositon == .unspecified || currenPositon == .front {
+            toChangePosition = .back
         }
         
         toChangeDevice = self.getCameraDevice(toChangePosition)
@@ -190,13 +190,13 @@ class CameraCaptureController: FPBaseController {
         }
     }
     
-    @IBAction func onCaptureAction(sender: AnyObject) {
+    @IBAction func onCaptureAction(_ sender: AnyObject) {
         //根据设备输出获得连接
-        let captureConnection = self.captureStillImageOutput.connectionWithMediaType(AVMediaTypeVideo)
-        self.captureStillImageOutput.captureStillImageAsynchronouslyFromConnection(captureConnection, completionHandler: {(imageDataSampleBuffer, error) in
+        let captureConnection = self.captureStillImageOutput.connection(withMediaType: AVMediaTypeVideo)
+        self.captureStillImageOutput.captureStillImageAsynchronously(from: captureConnection, completionHandler: {(imageDataSampleBuffer, error) in
             if imageDataSampleBuffer != nil{
                 let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer)
-                let image = UIImage(data: imageData)
+                let image = UIImage(data: imageData!)
                 self.captureImageView.image = image
                 self.showCaptureImageViewAnimated()
                 //UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil) //保存到相册中

@@ -14,7 +14,7 @@ class FPNavigaionController: UINavigationController,UIGestureRecognizerDelegate 
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.navigationBar.tintColor = UIColor.grayColor()
+        self.navigationBar.tintColor = UIColor.gray
         self.interactivePopGestureRecognizer!.delegate = self;
     }
 
@@ -24,22 +24,22 @@ class FPNavigaionController: UINavigationController,UIGestureRecognizerDelegate 
     }
     
     //MARK: UIGestureRecognizerDelegate
-    func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         // 手势何时有效 : 当导航控制器的子控制器个数 > 1就有效
         return self.viewControllers.count > 1
     }
     
     //MARK: Rotate Methods
-    override func shouldAutorotate() -> Bool {
-        return (self.visibleViewController?.shouldAutorotate())!
+    override var shouldAutorotate : Bool {
+        return (self.visibleViewController?.shouldAutorotate)!
     }
     
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        return (self.visibleViewController?.supportedInterfaceOrientations())!
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        return (self.visibleViewController?.supportedInterfaceOrientations)!
     }
     
-    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-        self.visibleViewController?.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        self.visibleViewController?.viewWillTransition(to: size, with: coordinator)
     }
     
 }

@@ -9,18 +9,18 @@
 import UIKit
 
 enum ViewPosition {
-    case Left
-    case Center
-    case Right
+    case left
+    case center
+    case right
 }
 
 class LCPanoTopView: UIView {
 
     /// 固定尺寸
     internal let fixedHeight = CGFloat(30), fixedWith = CGFloat(140)
-    private var leftBtn: UIButton!
-    private var centerBtn: UIButton!
-    private var rightBtn: UIButton!
+    fileprivate var leftBtn: UIButton!
+    fileprivate var centerBtn: UIButton!
+    fileprivate var rightBtn: UIButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,27 +34,27 @@ class LCPanoTopView: UIView {
     
     func initUIWidgest() {
         self.layer.cornerRadius = self.fixedHeight / 2.0
-        self.layer.borderColor = self.lineColor().CGColor
+        self.layer.borderColor = self.lineColor().cgColor
         self.layer.borderWidth = 0.5
         self.layer.masksToBounds = true
         
-        self.leftBtn = self.button(withImage: "live_icon_up", action:#selector(onLeftAction), postion: .Left)
-        self.centerBtn = self.button(withImage: "live_icon_up", action:#selector(onCenterAction), postion: .Center)
-        self.rightBtn = self.button(withImage: "live_icon_up", action:#selector(onRightAction), postion: .Right)
+        self.leftBtn = self.button(withImage: "live_icon_up", action:#selector(onLeftAction), postion: .left)
+        self.centerBtn = self.button(withImage: "live_icon_up", action:#selector(onCenterAction), postion: .center)
+        self.rightBtn = self.button(withImage: "live_icon_up", action:#selector(onRightAction), postion: .right)
         
-        self.separatorLine(.Left)
-        self.separatorLine(.Right)
+        _ = self.separatorLine(.left)
+        _ = self.separatorLine(.right)
     }
     
     //MARK: Button State Operation
-    func enableButton(postion: ViewPosition) {
+    func enableButton(_ postion: ViewPosition) {
         let button = self.getButton(atPostion: postion)
-        button.enabled = true
+        button.isEnabled = true
     }
     
-    func disableButton(position: ViewPosition) {
+    func disableButton(_ position: ViewPosition) {
         let button = self.getButton(atPostion: position)
-        button.enabled = false
+        button.isEnabled = false
     }
     
     /**
@@ -63,18 +63,18 @@ class LCPanoTopView: UIView {
      - parameter button:   按钮
      - parameter position: 位置
      */
-    func addConstrain(button:UIButton, position: ViewPosition) {
+    func addConstrain(_ button:UIButton, position: ViewPosition) {
         button.mas_makeConstraints({ make in
-            make.height.equalTo()(self.fixedHeight)
-            make.width.equalTo()(self.fixedHeight)
-            make.centerY.equalTo()(self)
+            make!.height.equalTo()(self.fixedHeight)
+            make!.width.equalTo()(self.fixedHeight)
+            make!.centerY.equalTo()(self)
             
-            if position == .Center {
-                make.centerX.equalTo()(self)
-            } else if position == .Left {
-                make.left.equalTo()(self).offset()(10)
+            if position == .center {
+                make!.centerX.equalTo()(self)
+            } else if position == .left {
+                make!.left.equalTo()(self)!.offset()(10)
             } else {
-                make.right.equalTo()(self).offset()(-10)
+                make!.right.equalTo()(self)!.offset()(-10)
             }
         })
     }
@@ -88,12 +88,12 @@ class LCPanoTopView: UIView {
      
      - returns: UIButton
      */
-    private func button(withImage imagename: String, action: Selector, postion: ViewPosition) -> UIButton {
-        let button = UIButton(type: .Custom)
+    fileprivate func button(withImage imagename: String, action: Selector, postion: ViewPosition) -> UIButton {
+        let button = UIButton(type: .custom)
         if let image = UIImage(named: imagename) {
-            button.setImage(image, forState: .Normal)
+            button.setImage(image, for: UIControlState())
         }
-        button.addTarget(self, action: action, forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: action, for: .touchUpInside)
         self.addSubview(button)
         
         self.addConstrain(button, position: postion)
@@ -107,20 +107,20 @@ class LCPanoTopView: UIView {
      
      - returns: UIView
      */
-    private func separatorLine(position: ViewPosition) -> UIView {
+    fileprivate func separatorLine(_ position: ViewPosition) -> UIView {
         let view = UIView()
         view.backgroundColor = self.lineColor()
         self.addSubview(view)
         
         view.mas_makeConstraints({ make in
-            make.height.equalTo()(10)
-            make.width.equalTo()(0.6)
-            make.centerY.equalTo()(self)
+            _ = make?.height.equalTo()(10)
+            _ = make?.width.equalTo()(0.6)
+            _ = make?.centerY.equalTo()(self)
             
-            if position == .Left {
-                make.left.equalTo()(self).offset()(47)
+            if position == .left {
+                _ = make?.left.equalTo()(self)?.offset()(47)
             } else {
-                make.right.equalTo()(self).offset()(-47)
+                _ = make?.right.equalTo()(self)?.offset()(-47)
             }
         })
         return view
@@ -139,7 +139,7 @@ class LCPanoTopView: UIView {
         
     }
     
-    private func lineColor() -> UIColor {
+    fileprivate func lineColor() -> UIColor {
         return UIColor.fp_colorWithHexString("7D7E88")!
     }
     
@@ -150,13 +150,13 @@ class LCPanoTopView: UIView {
      
      - returns: 按钮
      */
-    private func getButton(atPostion positon: ViewPosition) -> UIButton {
+    fileprivate func getButton(atPostion positon: ViewPosition) -> UIButton {
         switch positon {
-        case .Left:
+        case .left:
             return self.leftBtn
-        case .Center:
+        case .center:
             return self.centerBtn
-        case .Right:
+        case .right:
             return self.rightBtn
         }
     }

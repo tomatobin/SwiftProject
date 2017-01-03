@@ -7,8 +7,8 @@
 //  增加不同类型的适配
 
 enum FPRoomCompositeType {
-    case Strip //两排
-    case Square //方形
+    case strip //两排
+    case square //方形
 }
 
 class FPRoomSelectView: UIScrollView {
@@ -19,13 +19,13 @@ class FPRoomSelectView: UIScrollView {
     var actualLine = Int(2)
     
     /// 单格的左右间距
-    private var gridPadding = CGFloat(5)
+    fileprivate var gridPadding = CGFloat(5)
     
     /// 单格的宽度、高度、上下间距
-    private var gridWidth = CGFloat(37), gridHeight = CGFloat(38), verticalGap = CGFloat(15)
+    fileprivate var gridWidth = CGFloat(37), gridHeight = CGFloat(38), verticalGap = CGFloat(15)
     
     /// 格视图数组
-    private var gridsView = Array<FPRoomGridView>()
+    fileprivate var gridsView = Array<FPRoomGridView>()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -45,14 +45,14 @@ class FPRoomSelectView: UIScrollView {
         }
         
         var gridInfo = FPRoomGridInfo()
-        gridInfo.gridDirection = .Down
-        gridInfo.gridType = .Elevator
-        self.gridInfo.insert(gridInfo, atIndex: 4) //10
+        gridInfo.gridDirection = .down
+        gridInfo.gridType = .elevator
+        self.gridInfo.insert(gridInfo, at: 4) //10
         
         gridInfo = FPRoomGridInfo()
-        gridInfo.gridDirection = .Up
-        gridInfo.gridType = .Elevator
-        self.gridInfo.insert(gridInfo, atIndex: 5) //11
+        gridInfo.gridDirection = .up
+        gridInfo.gridType = .elevator
+        self.gridInfo.insert(gridInfo, at: 5) //11
     }
     
     /**
@@ -60,7 +60,7 @@ class FPRoomSelectView: UIScrollView {
      
      - parameter type: 房间分布类型
      */
-    func updateView(type: FPRoomCompositeType) {
+    func updateView(_ type: FPRoomCompositeType) {
         for subview in self.subviews {
             subview.removeFromSuperview()
         }
@@ -68,7 +68,7 @@ class FPRoomSelectView: UIScrollView {
         self.layoutIfNeeded() //调用获取高度
         self.gridsView.removeAll()
         self.contentSize = self.stripContentSize()
-        self.backgroundColor = UIColor.greenColor()
+        self.backgroundColor = UIColor.green
         
         let countInLine = self.gridsCountInLine()
         let totalLine = self.gridsLines(type)
@@ -93,12 +93,12 @@ class FPRoomSelectView: UIScrollView {
                 
                 let gridView = FPRoomGridView(frame: frame)
                 gridView.gridInfo = self.gridInfo[roomIndex]
-                gridView.gridInfo.gridDirection = (line % 2 == 0) ? .Down : .Up
+                gridView.gridInfo.gridDirection = (line % 2 == 0) ? .down : .up
                 gridView.updateRoomGrid()
                 self.addSubview(gridView)
                 self.gridsView.append(gridView)
                 
-                frame = CGRectOffset(frame, self.gridWidth - 1, 0)
+                frame = frame.offsetBy(dx: self.gridWidth - 1, dy: 0)
             }
             
             yOrigin += self.gridHeight + verticalGap
@@ -121,16 +121,16 @@ class FPRoomSelectView: UIScrollView {
      总的行数
      - returns: Int
      */
-    func gridsLines(type: FPRoomCompositeType) -> Int {
-        if type == .Strip {
+    func gridsLines(_ type: FPRoomCompositeType) -> Int {
+        if type == .strip {
             return 2
         }
         
         return 2
     }
     
-    func xOrigin(type: FPRoomCompositeType) -> CGFloat {
-        if type == .Strip {
+    func xOrigin(_ type: FPRoomCompositeType) -> CGFloat {
+        if type == .strip {
             let stripWith = CGFloat(self.gridsCountInLine()) * gridWidth
             if stripWith > self.bounds.width {
                 return self.gridPadding

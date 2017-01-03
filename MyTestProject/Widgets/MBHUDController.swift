@@ -13,14 +13,14 @@ class MBHUDController: FPBaseController,UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     var dataSource: FPTableDataSource!
     var data: Dictionary<String,Selector>!
-    var timer: NSTimer?
+    var timer: Timer?
     var progress = Float(0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: #selector(timerProcess), userInfo: nil, repeats: true)
-        timer?.fireDate = NSDate.distantFuture()
+        timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(timerProcess), userInfo: nil, repeats: true)
+        timer?.fireDate = Date.distantFuture
         
         data = ["Show Gif" : #selector(showGifLoading),
                 "Show Message": #selector(showTxtHud),
@@ -38,11 +38,11 @@ class MBHUDController: FPBaseController,UITableViewDelegate {
     }
     
     override func naviRightButton() -> UIButton? {
-        let button = UIButton(type: .System)
+        let button = UIButton(type: .system)
         button.frame = CGRect(x: 0, y: 0, width: 64, height: 44)
-        button.setTitle("Dismiss", forState: .Normal)
-        button.setTitleColor(UIColor.fp_mainRedColor(), forState: .Normal)
-        button.addTarget(self, action: #selector(dismissHud), forControlEvents: .TouchUpInside)
+        button.setTitle("Dismiss", for: UIControlState())
+        button.setTitleColor(UIColor.fp_mainRedColor(), for: UIControlState())
+        button.addTarget(self, action: #selector(dismissHud), for: .touchUpInside)
         return button
     }
     
@@ -50,21 +50,21 @@ class MBHUDController: FPBaseController,UITableViewDelegate {
         let identifier = FPTableViewCell.cellIdentifier()
         
         let allKeys = Array(data.keys)
-        dataSource = FPTableDataSource.init(cellItems: allKeys, cellIdentifier: identifier, configureCell: {(cell, item) in
+        dataSource = FPTableDataSource.init(cellItems: allKeys as Array<AnyObject>, cellIdentifier: identifier, configureCell: {(cell, item) in
             let testCell = cell as! FPTableViewCell
             testCell.configureForCell(item)
         })
         
-        tableView.registerClass(FPTableViewCell.self, forCellReuseIdentifier: identifier)
+        tableView.register(FPTableViewCell.self, forCellReuseIdentifier: identifier)
         tableView.dataSource = dataSource
         tableView.delegate = self
         tableView.reloadData()
     }
     
     func dismissHud() {
-        self.timer?.fireDate = NSDate.distantFuture()
+        self.timer?.fireDate = Date.distantFuture
         FPHudUtility.hideGifLoading()
-        MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+        MBProgressHUD.hideAllHUDs(for: self.view, animated: true)
     }
     
     func showGifLoading() {
@@ -77,35 +77,35 @@ class MBHUDController: FPBaseController,UITableViewDelegate {
     }
     
     func showWatingNormal() {
-        self.showWating(.Indeterminate)
+        self.showWating(.indeterminate)
     }
     
     func showWatingDeterminate() {
-        self.showWating(.Determinate)
+        self.showWating(.determinate)
     }
     
     func showWatingNormalAnnularDeterminate() {
-        self.showWating(.AnnularDeterminate)
+        self.showWating(.annularDeterminate)
     }
     
     func showWatingDeterminateHorizontalBar() {
-        self.showWating(.DeterminateHorizontalBar)
+        self.showWating(.determinateHorizontalBar)
     }
     
-    func showWating(hudMode: MBProgressHUDMode) {
+    func showWating(_ hudMode: MBProgressHUDMode) {
         self.progress = 0
-        self.timer?.fireDate = NSDate.distantPast()
+        self.timer?.fireDate = Date.distantPast
         let hud = FPHudUtility.showWating(self.view, text: "Loading...", hudMode: hudMode)
         hud.yOffset = -Float(FP_NAVI_HEIGHT)
     }
     
     //MARK: Timer
-    func timerProcess(timer: NSTimer) {
+    func timerProcess(_ timer: Timer) {
         self.progress += 0.025
         FPHudUtility.updateProgressHud(self.progress)
         
         if self.progress >= 1 {
-            self.timer?.fireDate = NSDate.distantFuture()
+            self.timer?.fireDate = Date.distantFuture
             self.dismissHud()
         }
     }
@@ -113,14 +113,14 @@ class MBHUDController: FPBaseController,UITableViewDelegate {
 
 extension MBHUDController{
     //MARK: - UITableViewDelegate
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return FPTableViewCell.cellHeight()
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let values = Array(data.values)
         let selector = values[indexPath.row] as Selector
-        self.performSelector(selector)
+        self.perform(selector)
     }
 }

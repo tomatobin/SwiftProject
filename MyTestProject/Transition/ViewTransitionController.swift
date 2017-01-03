@@ -30,23 +30,23 @@ class ViewTransitionController: FPBaseController {
         stepOneView = UILabel(frame: self.rightFrame)
         stepOneView.text = "第一步，我要从右边显示出来，从左边隐藏"
         stepOneView.numberOfLines = 0
-        stepOneView.font = UIFont.systemFontOfSize(17)
-        stepOneView.textColor = UIColor.whiteColor()
+        stepOneView.font = UIFont.systemFont(ofSize: 17)
+        stepOneView.textColor = UIColor.white
         self.view.addSubview(stepOneView)
         
         stepTwoView = UILabel(frame: self.rightFrame)
         stepTwoView.numberOfLines = 0
         stepTwoView.text = "第二步，我要从右边显示出来，从左边隐藏"
-        stepTwoView.font = UIFont.systemFontOfSize(17)
-        stepTwoView.textColor = UIColor.whiteColor()
+        stepTwoView.font = UIFont.systemFont(ofSize: 17)
+        stepTwoView.textColor = UIColor.white
         self.view.addSubview(stepTwoView)
         
         self.onNextBtn.alpha = 0
     }
     
-    func showView(view: UIView) {
+    func showView(_ view: UIView) {
         view.alpha = 0.5
-        UIView.animateWithDuration(0.6, delay: 0, options: .CurveEaseIn, animations: {
+        UIView.animate(withDuration: 0.6, delay: 0, options: .curveEaseIn, animations: {
             view.alpha = 1
             view.frame = self.centerFrame
             self.onNextBtn.alpha = 1
@@ -54,17 +54,17 @@ class ViewTransitionController: FPBaseController {
         })
     }
     
-    @IBAction func onNextAction(sender: AnyObject) {
+    @IBAction func onNextAction(_ sender: AnyObject) {
         self.showSecondView()
     }
     
     func showSecondView() {
-        UIView.animateWithDuration(0.6, delay: 0, options: .CurveEaseIn, animations: {
+        UIView.animate(withDuration: 0.6, delay: 0, options: .curveEaseIn, animations: {
             self.stepOneView.alpha = 0
             self.stepOneView.frame = self.leftFrame
             self.onNextBtn.alpha = 0
         }, completion: {_ in
-            UIView.animateWithDuration(0.6, delay: 0, options: .CurveEaseIn, animations: {
+            UIView.animate(withDuration: 0.6, delay: 0, options: .curveEaseIn, animations: {
                 self.stepTwoView.frame = self.centerFrame
                 self.onNextBtn.alpha = 1
             }, completion: {_ in
@@ -73,17 +73,17 @@ class ViewTransitionController: FPBaseController {
         })
     }
     
-    func hideView(view: UIView) {
+    func hideView(_ view: UIView) {
         
     }
     
     //MARK: 解决导航栏手势滑动过程中不显示的问题
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         //二级页面通过右滑手势pop回来，滑动过程中 导航条会若隐若现
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         super.viewWillDisappear(animated)

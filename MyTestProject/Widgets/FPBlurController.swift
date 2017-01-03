@@ -11,32 +11,32 @@ class FPBlurController: FPBaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.clearColor()
+        self.view.backgroundColor = UIColor.clear
         self.setupBlurEffect()
         self.addTapGesture()
     }
     
     func setTransionStyle() {
-        self.modalPresentationStyle = .OverFullScreen
-        self.modalTransitionStyle = .CrossDissolve
+        self.modalPresentationStyle = .overFullScreen
+        self.modalTransitionStyle = .crossDissolve
     }
     
     /**
      设置模糊效果
      */
-    private func setupBlurEffect() {
-        let blurEffect = UIBlurEffect(style: .Light)
+    fileprivate func setupBlurEffect() {
+        let blurEffect = UIBlurEffect(style: .light)
         let visualEffectView = UIVisualEffectView(effect: blurEffect)
         visualEffectView.frame = self.view.bounds
         self.view.addSubview(visualEffectView)
     }
     
-    private func addTapGesture() {
+    fileprivate func addTapGesture() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onTapAction))
         self.view.addGestureRecognizer(tapGesture)
     }
     
     func onTapAction() {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
 }

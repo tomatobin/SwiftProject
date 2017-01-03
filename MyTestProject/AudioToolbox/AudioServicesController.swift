@@ -33,14 +33,14 @@ class AudioServicesController: FPBaseController {
         // Dispose of any resources that can be recreated.
     }
     
-    func playAudio(soundName: String){
+    func playAudio(_ soundName: String){
         var soundId = SystemSoundID()
-        let resourcePath = NSBundle.mainBundle().pathForResource(soundName, ofType: "mp3")
-        AudioServicesCreateSystemSoundID(NSURL(fileURLWithPath: resourcePath!) , &soundId)
+        let resourcePath = Bundle.main.path(forResource: soundName, ofType: "mp3")
+        AudioServicesCreateSystemSoundID(URL(fileURLWithPath: resourcePath!) as CFURL , &soundId)
         AudioServicesPlaySystemSound(soundId)
     }
     
-    @IBAction func onPlayAction(sender: UIButton) {
+    @IBAction func onPlayAction(_ sender: UIButton) {
         if let identifier = sender.accessibilityIdentifier {
             let dic = ["cow": "cowsound", "cock": "roostersound", "pig": "pigsound"]
             self.playAudio(dic[identifier]!)
@@ -52,16 +52,16 @@ class AudioServicesController: FPBaseController {
         }
     }
     
-    func startAnimation(view: UIView){
+    func startAnimation(_ view: UIView){
         let animation = CABasicAnimation(keyPath: "transform.rotation.z")
         animation.fromValue = 0
         animation.toValue = Double(arc4random()%2 + 1) *  M_PI / 6
         animation.duration = 2
         animation.repeatCount = 1
         animation.autoreverses = false
-        animation.removedOnCompletion = false
+        animation.isRemovedOnCompletion = false
         animation.fillMode = kCAFillModeForwards
         animation.beginTime = CACurrentMediaTime();
-        view.layer.addAnimation(animation, forKey: "rotate")
+        view.layer.add(animation, forKey: "rotate")
     }
 }

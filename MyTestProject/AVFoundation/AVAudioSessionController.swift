@@ -29,7 +29,7 @@ class AVAudioSessionController: FPBaseController,AVAudioPlayerDelegate {
         self.addNotifications() //添加耳机监听事件
     }
     
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.stopAudioPlayer()
         self.removeNotifications()
@@ -41,11 +41,11 @@ class AVAudioSessionController: FPBaseController,AVAudioPlayerDelegate {
     }
     
     func addNotifications(){
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(routeChanged), name: AVAudioSessionRouteChangeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(routeChanged), name: NSNotification.Name.AVAudioSessionRouteChange, object: nil)
     }
     
     func removeNotifications(){
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
     func initAudioSession(){
@@ -55,9 +55,9 @@ class AVAudioSessionController: FPBaseController,AVAudioPlayerDelegate {
     }
     
     func initAudioPlayer(){
-        let filePath = NSBundle.mainBundle().pathForResource("Liekkas", ofType: "mp3")
-        let fileURL = NSURL(fileURLWithPath: filePath!)
-        audioPlayer = try! AVAudioPlayer.init(contentsOfURL: fileURL)
+        let filePath = Bundle.main.path(forResource: "Liekkas", ofType: "mp3")
+        let fileURL = URL(fileURLWithPath: filePath!)
+        audioPlayer = try! AVAudioPlayer.init(contentsOf: fileURL)
         audioPlayer.delegate = self
         audioPlayer.prepareToPlay() //预播放
     }
@@ -69,19 +69,19 @@ class AVAudioSessionController: FPBaseController,AVAudioPlayerDelegate {
         }
     }
     
-    func routeChanged(notification: NSNotification){
+    func routeChanged(_ notification: Notification){
         let dictionary = notification.userInfo
-        let changeReason = dictionary![AVAudioSessionRouteChangeReasonKey]?.unsignedIntValue
+        let changeReason = (dictionary![AVAudioSessionRouteChangeReasonKey] as AnyObject).uint32Value
         ColorLog.green("Change Reason:\(changeReason)") // AVAudioSessionRouteChangeReason
     }
     
-    @IBAction func onPlayAction(sender: AnyObject) {
-        if audioPlayer.playing {
-            btnPlay.setButtonState(.Paused, animated: true)
+    @IBAction func onPlayAction(_ sender: AnyObject) {
+        if audioPlayer.isPlaying {
+            btnPlay.setButtonState(.paused, animated: true)
             audioPlayer.pause()
         }
         else{
-            btnPlay.setButtonState(.Playing, animated: true)
+            btnPlay.setButtonState(.playing, animated: true)
             audioPlayer.play()
             self.showPlayInfo()
         }
@@ -90,10 +90,10 @@ class AVAudioSessionController: FPBaseController,AVAudioPlayerDelegate {
     func showPlayInfo(){
         
         //如果不接收控制信息，会导致锁屏时显示不了信息
-        UIApplication.sharedApplication().beginReceivingRemoteControlEvents()
+        UIApplication.shared.beginReceivingRemoteControlEvents()
         
         // 直接使用defaultCenter来获取MPNowPlayingInfoCenter的默认唯一实例
-        let infoCenter = MPNowPlayingInfoCenter.defaultCenter()
+        let infoCenter = MPNowPlayingInfoCenter.default()
         
         let albumArt = MPMediaItemArtwork(image: UIImage(named: "Liekkas")!)
 
@@ -109,15 +109,15 @@ class AVAudioSessionController: FPBaseController,AVAudioPlayerDelegate {
     }
     
     //MARK: - AVAudioPlayerDelegate
-    func audioPlayerBeginInterruption(player: AVAudioPlayer) {
+    func audioPlayerBeginInterruption(_ player: AVAudioPlayer) {
         ColorLog.green("Receive interrupt...")
     }
     
-    func audioPlayerEndInterruption(player: AVAudioPlayer) {
-        ColorLog.green("End interrupt...")
-    }
+//    func audioPlayerEndInterruption(_ player: AVAudioPlayer) {
+//        ColorLog.green("End interrupt...")
+//    }
     
-    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         ColorLog.green("Music play over...")
     }
 }

@@ -18,37 +18,37 @@ class FPTextViewPlaceholder: UITextView {
     
     override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(textDidChanged), name: UITextViewTextDidChangeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(textDidChanged), name: NSNotification.Name.UITextViewTextDidChange, object: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(textDidChanged), name: UITextViewTextDidChangeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(textDidChanged), name: NSNotification.Name.UITextViewTextDidChange, object: nil)
     }
     
     func textDidChanged() {
         self.setNeedsDisplay()
     }
     
-    override func drawRect(rect: CGRect) {
-        super.drawRect(rect)
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
         
-        if self.hasText() {
+        if self.hasText {
             return
         }
         
         var attrs = Dictionary<String,AnyObject>()
-        attrs[NSForegroundColorAttributeName] = UIColor.lightGrayColor()
+        attrs[NSForegroundColorAttributeName] = UIColor.lightGray
         if self.font != nil {
             attrs[NSFontAttributeName] = self.font!
         }
         
-        self.placeholder?.drawInRect(CGRect(x: 5, y: 5, width: self.bounds.width - 5, height: self.bounds.height - 5),
+        self.placeholder?.draw(in: CGRect(x: 5, y: 5, width: self.bounds.width - 5, height: self.bounds.height - 5),
                                      withAttributes: attrs)
     }
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
 }

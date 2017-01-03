@@ -9,10 +9,10 @@
 import UIKit
 
 enum FPReservationSection: Int {
-    case PayDate = 0    //付款时间
-    case PayTime = 1    //付款方式
-    case PayMode = 2    //支付方式
-    case PayAgreement = 3   //协议
+    case payDate = 0    //付款时间
+    case payTime = 1    //付款方式
+    case payMode = 2    //支付方式
+    case payAgreement = 3   //协议
 }
 
 class FliterController: FPBaseController,UITableViewDelegate,UITableViewDataSource  {
@@ -34,23 +34,23 @@ class FliterController: FPBaseController,UITableViewDelegate,UITableViewDataSour
     func initUIWidgets() {
         self.tableView.backgroundColor = UIColor.fp_mainBgColor()
         self.tableView.tableFooterView = UIView()
-        self.tableView.separatorStyle = .None
-        self.tableView.registerClass(FPTableViewCell.self, forCellReuseIdentifier: FPTableViewCell.cellIdentifier())
-        self.tableView.registerClass(FPFliterCell.self, forCellReuseIdentifier: FPFliterCell.cellIdentifier())
+        self.tableView.separatorStyle = .none
+        self.tableView.register(FPTableViewCell.self, forCellReuseIdentifier: FPTableViewCell.cellIdentifier())
+        self.tableView.register(FPFliterCell.self, forCellReuseIdentifier: FPFliterCell.cellIdentifier())
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
     }
 
     //MARK: UITableViewDataSource
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var rows = 1
         switch FPReservationSection(rawValue: section)! {
-        case .PayDate:
+        case .payDate:
             rows = 2
-        case .PayTime:
+        case .payTime:
             rows = 3
-        case .PayMode:
+        case .payMode:
             rows = 2
         default:
             rows = 1
@@ -58,18 +58,18 @@ class FliterController: FPBaseController,UITableViewDelegate,UITableViewDataSour
         return rows
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 4
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell: UITableViewCell
         switch FPReservationSection(rawValue: indexPath.section)! {
-        case .PayDate:
+        case .payDate:
             if indexPath.row == 0 {
-                cell = tableView.dequeueReusableCellWithIdentifier("FPTableViewCell", forIndexPath: indexPath)
+                cell = tableView.dequeueReusableCell(withIdentifier: "FPTableViewCell", for: indexPath)
             } else {
-                cell = tableView.dequeueReusableCellWithIdentifier(FPFliterCell.cellIdentifier(), forIndexPath: indexPath)
+                cell = tableView.dequeueReusableCell(withIdentifier: FPFliterCell.cellIdentifier(), for: indexPath)
                 let fliterCell = cell as! FPFliterCell
                 fliterCell.configCell(["一季度", "半年", "一年"])
                 fliterCell.clickBlock = { index in
@@ -77,23 +77,23 @@ class FliterController: FPBaseController,UITableViewDelegate,UITableViewDataSour
                 }
             }
             
-        case .PayTime:
-            cell = tableView.dequeueReusableCellWithIdentifier("FPTableViewCell", forIndexPath: indexPath)
+        case .payTime:
+            cell = tableView.dequeueReusableCell(withIdentifier: "FPTableViewCell", for: indexPath)
             self.configPayTimeCell(cell as! FPTableViewCell, indexPath: indexPath)
         default:
-            cell = tableView.dequeueReusableCellWithIdentifier("FPTableViewCell", forIndexPath: indexPath)
+            cell = tableView.dequeueReusableCell(withIdentifier: "FPTableViewCell", for: indexPath)
         }
-        cell.selectionStyle = .None
+        cell.selectionStyle = .none
         
         return cell
     }
     
-    func configPayTimeCell(cell: FPTableViewCell, indexPath: NSIndexPath) {
+    func configPayTimeCell(_ cell: FPTableViewCell, indexPath: IndexPath) {
 
     }
     
     //MARK: UITableViewDelegate
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.section == 0 && indexPath.row == 1 {
             return 60
@@ -101,7 +101,7 @@ class FliterController: FPBaseController,UITableViewDelegate,UITableViewDataSour
         return 44
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 10
     }
 }
