@@ -40,6 +40,8 @@
 		865BE2D61D251A7100D1AD83 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865BE2D51D251A7100D1AD83 /* AVFoundation.framework */; };
 		865BE2D81D251D6800D1AD83 /* Liekkas.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 865BE2D71D251D6800D1AD83 /* Liekkas.mp3 */; };
 		865BE2DE1D25304200D1AD83 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865BE2DD1D25304200D1AD83 /* PlayButton.swift */; };
+		865F19881E304E8D00E64C71 /* AESCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865F19871E304E8D00E64C71 /* AESCipher.swift */; };
+		865F198D1E30574000E64C71 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865F198C1E30574000E64C71 /* String+Extension.swift */; };
 		866EC2FF1E1289EA00FDA308 /* FPTextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866EC2FE1E1289EA00FDA308 /* FPTextViewPlaceholder.swift */; };
 		866ED0991D2A75610098C40B /* AudioRecorderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866ED0981D2A75610098C40B /* AudioRecorderController.swift */; };
 		866ED09E1D2A797C0098C40B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866ED09D1D2A797C0098C40B /* Foundation.framework */; };
@@ -99,6 +101,8 @@
 		865BE2D71D251D6800D1AD83 /* Liekkas.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Liekkas.mp3; sourceTree = "<group>"; };
 		865BE2D91D25301500D1AD83 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		865BE2DD1D25304200D1AD83 /* PlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
+		865F19871E304E8D00E64C71 /* AESCipher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AESCipher.swift; sourceTree = "<group>"; };
+		865F198C1E30574000E64C71 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		866EC2FE1E1289EA00FDA308 /* FPTextViewPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPTextViewPlaceholder.swift; sourceTree = "<group>"; };
 		866ED0981D2A75610098C40B /* AudioRecorderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorderController.swift; sourceTree = "<group>"; };
 		866ED09D1D2A797C0098C40B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -195,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				860EB8C21D24BD4F0020736D /* UIColor+Extension.swift */,
+				865F198C1E30574000E64C71 /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 		860EB8C31D24BD4F0020736D /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				865F19861E304BE900E64C71 /* AESCipher */,
 				860EB8C41D24BD4F0020736D /* ColorLog.swift */,
 				86CC8F911D2B409F00D8FC81 /* FPFileHelper.swift */,
 				869E3DE51D338F87000D2858 /* Constant.swift */,
@@ -280,6 +286,14 @@
 				866EC2FE1E1289EA00FDA308 /* FPTextViewPlaceholder.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		865F19861E304BE900E64C71 /* AESCipher */ = {
+			isa = PBXGroup;
+			children = (
+				865F19871E304E8D00E64C71 /* AESCipher.swift */,
+			);
+			path = AESCipher;
 			sourceTree = "<group>";
 		};
 		86A8E65B1D33884F00EF9F26 /* Transition */ = {
@@ -479,6 +493,8 @@
 				860EB8C91D24BD4F0020736D /* ColorLog.swift in Sources */,
 				8631A6221DB63E870035C197 /* FPRoomGridInfo.swift in Sources */,
 				860EB8E81D25019D0020736D /* AudioServicesController.swift in Sources */,
+				865F198D1E30574000E64C71 /* String+Extension.swift in Sources */,
+				865F19881E304E8D00E64C71 /* AESCipher.swift in Sources */,
 				86A8E6621D338A1400EF9F26 /* ViewTransitionController.swift in Sources */,
 				860EB8C81D24BD4F0020736D /* UIColor+Extension.swift in Sources */,
 				4E39425E1DB3A38300980579 /* CustomWidgetsController.swift in Sources */,

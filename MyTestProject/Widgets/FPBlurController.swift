@@ -14,6 +14,12 @@ class FPBlurController: FPBaseController {
         self.view.backgroundColor = UIColor.clear
         self.setupBlurEffect()
         self.addTapGesture()
+        
+        //Test Aescipher
+        let pwd = "123456"
+        let md5 = pwd.fp_md5Digest()
+        let aes = AESCipher.encrypt(content: md5, withKey: "qwertyuiop")
+        print("AES Result:\(aes)")
     }
     
     func setTransionStyle() {

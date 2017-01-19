@@ -14,4 +14,6 @@
 #import "SDImageCache.h"
 #import "UIImage+GIF.h"
 #import "Masonry.h"
+#import <CommonCrypto/CommonCrypto.h>
+#import <CommonCrypto/CommonDigest.h>
 #endif /* BridgingHeader_h */
