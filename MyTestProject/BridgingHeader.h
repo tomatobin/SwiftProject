@@ -9,11 +9,10 @@
 #ifndef BridgingHeader_h
 #define BridgingHeader_h
 
-#import "POP.h"
-#import "MBProgressHUD.h"
-#import "SDImageCache.h"
-#import "UIImage+GIF.h"
-#import "Masonry.h"
+#import <pop/POP.h>
+#import <MBProgressHUD/MBProgressHUD.h>
+#import <SDWebImage/SDImageCache.h>
+#import <Masonry/Masonry.h>
 #import <CommonCrypto/CommonCrypto.h>
 #import <CommonCrypto/CommonDigest.h>
 #endif /* BridgingHeader_h */

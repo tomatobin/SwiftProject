@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		168617B01D8D49F797293535 /* libPods-MyTestProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD1B47144B1A1B020647C03 /* libPods-MyTestProject.a */; };
 		4E39425C1DB3A25D00980579 /* FPStarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39425B1DB3A25D00980579 /* FPStarsView.swift */; };
 		4E39425E1DB3A38300980579 /* CustomWidgetsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39425D1DB3A38300980579 /* CustomWidgetsController.swift */; };
 		860EB8AB1D24BCC10020736D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860EB8AA1D24BCC10020736D /* AppDelegate.swift */; };
@@ -29,7 +28,6 @@
 		860EB8E41D24EF950020736D /* roostersound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 860EB8E11D24EF950020736D /* roostersound.mp3 */; };
 		860EB8E61D24FF830020736D /* AudioToolboxRootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860EB8E51D24FF830020736D /* AudioToolboxRootController.swift */; };
 		860EB8E81D25019D0020736D /* AudioServicesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860EB8E71D25019D0020736D /* AudioServicesController.swift */; };
-		8616759C1D264C30001EE809 /* libpop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8616759B1D264C30001EE809 /* libpop.a */; };
 		8631A61C1DB6309C0035C197 /* FPDrawRoomSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8631A61B1DB6309C0035C197 /* FPDrawRoomSelectView.swift */; };
 		8631A61E1DB63DF50035C197 /* FPRoomSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8631A61D1DB63DF50035C197 /* FPRoomSelectView.swift */; };
 		8631A6201DB63E4D0035C197 /* FPRoomGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8631A61F1DB63E4D0035C197 /* FPRoomGridView.swift */; };
@@ -60,12 +58,14 @@
 		86D188E31D3DB7E30031D32C /* Loading_carton.gif in Resources */ = {isa = PBXBuildFile; fileRef = 86D188E21D3DB7E30031D32C /* Loading_carton.gif */; };
 		86E1ED951E0A2C0400261402 /* FPFliterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1ED941E0A2C0400261402 /* FPFliterCell.swift */; };
 		86E1ED9A1E0A2C3C00261402 /* FliterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1ED991E0A2C3C00261402 /* FliterController.swift */; };
+		B5F156329252B0C1FF3BE862 /* Pods_MyTestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCBB48DE8AF7BA6C1388AE1 /* Pods_MyTestProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4E39425B1DB3A25D00980579 /* FPStarsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPStarsView.swift; sourceTree = "<group>"; };
 		4E39425D1DB3A38300980579 /* CustomWidgetsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomWidgetsController.swift; sourceTree = "<group>"; };
 		5EE5F991111B4F41E0289859 /* Pods-MyTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTestProject/Pods-MyTestProject.release.xcconfig"; sourceTree = "<group>"; };
+		6FCBB48DE8AF7BA6C1388AE1 /* Pods_MyTestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		849898BD5A042CF962BB3771 /* Pods-MyTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTestProject/Pods-MyTestProject.debug.xcconfig"; sourceTree = "<group>"; };
 		860EB8A71D24BCC10020736D /* MyTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		860EB8AA1D24BCC10020736D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -121,7 +121,6 @@
 		86D188E21D3DB7E30031D32C /* Loading_carton.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Loading_carton.gif; sourceTree = "<group>"; };
 		86E1ED941E0A2C0400261402 /* FPFliterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPFliterCell.swift; sourceTree = "<group>"; };
 		86E1ED991E0A2C3C00261402 /* FliterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FliterController.swift; sourceTree = "<group>"; };
-		EDD1B47144B1A1B020647C03 /* libPods-MyTestProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyTestProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,11 +129,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				866ED09E1D2A797C0098C40B /* Foundation.framework in Frameworks */,
-				8616759C1D264C30001EE809 /* libpop.a in Frameworks */,
 				865BE2D61D251A7100D1AD83 /* AVFoundation.framework in Frameworks */,
 				860EB8D21D24C6E00020736D /* AudioToolbox.framework in Frameworks */,
 				860EB8D01D24C6D80020736D /* UIKit.framework in Frameworks */,
-				168617B01D8D49F797293535 /* libPods-MyTestProject.a in Frameworks */,
+				B5F156329252B0C1FF3BE862 /* Pods_MyTestProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +233,7 @@
 				865BE2D51D251A7100D1AD83 /* AVFoundation.framework */,
 				860EB8D11D24C6E00020736D /* AudioToolbox.framework */,
 				860EB8CF1D24C6D80020736D /* UIKit.framework */,
-				EDD1B47144B1A1B020647C03 /* libPods-MyTestProject.a */,
+				6FCBB48DE8AF7BA6C1388AE1 /* Pods_MyTestProject.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -438,7 +436,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		489BB348B53E594445F29A00 /* [CP] Embed Pods Frameworks */ = {
@@ -634,9 +632,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 849898BD5A042CF962BB3771 /* Pods-MyTestProject.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tingchao Zhang (SHVGB9AP99)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: tao chen (5ECNRQCTS6)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -650,9 +648,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/iosrender",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tomatobin.MyTestProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zjfunday.myproject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a1870e11-dd24-4cf0-8a9d-30d5b7db3ee1";
+				PROVISIONING_PROFILE = "081239dd-b22f-4f11-8c2d-b21cb7cf0fc3";
+				PROVISIONING_PROFILE_SPECIFIER = zjfunday_all;
 				SWIFT_OBJC_BRIDGING_HEADER = MyTestProject/BridgingHeader.h;
 				SWIFT_VERSION = 3.0;
 			};
@@ -662,9 +661,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5EE5F991111B4F41E0289859 /* Pods-MyTestProject.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tingchao Zhang (SHVGB9AP99)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: tao chen (5ECNRQCTS6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: tao chen (5ECNRQCTS6)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -678,9 +678,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/iosrender",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tomatobin.MyTestProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zjfunday.myproject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a1870e11-dd24-4cf0-8a9d-30d5b7db3ee1";
+				PROVISIONING_PROFILE = "081239dd-b22f-4f11-8c2d-b21cb7cf0fc3";
+				PROVISIONING_PROFILE_SPECIFIER = zjfunday_all;
 				SWIFT_OBJC_BRIDGING_HEADER = MyTestProject/BridgingHeader.h;
 				SWIFT_VERSION = 3.0;
 			};

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MBProgressHUD
+import SDWebImage
 
 class FPHudUtility: NSObject,MBProgressHUDDelegate {
     static let sharedInstance: FPHudUtility = FPHudUtility()
