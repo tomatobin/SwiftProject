@@ -2,7 +2,7 @@
 //  FPTextViewPlaceholder.swift
 //  MyTestProject
 //
-//  Created by 江斌 on 16/12/27.
+//  Created by jiang_bin on 16/12/27.
 //  Copyright © 2016年 iblue. All rights reserved.
 //
 
@@ -43,7 +43,7 @@ class FPTextViewPlaceholder: UITextView {
             attrs[NSFontAttributeName] = self.font!
         }
         
-        self.placeholder?.draw(in: CGRect(x: 5, y: 5, width: self.bounds.width - 5, height: self.bounds.height - 5),
+        self.placeholder?.draw(in: CGRect(x: 5, y: 8, width: self.bounds.width - 5, height: self.bounds.height - 5),
                                      withAttributes: attrs)
     }
     

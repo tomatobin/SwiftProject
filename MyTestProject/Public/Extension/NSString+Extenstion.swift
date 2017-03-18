@@ -1,0 +1,19 @@
+//
+//  NSString+Extenstion.swift
+//  FPSwift
+//
+//  Created by jiangbin on 16/7/8.
+//  Copyright © 2016年 iblue. All rights reserved.
+//
+
+extension NSString{
+    func fp_textSize(_ font: UIFont, size: CGSize) -> CGSize {
+        var textSize = CGSize(width: 0, height: 0)
+        let style = NSMutableParagraphStyle()
+        style.lineBreakMode = .byWordWrapping
+        let attributes = [NSFontAttributeName: font, NSParagraphStyleAttributeName: style]
+        textSize = self.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil).size
+        
+        return textSize
+    }
+}

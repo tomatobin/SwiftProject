@@ -9,8 +9,12 @@
 import UIKit
 
 extension UIColor{
-    class func fp_mainBlueColor()->UIColor {
+    class func fp_mainBlueColor() -> UIColor {
         return self.fp_colorWithHexString("4EA7F2")!
+    }
+    
+    class func fp_naviBgColor() -> UIColor {
+        return self.fp_colorWithHexString("FAFAFA")!
     }
     
     class func fp_mainBgColor() -> UIColor {
@@ -42,7 +46,7 @@ extension UIColor{
     }
     
     class func fp_yellowColor() -> UIColor {
-        return self.fp_colorWithHexString("EEC61F")!
+        return self.fp_colorWithHexString("F3C547")!
     }
     
     class func fp_colorWithHexString(_ hexString: String)->UIColor?{
@@ -82,7 +86,7 @@ extension UIColor{
             return nil
             
         }
-        
+
         return UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
     

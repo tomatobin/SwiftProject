@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -24,6 +29,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SnapKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>pop.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
+		<key>03EB97381BE04A6B029D66A2150B18FD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>819E25F9D94F53F8B746A3CF502C795F</key>
+		<key>260D9EB6ACF79776236B29077712163E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9B121359B5E02E6D4A1FCC76C2569F38</key>
+		<key>58E105AEF609EA221FF0D1C6EA70E1D1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D22D24473C57DD94AFC224CCD741D4F9</key>
+		<key>6B1714E816AE794962516E2ECBB40A5A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FE2F1D7B9D9FCEA148517E4657B243F4</key>
+		<key>84285FDC15C0E3A77BCA6CF9FD03A57F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9224D3F60DB7D1C065D3794C3AB9EBB8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D52144DE9D7255DE912490FF5A806573</key>
 		<dict>
 			<key>primary</key>
 			<true/>
