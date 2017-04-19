@@ -50,8 +50,13 @@ class MBHUDController: FPBaseController,UITableViewDelegate {
     func configureTableView(){
         let identifier = FPTableViewCell.cellIdentifier()
         
-        let allKeys = Array(data.keys)
-        dataSource = FPTableDataSource.init(cellItems: allKeys as Array<AnyObject>, cellIdentifier: identifier, configureCell: {(cell, item) in
+        var dataArray = [FPTableViewCellData]()
+        for key in Array(data.keys) {
+            let celldata = FPTableViewCellData(title: key, imageName: nil, detail: nil, type: .normal)
+            dataArray.append(celldata)
+        }
+        
+        dataSource = FPTableDataSource.init(cellItems: dataArray, cellIdentifier: identifier, configureCell: {(cell, item) in
             let testCell = cell as! FPTableViewCell
             testCell.configureForCell(item: item)
         })
@@ -74,7 +79,7 @@ class MBHUDController: FPBaseController,UITableViewDelegate {
     }
     
     func showTxtHud() {
-        FPHudUtility.showMessage("Requesting...")
+        _ = FPHudUtility.showMessage("Requesting...")
     }
     
     func showWatingNormal() {
@@ -97,6 +102,7 @@ class MBHUDController: FPBaseController,UITableViewDelegate {
         self.progress = 0
         self.timer?.fireDate = Date.distantPast
         let hud = FPHudUtility.showWaitingHud(self.view)
+        hud.mode = hudMode
         hud.yOffset = -Float(FP_NAVI_HEIGHT)
     }
     

@@ -16,10 +16,9 @@ class WidgetsController: FPBaseController,UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "Widgets"
         data = ["MBProgressHUD" : "PushToMBProgressHUD", "CustomWidgets": "PushToCustomWidgets", "BlurEffect": "PresentBlur",
                 "Fliter": "PushToFliter"]
-        
         self.configureTableView()
     }
     
@@ -31,8 +30,13 @@ class WidgetsController: FPBaseController,UITableViewDelegate {
     func configureTableView(){
         let identifier = FPTableViewCell.cellIdentifier()
         
-        let allKeys = Array(data.keys)
-        dataSource = FPTableDataSource.init(cellItems: allKeys as Array<AnyObject>, cellIdentifier: identifier, configureCell: {(cell, item) in
+        var dataArray = [FPTableViewCellData]()
+        for key in Array(data.keys) {
+            let celldata = FPTableViewCellData(title: key, imageName: nil, detail: nil, type: .normal)
+            dataArray.append(celldata)
+        }
+        
+        dataSource = FPTableDataSource.init(cellItems: dataArray, cellIdentifier: identifier, configureCell: {(cell, item) in
             let testCell = cell as! FPTableViewCell
             testCell.imageView?.image = UIImage(named: "star_yellow")
             testCell.configureForCell(item: item)

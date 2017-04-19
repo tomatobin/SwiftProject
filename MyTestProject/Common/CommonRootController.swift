@@ -20,7 +20,7 @@ class CommonRootController: FPBaseController,UITableViewDelegate {
         // Do any additional setup after loading the view.
         data = ["AVFoundation": "PushToAVFoundation", "AudioToolbox" : "PushToAudioToolbox",
                 "Transition": "PushToTransition", "Widgets": "PushToWidgets"]
-        
+        self.title = "常用"
         self.configureTableView()
     }
 
@@ -32,16 +32,22 @@ class CommonRootController: FPBaseController,UITableViewDelegate {
     func configureTableView(){
         let identifier = FPTableViewCell.cellIdentifier()
         
-        let allKeys = Array(data.keys)
-        dataSource = FPTableDataSource.init(cellItems: allKeys as Array<AnyObject>, cellIdentifier: identifier, configureCell: {(cell, item) in
+        var dataArray = [FPTableViewCellData]()
+        for key in Array(data.keys) {
+            let celldata = FPTableViewCellData(title: key, imageName: nil, detail: nil, type: .normal)
+            dataArray.append(celldata)
+        }
+        
+        dataSource = FPTableDataSource.init(cellItems: dataArray, cellIdentifier: identifier, configureCell: {(cell, item) in
             let testCell = cell as! FPTableViewCell
-            testCell.configureForCell(item)
+            testCell.configureForCell(item: item)
         })
         
         tableView.register(FPTableViewCell.self, forCellReuseIdentifier: identifier)
         tableView.dataSource = dataSource
         tableView.delegate = self
         tableView.reloadData()
+        tableView.fp_setExtraRowsHidden()
     }
     
     //MARK: - UITableViewDelegate

@@ -93,6 +93,7 @@
 		86D188D81D3DACBB0031D32C /* Widgets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86D188D61D3DACBB0031D32C /* Widgets.storyboard */; };
 		86D188E11D3DB7560031D32C /* Loading_rabbit.gif in Resources */ = {isa = PBXBuildFile; fileRef = 86D188E01D3DB7560031D32C /* Loading_rabbit.gif */; };
 		86D188E31D3DB7E30031D32C /* Loading_carton.gif in Resources */ = {isa = PBXBuildFile; fileRef = 86D188E21D3DB7E30031D32C /* Loading_carton.gif */; };
+		86E520611EA6EBFB00B01529 /* Common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E520601EA6EBFB00B01529 /* Common.storyboard */; };
 		B5F156329252B0C1FF3BE862 /* Pods_MyTestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCBB48DE8AF7BA6C1388AE1 /* Pods_MyTestProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -192,6 +193,7 @@
 		86D188D71D3DACBB0031D32C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Widgets.storyboard; sourceTree = "<group>"; };
 		86D188E01D3DB7560031D32C /* Loading_rabbit.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Loading_rabbit.gif; sourceTree = "<group>"; };
 		86D188E21D3DB7E30031D32C /* Loading_carton.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Loading_carton.gif; sourceTree = "<group>"; };
+		86E520601EA6EBFB00B01529 /* Common.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Common.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +242,7 @@
 				860EB8BD1D24BD2B0020736D /* FPNavigaionController.swift */,
 				860EB8AC1D24BCC10020736D /* ViewController.swift */,
 				860EB8AE1D24BCC10020736D /* Main.storyboard */,
+				86E520601EA6EBFB00B01529 /* Common.storyboard */,
 				864A9DD21E7D0E17001665B8 /* Reverse.storyboard */,
 				86D188D61D3DACBB0031D32C /* Widgets.storyboard */,
 				86A8E65E1D33897800EF9F26 /* Transition.storyboard */,
@@ -546,6 +549,7 @@
 				864A9E4C1E7D1151001665B8 /* FPShareItems.xib in Resources */,
 				864A9DD41E7D0E17001665B8 /* Reverse.storyboard in Resources */,
 				86D188E31D3DB7E30031D32C /* Loading_carton.gif in Resources */,
+				86E520611EA6EBFB00B01529 /* Common.storyboard in Resources */,
 				86D188E11D3DB7560031D32C /* Loading_rabbit.gif in Resources */,
 				860EB8B01D24BCC10020736D /* Main.storyboard in Resources */,
 				86D188D81D3DACBB0031D32C /* Widgets.storyboard in Resources */,
