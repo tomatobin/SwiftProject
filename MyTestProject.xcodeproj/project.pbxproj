@@ -87,6 +87,10 @@
 		864A9E551E7D1151001665B8 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864A9E1A1E7D1151001665B8 /* PlayButton.swift */; };
 		864A9E561E7D1151001665B8 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 864A9E1C1E7D1151001665B8 /* UINavigationBar+Awesome.m */; };
 		865143801EF76D01003D8995 /* TableHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8651437F1EF76D01003D8995 /* TableHeaderController.swift */; };
+		865143861EF77B2A003D8995 /* FPRefreshComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865143851EF77B2A003D8995 /* FPRefreshComponent.swift */; };
+		865143881EF77B77003D8995 /* UIScrollView+Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865143871EF77B77003D8995 /* UIScrollView+Refresh.swift */; };
+		8651438A1EF79C34003D8995 /* FPRefreshConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865143891EF79C34003D8995 /* FPRefreshConst.swift */; };
+		8651438C1EF7A199003D8995 /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8651438B1EF7A199003D8995 /* UIView+Ex.swift */; };
 		865BE2D61D251A7100D1AD83 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865BE2D51D251A7100D1AD83 /* AVFoundation.framework */; };
 		865BE2D81D251D6800D1AD83 /* Liekkas.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 865BE2D71D251D6800D1AD83 /* Liekkas.mp3 */; };
 		866ED09E1D2A797C0098C40B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866ED09D1D2A797C0098C40B /* Foundation.framework */; };
@@ -187,6 +191,10 @@
 		864A9E1B1E7D1151001665B8 /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
 		864A9E1C1E7D1151001665B8 /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 		8651437F1EF76D01003D8995 /* TableHeaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableHeaderController.swift; sourceTree = "<group>"; };
+		865143851EF77B2A003D8995 /* FPRefreshComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPRefreshComponent.swift; sourceTree = "<group>"; };
+		865143871EF77B77003D8995 /* UIScrollView+Refresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Refresh.swift"; sourceTree = "<group>"; };
+		865143891EF79C34003D8995 /* FPRefreshConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPRefreshConst.swift; sourceTree = "<group>"; };
+		8651438B1EF7A199003D8995 /* UIView+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
 		865BE2D51D251A7100D1AD83 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		865BE2D71D251D6800D1AD83 /* Liekkas.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Liekkas.mp3; sourceTree = "<group>"; };
 		865BE2D91D25301500D1AD83 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
@@ -385,6 +393,7 @@
 				864A9DEA1E7D1151001665B8 /* UITableView+Extension.swift */,
 				864A9DEB1E7D1151001665B8 /* UITextField+Extension.swift */,
 				864A9DEC1E7D1151001665B8 /* UIView+Extension.swift */,
+				8651438B1EF7A199003D8995 /* UIView+Ex.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -427,6 +436,7 @@
 		864A9E021E7D1151001665B8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				865143841EF77B10003D8995 /* FPRefresh */,
 				864A9E041E7D1151001665B8 /* FPAlert.swift */,
 				864A9E051E7D1151001665B8 /* FPCircleProgress.swift */,
 				864A9E061E7D1151001665B8 /* FPDrawRoomSelectView.swift */,
@@ -460,6 +470,16 @@
 				864A9E0E1E7D1151001665B8 /* resign@3x.png */,
 			);
 			path = FPNumberKeyboard;
+			sourceTree = "<group>";
+		};
+		865143841EF77B10003D8995 /* FPRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				865143851EF77B2A003D8995 /* FPRefreshComponent.swift */,
+				865143871EF77B77003D8995 /* UIScrollView+Refresh.swift */,
+				865143891EF79C34003D8995 /* FPRefreshConst.swift */,
+			);
+			path = FPRefresh;
 			sourceTree = "<group>";
 		};
 		F37164E92E92FF569EBC90C0 /* Pods */ = {
@@ -620,6 +640,7 @@
 				864A9E361E7D1151001665B8 /* FPHudUtility.swift in Sources */,
 				864A9E311E7D1151001665B8 /* DismissModallySegue.swift in Sources */,
 				864A9E371E7D1151001665B8 /* FPNetworkingMonitor.swift in Sources */,
+				8651438C1EF7A199003D8995 /* UIView+Ex.swift in Sources */,
 				864A9DCC1E7D0DE1001665B8 /* ViewTransitionController.swift in Sources */,
 				864A9E261E7D1151001665B8 /* UIDevice+Extension.swift in Sources */,
 				864A9DC41E7D0DE1001665B8 /* AudioServicesController.swift in Sources */,
@@ -628,6 +649,7 @@
 				864A9E391E7D1151001665B8 /* FPSetAuthorizationHelper.swift in Sources */,
 				864A9E251E7D1151001665B8 /* UIColor+Extension.swift in Sources */,
 				860EB8BF1D24BD2B0020736D /* FPNavigaionController.swift in Sources */,
+				865143861EF77B2A003D8995 /* FPRefreshComponent.swift in Sources */,
 				864A9E411E7D1151001665B8 /* FPCircleProgress.swift in Sources */,
 				864A9E2B1E7D1151001665B8 /* UITextField+Extension.swift in Sources */,
 				864A9E1E1E7D1151001665B8 /* NSDate+Extension.swift in Sources */,
@@ -635,6 +657,7 @@
 				864A9DCD1E7D0DE1001665B8 /* CustomWidgetsController.swift in Sources */,
 				860EB8AD1D24BCC10020736D /* ViewController.swift in Sources */,
 				860EB8AB1D24BCC10020736D /* AppDelegate.swift in Sources */,
+				8651438A1EF79C34003D8995 /* FPRefreshConst.swift in Sources */,
 				864A9E3B1E7D1151001665B8 /* PresentModallySegue.swift in Sources */,
 				864A9E241E7D1151001665B8 /* UIButton+PositionLabel.swift in Sources */,
 				864A9DCF1E7D0DE1001665B8 /* FPBlurController.swift in Sources */,
@@ -667,6 +690,7 @@
 				864A9E301E7D1151001665B8 /* Configration.swift in Sources */,
 				864A9E231E7D1151001665B8 /* UIButton+CountDown.swift in Sources */,
 				864A9DCA1E7D0DE1001665B8 /* CommonRootController.swift in Sources */,
+				865143881EF77B77003D8995 /* UIScrollView+Refresh.swift in Sources */,
 				864A9E4F1E7D1151001665B8 /* FPStarsView.swift in Sources */,
 				864A9E3D1E7D1151001665B8 /* FPTableDataSource.swift in Sources */,
 				864A9E551E7D1151001665B8 /* PlayButton.swift in Sources */,

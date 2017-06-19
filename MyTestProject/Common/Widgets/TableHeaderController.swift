@@ -27,22 +27,15 @@ class TableHeaderController: FPBaseController,UITableViewDelegate,UITableViewDat
         
         self.tableView.contentInset = UIEdgeInsetsMake(topHeight , 0, 0, 0)
         self.tableView.register(UITableViewCell.classForCoder(),forCellReuseIdentifier: "HeaderCell")
+        
+        let header = FPRefreshComponent()
+        self.tableView.fp_header = header
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath)
