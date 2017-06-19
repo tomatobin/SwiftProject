@@ -32,9 +32,8 @@ class FPBaseController: UIViewController {
         self.view.backgroundColor = UIColor.white
         
         //Assure view below navigation bar
-        self.extendedLayoutIncludesOpaqueBars = true
-        self.automaticallyAdjustsScrollViewInsets = true
-        self.edgesForExtendedLayout = UIRectEdge()
+        self.automaticallyAdjustsScrollViewInsets = false
+        self.edgesForExtendedLayout = .all
         self.navigationController?.navigationBar.isTranslucent = false
         self.tabBarController?.tabBar.isTranslucent = false
         

@@ -17,8 +17,11 @@ class WidgetsController: FPBaseController,UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Widgets"
-        data = ["MBProgressHUD" : "PushToMBProgressHUD", "CustomWidgets": "PushToCustomWidgets", "BlurEffect": "PresentBlur",
-                "Fliter": "PushToFliter"]
+        data = ["MBProgressHUD" : "PushToMBProgressHUD",
+                "CustomWidgets": "PushToCustomWidgets",
+                "BlurEffect": "PresentBlur",
+                "Fliter": "PushToFliter",
+                "TableHeader": "PushToTableHeader"]
         self.configureTableView()
     }
     

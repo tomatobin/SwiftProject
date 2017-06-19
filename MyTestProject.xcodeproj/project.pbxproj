@@ -86,6 +86,7 @@
 		864A9E541E7D1151001665B8 /* LCPanoTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864A9E191E7D1151001665B8 /* LCPanoTopView.swift */; };
 		864A9E551E7D1151001665B8 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864A9E1A1E7D1151001665B8 /* PlayButton.swift */; };
 		864A9E561E7D1151001665B8 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 864A9E1C1E7D1151001665B8 /* UINavigationBar+Awesome.m */; };
+		865143801EF76D01003D8995 /* TableHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8651437F1EF76D01003D8995 /* TableHeaderController.swift */; };
 		865BE2D61D251A7100D1AD83 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865BE2D51D251A7100D1AD83 /* AVFoundation.framework */; };
 		865BE2D81D251D6800D1AD83 /* Liekkas.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 865BE2D71D251D6800D1AD83 /* Liekkas.mp3 */; };
 		866ED09E1D2A797C0098C40B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866ED09D1D2A797C0098C40B /* Foundation.framework */; };
@@ -185,6 +186,7 @@
 		864A9E1A1E7D1151001665B8 /* PlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		864A9E1B1E7D1151001665B8 /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
 		864A9E1C1E7D1151001665B8 /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
+		8651437F1EF76D01003D8995 /* TableHeaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableHeaderController.swift; sourceTree = "<group>"; };
 		865BE2D51D251A7100D1AD83 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		865BE2D71D251D6800D1AD83 /* Liekkas.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Liekkas.mp3; sourceTree = "<group>"; };
 		865BE2D91D25301500D1AD83 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 				864A9DC01E7D0DE1001665B8 /* FPBlurController.swift */,
 				864A9DC11E7D0DE1001665B8 /* MBHUDController.swift */,
 				864A9DC21E7D0DE1001665B8 /* WidgetsController.swift */,
+				8651437F1EF76D01003D8995 /* TableHeaderController.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -639,6 +642,7 @@
 				864A9E501E7D1151001665B8 /* FPTextField.swift in Sources */,
 				864A9E2F1E7D1151001665B8 /* ColorLog.swift in Sources */,
 				864A9E211E7D1151001665B8 /* NSString+Extenstion.swift in Sources */,
+				865143801EF76D01003D8995 /* TableHeaderController.swift in Sources */,
 				864A9E341E7D1151001665B8 /* FPFileHelper.swift in Sources */,
 				864A9E1F1E7D1151001665B8 /* NSDictionary+Extension.swift in Sources */,
 				864A9E4B1E7D1151001665B8 /* FPRoomSelectView.swift in Sources */,

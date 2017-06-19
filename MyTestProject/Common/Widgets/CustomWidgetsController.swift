@@ -13,6 +13,7 @@ class CustomWidgetsController: FPBaseController {
     @IBOutlet weak var panoTopView: LCPanoTopView!
     @IBOutlet weak var bazierButtoin: UIButton!
     @IBOutlet weak var textView: FPTextViewPlaceholder!
+    @IBOutlet weak var talkButtion: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,10 +23,15 @@ class CustomWidgetsController: FPBaseController {
         self.initPanoTopView()
         self.initBazierButton()
         self.initTextView()
-        
+        self.initTalkButtion()
 //        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
 //            self.presentBlurController()
 //        })
+    }
+    
+    func initTalkButtion() {
+        self.talkButtion.setImage(UIImage(named: "livepreview_icon_speak_disable"), for: .normal)
+        self.talkButtion.tag = 0
     }
     
     func initStarsView () {
@@ -67,5 +73,14 @@ class CustomWidgetsController: FPBaseController {
     
     func initTextView() {
         self.textView.placeholder = "这是一个自带PlaceHolder的TextView，是不是很不错的啊~"
+    }
+    
+    @IBAction func onTalkAction(_ sender: Any) {
+        
+        let animation: CATransition = CATransition.init()
+        animation.duration = 1.0
+        animation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseOut)
+        animation.type = "oglFlip"
+        self.talkButtion.layer.add(animation, forKey: "Flip")
     }
 }
