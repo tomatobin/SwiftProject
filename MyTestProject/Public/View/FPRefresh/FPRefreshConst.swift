@@ -12,3 +12,4 @@ let FPRefreshComponentKey = UnsafeRawPointer(bitPattern: "ComponentKey".hashValu
 let FPRefreshPathContentOffset = "contentOffset"
 let FPRefreshPathContentInset = "contentInset"
 let FPRefreshPathContentSize = "contentSize"
+

@@ -24,6 +24,9 @@ class FPRefreshComponent: UIView {
     /// ScrollView刚开始时的inset
     var scrollViewOriginalInset: UIEdgeInsets!
     
+    /// y方向最大距离
+    var yMaxHeight: CGFloat = CGFloat(40)
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = UIColor.orange
@@ -95,7 +98,15 @@ class FPRefreshComponent: UIView {
     }
     
     func scrollViewContentOffsetDidChange(change: [NSKeyValueChangeKey : Any]?) {
+        let yOffset = self.scrollView.contentOffset.y
+        let yDelta = yOffset + self.scrollViewOriginalInset.top
+        print("yOffset:\(yOffset), delta:\(yDelta)")
         
+        if yDelta > -self.yMaxHeight {
+            self.fp_y = yOffset - yDelta - self.bounds.height
+        } else {
+            self.fp_y = yOffset + self.yMaxHeight
+        }
     }
     
     func scrollViewContentSizeDidChange(change: [NSKeyValueChangeKey : Any]?) {
