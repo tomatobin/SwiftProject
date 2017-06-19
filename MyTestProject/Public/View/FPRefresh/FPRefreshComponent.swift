@@ -102,8 +102,10 @@ class FPRefreshComponent: UIView {
         let yDelta = yOffset + self.scrollViewOriginalInset.top
         print("yOffset:\(yOffset), delta:\(yDelta)")
         
-        if yDelta > -self.yMaxHeight {
+        if yDelta > -self.yMaxHeight - self.bounds.height {
             self.fp_y = yOffset - yDelta - self.bounds.height
+            let angle = Double(2 * yDelta / self.yMaxHeight + self.bounds.height) * Double.pi
+            self.loadingView.transform = CGAffineTransform(rotationAngle: -CGFloat(angle))
         } else {
             self.fp_y = yOffset + self.yMaxHeight
         }
