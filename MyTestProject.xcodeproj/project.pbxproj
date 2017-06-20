@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E3277421EF96B8200BD341E /* FPRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4E3277411EF96B8200BD341E /* FPRefresh.bundle */; };
+		4E3277481EF96CB800BD341E /* FPRefresh@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3277461EF96CB800BD341E /* FPRefresh@3x.png */; };
+		4E3277491EF96CB800BD341E /* FPRresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3277471EF96CB800BD341E /* FPRresh@2x.png */; };
 		860777E51EF8A89300B08DA0 /* FPRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860777E41EF8A89300B08DA0 /* FPRefreshHeader.swift */; };
 		860EB8AB1D24BCC10020736D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860EB8AA1D24BCC10020736D /* AppDelegate.swift */; };
 		860EB8AD1D24BCC10020736D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860EB8AC1D24BCC10020736D /* ViewController.swift */; };
@@ -104,6 +107,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E3277411EF96B8200BD341E /* FPRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FPRefresh.bundle; sourceTree = "<group>"; };
+		4E3277461EF96CB800BD341E /* FPRefresh@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FPRefresh@3x.png"; path = "FPRefresh.bundle/FPRefresh@3x.png"; sourceTree = "<group>"; };
+		4E3277471EF96CB800BD341E /* FPRresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FPRresh@2x.png"; path = "FPRefresh.bundle/FPRresh@2x.png"; sourceTree = "<group>"; };
 		5EE5F991111B4F41E0289859 /* Pods-MyTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTestProject/Pods-MyTestProject.release.xcconfig"; sourceTree = "<group>"; };
 		6FCBB48DE8AF7BA6C1388AE1 /* Pods_MyTestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		849898BD5A042CF962BB3771 /* Pods-MyTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTestProject/Pods-MyTestProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -477,10 +483,13 @@
 		865143841EF77B10003D8995 /* FPRefresh */ = {
 			isa = PBXGroup;
 			children = (
+				4E3277461EF96CB800BD341E /* FPRefresh@3x.png */,
+				4E3277471EF96CB800BD341E /* FPRresh@2x.png */,
 				865143851EF77B2A003D8995 /* FPRefreshComponent.swift */,
 				865143871EF77B77003D8995 /* UIScrollView+Refresh.swift */,
 				865143891EF79C34003D8995 /* FPRefreshDefine.swift */,
 				860777E41EF8A89300B08DA0 /* FPRefreshHeader.swift */,
+				4E3277411EF96B8200BD341E /* FPRefresh.bundle */,
 			);
 			path = FPRefresh;
 			sourceTree = "<group>";
@@ -566,6 +575,7 @@
 				864A9E471E7D1151001665B8 /* FPNumberKeyboard.xib in Resources */,
 				864A9E481E7D1151001665B8 /* resign@2x.png in Resources */,
 				860EB8E21D24EF950020736D /* cowsound.mp3 in Resources */,
+				4E3277421EF96B8200BD341E /* FPRefresh.bundle in Resources */,
 				864A9E451E7D1151001665B8 /* delete@3x.png in Resources */,
 				864A9E491E7D1151001665B8 /* resign@3x.png in Resources */,
 				864A9E441E7D1151001665B8 /* delete@2x.png in Resources */,
@@ -576,6 +586,8 @@
 				864A9DD41E7D0E17001665B8 /* Reverse.storyboard in Resources */,
 				86D188E31D3DB7E30031D32C /* Loading_carton.gif in Resources */,
 				86E520611EA6EBFB00B01529 /* Common.storyboard in Resources */,
+				4E3277491EF96CB800BD341E /* FPRresh@2x.png in Resources */,
+				4E3277481EF96CB800BD341E /* FPRefresh@3x.png in Resources */,
 				86D188E11D3DB7560031D32C /* Loading_rabbit.gif in Resources */,
 				860EB8B01D24BCC10020736D /* Main.storyboard in Resources */,
 				86D188D81D3DACBB0031D32C /* Widgets.storyboard in Resources */,

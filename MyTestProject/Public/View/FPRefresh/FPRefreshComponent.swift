@@ -12,7 +12,7 @@ class FPRefreshComponent: UIView {
 
     /// Loading控件
     internal lazy var loadingView: UIImageView = {
-        let image = UIImage(named: "refresh")!
+        let image = UIImage(named: "FPRefresh")!
         let imageView = UIImageView(image: image)
         imageView.frame = CGRect(x: 10, y: 0, width: image.size.width, height: image.size.height)
         self.addSubview(imageView)
