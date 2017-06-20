@@ -10,7 +10,8 @@ import UIKit
 
 class FPRefreshComponent: UIView {
 
-    lazy var loadingView: UIImageView = {
+    /// Loading控件
+    internal lazy var loadingView: UIImageView = {
         let image = UIImage(named: "refresh")!
         let imageView = UIImageView(image: image)
         imageView.frame = CGRect(x: 10, y: 0, width: image.size.width, height: image.size.height)
@@ -18,18 +19,32 @@ class FPRefreshComponent: UIView {
         return imageView
     }()
     
+    /// 正在刷新的回调
+    var refreshingBlock: FPRefreshComponentRefreshingBlcok?
+    
+    /// 刷新状态(默认idle)
+    var state: FPRefreshState = .idle {
+        didSet{
+            print("🍎 Set state: \(state)🍎")
+        }
+    }
+    
     /// 依赖的外部ScrollView
     weak var scrollView: UIScrollView!
     
     /// ScrollView刚开始时的inset
-    var scrollViewOriginalInset: UIEdgeInsets!
+    internal var scrollViewOriginalInset: UIEdgeInsets!
     
     /// y方向最大距离
-    var yMaxHeight: CGFloat = CGFloat(40)
+    internal var yMaxHeight: CGFloat = CGFloat(40)
+    
+    deinit {
+        fp_testDeinit(self)
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.orange
+        self.backgroundColor = UIColor.clear
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -71,18 +86,90 @@ class FPRefreshComponent: UIView {
         }
     }
     
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        
+        //参考MJ，预防view还没显示出来就调用了beginRefreshing
+        if self.state == .willRefresh {
+            self.state = .refreshing
+        }
+    }
+    
+    /// 恢复初始位置
+    func backToOrigin() {
+        self.fp_y = -self.scrollViewOriginalInset.top - self.bounds.height
+    }
+    
+    //MARK: Refresh
+    func beginRefreshing() {
+        self.state = .refreshing
+        self.startRotateAnimation()
+        
+        UIView.animate(withDuration: FPRefreshFastAnimationDuration, animations: {
+            
+        }, completion: { _ in
+            self.executeRefreshingCallback()
+        })
+    }
+    
+    func endRefreshing() {
+        self.state = .idle
+        
+        UIView.animate(withDuration: FPRefreshFastAnimationDuration, animations: {
+            self.backToOrigin()
+        }) { _ in
+            self.stopRotateAnimation()
+        }
+    }
+}
+
+//MARK: 内部方法
+extension FPRefreshComponent {
+    
+    /// 触发回调
+    func executeRefreshingCallback() {
+        DispatchQueue.main.async {
+            self.refreshingBlock?()
+        }
+    }
+    
+    //MARK: Rotate
+    func startRotateAnimation() {
+        let animation = CABasicAnimation(keyPath: "transform.rotation.z")
+        animation.fillMode = kCAFillModeForwards
+        animation.isRemovedOnCompletion = false
+        animation.fromValue =  0
+        animation.toValue  = -2 * Double.pi
+        animation.duration  = 4 / (2 * Double.pi)
+        animation.repeatCount = MAXFLOAT
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        self.loadingView.layer.add(animation, forKey: "rotate")
+    }
+    
+    func stopRotateAnimation() {
+        self.loadingView.layer.removeAllAnimations()
+    }
+    
     //MARK: KVO
     func addObservers() {
-        self.scrollView?.addObserver(self, forKeyPath: FPRefreshPathContentOffset, options: [.new, .old], context: nil)
+        self.scrollView.addObserver(self, forKeyPath: FPRefreshPathContentOffset, options: [.new, .old], context: nil)
     }
     
     func removeObservers() {
         self.scrollView?.removeObserver(self, forKeyPath: FPRefreshPathContentOffset)
     }
     
+    func removeObservers(superView: UIView?) {
+        superView?.removeObserver(self, forKeyPath: FPRefreshPathContentOffset)
+    }
+    
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if self.isUserInteractionEnabled == false {
             return
+        }
+        
+        if keyPath == FPRefreshPathContentSize {
+            self.scrollViewContentSizeDidChange(change: change)
         }
         
         if self.isHidden {
@@ -98,17 +185,7 @@ class FPRefreshComponent: UIView {
     }
     
     func scrollViewContentOffsetDidChange(change: [NSKeyValueChangeKey : Any]?) {
-        let yOffset = self.scrollView.contentOffset.y
-        let yDelta = yOffset + self.scrollViewOriginalInset.top
-        print("yOffset:\(yOffset), delta:\(yDelta)")
         
-        if yDelta > -self.yMaxHeight - self.bounds.height {
-            self.fp_y = yOffset - yDelta - self.bounds.height
-            let angle = Double(2 * yDelta / self.yMaxHeight + self.bounds.height) * Double.pi
-            self.loadingView.transform = CGAffineTransform(rotationAngle: -CGFloat(angle))
-        } else {
-            self.fp_y = yOffset + self.yMaxHeight
-        }
     }
     
     func scrollViewContentSizeDidChange(change: [NSKeyValueChangeKey : Any]?) {

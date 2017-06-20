@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		860777E51EF8A89300B08DA0 /* FPRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860777E41EF8A89300B08DA0 /* FPRefreshHeader.swift */; };
 		860EB8AB1D24BCC10020736D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860EB8AA1D24BCC10020736D /* AppDelegate.swift */; };
 		860EB8AD1D24BCC10020736D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860EB8AC1D24BCC10020736D /* ViewController.swift */; };
 		860EB8B01D24BCC10020736D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860EB8AE1D24BCC10020736D /* Main.storyboard */; };
@@ -89,7 +90,7 @@
 		865143801EF76D01003D8995 /* TableHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8651437F1EF76D01003D8995 /* TableHeaderController.swift */; };
 		865143861EF77B2A003D8995 /* FPRefreshComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865143851EF77B2A003D8995 /* FPRefreshComponent.swift */; };
 		865143881EF77B77003D8995 /* UIScrollView+Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865143871EF77B77003D8995 /* UIScrollView+Refresh.swift */; };
-		8651438A1EF79C34003D8995 /* FPRefreshConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865143891EF79C34003D8995 /* FPRefreshConst.swift */; };
+		8651438A1EF79C34003D8995 /* FPRefreshDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865143891EF79C34003D8995 /* FPRefreshDefine.swift */; };
 		8651438C1EF7A199003D8995 /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8651438B1EF7A199003D8995 /* UIView+Ex.swift */; };
 		865BE2D61D251A7100D1AD83 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865BE2D51D251A7100D1AD83 /* AVFoundation.framework */; };
 		865BE2D81D251D6800D1AD83 /* Liekkas.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 865BE2D71D251D6800D1AD83 /* Liekkas.mp3 */; };
@@ -106,6 +107,7 @@
 		5EE5F991111B4F41E0289859 /* Pods-MyTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTestProject/Pods-MyTestProject.release.xcconfig"; sourceTree = "<group>"; };
 		6FCBB48DE8AF7BA6C1388AE1 /* Pods_MyTestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		849898BD5A042CF962BB3771 /* Pods-MyTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTestProject/Pods-MyTestProject.debug.xcconfig"; sourceTree = "<group>"; };
+		860777E41EF8A89300B08DA0 /* FPRefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPRefreshHeader.swift; sourceTree = "<group>"; };
 		860EB8A71D24BCC10020736D /* MyTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		860EB8AA1D24BCC10020736D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		860EB8AC1D24BCC10020736D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -193,7 +195,7 @@
 		8651437F1EF76D01003D8995 /* TableHeaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableHeaderController.swift; sourceTree = "<group>"; };
 		865143851EF77B2A003D8995 /* FPRefreshComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPRefreshComponent.swift; sourceTree = "<group>"; };
 		865143871EF77B77003D8995 /* UIScrollView+Refresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Refresh.swift"; sourceTree = "<group>"; };
-		865143891EF79C34003D8995 /* FPRefreshConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPRefreshConst.swift; sourceTree = "<group>"; };
+		865143891EF79C34003D8995 /* FPRefreshDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPRefreshDefine.swift; sourceTree = "<group>"; };
 		8651438B1EF7A199003D8995 /* UIView+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
 		865BE2D51D251A7100D1AD83 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		865BE2D71D251D6800D1AD83 /* Liekkas.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Liekkas.mp3; sourceTree = "<group>"; };
@@ -477,7 +479,8 @@
 			children = (
 				865143851EF77B2A003D8995 /* FPRefreshComponent.swift */,
 				865143871EF77B77003D8995 /* UIScrollView+Refresh.swift */,
-				865143891EF79C34003D8995 /* FPRefreshConst.swift */,
+				865143891EF79C34003D8995 /* FPRefreshDefine.swift */,
+				860777E41EF8A89300B08DA0 /* FPRefreshHeader.swift */,
 			);
 			path = FPRefresh;
 			sourceTree = "<group>";
@@ -657,7 +660,7 @@
 				864A9DCD1E7D0DE1001665B8 /* CustomWidgetsController.swift in Sources */,
 				860EB8AD1D24BCC10020736D /* ViewController.swift in Sources */,
 				860EB8AB1D24BCC10020736D /* AppDelegate.swift in Sources */,
-				8651438A1EF79C34003D8995 /* FPRefreshConst.swift in Sources */,
+				8651438A1EF79C34003D8995 /* FPRefreshDefine.swift in Sources */,
 				864A9E3B1E7D1151001665B8 /* PresentModallySegue.swift in Sources */,
 				864A9E241E7D1151001665B8 /* UIButton+PositionLabel.swift in Sources */,
 				864A9DCF1E7D0DE1001665B8 /* FPBlurController.swift in Sources */,
@@ -703,6 +706,7 @@
 				864A9E2A1E7D1151001665B8 /* UITableView+Extension.swift in Sources */,
 				864A9E531E7D1151001665B8 /* FPWKWebController.swift in Sources */,
 				864A9E561E7D1151001665B8 /* UINavigationBar+Awesome.m in Sources */,
+				860777E51EF8A89300B08DA0 /* FPRefreshHeader.swift in Sources */,
 				864A9E4E1E7D1151001665B8 /* FPShareView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,6 +15,13 @@ class TableHeaderController: FPBaseController,UITableViewDelegate,UITableViewDat
     
     var topHeight: CGFloat = CGFloat(300)
     
+    deinit {
+        fp_testDeinit(self)
+        
+        //由于在内部的弱引用会被重置为nil，暂时在上层处理
+        self.tableView.removeObserver(self.tableView.fp_header, forKeyPath: FPRefreshPathContentOffset, context: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,13 +35,24 @@ class TableHeaderController: FPBaseController,UITableViewDelegate,UITableViewDat
         self.tableView.contentInset = UIEdgeInsetsMake(topHeight , 0, 0, 0)
         self.tableView.register(UITableViewCell.classForCoder(),forCellReuseIdentifier: "HeaderCell")
         
-        let header = FPRefreshComponent()
+        let header = FPRefreshHeader()
+        header.refreshingBlock = {
+            
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3.0, execute: { 
+                self.refreshEnd()
+            })
+        }
+        
         self.tableView.fp_header = header
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func refreshEnd() {
+        self.tableView.fp_header.endRefreshing()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
