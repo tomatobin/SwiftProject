@@ -19,7 +19,7 @@ class TableHeaderController: FPBaseController,UITableViewDelegate,UITableViewDat
         fp_testDeinit(self)
         
         //由于在内部的弱引用会被重置为nil，暂时在上层处理
-        self.tableView.removeObserver(self.tableView.fp_header, forKeyPath: FPRefreshPathContentOffset, context: nil)
+        self.tableView.removeObserver(self.tableView.fp_header, forKeyPath: FPRefreshKeyPathContentOffset, context: nil)
     }
     
     override func viewDidLoad() {
@@ -36,14 +36,18 @@ class TableHeaderController: FPBaseController,UITableViewDelegate,UITableViewDat
         self.tableView.register(UITableViewCell.classForCoder(),forCellReuseIdentifier: "HeaderCell")
         
         let header = FPRefreshHeader()
+        weak var weakself = self
         header.refreshingBlock = {
             
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3.0, execute: { 
-                self.refreshEnd()
+            //注意循环引用
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3.0, execute: {
+                weakself?.refreshEnd()
             })
         }
         
         self.tableView.fp_header = header
+        
+        self.tableView.fp_header.beginRefreshing()
     }
 
     override func didReceiveMemoryWarning() {

@@ -80,33 +80,39 @@ class FPRefreshComponent: UIView {
         }
     }
     
+    override func removeFromSuperview() {
+        super.removeFromSuperview()
+        self.removeObservers()
+    }
+    
     func placeSubviews() {
         self.loadingView.mas_makeConstraints { (make) in
             make!.center.equalTo()(self)
         }
     }
     
-    override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        
-        //参考MJ，预防view还没显示出来就调用了beginRefreshing
-        if self.state == .willRefresh {
-            self.state = .refreshing
-        }
+    /// 恢复初始位置
+    func backToOriginLocation() {
+        self.fp_y = -self.scrollViewOriginalInset.top - self.bounds.height
     }
     
-    /// 恢复初始位置
-    func backToOrigin() {
-        self.fp_y = -self.scrollViewOriginalInset.top - self.bounds.height
+    /// 移动到刷新的位置
+    func moveToRefreshLocation() {
+        self.fp_y = self.scrollView.contentOffset.y + self.yMaxHeight
     }
     
     //MARK: Refresh
     func beginRefreshing() {
+        if self.state == .refreshing {
+            return
+        }
+        
         self.state = .refreshing
         self.startRotateAnimation()
         
         UIView.animate(withDuration: FPRefreshFastAnimationDuration, animations: {
-            
+            //主动调用时，先移动到loading的位置
+            self.moveToRefreshLocation()
         }, completion: { _ in
             self.executeRefreshingCallback()
         })
@@ -116,7 +122,7 @@ class FPRefreshComponent: UIView {
         self.state = .idle
         
         UIView.animate(withDuration: FPRefreshFastAnimationDuration, animations: {
-            self.backToOrigin()
+            self.backToOriginLocation()
         }) { _ in
             self.stopRotateAnimation()
         }
@@ -152,15 +158,15 @@ extension FPRefreshComponent {
     
     //MARK: KVO
     func addObservers() {
-        self.scrollView.addObserver(self, forKeyPath: FPRefreshPathContentOffset, options: [.new, .old], context: nil)
+        self.scrollView.addObserver(self, forKeyPath: FPRefreshKeyPathContentOffset, options: [.new, .old], context: nil)
     }
     
     func removeObservers() {
-        self.scrollView?.removeObserver(self, forKeyPath: FPRefreshPathContentOffset)
+        self.scrollView?.removeObserver(self, forKeyPath: FPRefreshKeyPathContentOffset)
     }
     
     func removeObservers(superView: UIView?) {
-        superView?.removeObserver(self, forKeyPath: FPRefreshPathContentOffset)
+        superView?.removeObserver(self, forKeyPath: FPRefreshKeyPathContentOffset)
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -168,7 +174,7 @@ extension FPRefreshComponent {
             return
         }
         
-        if keyPath == FPRefreshPathContentSize {
+        if keyPath == FPRefreshKeyPathContentSize {
             self.scrollViewContentSizeDidChange(change: change)
         }
         
@@ -176,9 +182,9 @@ extension FPRefreshComponent {
             return
         }
         
-        if keyPath == FPRefreshPathContentOffset {
+        if keyPath == FPRefreshKeyPathContentOffset {
             self.scrollViewContentOffsetDidChange(change: change)
-        } else if keyPath == FPRefreshPathContentSize {
+        } else if keyPath == FPRefreshKeyPathContentSize {
             self.scrollViewContentSizeDidChange(change: change)
         }
         

@@ -14,9 +14,9 @@ extension UIScrollView {
         set{
             newValue.frame = CGRect(x: 10, y: 10, width: 50, height: 50)
             self.addSubview(newValue)
-            objc_setAssociatedObject(self, FPRefreshComponentKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, FPRefreshRuntimeKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }get{
-            return objc_getAssociatedObject(self, FPRefreshComponentKey) as! FPRefreshComponent
+            return objc_getAssociatedObject(self, FPRefreshRuntimeKey) as! FPRefreshComponent
         }
     }
 }

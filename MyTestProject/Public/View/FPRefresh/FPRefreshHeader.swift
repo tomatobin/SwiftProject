@@ -13,14 +13,14 @@ class FPRefreshHeader: FPRefreshComponent {
     override func scrollViewContentOffsetDidChange(change: [NSKeyValueChangeKey : Any]?) {
         super.scrollViewContentOffsetDidChange(change: change)
         
-        
         let yOffset = self.scrollView.contentOffset.y
         
         //相对偏移的值
         let yDelta = yOffset + self.scrollViewOriginalInset.top
         //print("yOffset:\(yOffset), delta:\(yDelta)")
         
-        if (self.state == .refreshing  && yDelta > -self.yMaxHeight - self.bounds.height) ||
+        //下拉过程中正在刷新或者下拉距离超过限制，固定位置
+        if (self.state == .refreshing && yDelta > -self.yMaxHeight - self.bounds.height) ||
             yDelta < -self.yMaxHeight - self.bounds.height {
             //print("🍎 Set y : \(yOffset + self.yMaxHeight) 🍎")
             self.fp_y = yOffset + self.yMaxHeight
@@ -38,13 +38,11 @@ class FPRefreshHeader: FPRefreshComponent {
                 self.fp_y = yOffset - yDelta - self.bounds.height
             } else if self.state == .pulling && yDelta > -self.yMaxHeight - self.bounds.height {
                 //转化为普通状态
-                self.state = .idle
                 self.endRefreshing()
             }
         } else if self.state == .pulling { //即将刷新 && 手松开
             print("🍎 Begin refreshing...🍎")
             self.fp_y = yOffset + self.yMaxHeight
-            self.state = .refreshing
             self.beginRefreshing()
         }
     }
