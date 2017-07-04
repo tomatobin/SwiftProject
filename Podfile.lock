@@ -19,7 +19,10 @@ PODS:
   - ShareSDK3/ShareSDKPlatforms/WeChat (3.6.1):
     - MOBFoundation
   - SnapKit (3.2.0)
+  - SocketRocket (0.5.1)
   - SwiftyJSON (3.1.4)
+  - WeexSDK (0.11.0):
+    - SocketRocket
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
@@ -34,6 +37,7 @@ DEPENDENCIES:
   - ShareSDK3/ShareSDKPlatforms/WeChat (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS.git`)
   - SnapKit (~> 3.2.0)
   - SwiftyJSON (~> 3.1.4)
+  - WeexSDK (= 0.11.0)
 
 EXTERNAL SOURCES:
   ShareSDK3:
@@ -53,8 +57,10 @@ SPEC CHECKSUMS:
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   ShareSDK3: dea6a14cc4385fa6493e10895ba11d07ef34d149
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  WeexSDK: f9cfe6adc91fba3ca5e36bc9808bf1b6e8be2106
 
-PODFILE CHECKSUM: 3a9c7579ce9208774913856ee201e434cfe3ca02
+PODFILE CHECKSUM: b28a9c18ed0ac55c2906ed07c90d91b740285c9f
 
 COCOAPODS: 1.2.0

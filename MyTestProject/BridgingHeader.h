@@ -31,4 +31,7 @@
 //新浪微博SDK需要在项目Build Settings中的Other Linker Flags添加"-ObjC"
 #import "WeiboSDK.h"
 
+//Weex SDK
+#import <WeexSDK/WeexSDK.h>
+
 #endif /* BridgingHeader_h */
