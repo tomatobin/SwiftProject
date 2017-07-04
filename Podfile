@@ -1,6 +1,7 @@
 use_frameworks!
 target 'MyTestProject' do
     pod 'pop'
+    pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
     pod 'MBProgressHUD', '~> 0.9.2'
     pod 'SDWebImage', '~> 3.8.1'
     pod 'Masonry', '0.6.3'

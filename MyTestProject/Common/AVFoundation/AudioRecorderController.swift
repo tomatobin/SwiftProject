@@ -172,7 +172,7 @@ class AudioRecorderController: FPBaseController, AVAudioRecorderDelegate, AVAudi
     func filePath() -> URL {
         var path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last
         path = (path)! + "/myRecord.caf"
-        ColorLog.green("File path: \(path)")
+        ColorLog.green("File path: \(String(describing: path))")
         let url  = URL(fileURLWithPath: path!)
         return url
     }

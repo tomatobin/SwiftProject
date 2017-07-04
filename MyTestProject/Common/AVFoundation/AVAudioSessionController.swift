@@ -72,7 +72,7 @@ class AVAudioSessionController: FPBaseController,AVAudioPlayerDelegate {
     func routeChanged(_ notification: Notification){
         let dictionary = notification.userInfo
         let changeReason = (dictionary![AVAudioSessionRouteChangeReasonKey] as AnyObject).uint32Value
-        ColorLog.green("Change Reason:\(changeReason)") // AVAudioSessionRouteChangeReason
+        ColorLog.green("Change Reason:\(changeReason ?? 0)") // AVAudioSessionRouteChangeReason
     }
     
     @IBAction func onPlayAction(_ sender: AnyObject) {

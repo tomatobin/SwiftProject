@@ -20,6 +20,7 @@ PODS:
     - MOBFoundation
   - SnapKit (3.2.0)
   - SocketRocket (0.5.1)
+  - Spring (1.0.3)
   - SwiftyJSON (3.1.4)
   - WeexSDK (0.11.0):
     - SocketRocket
@@ -36,17 +37,24 @@ DEPENDENCIES:
   - ShareSDK3/ShareSDKPlatforms/SinaWeibo (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS.git`)
   - ShareSDK3/ShareSDKPlatforms/WeChat (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS.git`)
   - SnapKit (~> 3.2.0)
+  - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
   - SwiftyJSON (~> 3.1.4)
   - WeexSDK (= 0.11.0)
 
 EXTERNAL SOURCES:
   ShareSDK3:
     :git: https://git.oschina.net/MobClub/ShareSDK-for-iOS.git
+  Spring:
+    :branch: swift3
+    :git: https://github.com/MengTo/Spring.git
 
 CHECKOUT OPTIONS:
   ShareSDK3:
     :commit: 02f43072cfefcc5d97bdad4c33d4efb32c18afb8
     :git: https://git.oschina.net/MobClub/ShareSDK-for-iOS.git
+  Spring:
+    :commit: 8201b5c93bd7ebdf4cd18160bcde1e6e88c2be64
+    :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
@@ -58,9 +66,10 @@ SPEC CHECKSUMS:
   ShareSDK3: dea6a14cc4385fa6493e10895ba11d07ef34d149
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
+  Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   WeexSDK: f9cfe6adc91fba3ca5e36bc9808bf1b6e8be2106
 
-PODFILE CHECKSUM: b28a9c18ed0ac55c2906ed07c90d91b740285c9f
+PODFILE CHECKSUM: 0ff76bbc6ad0a026e7e42a0e9d515e2318277df9
 
 COCOAPODS: 1.2.0

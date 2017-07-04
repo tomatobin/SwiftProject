@@ -90,7 +90,7 @@ class FPWKWebController: FPBaseController,WKUIDelegate,WKNavigationDelegate {
     
     //MARK: WKNavigationDelegate
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        ColorLog.green("\(NSStringFromClass(self.classForCoder))::Start load url \(webView.url?.absoluteString)")
+        ColorLog.green("\(NSStringFromClass(self.classForCoder))::Start load url \(String(describing: webView.url?.absoluteString))")
         self.progressView.progress = 0
     }
     

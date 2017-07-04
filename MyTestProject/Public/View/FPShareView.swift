@@ -125,25 +125,25 @@ class FPShareView: UIView {
         if shareType == .weChat {
             platform = .subTypeWechatSession
             if !WXApi.isWXAppInstalled() {
-                FPHudUtility.showMessage("未安装微信客户端")
+                _ = FPHudUtility.showMessage("未安装微信客户端")
                 return
             }
         } else if shareType == .weChatFriends {
             platform = .subTypeWechatTimeline
             if !WXApi.isWXAppInstalled() {
-                FPHudUtility.showMessage("未安装微信客户端")
+                _ = FPHudUtility.showMessage("未安装微信客户端")
                 return
             }
         } else if shareType == .weibo {
             platform = .typeSinaWeibo
             if !WeiboSDK.isWeiboAppInstalled() {
-                FPHudUtility.showMessage("未安装微博客户端")
+                _ = FPHudUtility.showMessage("未安装微博客户端")
                 return
             }
         } else {
             platform = .subTypeQZone
             if !QQApiInterface.isQQInstalled() {
-                FPHudUtility.showMessage("未安装QQ客户端")
+                _ = FPHudUtility.showMessage("未安装QQ客户端")
                 return
             }
         }
@@ -166,12 +166,12 @@ class FPShareView: UIView {
             self.dismiss()
             switch state{
             case SSDKResponseState.success:
-                FPHudUtility.showMessage("分享成功")
+                _ = FPHudUtility.showMessage("分享成功")
             case SSDKResponseState.fail:
-                ColorLog.red("ShareSDK::\(error)")
-                FPHudUtility.showMessage("分享失败")
+                ColorLog.red("ShareSDK::\(String(describing: error))")
+                _ = FPHudUtility.showMessage("分享失败")
             case SSDKResponseState.cancel:
-                FPHudUtility.showMessage("分享取消")
+                _ = FPHudUtility.showMessage("分享取消")
                 
             default:
                 break

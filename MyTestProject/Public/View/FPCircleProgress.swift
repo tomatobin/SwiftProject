@@ -122,7 +122,7 @@ class FPCircleProgress: UIView {
     /// 画圆环背景色
     func drawArcBackground() {
         let radius = self.bounds.width / 2.0
-        self.drawArc(withColor: self.arcBgColor, startAngle: 0, endAngle: CGFloat(Double(2*M_PI)), radius: radius)
+        self.drawArc(withColor: self.arcBgColor, startAngle: 0, endAngle: CGFloat(2*Double.pi), radius: radius)
     }
     
     /// 画圆环
@@ -132,14 +132,14 @@ class FPCircleProgress: UIView {
         }
         
         let radius = self.bounds.width / 2.0
-        let endAngle = Double(2 * M_PI * Double(self.percent)) - M_PI_2
-        self.drawArc(withColor: self.arcUnfinishColor, startAngle: -(CGFloat)(M_PI_2), endAngle: CGFloat(endAngle), radius: radius)
+        let endAngle = 2.0 * Double.pi * Double(self.percent) - Double.pi/2.0
+        self.drawArc(withColor: self.arcUnfinishColor, startAngle: -(CGFloat)(Double.pi/2.0), endAngle: CGFloat(endAngle), radius: radius)
     }
     
     /// 画圆环前景色
     func drawArcCenter() {
         let radius = self.bounds.width / 2.0 - self.arcWidth
-        self.drawArc(withColor: self.centerColor, startAngle: 0, endAngle: CGFloat(Double(2*M_PI)), radius: radius)
+        self.drawArc(withColor: self.centerColor, startAngle: 0, endAngle: CGFloat(2*Double.pi), radius: radius)
     }
     
     func drawText() {

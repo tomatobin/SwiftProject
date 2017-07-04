@@ -83,4 +83,9 @@ class CustomWidgetsController: FPBaseController {
         animation.type = "oglFlip"
         self.talkButtion.layer.add(animation, forKey: "Flip")
     }
+    
+    //MARK: Animation
+    func swingAnimation() {
+       
+    }
 }
