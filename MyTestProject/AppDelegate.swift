@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         WXAppConfiguration.setAppGroup("DemoApp")
         WXSDKEngine.initSDKEnvironment()
         
-        WXLog.setLogLevel(.all)
+        WXLog.setLogLevel(.off)
     }
 }
 
