@@ -12,7 +12,7 @@
         <!--Widgets Controller-->
         <scene sceneID="3oY-6c-IBd">
             <objects>
-                <viewController id="W5M-c6-B6C" customClass="WidgetsController" customModule="MyTestProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="W5M-c6-B6C" customClass="WidgetsController" customModule="MyTestProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="scu-a4-h7p"/>
                         <viewControllerLayoutGuide type="bottom" id="VBV-jO-13C"/>
