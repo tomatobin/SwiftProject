@@ -86,7 +86,7 @@ class CustomWidgetsController: FPBaseController {
         animation.type = "oglFlip"
         self.talkButtion.layer.add(animation, forKey: "Flip")
         
-        MGJRouter.openURL("my://widgets/hud", withUserInfo: ["dissmissTime": Double(2.0),
+        MGJRouter.openURL("my://widgets/hud?dismissTime=5&title=MGJRouter", withUserInfo: ["dissmissTime": Double(2.0),
                                                              "NavigationVc": self.navigationController as Any]) { result in
         }
     }

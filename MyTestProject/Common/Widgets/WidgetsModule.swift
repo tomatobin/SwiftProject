@@ -30,13 +30,27 @@ class WidgetsModule: NSObject,BHModuleProtocol {
 //            
 //        }
         
-        //带返回值的
-        MGJRouter.registerURLPattern("my://widgets/hud") { ( parameters : [AnyHashable : Any]?) -> (UIViewController?) in
+//        //带返回值的
+//        MGJRouter.registerURLPattern("my://widgets/hud") { ( parameters : [AnyHashable : Any]?) -> (UIViewController?) in
+//            let hudVc = MBHUDController.storyboardInstance()
+//            let userInfo = parameters?["MGJRouterParameterUserInfo"] as? [AnyHashable : Any]
+//            if let dissmissTime = userInfo?["dissmissTime"], dissmissTime is Double,
+//                let naviVc = userInfo?["NavigationVc"], naviVc is UINavigationController {
+//                hudVc?.dismissTime = dissmissTime as! Double
+//                (naviVc as! UINavigationController).pushViewController(hudVc!, animated: true)
+//            }
+//            
+//            return hudVc
+//        }
+        
+        //使用url参数
+        MGJRouter.registerURLPattern("my://widgets/hud?dismissTime=&title=") { ( parameters : [AnyHashable : Any]?) -> (UIViewController?) in
             let hudVc = MBHUDController.storyboardInstance()
             let userInfo = parameters?["MGJRouterParameterUserInfo"] as? [AnyHashable : Any]
-            if let dissmissTime = userInfo?["dissmissTime"], dissmissTime is Double,
+            if let dissmissTime = parameters?["dismissTime"],
                 let naviVc = userInfo?["NavigationVc"], naviVc is UINavigationController {
-                hudVc?.dismissTime = dissmissTime as! Double
+                hudVc?.dismissTime = Double(dissmissTime as! String)!
+                hudVc?.title = parameters?["title"] as? String
                 (naviVc as! UINavigationController).pushViewController(hudVc!, animated: true)
             }
             
