@@ -168,7 +168,7 @@
         <!--Controller-->
         <scene sceneID="ZPF-xP-276">
             <objects>
-                <viewController id="kxl-2F-pkS" customClass="MBHUDController" customModule="MyTestProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MBHUDController" id="kxl-2F-pkS" customClass="MBHUDController" customModule="MyTestProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Iy1-9w-0rI"/>
                         <viewControllerLayoutGuide type="bottom" id="Qcp-U0-37Z"/>

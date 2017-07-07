@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E2506A81F0F5FCD003117D7 /* WidgetsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2506A71F0F5FCD003117D7 /* WidgetsModule.swift */; };
+		4E2506AA1F0F60F5003117D7 /* WidgetsHudServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2506A91F0F60F5003117D7 /* WidgetsHudServiceProtocol.swift */; };
 		4E3277421EF96B8200BD341E /* FPRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4E3277411EF96B8200BD341E /* FPRefresh.bundle */; };
 		4E3277481EF96CB800BD341E /* FPRefresh@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3277461EF96CB800BD341E /* FPRefresh@3x.png */; };
 		4E3277491EF96CB800BD341E /* FPRresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3277471EF96CB800BD341E /* FPRresh@2x.png */; };
@@ -113,6 +115,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E2506A71F0F5FCD003117D7 /* WidgetsModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetsModule.swift; sourceTree = "<group>"; };
+		4E2506A91F0F60F5003117D7 /* WidgetsHudServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetsHudServiceProtocol.swift; sourceTree = "<group>"; };
 		4E3277411EF96B8200BD341E /* FPRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FPRefresh.bundle; sourceTree = "<group>"; };
 		4E3277461EF96CB800BD341E /* FPRefresh@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FPRefresh@3x.png"; path = "FPRefresh.bundle/FPRefresh@3x.png"; sourceTree = "<group>"; };
 		4E3277471EF96CB800BD341E /* FPRresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FPRresh@2x.png"; path = "FPRefresh.bundle/FPRresh@2x.png"; sourceTree = "<group>"; };
@@ -376,6 +380,8 @@
 				864A9DC21E7D0DE1001665B8 /* WidgetsController.swift */,
 				8651437F1EF76D01003D8995 /* TableHeaderController.swift */,
 				4E7AF6241F0B831C00B659DD /* SpringController.swift */,
+				4E2506A71F0F5FCD003117D7 /* WidgetsModule.swift */,
+				4E2506A91F0F60F5003117D7 /* WidgetsHudServiceProtocol.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -716,6 +722,7 @@
 				864A9E291E7D1151001665B8 /* UINavigationController+Extenstion.swift in Sources */,
 				864A9E1D1E7D1151001665B8 /* FPConstant.swift in Sources */,
 				864A9E3E1E7D1151001665B8 /* FPTableViewCell.swift in Sources */,
+				4E2506A81F0F5FCD003117D7 /* WidgetsModule.swift in Sources */,
 				864A9DD01E7D0DE1001665B8 /* MBHUDController.swift in Sources */,
 				864A9E461E7D1151001665B8 /* FPNumberKeyboard.swift in Sources */,
 				4E7AF6201F0B292E00B659DD /* FPTabbarContoller.swift in Sources */,
@@ -745,6 +752,7 @@
 				860EB8BE1D24BD2B0020736D /* FPBaseController.swift in Sources */,
 				864A9E541E7D1151001665B8 /* LCPanoTopView.swift in Sources */,
 				864A9DCE1E7D0DE1001665B8 /* FliterController.swift in Sources */,
+				4E2506AA1F0F60F5003117D7 /* WidgetsHudServiceProtocol.swift in Sources */,
 				864A9DC91E7D0DE1001665B8 /* CameraCaptureController.swift in Sources */,
 				864A9E2A1E7D1151001665B8 /* UITableView+Extension.swift in Sources */,
 				864A9E531E7D1151001665B8 /* FPWKWebController.swift in Sources */,

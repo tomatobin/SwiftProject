@@ -34,4 +34,11 @@
 //Weex SDK
 #import <WeexSDK/WeexSDK.h>
 
+//BeeHive
+#import <BeeHive/BeeHive.h>
+#import <BeeHive/BHTimeProfiler.h>
+
+//MGJRotuer
+#import <MGJRouter/MGJRouter.h>
+
 #endif /* BridgingHeader_h */

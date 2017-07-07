@@ -6,6 +6,9 @@
 //  Copyright © 2016年 iblue. All rights reserved.
 //
 
+import BeeHive
+import MGJRouter
+
 class CustomWidgetsController: FPBaseController {
 
     @IBOutlet weak var starsView: FPStarsView!
@@ -82,6 +85,10 @@ class CustomWidgetsController: FPBaseController {
         animation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseOut)
         animation.type = "oglFlip"
         self.talkButtion.layer.add(animation, forKey: "Flip")
+        
+        MGJRouter.openURL("my://widgets/hud", withUserInfo: ["dissmissTime": Double(2.0),
+                                                             "NavigationVc": self.navigationController as Any]) { result in
+        }
     }
     
     //MARK: Animation

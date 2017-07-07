@@ -9,6 +9,8 @@ target 'MyTestProject' do
     pod 'SwiftyJSON', '~> 3.1.4'
     pod 'SnapKit', '~> 3.2.0'
     pod 'WeexSDK', '0.11.0'
+    pod 'BeeHive', '~> 1.5.1'
+    pod 'MGJRouter', '~> 0.9.3'
     
     #share sdk，具体见http://wiki.mob.com/使用cocoapods集成sharesdk/
     #主模块(必须)

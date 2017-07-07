@@ -9,7 +9,7 @@
 import UIKit
 
 class WidgetsController: FPBaseController,UITableViewDelegate {
-
+    
     @IBOutlet weak var tableView: UITableView!
     var dataSource: FPTableDataSource!
     var data: Dictionary<String,String>!
@@ -36,13 +36,12 @@ class WidgetsController: FPBaseController,UITableViewDelegate {
         
         var dataArray = [FPTableViewCellData]()
         for key in Array(data.keys) {
-            let celldata = FPTableViewCellData(title: key, imageName: nil, detail: nil, type: .normal)
+            let celldata = FPTableViewCellData(title: key, imageName: "star_yellow", detail: nil, type: .normal)
             dataArray.append(celldata)
         }
         
         dataSource = FPTableDataSource.init(cellItems: dataArray, cellIdentifier: identifier, configureCell: {(cell, item) in
             let testCell = cell as! FPTableViewCell
-            testCell.imageView?.image = UIImage(named: "star_yellow")
             testCell.configureForCell(item: item)
         })
         

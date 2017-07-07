@@ -26,7 +26,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yCx-lT-Maw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6572" y="-234"/>
+            <point key="canvasLocation" x="-6958" y="-575"/>
         </scene>
         <!--逆向-->
         <scene sceneID="9fL-n9-Wlm">
@@ -43,7 +43,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qIn-xD-CCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4359" y="-114"/>
+            <point key="canvasLocation" x="-4671" y="-1082"/>
         </scene>
         <!--Weex-->
         <scene sceneID="xhh-XT-thM">
@@ -60,7 +60,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZRV-an-lRR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4359" y="733"/>
+            <point key="canvasLocation" x="-4671" y="-69"/>
         </scene>
         <!--Reverse-->
         <scene sceneID="l5Z-a9-iTk">
@@ -71,7 +71,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBq-PI-dP8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2316" y="-187"/>
+            <point key="canvasLocation" x="-2455" y="-1083"/>
         </scene>
         <!--常用-->
         <scene sceneID="Iig-BO-Ibb">
@@ -90,7 +90,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hpn-wx-QRG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4359" y="-888"/>
+            <point key="canvasLocation" x="-4670" y="-1976"/>
         </scene>
         <!--Common-->
         <scene sceneID="hZv-eh-xhf">
@@ -101,7 +101,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IL5-GV-PPM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2779" y="-889"/>
+            <point key="canvasLocation" x="-2387" y="-1977"/>
         </scene>
         <!--Weex-->
         <scene sceneID="3sb-15-bcR">
@@ -111,7 +111,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBy-CN-bdQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3278" y="733"/>
+            <point key="canvasLocation" x="-2370" y="-70"/>
         </scene>
     </scenes>
     <resources>

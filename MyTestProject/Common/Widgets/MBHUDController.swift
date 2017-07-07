@@ -9,13 +9,21 @@
 import UIKit
 import MBProgressHUD
 
-class MBHUDController: FPBaseController,UITableViewDelegate {
+class MBHUDController: FPBaseController,UITableViewDelegate,WidgetsHudServiceProtocol {
 
+    //约定：ServiceProtocol中声明的，不直接对外暴露
+    internal var dismissTime: Double = Double(2.0)
+    
     @IBOutlet weak var tableView: UITableView!
     var dataSource: FPTableDataSource!
     var data: Dictionary<String,Selector>!
     var timer: Timer?
     var progress = Float(0)
+    
+    static func storyboardInstance() -> MBHUDController? {
+        let storyboard = UIStoryboard(name: "Widgets", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: "MBHUDController") as? MBHUDController
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,7 +83,7 @@ class MBHUDController: FPBaseController,UITableViewDelegate {
     
     func showGifLoading() {
         let hud = FPHudUtility.showGifLoading(self.view, gifName: "Loading_rabbit") //不可以添加gif后缀
-        hud.hide(true, afterDelay: 20.0)
+        hud.hide(true, afterDelay: self.dismissTime)
     }
     
     func showTxtHud() {
@@ -104,6 +112,7 @@ class MBHUDController: FPBaseController,UITableViewDelegate {
         let hud = FPHudUtility.showWaitingHud(self.view)
         hud.mode = hudMode
         hud.yOffset = -Float(FP_NAVI_HEIGHT)
+        hud.hide(true, afterDelay: self.dismissTime)
     }
     
     //MARK: Timer

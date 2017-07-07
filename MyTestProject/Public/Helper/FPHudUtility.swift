@@ -61,6 +61,7 @@ class FPHudUtility: NSObject {
         MBProgressHUD.hideAllHUDs(for: superView, animated: true)
         let hud = MBProgressHUD.showAdded(to: superView, animated: true)
         hud?.color = UIColor.black.withAlphaComponent(0.7)
+        sharedInstance.progressHud = hud
         return hud!
     }
     
