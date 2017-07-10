@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import pop
 
 //定义button两种状态的枚举
 
@@ -51,27 +52,30 @@ class PlayButton: UIButton {
         
         // 4
         if animated {
-//            let animation: POPBasicAnimation = POPBasicAnimation()
-//            if let property = POPAnimatableProperty.property(withName: "animationValue", initializer: { (prop: POPMutableAnimatableProperty!) -> Void in
-//                prop.readBlock = { (object: AnyObject!, values: UnsafeMutablePointer<CGFloat>) -> Void in
-//                    if let button = object as? PlayButton {
-//                        values[0] = button.animationValue
-//                    }
-//                }
-//                prop.writeBlock = { (object: AnyObject!, values: UnsafePointer<CGFloat>) -> Void in
-//                    if let button = object as? PlayButton {
-//                        button.animationValue = values[0]
-//                    }
-//                }
-//                prop.threshold = 0.01
-//            }) as? POPAnimatableProperty {
-//                animation.property = property
-//            }
-//            animation.fromValue = NSNumber(value: Float(self.animationValue) as Float)
-//            animation.toValue = NSNumber(value: Float(toValue) as Float)
-//            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
-//            animation.duration = 0.25
-//            pop_add(animation, forKey: "percentage")
+            let animation: POPBasicAnimation = POPBasicAnimation()
+            if let property = POPAnimatableProperty.property(withName: "animationValue", initializer: { prop in
+                prop?.readBlock = { (object: Any?, values: UnsafeMutablePointer<CGFloat>?) -> Void in
+                    if let button = object as? PlayButton {
+                        values?[0] = button.animationValue
+                    }
+                }
+                
+                prop?.writeBlock = { (object: Any?, values: UnsafePointer<CGFloat>?) -> Void in
+                    if let button = object as? PlayButton, let animationValues = values {
+                        button.animationValue = animationValues[0]
+                    }
+                }
+                
+                prop?.threshold = 0.01
+                
+            }) as? POPAnimatableProperty {
+                animation.property = property
+            }
+            animation.fromValue = NSNumber(value: Float(self.animationValue) as Float)
+            animation.toValue = NSNumber(value: Float(toValue) as Float)
+            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+            animation.duration = 0.25
+            pop_add(animation, forKey: "percentage")
         } else {
             animationValue = toValue
         }

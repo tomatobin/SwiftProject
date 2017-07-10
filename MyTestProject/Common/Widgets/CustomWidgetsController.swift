@@ -89,6 +89,7 @@ class CustomWidgetsController: FPBaseController {
         MGJRouter.openURL("my://widgets/hud?dismissTime=5&title=MGJRouter", withUserInfo: ["dissmissTime": Double(2.0),
                                                              "NavigationVc": self.navigationController as Any]) { result in
         }
+        
     }
     
     //MARK: Animation
