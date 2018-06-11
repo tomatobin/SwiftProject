@@ -171,7 +171,7 @@ import UIKit
 			
 			self.millisecondsCount += interval
 			self.currentTime = Int(self.millisecondsCount / 1000)
-			self.progressLabel.text = "\(self.maxTime - self.currentTime)s"
+			self.progressLabel.text = "\(self.maxTime - self.currentTime)\ns"
 			self.drawProgressPath()
 			
 			//传出时间
