@@ -127,15 +127,15 @@ class LCPanoTopView: UIView {
     }
     
     //MARK: Actions
-    func onLeftAction() {
+	@objc func onLeftAction() {
         
     }
     
-    func onCenterAction() {
+    @objc func onCenterAction() {
         
     }
     
-    func onRightAction() {
+     @objc func onRightAction() {
         
     }
     

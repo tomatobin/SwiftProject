@@ -118,11 +118,11 @@ class FPBaseController: UIViewController {
         return nil
     }
     
-    func onBackAction() {
+	@objc func onBackAction() {
         _ = self.navigationController?.popViewController(animated: true)
     }
     
-    func onNaviRightAction(_ button: UIButton) {
+	@objc func onNaviRightAction(_ button: UIButton) {
         
     }
     

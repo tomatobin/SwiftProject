@@ -145,9 +145,9 @@ class FPCircleProgress: UIView {
     func drawText() {
         let text = NSString(string: self.centerText)
         let centerPoint = CGPoint(x: self.bounds.width / 2.0, y: self.bounds.height / 2.0)
-        let attr = [ NSForegroundColorAttributeName: UIColor.white,
-                     NSFontAttributeName: UIFont.systemFont(ofSize: 13)]
-        text.draw(at: centerPoint, withAttributes: attr)
+		let attr = [ kCTForegroundColorAttributeName: UIColor.white,
+					 kCTFontAttributeName: UIFont.systemFont(ofSize: 13)]
+		text.draw(at: centerPoint, withAttributes: attr as [NSAttributedStringKey : Any])
         //text.draw(in: self.bounds, withAttributes: attr)
     }
     

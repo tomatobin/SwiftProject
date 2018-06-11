@@ -190,11 +190,11 @@ extension FPRefreshComponent {
         
     }
     
-    func scrollViewContentOffsetDidChange(change: [NSKeyValueChangeKey : Any]?) {
+    @objc func scrollViewContentOffsetDidChange(change: [NSKeyValueChangeKey : Any]?) {
         
     }
     
-    func scrollViewContentSizeDidChange(change: [NSKeyValueChangeKey : Any]?) {
+     @objc func scrollViewContentSizeDidChange(change: [NSKeyValueChangeKey : Any]?) {
         
     }
 }

@@ -42,7 +42,7 @@ class FPBlurController: FPBaseController {
         self.view.addGestureRecognizer(tapGesture)
     }
     
-    func onTapAction() {
+	@objc func onTapAction() {
         self.dismiss(animated: true, completion: nil)
     }
 }

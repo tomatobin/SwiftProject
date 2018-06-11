@@ -91,7 +91,7 @@ class FPFliterCell: UITableViewCell {
         }
     }
     
-    func onButtonAction(_ button: UIButton) {
+	@objc func onButtonAction(_ button: UIButton) {
         
         //取消其他按钮的选中状态
         for childButton in self.filterButtons {

@@ -13,7 +13,7 @@ extension UIButton {
         let titleFont = self.titleLabel?.font!
         var titleSize = CGSize.zero
         if let title = self.titleLabel?.text {
-            titleSize = title.size(attributes: [NSFontAttributeName: titleFont!])
+			titleSize = title.size(withAttributes: [kCTFontAttributeName as NSAttributedStringKey: titleFont!])
         }
         
         var titleInsets: UIEdgeInsets

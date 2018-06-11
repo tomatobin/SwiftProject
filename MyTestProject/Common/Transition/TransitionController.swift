@@ -16,7 +16,8 @@ class TransitionController: FPBaseController,UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        data = ["ViewTransition" : "PushToViewTransition"]
+        data = ["ViewTransition" : "PushToViewTransition",
+				"ErrorTransition" : "PushToErrorView"]
         self.configureTableView()
     }
     

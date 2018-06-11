@@ -20,6 +20,8 @@
 		4E7AF6201F0B292E00B659DD /* FPTabbarContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7AF61E1F0B292E00B659DD /* FPTabbarContoller.swift */; };
 		4E7AF6251F0B831C00B659DD /* SpringController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7AF6241F0B831C00B659DD /* SpringController.swift */; };
 		4E7CBCC21F2AC6FD000A469D /* SoccerFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7CBCC11F2AC6FD000A469D /* SoccerFieldView.swift */; };
+		4EF8638A20CE11B30078B7BD /* ErrorViewTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF8638920CE11B30078B7BD /* ErrorViewTransitionViewController.swift */; };
+		4EF8638C20CE1FF90078B7BD /* DHCycleTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF8638B20CE1FF90078B7BD /* DHCycleTimerView.swift */; };
 		860777E51EF8A89300B08DA0 /* FPRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860777E41EF8A89300B08DA0 /* FPRefreshHeader.swift */; };
 		860EB8AB1D24BCC10020736D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860EB8AA1D24BCC10020736D /* AppDelegate.swift */; };
 		860EB8AD1D24BCC10020736D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860EB8AC1D24BCC10020736D /* ViewController.swift */; };
@@ -129,6 +131,8 @@
 		4E7AF61E1F0B292E00B659DD /* FPTabbarContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPTabbarContoller.swift; sourceTree = "<group>"; };
 		4E7AF6241F0B831C00B659DD /* SpringController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringController.swift; sourceTree = "<group>"; };
 		4E7CBCC11F2AC6FD000A469D /* SoccerFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoccerFieldView.swift; sourceTree = "<group>"; };
+		4EF8638920CE11B30078B7BD /* ErrorViewTransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewTransitionViewController.swift; sourceTree = "<group>"; };
+		4EF8638B20CE1FF90078B7BD /* DHCycleTimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHCycleTimerView.swift; sourceTree = "<group>"; };
 		5EE5F991111B4F41E0289859 /* Pods-MyTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTestProject/Pods-MyTestProject.release.xcconfig"; sourceTree = "<group>"; };
 		6FCBB48DE8AF7BA6C1388AE1 /* Pods_MyTestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		849898BD5A042CF962BB3771 /* Pods-MyTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTestProject/Pods-MyTestProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -368,6 +372,7 @@
 			children = (
 				864A9DBB1E7D0DE1001665B8 /* TransitionController.swift */,
 				864A9DBC1E7D0DE1001665B8 /* ViewTransitionController.swift */,
+				4EF8638920CE11B30078B7BD /* ErrorViewTransitionViewController.swift */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -498,6 +503,7 @@
 				864A9E1B1E7D1151001665B8 /* UINavigationBar+Awesome.h */,
 				864A9E1C1E7D1151001665B8 /* UINavigationBar+Awesome.m */,
 				4E7CBCC11F2AC6FD000A469D /* SoccerFieldView.swift */,
+				4EF8638B20CE1FF90078B7BD /* DHCycleTimerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -717,6 +723,7 @@
 				864A9E401E7D1151001665B8 /* FPAlert.swift in Sources */,
 				864A9E501E7D1151001665B8 /* FPTextField.swift in Sources */,
 				864A9E2F1E7D1151001665B8 /* ColorLog.swift in Sources */,
+				4EF8638A20CE11B30078B7BD /* ErrorViewTransitionViewController.swift in Sources */,
 				864A9E211E7D1151001665B8 /* NSString+Extenstion.swift in Sources */,
 				865143801EF76D01003D8995 /* TableHeaderController.swift in Sources */,
 				864A9E341E7D1151001665B8 /* FPFileHelper.swift in Sources */,
@@ -758,6 +765,7 @@
 				864A9DCE1E7D0DE1001665B8 /* FliterController.swift in Sources */,
 				4E2506AA1F0F60F5003117D7 /* WidgetsHudServiceProtocol.swift in Sources */,
 				864A9DC91E7D0DE1001665B8 /* CameraCaptureController.swift in Sources */,
+				4EF8638C20CE1FF90078B7BD /* DHCycleTimerView.swift in Sources */,
 				864A9E2A1E7D1151001665B8 /* UITableView+Extension.swift in Sources */,
 				864A9E531E7D1151001665B8 /* FPWKWebController.swift in Sources */,
 				4E7AF61F1F0B292E00B659DD /* FPTabbar.swift in Sources */,
@@ -944,7 +952,7 @@
 				PROVISIONING_PROFILE = "081239dd-b22f-4f11-8c2d-b21cb7cf0fc3";
 				PROVISIONING_PROFILE_SPECIFIER = zjfunday_all;
 				SWIFT_OBJC_BRIDGING_HEADER = MyTestProject/BridgingHeader.h;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -974,7 +982,7 @@
 				PROVISIONING_PROFILE = "081239dd-b22f-4f11-8c2d-b21cb7cf0fc3";
 				PROVISIONING_PROFILE_SPECIFIER = zjfunday_all;
 				SWIFT_OBJC_BRIDGING_HEADER = MyTestProject/BridgingHeader.h;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

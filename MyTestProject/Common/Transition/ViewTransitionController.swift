@@ -80,12 +80,12 @@ class ViewTransitionController: FPBaseController {
     //MARK: 解决导航栏手势滑动过程中不显示的问题
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        //self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         //二级页面通过右滑手势pop回来，滑动过程中 导航条会若隐若现
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-        super.viewWillDisappear(animated)
+        //super.viewWillDisappear(animated)
     }
 }

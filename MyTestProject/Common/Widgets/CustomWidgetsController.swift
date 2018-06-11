@@ -18,7 +18,8 @@ class CustomWidgetsController: FPBaseController {
     @IBOutlet weak var textView: FPTextViewPlaceholder!
     @IBOutlet weak var talkButtion: UIButton!
     
-    override func viewDidLoad() {
+	@IBOutlet weak var timerCycleView: DHCycleTimerView!
+	override func viewDidLoad() {
         super.viewDidLoad()
         
         self.initStarsView()
@@ -57,6 +58,11 @@ class CustomWidgetsController: FPBaseController {
         self.bazierButtoin.addTarget(self, action: #selector(presentBlurController), for: .touchUpInside)
         self.startAnimation()
     }
+	
+	func initCycleTimerView() {
+		timerCycleView.maxTime = 60
+		timerCycleView.startTimer()
+	}
     
     func startAnimation() {
         let animation = CABasicAnimation(keyPath: "transform.rotation.z")
@@ -68,7 +74,7 @@ class CustomWidgetsController: FPBaseController {
         self.bazierButtoin.layer.add(animation, forKey: "rotate")
     }
     
-    func presentBlurController() {
+	@objc func presentBlurController() {
         let blurController = FPBlurController()
         blurController.setTransionStyle()
         self.present(blurController, animated: true, completion: nil)
@@ -86,6 +92,8 @@ class CustomWidgetsController: FPBaseController {
         animation.type = "oglFlip"
         self.talkButtion.layer.add(animation, forKey: "Flip")
         
+        self.popAnimation(view: self.talkButtion)
+        
         MGJRouter.openURL("my://widgets/hud?dismissTime=5&title=MGJRouter", withUserInfo: ["dissmissTime": Double(2.0),
                                                              "NavigationVc": self.navigationController as Any]) { result in
         }
@@ -95,5 +103,18 @@ class CustomWidgetsController: FPBaseController {
     //MARK: Animation
     func swingAnimation() {
        
+    }
+    
+    func popAnimation(view: UIView) {
+        let keyframeAnimation = CAKeyframeAnimation(keyPath: "transform")
+        let scale1 =  CATransform3DMakeScale(0.5, 0.5, 1)
+        let scale2 =  CATransform3DMakeScale(1.2, 1.2, 1)
+        let scale3 =  CATransform3DMakeScale(0.9, 0.9, 1)
+        let scale4 =  CATransform3DMakeScale(1.0, 1.0, 1)
+        keyframeAnimation.values = [scale1, scale2, scale3, scale4]
+        keyframeAnimation.keyTimes = [0, 0.5, 0.9, 1.0]
+        keyframeAnimation.fillMode = kCAFillModeForwards
+        keyframeAnimation.duration = 3
+        view.layer.add(keyframeAnimation, forKey: "KeyframeAnimation")
     }
 }

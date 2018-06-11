@@ -26,7 +26,7 @@ class FPTextViewPlaceholder: UITextView {
         NotificationCenter.default.addObserver(self, selector: #selector(textDidChanged), name: NSNotification.Name.UITextViewTextDidChange, object: nil)
     }
     
-    func textDidChanged() {
+	@objc func textDidChanged() {
         self.setNeedsDisplay()
     }
     
@@ -37,10 +37,10 @@ class FPTextViewPlaceholder: UITextView {
             return
         }
         
-        var attrs = Dictionary<String,AnyObject>()
-        attrs[NSForegroundColorAttributeName] = UIColor.lightGray
+        var attrs = Dictionary<NSAttributedStringKey, Any>()
+		attrs[NSAttributedStringKey.foregroundColor] = UIColor.lightGray
         if self.font != nil {
-            attrs[NSFontAttributeName] = self.font!
+			attrs[NSAttributedStringKey.font] = self.font!
         }
         
         self.placeholder?.draw(in: CGRect(x: 5, y: 8, width: self.bounds.width - 5, height: self.bounds.height - 5),

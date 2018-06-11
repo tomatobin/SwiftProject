@@ -75,34 +75,34 @@ class MBHUDController: FPBaseController,UITableViewDelegate,WidgetsHudServicePro
         tableView.reloadData()
     }
     
-    func dismissHud() {
+	@objc func dismissHud() {
         self.timer?.fireDate = Date.distantFuture
         FPHudUtility.hideGifLoading()
         MBProgressHUD.hideAllHUDs(for: self.view, animated: true)
     }
     
-    func showGifLoading() {
+	@objc func showGifLoading() {
         let hud = FPHudUtility.showGifLoading(self.view, gifName: "Loading_rabbit") //不可以添加gif后缀
         hud.hide(true, afterDelay: self.dismissTime)
     }
     
-    func showTxtHud() {
+	@objc func showTxtHud() {
         _ = FPHudUtility.showMessage("Requesting...")
     }
     
-    func showWatingNormal() {
+	@objc func showWatingNormal() {
         self.showWating(.indeterminate)
     }
     
-    func showWatingDeterminate() {
+	@objc func showWatingDeterminate() {
         self.showWating(.determinate)
     }
     
-    func showWatingNormalAnnularDeterminate() {
+	@objc func showWatingNormalAnnularDeterminate() {
         self.showWating(.annularDeterminate)
     }
     
-    func showWatingDeterminateHorizontalBar() {
+	@objc func showWatingDeterminateHorizontalBar() {
         self.showWating(.determinateHorizontalBar)
     }
     
@@ -116,7 +116,7 @@ class MBHUDController: FPBaseController,UITableViewDelegate,WidgetsHudServicePro
     }
     
     //MARK: Timer
-    func timerProcess(_ timer: Timer) {
+	@objc func timerProcess(_ timer: Timer) {
         self.progress += 0.025
         FPHudUtility.updateProgressHud(self.progress)
         

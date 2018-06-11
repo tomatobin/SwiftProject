@@ -11,8 +11,8 @@ extension NSString{
         var textSize = CGSize(width: 0, height: 0)
         let style = NSMutableParagraphStyle()
         style.lineBreakMode = .byWordWrapping
-        let attributes = [NSFontAttributeName: font, NSParagraphStyleAttributeName: style]
-        textSize = self.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil).size
+		let attributes = [kCTFontAttributeName: font, kCTParagraphStyleAttributeName: style]
+		textSize = self.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes as [NSAttributedStringKey : Any], context: nil).size
         
         return textSize
     }

@@ -32,7 +32,7 @@ class SpringController: FPBaseController {
         self.loadingVew.showLoading()
     }
     
-    func onTouchUpInsideAction() {
+	@objc func onTouchUpInsideAction() {
         self.swingAnimation()
     }
     

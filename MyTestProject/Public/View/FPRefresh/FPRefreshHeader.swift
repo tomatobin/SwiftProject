@@ -10,7 +10,7 @@ import UIKit
 
 class FPRefreshHeader: FPRefreshComponent {
 
-    override func scrollViewContentOffsetDidChange(change: [NSKeyValueChangeKey : Any]?) {
+	@objc override func scrollViewContentOffsetDidChange(change: [NSKeyValueChangeKey : Any]?) {
         super.scrollViewContentOffsetDidChange(change: change)
         
         let yOffset = self.scrollView.contentOffset.y

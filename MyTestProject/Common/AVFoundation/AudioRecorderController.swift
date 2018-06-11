@@ -42,7 +42,7 @@ class AudioRecorderController: FPBaseController, AVAudioRecorderDelegate, AVAudi
     }
     
     //MARK: - Recorder & Player
-    func audioPowerChange(){
+	@objc func audioPowerChange(){
         var power = Float(-160)
         if audioRecorder?.isRecording != nil {
             audioRecorder!.updateMeters() //更新测量值

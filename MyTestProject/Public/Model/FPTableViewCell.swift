@@ -83,7 +83,7 @@ class FPTableViewCell: UITableViewCell,FPTableViewCellProtocol {
         }
     
         let data = item as! FPTableViewCellData
-        self.textLabel?.text = item.cellTitle
+		self.textLabel?.text = data.cellTitle
         
         self.backgroundView = UIView()
         let bgView = UIView()

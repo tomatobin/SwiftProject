@@ -43,7 +43,7 @@ class FPSetAuthorizationHelper: NSObject {
     ///
     /// - Returns: AVAuthorizationStatus
     class func cameraAuthorizationStatus() -> AVAuthorizationStatus {
-        let authorStatus = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo)
+		let authorStatus = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
         return authorStatus
     }
     

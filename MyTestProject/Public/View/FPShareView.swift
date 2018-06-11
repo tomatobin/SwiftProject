@@ -76,7 +76,7 @@ class FPShareView: UIView {
         })
     }
     
-    func tappedBackground() {
+	@objc func tappedBackground() {
         self.dismiss()
     }
     
