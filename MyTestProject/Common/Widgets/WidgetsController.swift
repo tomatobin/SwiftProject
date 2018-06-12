@@ -22,7 +22,8 @@ class WidgetsController: FPBaseController,UITableViewDelegate {
                 "BlurEffect": "PresentBlur",
                 "Fliter": "PushToFliter",
                 "TableHeader": "PushToTableHeader",
-                "Spring": "PushToSpring"]
+                "Spring": "PushToSpring",
+				"LightButton": "PushToLightButton"]
         self.configureTableView()
     }
     

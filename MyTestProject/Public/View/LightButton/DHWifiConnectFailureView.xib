@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DHWifiConnectFailureView" customModule="MyTestProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vPu-VV-8eT">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="JIk-ff-9mH"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="连接超时" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOp-ez-26f">
+                    <rect key="frame" x="15" y="234" width="345" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请按照设备指示灯或语音提示选择操作 " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0t-hl-JCM">
+                    <rect key="frame" x="15" y="261.5" width="345" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.52635732319999995" green="0.52635732319999995" blue="0.52635732319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVC-Pa-8aZ">
+                    <rect key="frame" x="172.5" y="617" width="30" height="30"/>
+                    <state key="normal" title="FAQ">
+                        <color key="titleColor" red="0.96470588239999999" green="0.4941176471" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F7t-i4-H1k">
+                    <rect key="frame" x="30" y="307" width="315" height="290"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="nVC-Pa-8aZ" firstAttribute="top" secondItem="F7t-i4-H1k" secondAttribute="bottom" constant="20" id="1nm-RH-XYL"/>
+                <constraint firstItem="jOp-ez-26f" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3ag-pU-3W4"/>
+                <constraint firstItem="d0t-hl-JCM" firstAttribute="leading" secondItem="jOp-ez-26f" secondAttribute="leading" id="43L-cN-FpJ"/>
+                <constraint firstItem="vPu-VV-8eT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="AUi-GA-Uii"/>
+                <constraint firstItem="vPu-VV-8eT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="E2M-0t-HDC"/>
+                <constraint firstItem="d0t-hl-JCM" firstAttribute="top" secondItem="jOp-ez-26f" secondAttribute="bottom" constant="8" id="Ljt-du-ydd"/>
+                <constraint firstItem="F7t-i4-H1k" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="MGB-xk-WkF"/>
+                <constraint firstItem="d0t-hl-JCM" firstAttribute="centerX" secondItem="jOp-ez-26f" secondAttribute="centerX" id="bDn-ze-VCY"/>
+                <constraint firstItem="nVC-Pa-8aZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fIr-a4-SLC"/>
+                <constraint firstItem="vPu-VV-8eT" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="ivb-se-Cht"/>
+                <constraint firstItem="F7t-i4-H1k" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jA6-Oi-xpF"/>
+                <constraint firstItem="jOp-ez-26f" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="jNf-fY-SLd"/>
+                <constraint firstItem="jOp-ez-26f" firstAttribute="top" secondItem="vPu-VV-8eT" secondAttribute="bottom" constant="34" id="laY-cE-f5S"/>
+                <constraint firstItem="F7t-i4-H1k" firstAttribute="top" secondItem="d0t-hl-JCM" secondAttribute="bottom" constant="30" id="tOK-q2-bYC"/>
+                <constraint firstAttribute="bottom" secondItem="nVC-Pa-8aZ" secondAttribute="bottom" constant="20" id="zHH-5R-TjE"/>
+            </constraints>
+            <connections>
+                <outlet property="contentLabel" destination="jOp-ez-26f" id="pgR-Jc-8lg"/>
+                <outlet property="detailLabel" destination="d0t-hl-JCM" id="mRb-l5-CCT"/>
+                <outlet property="scollView" destination="F7t-i4-H1k" id="Lfu-qq-2MJ"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+</document>

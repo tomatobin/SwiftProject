@@ -6,6 +6,7 @@
 //  Copyright © 2018年 dh. All rights reserved.
 //	动画如果采用CABaseAnimation的方法，无法处理进入后台的问题，统一使用定时器进行绘制
 //	由于使用了定时器，在不使用的时候，需要调用stopTimer()方法进行销毁
+//	UILabel富文本在文字较少的时候，行间距设置无效，使用两个Label进行显示
 
 import UIKit
 
@@ -66,14 +67,22 @@ import UIKit
 	/// 标记是否开始
 	private var isStarted: Bool = false
 	
-	/// 进度label
-	private lazy var progressLabel : UILabel = {
+	/// 内容label
+	private lazy var contentLabel : UILabel = {
 		let label = UILabel()
-		label.frame = self.bounds
 		label.textColor = UIColor.orange
-		label.font = UIFont.systemFont(ofSize: 20)
 		label.textAlignment = .center
-		label.numberOfLines = 0
+		label.font = UIFont.boldSystemFont(ofSize: 25)
+		return label
+	}()
+	
+	///秒数label
+	private lazy var secondLabel: UILabel = {
+		let label = UILabel()
+		label.textColor = UIColor.orange
+		label.textAlignment = .center
+		label.font = UIFont.systemFont(ofSize: 25)
+		label.text = "s"
 		return label
 	}()
 	
@@ -110,7 +119,20 @@ import UIKit
 	func setupLayers() {
 		layer.addSublayer(bottomLayer)
 		layer.addSublayer(progressLayer)
-		addSubview(progressLabel)
+		addSubview(secondLabel)
+		addSubview(contentLabel)
+		
+		secondLabel.snp.makeConstraints { make in
+			make.left.width.equalTo(self)
+			make.height.equalTo(20)
+			make.top.equalTo(self.snp.centerY)
+		}
+
+		contentLabel.snp.makeConstraints { make in
+			make.left.width.equalTo(self)
+			make.height.equalTo(20)
+			make.bottom.equalTo(secondLabel.snp.top)
+		}
 		
 		origin = CGPoint(x: self.bounds.size.width / 2, y: self.bounds.size.height / 2)
 		radius = self.bounds.size.width / 2
@@ -153,7 +175,7 @@ import UIKit
 		}
 		
 		//设置开始的时间
-		progressLabel.text = "\(self.maxTime - self.currentTime)\ns"
+		updateProgressText()
 		
 		//屏幕刷新50HZ为参考
 		let interval = TimeInterval(1/50.0) * 1000
@@ -171,7 +193,7 @@ import UIKit
 			
 			self.millisecondsCount += interval
 			self.currentTime = Int(self.millisecondsCount / 1000)
-			self.progressLabel.text = "\(self.maxTime - self.currentTime)\ns"
+			self.updateProgressText()
 			self.drawProgressPath()
 			
 			//传出时间
@@ -197,6 +219,29 @@ import UIKit
 		let endAngle = startAngle + CGFloat(millisecondsCount / 1000) * CGFloat(Double.pi * 2) / CGFloat(maxTime)
 		let topPath = UIBezierPath(arcCenter: origin, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
 		progressLayer.path = topPath.cgPath
+	}
+	
+	private func updateProgressText() {
+		contentLabel.text = "\(self.maxTime - self.currentTime)"
+	}
+	
+	private func multilineTextHeight(font: UIFont) -> CGFloat {
+
+		let size = CGSize(width: self.bounds.width, height: self.bounds.height)
+		let style = NSMutableParagraphStyle()
+		style.lineBreakMode = NSLineBreakMode.byCharWrapping
+		style.lineSpacing = 10
+		
+		let attributes = [NSAttributedStringKey.font: font,
+						  NSAttributedStringKey.paragraphStyle: style]
+
+		let text = "Test\nTest" as NSString
+		let rect = text.boundingRect(with: size,
+									 options: NSStringDrawingOptions.usesLineFragmentOrigin,
+									 attributes: attributes,
+									 context: nil)
+		
+		return rect.size.height
 	}
 
 	//MARK: Deinit

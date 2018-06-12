@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E0D915F20CFBB520070BACA /* DHLightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D915E20CFBB510070BACA /* DHLightButton.swift */; };
+		4E0D916120CFBBD40070BACA /* LightButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D916020CFBBD40070BACA /* LightButtonController.swift */; };
+		4E0D916320CFBD780070BACA /* DHWifiConnectFailureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D916220CFBD780070BACA /* DHWifiConnectFailureView.swift */; };
+		4E0D916520CFBFA80070BACA /* DHWifiConnectFailureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D916420CFBFA80070BACA /* DHWifiConnectFailureView.xib */; };
 		4E2506A81F0F5FCD003117D7 /* WidgetsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2506A71F0F5FCD003117D7 /* WidgetsModule.swift */; };
 		4E2506AA1F0F60F5003117D7 /* WidgetsHudServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2506A91F0F60F5003117D7 /* WidgetsHudServiceProtocol.swift */; };
 		4E3277421EF96B8200BD341E /* FPRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4E3277411EF96B8200BD341E /* FPRefresh.bundle */; };
@@ -118,6 +122,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E0D915E20CFBB510070BACA /* DHLightButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHLightButton.swift; sourceTree = "<group>"; };
+		4E0D916020CFBBD40070BACA /* LightButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightButtonController.swift; sourceTree = "<group>"; };
+		4E0D916220CFBD780070BACA /* DHWifiConnectFailureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHWifiConnectFailureView.swift; sourceTree = "<group>"; };
+		4E0D916420CFBFA80070BACA /* DHWifiConnectFailureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DHWifiConnectFailureView.xib; sourceTree = "<group>"; };
 		4E2506A71F0F5FCD003117D7 /* WidgetsModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetsModule.swift; sourceTree = "<group>"; };
 		4E2506A91F0F60F5003117D7 /* WidgetsHudServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetsHudServiceProtocol.swift; sourceTree = "<group>"; };
 		4E3277411EF96B8200BD341E /* FPRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FPRefresh.bundle; sourceTree = "<group>"; };
@@ -253,6 +261,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E0D915D20CFBB510070BACA /* LightButton */ = {
+			isa = PBXGroup;
+			children = (
+				4E0D915E20CFBB510070BACA /* DHLightButton.swift */,
+				4E0D916220CFBD780070BACA /* DHWifiConnectFailureView.swift */,
+				4E0D916420CFBFA80070BACA /* DHWifiConnectFailureView.xib */,
+			);
+			path = LightButton;
+			sourceTree = "<group>";
+		};
 		4E7AF6171F0B209700B659DD /* Weex */ = {
 			isa = PBXGroup;
 			children = (
@@ -389,6 +407,7 @@
 				4E7AF6241F0B831C00B659DD /* SpringController.swift */,
 				4E2506A71F0F5FCD003117D7 /* WidgetsModule.swift */,
 				4E2506A91F0F60F5003117D7 /* WidgetsHudServiceProtocol.swift */,
+				4E0D916020CFBBD40070BACA /* LightButtonController.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -483,6 +502,7 @@
 		864A9E021E7D1151001665B8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4E0D915D20CFBB510070BACA /* LightButton */,
 				865143841EF77B10003D8995 /* FPRefresh */,
 				864A9E041E7D1151001665B8 /* FPAlert.swift */,
 				864A9E051E7D1151001665B8 /* FPCircleProgress.swift */,
@@ -630,6 +650,7 @@
 				4E7AF6161F0B208D00B659DD /* Weex.storyboard in Resources */,
 				4E3277481EF96CB800BD341E /* FPRefresh@3x.png in Resources */,
 				4E7AF6151F0B208D00B659DD /* Common.storyboard in Resources */,
+				4E0D916520CFBFA80070BACA /* DHWifiConnectFailureView.xib in Resources */,
 				86D188E11D3DB7560031D32C /* Loading_rabbit.gif in Resources */,
 				860EB8B01D24BCC10020736D /* Main.storyboard in Resources */,
 				86D188D81D3DACBB0031D32C /* Widgets.storyboard in Resources */,
@@ -740,6 +761,7 @@
 				864A9DCB1E7D0DE1001665B8 /* TransitionController.swift in Sources */,
 				864A9E221E7D1151001665B8 /* String+Extension.swift in Sources */,
 				864A9E431E7D1151001665B8 /* FPFliterCell.swift in Sources */,
+				4E0D916120CFBBD40070BACA /* LightButtonController.swift in Sources */,
 				864A9E201E7D1151001665B8 /* NSObject+Extension.swift in Sources */,
 				864A9DC61E7D0DE1001665B8 /* AudioRecorderController.swift in Sources */,
 				864A9E2C1E7D1151001665B8 /* UIView+Extension.swift in Sources */,
@@ -767,6 +789,8 @@
 				864A9DC91E7D0DE1001665B8 /* CameraCaptureController.swift in Sources */,
 				4EF8638C20CE1FF90078B7BD /* DHCycleTimerView.swift in Sources */,
 				864A9E2A1E7D1151001665B8 /* UITableView+Extension.swift in Sources */,
+				4E0D915F20CFBB520070BACA /* DHLightButton.swift in Sources */,
+				4E0D916320CFBD780070BACA /* DHWifiConnectFailureView.swift in Sources */,
 				864A9E531E7D1151001665B8 /* FPWKWebController.swift in Sources */,
 				4E7AF61F1F0B292E00B659DD /* FPTabbar.swift in Sources */,
 				864A9E561E7D1151001665B8 /* UINavigationBar+Awesome.m in Sources */,
