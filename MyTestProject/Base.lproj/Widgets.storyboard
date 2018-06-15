@@ -123,7 +123,7 @@
         <!--Ap Guide View Controller-->
         <scene sceneID="H52-ga-sTa">
             <objects>
-                <viewController id="zvI-3X-cYg" customClass="DHApGuideViewController" sceneMemberID="viewController">
+                <viewController id="zvI-3X-cYg" customClass="DHApGuideViewController" customModule="MyTestProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DmY-5P-tWb"/>
                         <viewControllerLayoutGuide type="bottom" id="bgb-sU-I6F"/>
