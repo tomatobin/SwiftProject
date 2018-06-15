@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E044B6020D23BF100EDB3E0 /* DHBlurViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E044B5F20D23BF100EDB3E0 /* DHBlurViewContainer.swift */; };
 		4E0D915F20CFBB520070BACA /* DHLightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D915E20CFBB510070BACA /* DHLightButton.swift */; };
 		4E0D916120CFBBD40070BACA /* LightButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D916020CFBBD40070BACA /* LightButtonController.swift */; };
 		4E0D916320CFBD780070BACA /* DHWifiConnectFailureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D916220CFBD780070BACA /* DHWifiConnectFailureView.swift */; };
 		4E0D916520CFBFA80070BACA /* DHWifiConnectFailureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D916420CFBFA80070BACA /* DHWifiConnectFailureView.xib */; };
 		4E2506A81F0F5FCD003117D7 /* WidgetsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2506A71F0F5FCD003117D7 /* WidgetsModule.swift */; };
 		4E2506AA1F0F60F5003117D7 /* WidgetsHudServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2506A91F0F60F5003117D7 /* WidgetsHudServiceProtocol.swift */; };
+		4E28B10420D0A6460041DEB7 /* LightFailureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E28B10320D0A6460041DEB7 /* LightFailureController.swift */; };
+		4E28B10820D0AECD0041DEB7 /* DHWifiConnectFailureType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E28B10720D0AECD0041DEB7 /* DHWifiConnectFailureType.swift */; };
 		4E3277421EF96B8200BD341E /* FPRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4E3277411EF96B8200BD341E /* FPRefresh.bundle */; };
 		4E3277481EF96CB800BD341E /* FPRefresh@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3277461EF96CB800BD341E /* FPRefresh@3x.png */; };
 		4E3277491EF96CB800BD341E /* FPRresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3277471EF96CB800BD341E /* FPRresh@2x.png */; };
+		4E3EFBC220D3459F0001A921 /* DHSelectModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3EFBC120D3459E0001A921 /* DHSelectModelViewController.swift */; };
+		4E3EFBC420D345BF0001A921 /* AddDevice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E3EFBC320D345BF0001A921 /* AddDevice.storyboard */; };
 		4E7AF60E1F0B1F3900B659DD /* FPReverseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7AF60D1F0B1F3900B659DD /* FPReverseController.swift */; };
 		4E7AF6151F0B208D00B659DD /* Common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7AF6111F0B208D00B659DD /* Common.storyboard */; };
 		4E7AF6161F0B208D00B659DD /* Weex.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7AF6131F0B208D00B659DD /* Weex.storyboard */; };
@@ -122,15 +127,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E044B5F20D23BF100EDB3E0 /* DHBlurViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHBlurViewContainer.swift; sourceTree = "<group>"; };
 		4E0D915E20CFBB510070BACA /* DHLightButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHLightButton.swift; sourceTree = "<group>"; };
 		4E0D916020CFBBD40070BACA /* LightButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightButtonController.swift; sourceTree = "<group>"; };
 		4E0D916220CFBD780070BACA /* DHWifiConnectFailureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHWifiConnectFailureView.swift; sourceTree = "<group>"; };
 		4E0D916420CFBFA80070BACA /* DHWifiConnectFailureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DHWifiConnectFailureView.xib; sourceTree = "<group>"; };
 		4E2506A71F0F5FCD003117D7 /* WidgetsModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetsModule.swift; sourceTree = "<group>"; };
 		4E2506A91F0F60F5003117D7 /* WidgetsHudServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetsHudServiceProtocol.swift; sourceTree = "<group>"; };
+		4E28B10320D0A6460041DEB7 /* LightFailureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightFailureController.swift; sourceTree = "<group>"; };
+		4E28B10720D0AECD0041DEB7 /* DHWifiConnectFailureType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHWifiConnectFailureType.swift; sourceTree = "<group>"; };
 		4E3277411EF96B8200BD341E /* FPRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FPRefresh.bundle; sourceTree = "<group>"; };
 		4E3277461EF96CB800BD341E /* FPRefresh@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FPRefresh@3x.png"; path = "FPRefresh.bundle/FPRefresh@3x.png"; sourceTree = "<group>"; };
 		4E3277471EF96CB800BD341E /* FPRresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FPRresh@2x.png"; path = "FPRefresh.bundle/FPRresh@2x.png"; sourceTree = "<group>"; };
+		4E3EFBC120D3459E0001A921 /* DHSelectModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHSelectModelViewController.swift; sourceTree = "<group>"; };
+		4E3EFBC320D345BF0001A921 /* AddDevice.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddDevice.storyboard; sourceTree = "<group>"; };
 		4E7AF60D1F0B1F3900B659DD /* FPReverseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPReverseController.swift; sourceTree = "<group>"; };
 		4E7AF6121F0B208D00B659DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Common.storyboard; sourceTree = "<group>"; };
 		4E7AF6141F0B208D00B659DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Weex.storyboard; sourceTree = "<group>"; };
@@ -261,14 +271,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4E0D915D20CFBB510070BACA /* LightButton */ = {
+		4E0D915D20CFBB510070BACA /* AddDevice */ = {
 			isa = PBXGroup;
 			children = (
 				4E0D915E20CFBB510070BACA /* DHLightButton.swift */,
 				4E0D916220CFBD780070BACA /* DHWifiConnectFailureView.swift */,
 				4E0D916420CFBFA80070BACA /* DHWifiConnectFailureView.xib */,
+				4E28B10720D0AECD0041DEB7 /* DHWifiConnectFailureType.swift */,
+				4E044B5F20D23BF100EDB3E0 /* DHBlurViewContainer.swift */,
 			);
-			path = LightButton;
+			path = AddDevice;
 			sourceTree = "<group>";
 		};
 		4E7AF6171F0B209700B659DD /* Weex */ = {
@@ -408,6 +420,9 @@
 				4E2506A71F0F5FCD003117D7 /* WidgetsModule.swift */,
 				4E2506A91F0F60F5003117D7 /* WidgetsHudServiceProtocol.swift */,
 				4E0D916020CFBBD40070BACA /* LightButtonController.swift */,
+				4E28B10320D0A6460041DEB7 /* LightFailureController.swift */,
+				4E3EFBC120D3459E0001A921 /* DHSelectModelViewController.swift */,
+				4E3EFBC320D345BF0001A921 /* AddDevice.storyboard */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -502,7 +517,7 @@
 		864A9E021E7D1151001665B8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4E0D915D20CFBB510070BACA /* LightButton */,
+				4E0D915D20CFBB510070BACA /* AddDevice */,
 				865143841EF77B10003D8995 /* FPRefresh */,
 				864A9E041E7D1151001665B8 /* FPAlert.swift */,
 				864A9E051E7D1151001665B8 /* FPCircleProgress.swift */,
@@ -632,6 +647,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E3EFBC420D345BF0001A921 /* AddDevice.storyboard in Resources */,
 				865BE2D81D251D6800D1AD83 /* Liekkas.mp3 in Resources */,
 				864A9E471E7D1151001665B8 /* FPNumberKeyboard.xib in Resources */,
 				864A9E481E7D1151001665B8 /* resign@2x.png in Resources */,
@@ -766,9 +782,11 @@
 				864A9DC61E7D0DE1001665B8 /* AudioRecorderController.swift in Sources */,
 				864A9E2C1E7D1151001665B8 /* UIView+Extension.swift in Sources */,
 				864A9E281E7D1151001665B8 /* UIImageView+Store.swift in Sources */,
+				4E28B10420D0A6460041DEB7 /* LightFailureController.swift in Sources */,
 				864A9E4A1E7D1151001665B8 /* FPRoomGridView.swift in Sources */,
 				864A9E511E7D1151001665B8 /* FPTextViewPlaceholder.swift in Sources */,
 				864A9E3A1E7D1151001665B8 /* FPSeviceCallHelper.swift in Sources */,
+				4E044B6020D23BF100EDB3E0 /* DHBlurViewContainer.swift in Sources */,
 				864A9E271E7D1151001665B8 /* UIImage+Extension.swift in Sources */,
 				864A9DC71E7D0DE1001665B8 /* AVAudioSessionController.swift in Sources */,
 				864A9E301E7D1151001665B8 /* Configration.swift in Sources */,
@@ -789,8 +807,10 @@
 				864A9DC91E7D0DE1001665B8 /* CameraCaptureController.swift in Sources */,
 				4EF8638C20CE1FF90078B7BD /* DHCycleTimerView.swift in Sources */,
 				864A9E2A1E7D1151001665B8 /* UITableView+Extension.swift in Sources */,
+				4E28B10820D0AECD0041DEB7 /* DHWifiConnectFailureType.swift in Sources */,
 				4E0D915F20CFBB520070BACA /* DHLightButton.swift in Sources */,
 				4E0D916320CFBD780070BACA /* DHWifiConnectFailureView.swift in Sources */,
+				4E3EFBC220D3459F0001A921 /* DHSelectModelViewController.swift in Sources */,
 				864A9E531E7D1151001665B8 /* FPWKWebController.swift in Sources */,
 				4E7AF61F1F0B292E00B659DD /* FPTabbar.swift in Sources */,
 				864A9E561E7D1151001665B8 /* UINavigationBar+Awesome.m in Sources */,
@@ -974,7 +994,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zjfunday.myproject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "081239dd-b22f-4f11-8c2d-b21cb7cf0fc3";
-				PROVISIONING_PROFILE_SPECIFIER = zjfunday_all;
+				PROVISIONING_PROFILE_SPECIFIER = "dev-wildcard";
 				SWIFT_OBJC_BRIDGING_HEADER = MyTestProject/BridgingHeader.h;
 				SWIFT_VERSION = 4.0;
 			};
@@ -1004,7 +1024,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zjfunday.myproject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "081239dd-b22f-4f11-8c2d-b21cb7cf0fc3";
-				PROVISIONING_PROFILE_SPECIFIER = zjfunday_all;
+				PROVISIONING_PROFILE_SPECIFIER = "dev-wildcard";
 				SWIFT_OBJC_BRIDGING_HEADER = MyTestProject/BridgingHeader.h;
 				SWIFT_VERSION = 4.0;
 			};

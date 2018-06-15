@@ -76,9 +76,16 @@ class CustomWidgetsController: FPBaseController {
     }
     
 	@objc func presentBlurController() {
-        let blurController = FPBlurController()
-        blurController.setTransionStyle()
-        self.present(blurController, animated: true, completion: nil)
+//        let blurController = FPBlurController()
+//        blurController.setTransionStyle()
+//        self.present(blurController, animated: true, completion: nil)
+		
+		let blurView = DHBlurViewContainer(frame: view.bounds)
+		let contentView = UIView()
+		contentView.backgroundColor = UIColor.white
+		blurView.setupContent(view: contentView, height: 350)
+		blurView.show(onView: view, animated: true)
+
     }
     
     func initTextView() {

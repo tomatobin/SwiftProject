@@ -36,20 +36,20 @@ enum DHLightButtonType {
 	}
 	
 	func color() -> UIColor {
-		var color = UIColor.red
+		var color = UIColor.orange
 		switch self {
 
 		case .greenConstant, .greenTwinkling, .greenBlueConstant:
-			color = UIColor.green
+			color = UIColor.lc_colorWithHexString("34c069")
 		
 		case .yellowTwinkling:
-			color = UIColor.yellow
+			color = UIColor.lc_colorWithHexString("ffb700")
 			
 		case .blueConstant:
-			color = UIColor.blue
+			color = UIColor.lc_colorWithHexString("4ea7f2")
 		
 		default:
-			color = UIColor.red
+			color = UIColor.red //默认红色
 		}
 		
 		return color

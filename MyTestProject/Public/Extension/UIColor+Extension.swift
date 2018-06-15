@@ -48,6 +48,10 @@ extension UIColor{
     class func fp_yellowColor() -> UIColor {
         return self.fp_colorWithHexString("F3C547")!
     }
+	
+	class func lc_colorWithHexString(_ hexString: String)->UIColor {
+		return self.fp_colorWithHexString(hexString) ?? UIColor.white
+	}
     
     class func fp_colorWithHexString(_ hexString: String)->UIColor?{
         let colorString = hexString.replacingOccurrences(of: "#", with: "").uppercased()
