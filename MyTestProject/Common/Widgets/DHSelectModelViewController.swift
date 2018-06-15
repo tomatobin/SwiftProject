@@ -19,6 +19,11 @@ class DHSelectModelHeaderView: UICollectionReusableView {
 	
 	@IBOutlet weak var titleLabel: UILabel!
 	
+	override func awakeFromNib() {
+		super.awakeFromNib()
+//		layer.borderColor = UIColor.fp_separatorColor().cgColor
+//		layer.borderWidth = 0.5
+	}
 }
 
 class DHSelectModelViewController: FPBaseController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {

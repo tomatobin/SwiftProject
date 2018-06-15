@@ -24,7 +24,8 @@ class WidgetsController: FPBaseController,UITableViewDelegate {
                 "TableHeader": "PushToTableHeader",
                 "Spring": "PushToSpring",
 				"LightButton": "PushToLightButton",
-				"ModelSelect": "PushToTypesSelect"]
+				"ModelSelect": "PushToTypesSelect",
+				"ApGuide": "PushToApGuide"]
         self.configureTableView()
     }
     
