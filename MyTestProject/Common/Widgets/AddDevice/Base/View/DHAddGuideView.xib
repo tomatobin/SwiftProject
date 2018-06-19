@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DHAddGuideView" customModule="MyTestProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="device_body_adddevice_a_n" translatesAutoresizingMaskIntoConstraints="NO" id="eq0-lz-gRI">
+                    <rect key="frame" x="0.0" y="20" width="375" height="350"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" priority="100" constant="350" id="dCw-Zm-DAQ"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请将设备连接电源" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hk6-jn-tet">
+                    <rect key="frame" x="35" y="400" width="305" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxn-Ly-azJ">
+                    <rect key="frame" x="30" y="603" width="315" height="44"/>
+                    <color key="backgroundColor" red="1" green="0.57138218399999996" blue="0.0047691579009999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="BnA-V0-uDR"/>
+                    </constraints>
+                    <state key="normal" title="下一步">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="self.layer.maskToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onNextAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Mgt-3J-dia"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4VP-Tm-oQX">
+                    <rect key="frame" x="30" y="573" width="315" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="hNP-OG-nbV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="已连接电源了" image="adddevice_box_checkbox">
+                        <color key="titleColor" red="0.52635732319999995" green="0.52635732319999995" blue="0.52635732319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="selected" image="adddevice_box_checkbox_checked"/>
+                    <connections>
+                        <action selector="onCheckAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="lqy-nS-g2M"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y8b-dh-yeA">
+                    <rect key="frame" x="35" y="456.5" width="305" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="27" id="nck-I0-LBN"/>
+                    </constraints>
+                    <state key="normal">
+                        <attributedString key="attributedTitle">
+                            <fragment content="未见绿灯闪烁">
+                                <attributes>
+                                    <color key="NSColor" red="0.96470588239999999" green="0.4941176471" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="15" name=".PingFangSC-Regular"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </state>
+                    <connections>
+                        <action selector="onDetailAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="yzB-Fe-WX6"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是描述" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXA-YO-cPu">
+                    <rect key="frame" x="35" y="435.5" width="305" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hk6-jn-tet" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="35" id="0Zs-rc-kBP"/>
+                <constraint firstItem="eq0-lz-gRI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3Qc-uX-Q14"/>
+                <constraint firstAttribute="bottom" secondItem="4VP-Tm-oQX" secondAttribute="bottom" constant="76" id="9Bh-KI-Pt7"/>
+                <constraint firstAttribute="trailing" secondItem="dxn-Ly-azJ" secondAttribute="trailing" constant="30" id="9wm-tt-WGt"/>
+                <constraint firstItem="hk6-jn-tet" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" constant="300" id="D9J-jv-DtJ"/>
+                <constraint firstItem="dxn-Ly-azJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="F3o-v5-HNi"/>
+                <constraint firstItem="4VP-Tm-oQX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="Irz-nb-QMf"/>
+                <constraint firstItem="y8b-dh-yeA" firstAttribute="trailing" secondItem="bXA-YO-cPu" secondAttribute="trailing" id="K5p-jM-rkv"/>
+                <constraint firstItem="hk6-jn-tet" firstAttribute="top" secondItem="eq0-lz-gRI" secondAttribute="bottom" constant="30" id="NYz-5c-f3U"/>
+                <constraint firstItem="y8b-dh-yeA" firstAttribute="leading" secondItem="bXA-YO-cPu" secondAttribute="leading" id="QBN-zW-jw1"/>
+                <constraint firstItem="y8b-dh-yeA" firstAttribute="top" secondItem="bXA-YO-cPu" secondAttribute="bottom" constant="5" id="Qh3-cm-o6O"/>
+                <constraint firstItem="bXA-YO-cPu" firstAttribute="trailing" secondItem="hk6-jn-tet" secondAttribute="trailing" id="SQ8-XG-sw6"/>
+                <constraint firstItem="bXA-YO-cPu" firstAttribute="top" secondItem="hk6-jn-tet" secondAttribute="bottom" constant="15" id="d0H-7e-6U6"/>
+                <constraint firstAttribute="trailing" secondItem="4VP-Tm-oQX" secondAttribute="trailing" constant="30" id="eYK-uA-Oem"/>
+                <constraint firstItem="bXA-YO-cPu" firstAttribute="leading" secondItem="hk6-jn-tet" secondAttribute="leading" id="h7x-eV-d1o"/>
+                <constraint firstItem="eq0-lz-gRI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="mRd-V1-qFh"/>
+                <constraint firstItem="eq0-lz-gRI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="p2D-AK-twN"/>
+                <constraint firstAttribute="bottom" secondItem="dxn-Ly-azJ" secondAttribute="bottom" constant="20" id="vCp-3y-3M3"/>
+                <constraint firstAttribute="trailing" secondItem="hk6-jn-tet" secondAttribute="trailing" constant="35" id="yv4-HX-Ceh"/>
+            </constraints>
+            <connections>
+                <outlet property="checkButton" destination="4VP-Tm-oQX" id="seF-vJ-Fdg"/>
+                <outlet property="descriptionLabel" destination="bXA-YO-cPu" id="iK8-6Y-8n3"/>
+                <outlet property="detailButton" destination="y8b-dh-yeA" id="974-bt-QAi"/>
+                <outlet property="nextButton" destination="dxn-Ly-azJ" id="l4C-5d-JXf"/>
+                <outlet property="topImageView" destination="eq0-lz-gRI" id="C55-C7-C5v"/>
+                <outlet property="topTipLabel" destination="hk6-jn-tet" id="EoC-oK-Q34"/>
+            </connections>
+            <point key="canvasLocation" x="25.5" y="51.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="adddevice_box_checkbox" width="19" height="19"/>
+        <image name="adddevice_box_checkbox_checked" width="19" height="19"/>
+        <image name="device_body_adddevice_a_n" width="375" height="350"/>
+    </resources>
+</document>

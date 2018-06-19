@@ -74,6 +74,20 @@ extension WidgetsController{
         if let controller = segue.destination as? FPBlurController {
             controller.modalPresentationStyle = .overFullScreen
             controller.modalTransitionStyle = .crossDissolve
-        }
+		} else if let controller = segue.destination as? DHApGuideViewController {
+			var guides = [DHApGuideInfo]()
+			for index in 0...3 {
+				var guide = DHApGuideInfo()
+				guide.tipText = "这是第\(index)步\n请描述内容"
+				
+				if index == 3 {
+					guide.isCheckHidden = false
+				}
+				
+				guides.append(guide)
+			}
+			
+			controller.setup(guides: guides)
+		}
     }
 }

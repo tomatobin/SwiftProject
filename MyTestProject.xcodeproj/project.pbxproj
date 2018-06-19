@@ -19,20 +19,20 @@
 		4E3277421EF96B8200BD341E /* FPRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4E3277411EF96B8200BD341E /* FPRefresh.bundle */; };
 		4E3277481EF96CB800BD341E /* FPRefresh@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3277461EF96CB800BD341E /* FPRefresh@3x.png */; };
 		4E3277491EF96CB800BD341E /* FPRresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3277471EF96CB800BD341E /* FPRresh@2x.png */; };
+		4E39607320D894EB007DA535 /* DHAddBaseVCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39606520D894EB007DA535 /* DHAddBaseVCProtocol.swift */; };
+		4E39607420D894EB007DA535 /* DHAddBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39606620D894EB007DA535 /* DHAddBaseViewController.swift */; };
+		4E39607520D894EB007DA535 /* DHGuideBaseVCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39606720D894EB007DA535 /* DHGuideBaseVCProtocol.swift */; };
+		4E39607620D894EB007DA535 /* DHGuideBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39606820D894EB007DA535 /* DHGuideBaseViewController.swift */; };
+		4E39607720D894EB007DA535 /* DHPowerGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39606920D894EB007DA535 /* DHPowerGuideViewController.swift */; };
+		4E39607820D894EB007DA535 /* DHAddDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39606B20D894EB007DA535 /* DHAddDeviceManager.swift */; };
+		4E39607920D894EB007DA535 /* DHAddGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39606D20D894EB007DA535 /* DHAddGuideView.swift */; };
+		4E39607A20D894EB007DA535 /* DHAddGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E39606E20D894EB007DA535 /* DHAddGuideView.xib */; };
+		4E39607B20D894EB007DA535 /* DHAutoKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39606F20D894EB007DA535 /* DHAutoKeyboardView.swift */; };
+		4E39607C20D894EB007DA535 /* DHCommonErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39607020D894EB007DA535 /* DHCommonErrorView.swift */; };
+		4E39607D20D894EB007DA535 /* DHCommonErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E39607120D894EB007DA535 /* DHCommonErrorView.xib */; };
+		4E39607E20D894EB007DA535 /* DHCycleTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39607220D894EB007DA535 /* DHCycleTimerView.swift */; };
 		4E3EFBC220D3459F0001A921 /* DHSelectModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3EFBC120D3459E0001A921 /* DHSelectModelViewController.swift */; };
 		4E3EFBC420D345BF0001A921 /* AddDevice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E3EFBC320D345BF0001A921 /* AddDevice.storyboard */; };
-		4E3EFBE120D36A5B0001A921 /* DHGuideBaseVCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3EFBD320D36A5B0001A921 /* DHGuideBaseVCProtocol.swift */; };
-		4E3EFBE220D36A5B0001A921 /* DHAddBaseVCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3EFBD420D36A5B0001A921 /* DHAddBaseVCProtocol.swift */; };
-		4E3EFBE320D36A5B0001A921 /* DHPowerGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3EFBD520D36A5B0001A921 /* DHPowerGuideViewController.swift */; };
-		4E3EFBE420D36A5B0001A921 /* DHAddBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3EFBD620D36A5B0001A921 /* DHAddBaseViewController.swift */; };
-		4E3EFBE520D36A5B0001A921 /* DHGuideBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3EFBD720D36A5B0001A921 /* DHGuideBaseViewController.swift */; };
-		4E3EFBE620D36A5B0001A921 /* DHAddDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3EFBD920D36A5B0001A921 /* DHAddDeviceManager.swift */; };
-		4E3EFBE720D36A5B0001A921 /* DHCycleTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3EFBDB20D36A5B0001A921 /* DHCycleTimerView.swift */; };
-		4E3EFBE820D36A5B0001A921 /* DHCommonErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3EFBDC20D36A5B0001A921 /* DHCommonErrorView.xib */; };
-		4E3EFBE920D36A5B0001A921 /* DHAutoKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3EFBDD20D36A5B0001A921 /* DHAutoKeyboardView.swift */; };
-		4E3EFBEA20D36A5B0001A921 /* DHAddGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3EFBDE20D36A5B0001A921 /* DHAddGuideView.swift */; };
-		4E3EFBEB20D36A5B0001A921 /* DHAddGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3EFBDF20D36A5B0001A921 /* DHAddGuideView.xib */; };
-		4E3EFBEC20D36A5B0001A921 /* DHCommonErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3EFBE020D36A5B0001A921 /* DHCommonErrorView.swift */; };
 		4E3EFBEE20D36BB20001A921 /* DHApGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3EFBED20D36BB20001A921 /* DHApGuideViewController.swift */; };
 		4E7AF60E1F0B1F3900B659DD /* FPReverseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7AF60D1F0B1F3900B659DD /* FPReverseController.swift */; };
 		4E7AF6151F0B208D00B659DD /* Common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7AF6111F0B208D00B659DD /* Common.storyboard */; };
@@ -151,21 +151,21 @@
 		4E3277411EF96B8200BD341E /* FPRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FPRefresh.bundle; sourceTree = "<group>"; };
 		4E3277461EF96CB800BD341E /* FPRefresh@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FPRefresh@3x.png"; path = "FPRefresh.bundle/FPRefresh@3x.png"; sourceTree = "<group>"; };
 		4E3277471EF96CB800BD341E /* FPRresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FPRresh@2x.png"; path = "FPRefresh.bundle/FPRresh@2x.png"; sourceTree = "<group>"; };
+		4E39606520D894EB007DA535 /* DHAddBaseVCProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHAddBaseVCProtocol.swift; sourceTree = "<group>"; };
+		4E39606620D894EB007DA535 /* DHAddBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHAddBaseViewController.swift; sourceTree = "<group>"; };
+		4E39606720D894EB007DA535 /* DHGuideBaseVCProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHGuideBaseVCProtocol.swift; sourceTree = "<group>"; };
+		4E39606820D894EB007DA535 /* DHGuideBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHGuideBaseViewController.swift; sourceTree = "<group>"; };
+		4E39606920D894EB007DA535 /* DHPowerGuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHPowerGuideViewController.swift; sourceTree = "<group>"; };
+		4E39606B20D894EB007DA535 /* DHAddDeviceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHAddDeviceManager.swift; sourceTree = "<group>"; };
+		4E39606D20D894EB007DA535 /* DHAddGuideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHAddGuideView.swift; sourceTree = "<group>"; };
+		4E39606E20D894EB007DA535 /* DHAddGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DHAddGuideView.xib; sourceTree = "<group>"; };
+		4E39606F20D894EB007DA535 /* DHAutoKeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHAutoKeyboardView.swift; sourceTree = "<group>"; };
+		4E39607020D894EB007DA535 /* DHCommonErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHCommonErrorView.swift; sourceTree = "<group>"; };
+		4E39607120D894EB007DA535 /* DHCommonErrorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DHCommonErrorView.xib; sourceTree = "<group>"; };
+		4E39607220D894EB007DA535 /* DHCycleTimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHCycleTimerView.swift; sourceTree = "<group>"; };
 		4E3EFBC120D3459E0001A921 /* DHSelectModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHSelectModelViewController.swift; sourceTree = "<group>"; };
 		4E3EFBC320D345BF0001A921 /* AddDevice.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddDevice.storyboard; sourceTree = "<group>"; };
-		4E3EFBD320D36A5B0001A921 /* DHGuideBaseVCProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHGuideBaseVCProtocol.swift; sourceTree = "<group>"; };
-		4E3EFBD420D36A5B0001A921 /* DHAddBaseVCProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHAddBaseVCProtocol.swift; sourceTree = "<group>"; };
-		4E3EFBD520D36A5B0001A921 /* DHPowerGuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHPowerGuideViewController.swift; sourceTree = "<group>"; };
-		4E3EFBD620D36A5B0001A921 /* DHAddBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHAddBaseViewController.swift; sourceTree = "<group>"; };
-		4E3EFBD720D36A5B0001A921 /* DHGuideBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHGuideBaseViewController.swift; sourceTree = "<group>"; };
-		4E3EFBD920D36A5B0001A921 /* DHAddDeviceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHAddDeviceManager.swift; sourceTree = "<group>"; };
-		4E3EFBDB20D36A5B0001A921 /* DHCycleTimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHCycleTimerView.swift; sourceTree = "<group>"; };
-		4E3EFBDC20D36A5B0001A921 /* DHCommonErrorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DHCommonErrorView.xib; sourceTree = "<group>"; };
-		4E3EFBDD20D36A5B0001A921 /* DHAutoKeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHAutoKeyboardView.swift; sourceTree = "<group>"; };
-		4E3EFBDE20D36A5B0001A921 /* DHAddGuideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHAddGuideView.swift; sourceTree = "<group>"; };
-		4E3EFBDF20D36A5B0001A921 /* DHAddGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DHAddGuideView.xib; sourceTree = "<group>"; };
-		4E3EFBE020D36A5B0001A921 /* DHCommonErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHCommonErrorView.swift; sourceTree = "<group>"; };
-		4E3EFBED20D36BB20001A921 /* DHApGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHApGuideViewController.swift; sourceTree = "<group>"; };
+		4E3EFBED20D36BB20001A921 /* DHApGuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.swift; path = DHApGuideViewController.swift; sourceTree = "<group>"; };
 		4E7AF60D1F0B1F3900B659DD /* FPReverseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPReverseController.swift; sourceTree = "<group>"; };
 		4E7AF6121F0B208D00B659DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Common.storyboard; sourceTree = "<group>"; };
 		4E7AF6141F0B208D00B659DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Weex.storyboard; sourceTree = "<group>"; };
@@ -307,57 +307,56 @@
 			path = AddDevice;
 			sourceTree = "<group>";
 		};
-		4E3EFBD020D36A480001A921 /* AddDevice */ = {
+		4E39606320D894EB007DA535 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				4E3EFBD120D36A5B0001A921 /* Base */,
-				4E3EFBED20D36BB20001A921 /* DHApGuideViewController.swift */,
+				4E39606420D894EB007DA535 /* Controller */,
+				4E39606A20D894EB007DA535 /* Manager */,
+				4E39606C20D894EB007DA535 /* View */,
 			);
-			path = AddDevice;
+			path = Base;
 			sourceTree = "<group>";
 		};
-		4E3EFBD120D36A5B0001A921 /* Base */ = {
+		4E39606420D894EB007DA535 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4E3EFBD220D36A5B0001A921 /* Controller */,
-				4E3EFBD820D36A5B0001A921 /* Manager */,
-				4E3EFBDA20D36A5B0001A921 /* View */,
-			);
-			name = Base;
-			path = ../../../../../../../../../../../Users/jiangbin/Desktop/Merge/iEasy4ip/Project/Easy4ip/Depend/DHAddDeviceModule/Base;
-			sourceTree = "<group>";
-		};
-		4E3EFBD220D36A5B0001A921 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				4E3EFBD320D36A5B0001A921 /* DHGuideBaseVCProtocol.swift */,
-				4E3EFBD420D36A5B0001A921 /* DHAddBaseVCProtocol.swift */,
-				4E3EFBD520D36A5B0001A921 /* DHPowerGuideViewController.swift */,
-				4E3EFBD620D36A5B0001A921 /* DHAddBaseViewController.swift */,
-				4E3EFBD720D36A5B0001A921 /* DHGuideBaseViewController.swift */,
+				4E39606520D894EB007DA535 /* DHAddBaseVCProtocol.swift */,
+				4E39606620D894EB007DA535 /* DHAddBaseViewController.swift */,
+				4E39606720D894EB007DA535 /* DHGuideBaseVCProtocol.swift */,
+				4E39606820D894EB007DA535 /* DHGuideBaseViewController.swift */,
+				4E39606920D894EB007DA535 /* DHPowerGuideViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		4E3EFBD820D36A5B0001A921 /* Manager */ = {
+		4E39606A20D894EB007DA535 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				4E3EFBD920D36A5B0001A921 /* DHAddDeviceManager.swift */,
+				4E39606B20D894EB007DA535 /* DHAddDeviceManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
 		};
-		4E3EFBDA20D36A5B0001A921 /* View */ = {
+		4E39606C20D894EB007DA535 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4E3EFBDB20D36A5B0001A921 /* DHCycleTimerView.swift */,
-				4E3EFBDC20D36A5B0001A921 /* DHCommonErrorView.xib */,
-				4E3EFBDD20D36A5B0001A921 /* DHAutoKeyboardView.swift */,
-				4E3EFBDE20D36A5B0001A921 /* DHAddGuideView.swift */,
-				4E3EFBDF20D36A5B0001A921 /* DHAddGuideView.xib */,
-				4E3EFBE020D36A5B0001A921 /* DHCommonErrorView.swift */,
+				4E39606D20D894EB007DA535 /* DHAddGuideView.swift */,
+				4E39606E20D894EB007DA535 /* DHAddGuideView.xib */,
+				4E39606F20D894EB007DA535 /* DHAutoKeyboardView.swift */,
+				4E39607020D894EB007DA535 /* DHCommonErrorView.swift */,
+				4E39607120D894EB007DA535 /* DHCommonErrorView.xib */,
+				4E39607220D894EB007DA535 /* DHCycleTimerView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4E3EFBD020D36A480001A921 /* AddDevice */ = {
+			isa = PBXGroup;
+			children = (
+				4E39606320D894EB007DA535 /* Base */,
+				4E3EFBED20D36BB20001A921 /* DHApGuideViewController.swift */,
+			);
+			path = AddDevice;
 			sourceTree = "<group>";
 		};
 		4E7AF6171F0B209700B659DD /* Weex */ = {
@@ -736,10 +735,10 @@
 				860EB8E31D24EF950020736D /* pigsound.mp3 in Resources */,
 				860EB8B51D24BCC10020736D /* LaunchScreen.storyboard in Resources */,
 				860EB8B21D24BCC10020736D /* Assets.xcassets in Resources */,
-				4E3EFBE820D36A5B0001A921 /* DHCommonErrorView.xib in Resources */,
-				4E3EFBEB20D36A5B0001A921 /* DHAddGuideView.xib in Resources */,
+				4E39607D20D894EB007DA535 /* DHCommonErrorView.xib in Resources */,
 				864A9E4C1E7D1151001665B8 /* FPShareItems.xib in Resources */,
 				864A9DD41E7D0E17001665B8 /* Reverse.storyboard in Resources */,
+				4E39607A20D894EB007DA535 /* DHAddGuideView.xib in Resources */,
 				86D188E31D3DB7E30031D32C /* Loading_carton.gif in Resources */,
 				4E3277491EF96CB800BD341E /* FPRresh@2x.png in Resources */,
 				4E7AF6161F0B208D00B659DD /* Weex.storyboard in Resources */,
@@ -817,20 +816,21 @@
 				8651438C1EF7A199003D8995 /* UIView+Ex.swift in Sources */,
 				864A9DCC1E7D0DE1001665B8 /* ViewTransitionController.swift in Sources */,
 				864A9E261E7D1151001665B8 /* UIDevice+Extension.swift in Sources */,
+				4E39607320D894EB007DA535 /* DHAddBaseVCProtocol.swift in Sources */,
 				864A9DC41E7D0DE1001665B8 /* AudioServicesController.swift in Sources */,
 				864A9DC51E7D0DE1001665B8 /* AudioToolboxRootController.swift in Sources */,
 				864A9E421E7D1151001665B8 /* FPDrawRoomSelectView.swift in Sources */,
 				864A9E391E7D1151001665B8 /* FPSetAuthorizationHelper.swift in Sources */,
-				4E3EFBE620D36A5B0001A921 /* DHAddDeviceManager.swift in Sources */,
 				864A9E251E7D1151001665B8 /* UIColor+Extension.swift in Sources */,
 				4E7AF6251F0B831C00B659DD /* SpringController.swift in Sources */,
+				4E39607520D894EB007DA535 /* DHGuideBaseVCProtocol.swift in Sources */,
 				860EB8BF1D24BD2B0020736D /* FPNavigaionController.swift in Sources */,
 				865143861EF77B2A003D8995 /* FPRefreshComponent.swift in Sources */,
-				4E3EFBE920D36A5B0001A921 /* DHAutoKeyboardView.swift in Sources */,
 				864A9E411E7D1151001665B8 /* FPCircleProgress.swift in Sources */,
 				864A9E2B1E7D1151001665B8 /* UITextField+Extension.swift in Sources */,
 				864A9E1E1E7D1151001665B8 /* NSDate+Extension.swift in Sources */,
 				864A9DD11E7D0DE1001665B8 /* WidgetsController.swift in Sources */,
+				4E39607920D894EB007DA535 /* DHAddGuideView.swift in Sources */,
 				864A9DCD1E7D0DE1001665B8 /* CustomWidgetsController.swift in Sources */,
 				860EB8AD1D24BCC10020736D /* ViewController.swift in Sources */,
 				860EB8AB1D24BCC10020736D /* AppDelegate.swift in Sources */,
@@ -838,8 +838,9 @@
 				864A9E3B1E7D1151001665B8 /* PresentModallySegue.swift in Sources */,
 				864A9E241E7D1151001665B8 /* UIButton+PositionLabel.swift in Sources */,
 				864A9DCF1E7D0DE1001665B8 /* FPBlurController.swift in Sources */,
+				4E39607B20D894EB007DA535 /* DHAutoKeyboardView.swift in Sources */,
+				4E39607E20D894EB007DA535 /* DHCycleTimerView.swift in Sources */,
 				864A9E401E7D1151001665B8 /* FPAlert.swift in Sources */,
-				4E3EFBE420D36A5B0001A921 /* DHAddBaseViewController.swift in Sources */,
 				864A9E501E7D1151001665B8 /* FPTextField.swift in Sources */,
 				864A9E2F1E7D1151001665B8 /* ColorLog.swift in Sources */,
 				4EF8638A20CE11B30078B7BD /* ErrorViewTransitionViewController.swift in Sources */,
@@ -847,10 +848,12 @@
 				865143801EF76D01003D8995 /* TableHeaderController.swift in Sources */,
 				864A9E341E7D1151001665B8 /* FPFileHelper.swift in Sources */,
 				864A9E1F1E7D1151001665B8 /* NSDictionary+Extension.swift in Sources */,
+				4E39607720D894EB007DA535 /* DHPowerGuideViewController.swift in Sources */,
 				864A9E4B1E7D1151001665B8 /* FPRoomSelectView.swift in Sources */,
 				864A9E291E7D1151001665B8 /* UINavigationController+Extenstion.swift in Sources */,
 				4E3EFBEE20D36BB20001A921 /* DHApGuideViewController.swift in Sources */,
 				864A9E1D1E7D1151001665B8 /* FPConstant.swift in Sources */,
+				4E39607820D894EB007DA535 /* DHAddDeviceManager.swift in Sources */,
 				864A9E3E1E7D1151001665B8 /* FPTableViewCell.swift in Sources */,
 				4E2506A81F0F5FCD003117D7 /* WidgetsModule.swift in Sources */,
 				864A9DD01E7D0DE1001665B8 /* MBHUDController.swift in Sources */,
@@ -860,18 +863,13 @@
 				864A9DCB1E7D0DE1001665B8 /* TransitionController.swift in Sources */,
 				864A9E221E7D1151001665B8 /* String+Extension.swift in Sources */,
 				864A9E431E7D1151001665B8 /* FPFliterCell.swift in Sources */,
-				4E3EFBE220D36A5B0001A921 /* DHAddBaseVCProtocol.swift in Sources */,
 				4E0D916120CFBBD40070BACA /* LightButtonController.swift in Sources */,
-				4E3EFBE520D36A5B0001A921 /* DHGuideBaseViewController.swift in Sources */,
 				864A9E201E7D1151001665B8 /* NSObject+Extension.swift in Sources */,
-				4E3EFBE720D36A5B0001A921 /* DHCycleTimerView.swift in Sources */,
-				4E3EFBEA20D36A5B0001A921 /* DHAddGuideView.swift in Sources */,
 				864A9DC61E7D0DE1001665B8 /* AudioRecorderController.swift in Sources */,
 				864A9E2C1E7D1151001665B8 /* UIView+Extension.swift in Sources */,
 				864A9E281E7D1151001665B8 /* UIImageView+Store.swift in Sources */,
 				4E28B10420D0A6460041DEB7 /* LightFailureController.swift in Sources */,
 				864A9E4A1E7D1151001665B8 /* FPRoomGridView.swift in Sources */,
-				4E3EFBE120D36A5B0001A921 /* DHGuideBaseVCProtocol.swift in Sources */,
 				864A9E511E7D1151001665B8 /* FPTextViewPlaceholder.swift in Sources */,
 				864A9E3A1E7D1151001665B8 /* FPSeviceCallHelper.swift in Sources */,
 				4E044B6020D23BF100EDB3E0 /* DHBlurViewContainer.swift in Sources */,
@@ -879,14 +877,16 @@
 				864A9DC71E7D0DE1001665B8 /* AVAudioSessionController.swift in Sources */,
 				864A9E301E7D1151001665B8 /* Configration.swift in Sources */,
 				864A9E231E7D1151001665B8 /* UIButton+CountDown.swift in Sources */,
+				4E39607620D894EB007DA535 /* DHGuideBaseViewController.swift in Sources */,
 				864A9DCA1E7D0DE1001665B8 /* CommonRootController.swift in Sources */,
 				865143881EF77B77003D8995 /* UIScrollView+Refresh.swift in Sources */,
 				4E7CBCC21F2AC6FD000A469D /* SoccerFieldView.swift in Sources */,
 				864A9E4F1E7D1151001665B8 /* FPStarsView.swift in Sources */,
+				4E39607420D894EB007DA535 /* DHAddBaseViewController.swift in Sources */,
 				864A9E3D1E7D1151001665B8 /* FPTableDataSource.swift in Sources */,
 				4E7AF60E1F0B1F3900B659DD /* FPReverseController.swift in Sources */,
 				864A9E551E7D1151001665B8 /* PlayButton.swift in Sources */,
-				4E3EFBEC20D36A5B0001A921 /* DHCommonErrorView.swift in Sources */,
+				4E39607C20D894EB007DA535 /* DHCommonErrorView.swift in Sources */,
 				864A9E3C1E7D1151001665B8 /* FPRoomGridInfo.swift in Sources */,
 				864A9E2D1E7D1151001665B8 /* AESCipher.swift in Sources */,
 				860EB8BE1D24BD2B0020736D /* FPBaseController.swift in Sources */,
@@ -898,7 +898,6 @@
 				4E28B10820D0AECD0041DEB7 /* DHWifiConnectFailureType.swift in Sources */,
 				4E0D915F20CFBB520070BACA /* DHLightButton.swift in Sources */,
 				4E0D916320CFBD780070BACA /* DHWifiConnectFailureView.swift in Sources */,
-				4E3EFBE320D36A5B0001A921 /* DHPowerGuideViewController.swift in Sources */,
 				4E3EFBC220D3459F0001A921 /* DHSelectModelViewController.swift in Sources */,
 				864A9E531E7D1151001665B8 /* FPWKWebController.swift in Sources */,
 				4E7AF61F1F0B292E00B659DD /* FPTabbar.swift in Sources */,
