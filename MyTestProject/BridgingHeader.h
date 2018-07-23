@@ -41,4 +41,7 @@
 //MGJRotuer
 #import <MGJRouter/MGJRouter.h>
 
+//Other
+#import "LCTextField.h"
+
 #endif /* BridgingHeader_h */

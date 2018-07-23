@@ -25,7 +25,8 @@ class WidgetsController: FPBaseController,UITableViewDelegate {
                 "Spring": "PushToSpring",
 				"LightButton": "PushToLightButton",
 				"ModelSelect": "PushToTypesSelect",
-				"ApGuide": "PushToApGuide"]
+				"ApGuide": "PushToApGuide",
+				"TestVC": "TestVC"]
         self.configureTableView()
     }
     
@@ -66,9 +67,19 @@ extension WidgetsController{
         let allValues = Array(data.values) as Array<String>
         if indexPath.row < allValues.count {
             let pushSegue = allValues[indexPath.row]
-            self.performSegue(withIdentifier: pushSegue, sender: nil)
+			
+			if pushSegue == "TestVC" {
+				self.testVC()
+			} else {
+				self.performSegue(withIdentifier: pushSegue, sender: nil)
+			}
         }
     }
+	
+	func testVC() {
+		let vc = DHInputSNViewController.storyboardInstance()
+		self.navigationController?.pushViewController(vc, animated: true)
+	}
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let controller = segue.destination as? FPBlurController {

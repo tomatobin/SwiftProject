@@ -15,12 +15,24 @@ class FPReverseController: FPBaseController {
 
         // Do any additional setup after loading the view.
         self.title = "逆向"
+		self.testVC()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	private func testVC() {
+		let vc = DHInputSNViewController.storyboardInstance()
+		self.addChildViewController(vc)
+		
+		self.view.addSubview(vc.view)
+		
+		vc.view.snp.makeConstraints { (make) in
+			make.edges.equalTo(self.view)
+		}
+	}
     
 
     /*

@@ -34,6 +34,9 @@
 		4E3EFBC220D3459F0001A921 /* DHSelectModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3EFBC120D3459E0001A921 /* DHSelectModelViewController.swift */; };
 		4E3EFBC420D345BF0001A921 /* AddDevice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E3EFBC320D345BF0001A921 /* AddDevice.storyboard */; };
 		4E3EFBEE20D36BB20001A921 /* DHApGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3EFBED20D36BB20001A921 /* DHApGuideViewController.swift */; };
+		4E5D7EA420E7095F005A8C1E /* DHInputSNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D7EA320E7095F005A8C1E /* DHInputSNViewController.swift */; };
+		4E5D7EA720E70A24005A8C1E /* LCTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D7EA520E70A24005A8C1E /* LCTextField.m */; };
+		4E5D7EAA20E70B38005A8C1E /* UITextField+LeChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D7EA920E70B38005A8C1E /* UITextField+LeChange.m */; };
 		4E7AF60E1F0B1F3900B659DD /* FPReverseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7AF60D1F0B1F3900B659DD /* FPReverseController.swift */; };
 		4E7AF6151F0B208D00B659DD /* Common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7AF6111F0B208D00B659DD /* Common.storyboard */; };
 		4E7AF6161F0B208D00B659DD /* Weex.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7AF6131F0B208D00B659DD /* Weex.storyboard */; };
@@ -166,6 +169,11 @@
 		4E3EFBC120D3459E0001A921 /* DHSelectModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHSelectModelViewController.swift; sourceTree = "<group>"; };
 		4E3EFBC320D345BF0001A921 /* AddDevice.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddDevice.storyboard; sourceTree = "<group>"; };
 		4E3EFBED20D36BB20001A921 /* DHApGuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.swift; path = DHApGuideViewController.swift; sourceTree = "<group>"; };
+		4E5D7EA320E7095F005A8C1E /* DHInputSNViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHInputSNViewController.swift; sourceTree = "<group>"; };
+		4E5D7EA520E70A24005A8C1E /* LCTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCTextField.m; sourceTree = "<group>"; };
+		4E5D7EA620E70A24005A8C1E /* LCTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCTextField.h; sourceTree = "<group>"; };
+		4E5D7EA820E70B37005A8C1E /* UITextField+LeChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+LeChange.h"; sourceTree = "<group>"; };
+		4E5D7EA920E70B38005A8C1E /* UITextField+LeChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+LeChange.m"; sourceTree = "<group>"; };
 		4E7AF60D1F0B1F3900B659DD /* FPReverseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPReverseController.swift; sourceTree = "<group>"; };
 		4E7AF6121F0B208D00B659DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Common.storyboard; sourceTree = "<group>"; };
 		4E7AF6141F0B208D00B659DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Weex.storyboard; sourceTree = "<group>"; };
@@ -355,6 +363,7 @@
 			children = (
 				4E39606320D894EB007DA535 /* Base */,
 				4E3EFBED20D36BB20001A921 /* DHApGuideViewController.swift */,
+				4E5D7EA320E7095F005A8C1E /* DHInputSNViewController.swift */,
 			);
 			path = AddDevice;
 			sourceTree = "<group>";
@@ -536,6 +545,8 @@
 		864A9DDD1E7D1151001665B8 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				4E5D7EA820E70B37005A8C1E /* UITextField+LeChange.h */,
+				4E5D7EA920E70B38005A8C1E /* UITextField+LeChange.m */,
 				864A9DDE1E7D1151001665B8 /* NSDate+Extension.swift */,
 				864A9DDF1E7D1151001665B8 /* NSDictionary+Extension.swift */,
 				864A9DE01E7D1151001665B8 /* NSObject+Extension.swift */,
@@ -594,6 +605,8 @@
 		864A9E021E7D1151001665B8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4E5D7EA620E70A24005A8C1E /* LCTextField.h */,
+				4E5D7EA520E70A24005A8C1E /* LCTextField.m */,
 				4E0D915D20CFBB510070BACA /* AddDevice */,
 				865143841EF77B10003D8995 /* FPRefresh */,
 				864A9E041E7D1151001665B8 /* FPAlert.swift */,
@@ -861,6 +874,8 @@
 				4E7AF6201F0B292E00B659DD /* FPTabbarContoller.swift in Sources */,
 				864A9DC81E7D0DE1001665B8 /* AVFoundationRootController.swift in Sources */,
 				864A9DCB1E7D0DE1001665B8 /* TransitionController.swift in Sources */,
+				4E5D7EA420E7095F005A8C1E /* DHInputSNViewController.swift in Sources */,
+				4E5D7EA720E70A24005A8C1E /* LCTextField.m in Sources */,
 				864A9E221E7D1151001665B8 /* String+Extension.swift in Sources */,
 				864A9E431E7D1151001665B8 /* FPFliterCell.swift in Sources */,
 				4E0D916120CFBBD40070BACA /* LightButtonController.swift in Sources */,
@@ -877,6 +892,7 @@
 				864A9DC71E7D0DE1001665B8 /* AVAudioSessionController.swift in Sources */,
 				864A9E301E7D1151001665B8 /* Configration.swift in Sources */,
 				864A9E231E7D1151001665B8 /* UIButton+CountDown.swift in Sources */,
+				4E5D7EAA20E70B38005A8C1E /* UITextField+LeChange.m in Sources */,
 				4E39607620D894EB007DA535 /* DHGuideBaseViewController.swift in Sources */,
 				864A9DCA1E7D0DE1001665B8 /* CommonRootController.swift in Sources */,
 				865143881EF77B77003D8995 /* UIScrollView+Refresh.swift in Sources */,
