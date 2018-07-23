@@ -18,8 +18,11 @@ class CommonRootController: FPBaseController,UITableViewDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        data = ["AVFoundation": "PushToAVFoundation", "AudioToolbox" : "PushToAudioToolbox",
-                "Transition": "PushToTransition", "Widgets": "PushToWidgets"]
+        data = ["AVFoundation": "PushToAVFoundation",
+				"AudioToolbox" : "PushToAudioToolbox",
+                "Transition": "PushToTransition",
+				"Widgets": "PushToWidgets",
+				"MVP": "PushToMVP"]
         self.title = "常用"
         self.configureTableView()
     }

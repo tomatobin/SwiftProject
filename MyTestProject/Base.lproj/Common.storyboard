@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R29-ay-z9m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R29-ay-z9m">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,6 +43,7 @@
                         <segue destination="Py1-WH-DLm" kind="show" identifier="PushToAVFoundation" id="9lG-aS-Fe5"/>
                         <segue destination="hXo-JU-mZC" kind="show" identifier="PushToTransition" id="yAI-O5-Uix"/>
                         <segue destination="xNV-DV-qjF" kind="show" identifier="PushToWidgets" id="drS-Cr-gY4"/>
+                        <segue destination="hfd-Q3-tSB" kind="show" identifier="PushToMVP" id="bG0-WD-oEI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Um2-5c-6CN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -116,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WXR-a0-UsP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1031" y="456"/>
+            <point key="canvasLocation" x="631" y="-35"/>
         </scene>
         <!--AudioService-->
         <scene sceneID="9TU-kV-94R">
@@ -445,7 +447,35 @@
                 <viewControllerPlaceholder storyboardName="Transition" id="hXo-JU-mZC" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cx7-Zo-hkN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1847" y="433"/>
+            <point key="canvasLocation" x="-2924" y="304"/>
+        </scene>
+        <!--City Table View Controller-->
+        <scene sceneID="EHf-qk-ePb">
+            <objects>
+                <tableViewController id="hfd-Q3-tSB" customClass="CityTableViewController" customModule="MyTestProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dfV-Jc-5IO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="1j9-tu-uTu">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1j9-tu-uTu" id="qPr-21-ggJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hfd-Q3-tSB" id="LPg-LH-5zB"/>
+                            <outlet property="delegate" destination="hfd-Q3-tSB" id="Es8-Pp-gn4"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sVr-ku-9sr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1540" y="182"/>
         </scene>
         <!--Widgets-->
         <scene sceneID="XSu-EZ-gyL">
@@ -453,7 +483,7 @@
                 <viewControllerPlaceholder storyboardName="Widgets" id="xNV-DV-qjF" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tKD-HS-KDP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2607" y="433"/>
+            <point key="canvasLocation" x="-3684" y="304"/>
         </scene>
     </scenes>
     <resources>
