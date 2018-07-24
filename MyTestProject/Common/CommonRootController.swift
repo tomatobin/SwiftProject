@@ -82,8 +82,7 @@ class CommonRootController: FPBaseController,UITableViewDelegate {
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		segue.destination.title = destiTitle
 		if let vc = segue.destination as? CityTableViewController {
-			let presenter = CityPresenter()
-			presenter.cityView = vc
+			let presenter = CityPresenter(cityView: vc)
 			vc.presenter = presenter
 		}
 	}

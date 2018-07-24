@@ -8,8 +8,9 @@
 
 import UIKit
 
-class CityTableViewController: FPBaseTableViewController,CityVCProtocol {
+class CityTableViewController: FPBaseTableViewController,CityViewProtocol {
 
+	/// 强持有，public访问权限
 	public var presenter: CityPresenter?
 	
 	public static func storyboardInstance() -> CityTableViewController {
@@ -27,20 +28,6 @@ class CityTableViewController: FPBaseTableViewController,CityVCProtocol {
         // self.clearsSelectionOnViewWillAppear = false
 
         setupNaviRightItem()
-		
-		//无界面复用情况下，直接在内部创建Presenter
-		/*
-		presenter = CityPresenter()
-		presenter?.cityView = self
-		*/
-		
-		//有需要进行界面复用的情况下，需要在Module或者使用的地方，创建Presenter
-		//参考 CommonRootController
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 	
 	private func setupNaviRightItem() {
@@ -80,7 +67,7 @@ class CityTableViewController: FPBaseTableViewController,CityVCProtocol {
 		return cell
 	}
 	
-	//MARK: BaseViewControllerProtcol
+	//MARK: CityViewProtocol
 	func mainNavigationController() -> UINavigationController? {
 		return navigationController
 	}
@@ -97,7 +84,7 @@ class CityTableViewController: FPBaseTableViewController,CityVCProtocol {
 		MBProgressHUD.hideAllHUDs(for: navigationController?.view, animated: true)
 	}
 	
-	func reloadData() {
+	func refreshCityView() {
 		tableView.reloadData()
 	}
 }

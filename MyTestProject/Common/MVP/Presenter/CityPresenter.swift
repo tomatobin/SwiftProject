@@ -9,7 +9,7 @@
 import UIKit
 
 /// ViewController需要实现的基础协议
-protocol BaseVCProtocol: class {
+protocol BaseViewProtocol: class {
 	
 	/// 返回导航控制器
 	func mainNavigationController() -> UINavigationController?
@@ -19,10 +19,10 @@ protocol BaseVCProtocol: class {
 }
 
 /// 城市列表VC协议
-protocol CityVCProtocol: BaseVCProtocol {
+protocol CityViewProtocol: BaseViewProtocol {
 	
 	/// 更新列表
-	func reloadData()
+	func refreshCityView()
 	
 	/// 显示加载
 	func showLoading()
@@ -53,13 +53,15 @@ protocol CityPresenterProtocol: class {
 
 class CityPresenter: CityPresenterProtocol {
 
-	/// Controller
-	weak var cityView: CityVCProtocol?
+	/// Controller，private访问权限 
+	private weak var cityView: CityViewProtocol?
 	
-	/// Model
+	/// DataSource
 	private var cityArray: [CityInfo] = [CityInfo]()
 	
-	init() {
+	/// 必须实现的方法
+	required init(cityView: CityViewProtocol) {
+		self.cityView = cityView
 		refreshCityData()
 	}
 
@@ -108,7 +110,7 @@ class CityPresenter: CityPresenterProtocol {
 			sleep(3)
 			
 			DispatchQueue.main.async {
-				self.cityView?.reloadData()
+				self.cityView?.refreshCityView()
 				self.cityView?.hideLoading()
 			}
 		}

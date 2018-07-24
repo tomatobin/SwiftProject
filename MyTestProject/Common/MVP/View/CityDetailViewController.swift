@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CityDetailViewController: FPBaseController,BaseVCProtocol {
+class CityDetailViewController: FPBaseController,BaseViewProtocol {
 
 	var presenter: CityDetailPresenterProtocol?
 	
