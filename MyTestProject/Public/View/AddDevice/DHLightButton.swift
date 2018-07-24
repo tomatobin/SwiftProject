@@ -3,7 +3,7 @@
 //  LeChangeOverseas
 //
 //  Created by iblue on 2018/6/12.
-//  Copyright © 2018年 Zhejiang Dahua Technology Co.,Ltd. All rights reserved.
+//  Copyright © 2018年 Zhejiang bingo Technology Co.,Ltd. All rights reserved.
 //	网络连接超时的按钮
 
 import UIKit

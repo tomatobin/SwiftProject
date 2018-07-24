@@ -4,7 +4,7 @@
 //
 //  Owned by han_dong on 16/09/30.
 //  Created by amysDavidHan on 16/2/21.
-//  Copyright © 2016年 dahua. All rights reserved.
+//  Copyright © 2016年 bingo. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

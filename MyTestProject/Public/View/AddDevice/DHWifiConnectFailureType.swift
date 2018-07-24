@@ -32,7 +32,7 @@ enum DHWifiConnectFailureType: String {
 	case overseasA	= "FamilyA"
 	case overseasC	= "FamilyC"
 	case overseasDoorbell	= "Doorbell"
-	case common	= "DahuaCommon"
+	case common	= "bingoCommon"
 	
 	func buttonTuples() -> [DHWifiConnectFailureTuple] {
 		var buttons: [DHWifiConnectFailureTuple]!

@@ -3,7 +3,7 @@
 //  LeChangeOverseas
 //
 //  Created by iblue on 2018/6/7.
-//  Copyright © 2018年 Zhejiang Dahua Technology Co.,Ltd. All rights reserved.
+//  Copyright © 2018年 Zhejiang bingo Technology Co.,Ltd. All rights reserved.
 //	设备添加管理类，单例
 
 import Foundation

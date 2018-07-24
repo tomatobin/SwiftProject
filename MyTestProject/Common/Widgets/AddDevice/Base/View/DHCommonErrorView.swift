@@ -3,7 +3,7 @@
 //  LeChangeOverseas
 //
 //  Created by iblue on 2018/6/8.
-//  Copyright © 2018年 Zhejiang Dahua Technology Co.,Ltd. All rights reserved.
+//  Copyright © 2018年 Zhejiang bingo Technology Co.,Ltd. All rights reserved.
 //	能用的错误页面，适用于图片、文字、按钮固定的场景
 
 import UIKit

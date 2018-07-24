@@ -3,7 +3,7 @@
 //  LCIphoneAdhocIP
 //
 //  Created by iblue on 2018/6/5.
-//  Copyright © 2018年 dahua. All rights reserved.
+//  Copyright © 2018年 bingo. All rights reserved.
 //	电源引导页：如果此时搜索到了设备，如果搜索到了设备，直接走有线添加
 
 import UIKit

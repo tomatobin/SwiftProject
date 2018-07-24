@@ -3,7 +3,7 @@
 //  LCIphone
 //
 //  Created by jiangbin on 16/10/19.
-//  Copyright © 2016年 dahua. All rights reserved.
+//  Copyright © 2016年 bingo. All rights reserved.
 //
 
 import UIKit

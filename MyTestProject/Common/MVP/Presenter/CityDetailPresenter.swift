@@ -14,8 +14,8 @@ protocol CityDetailPresenterProtocol: class {
 }
 
 /// 城市列表VC协议
-protocol CityDetailVCProtocol: BaseViewControllerProtcol {
-	
+protocol CityDetailVCProtocol: BaseVCProtocol {
+	//Do Something...
 }
 
 class CityDetailPresenter: CityDetailPresenterProtocol {

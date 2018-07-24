@@ -3,7 +3,7 @@
 //  LeChange
 //
 //  Owned by han_dong on 16/09/30.
-//  Created by dahua on 14-7-29.
+//  Created by bingo on 14-7-29.
 //  Copyright (c) 2014年 LeChange. All rights reserved.
 //
 

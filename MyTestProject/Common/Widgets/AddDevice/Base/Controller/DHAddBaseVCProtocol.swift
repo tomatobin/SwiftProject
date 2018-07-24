@@ -3,7 +3,7 @@
 //  LCIphoneAdhocIP
 //
 //  Created by iblue on 2018/6/5.
-//  Copyright © 2018年 dahua. All rights reserved.
+//  Copyright © 2018年 bingo. All rights reserved.
 //
 
 import Foundation

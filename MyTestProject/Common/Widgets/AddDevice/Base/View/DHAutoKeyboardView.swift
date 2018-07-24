@@ -3,7 +3,7 @@
 //  LCIphoneAdhocIP
 //
 //  Created by iblue on 2018/6/4.
-//  Copyright © 2018年 dahua. All rights reserved.
+//  Copyright © 2018年 bingo. All rights reserved.
 //	定义一个参考的view、能根据keyboard能够，自动调整frame的视图
 
 import UIKit

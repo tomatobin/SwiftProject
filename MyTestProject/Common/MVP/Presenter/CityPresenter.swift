@@ -8,25 +8,44 @@
 
 import UIKit
 
-/// 基础的VC协议，
-protocol BaseViewControllerProtcol: class {
+/// ViewController需要实现的基础协议
+protocol BaseVCProtocol: class {
+	
+	/// 返回导航控制器
 	func mainNavigationController() -> UINavigationController?
+	
+	/// 返回Controller的View
 	func mainView() -> UIView?
 }
 
 /// 城市列表VC协议
-protocol CityVCProtocol: BaseViewControllerProtcol {
+protocol CityVCProtocol: BaseVCProtocol {
+	
+	/// 更新列表
 	func reloadData()
+	
+	/// 显示加载
 	func showLoading()
+	
+	/// 隐藏加载
 	func hideLoading()
 }
 
 /// 解释器实现的协议
 protocol CityPresenterProtocol: class {
+	/// 返回列表section数量
 	func numberOfSections() -> Int
+	
+	/// 返回section对应的行数
 	func numberOfRows(section: Int) -> Int
+	
+	/// 设置cell
 	func configure(cell: UITableViewCell, indexPath: IndexPath)
+	
+	/// 选中cell
 	func didSelect(table: UITableView, indexPath: IndexPath)
+	
+	/// 刷新数据
 	func refreshCityData()
 }
 
@@ -37,12 +56,14 @@ class CityPresenter: CityPresenterProtocol {
 	/// Controller
 	weak var cityView: CityVCProtocol?
 	
+	/// Model
 	private var cityArray: [CityInfo] = [CityInfo]()
 	
 	init() {
 		refreshCityData()
 	}
 
+	//MARK: CityPresenterProtocol
 	func numberOfSections() -> Int {
 		return 1
 	}

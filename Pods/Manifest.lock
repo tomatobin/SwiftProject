@@ -20,7 +20,7 @@ PODS:
     - MOBFoundation
   - ShareSDK3/ShareSDKPlatforms/WeChat (3.6.1):
     - MOBFoundation
-  - SnapKit (3.2.0)
+  - SnapKit (4.0.0)
   - SocketRocket (0.5.1)
   - Spring (1.0.3)
   - SwiftyJSON (3.1.4)
@@ -40,16 +40,31 @@ DEPENDENCIES:
   - ShareSDK3/ShareSDKPlatforms/QQ (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS.git`)
   - ShareSDK3/ShareSDKPlatforms/SinaWeibo (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS.git`)
   - ShareSDK3/ShareSDKPlatforms/WeChat (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS.git`)
-  - SnapKit (~> 3.2.0)
-  - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
+  - SnapKit (~> 4.0.0)
+  - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift4`)
   - SwiftyJSON (~> 3.1.4)
   - WeexSDK (= 0.11.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - BeeHive
+    - Masonry
+    - MBProgressHUD
+    - MGJRouter
+    - MOBFoundation
+    - pop
+    - SDWebImage
+    - SnapKit
+    - SocketRocket
+    - SwiftyJSON
+    - WeexSDK
 
 EXTERNAL SOURCES:
   ShareSDK3:
     :git: https://git.oschina.net/MobClub/ShareSDK-for-iOS.git
   Spring:
-    :branch: swift3
+    :branch: swift4
     :git: https://github.com/MengTo/Spring.git
 
 CHECKOUT OPTIONS:
@@ -57,7 +72,7 @@ CHECKOUT OPTIONS:
     :commit: 02f43072cfefcc5d97bdad4c33d4efb32c18afb8
     :git: https://git.oschina.net/MobClub/ShareSDK-for-iOS.git
   Spring:
-    :commit: 8201b5c93bd7ebdf4cd18160bcde1e6e88c2be64
+    :commit: 8d04081f4b27ff85161addee45b21c1156f0143f
     :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
@@ -70,12 +85,12 @@ SPEC CHECKSUMS:
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   ShareSDK3: dea6a14cc4385fa6493e10895ba11d07ef34d149
-  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   WeexSDK: f9cfe6adc91fba3ca5e36bc9808bf1b6e8be2106
 
-PODFILE CHECKSUM: f90a57f0e6a8bab5d83f0dfb5f4a1c248ef103e0
+PODFILE CHECKSUM: 476b7d5bd4cfbb76f53abea70ab77a971b466a77
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.5.2
