@@ -13,6 +13,7 @@ class CommonRootController: FPBaseController,UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     var dataSource: FPTableDataSource!
     var data: Dictionary<String,String>!
+	var destiTitle: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +64,8 @@ class CommonRootController: FPBaseController,UITableViewDelegate {
         let allValues = Array(data.values) as Array<String>
         if indexPath.row < allValues.count {
             let pushSegue = allValues[indexPath.row]
+			let keys = Array(data.keys) as Array<String>
+			destiTitle = keys[indexPath.row]
             self.performSegue(withIdentifier: pushSegue, sender: nil)
         }
     }
@@ -74,4 +77,14 @@ class CommonRootController: FPBaseController,UITableViewDelegate {
     override var shouldAutorotate : Bool {
         return true
     }
+	
+	//MARK: Navigation
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		segue.destination.title = destiTitle
+		if let vc = segue.destination as? CityTableViewController {
+			let presenter = CityPresenter()
+			presenter.cityView = vc
+			vc.presenter = presenter
+		}
+	}
 }

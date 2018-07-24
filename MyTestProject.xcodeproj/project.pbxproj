@@ -45,6 +45,10 @@
 		4E7AF6201F0B292E00B659DD /* FPTabbarContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7AF61E1F0B292E00B659DD /* FPTabbarContoller.swift */; };
 		4E7AF6251F0B831C00B659DD /* SpringController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7AF6241F0B831C00B659DD /* SpringController.swift */; };
 		4E7CBCC21F2AC6FD000A469D /* SoccerFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7CBCC11F2AC6FD000A469D /* SoccerFieldView.swift */; };
+		4E8152522105FE3A00A594F5 /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8152512105FE3A00A594F5 /* CityInfo.swift */; };
+		4E83DDB32106C53700FCC387 /* CityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E83DDB22106C53700FCC387 /* CityDetailViewController.swift */; };
+		4E83DDBA2106C97500FCC387 /* MVP.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E83DDB82106C97400FCC387 /* MVP.storyboard */; };
+		4E83DDBC2106CBFD00FCC387 /* CityDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E83DDBB2106CBFD00FCC387 /* CityDetailPresenter.swift */; };
 		4EA4200D2105D68C007281BD /* FPBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4200C2105D68C007281BD /* FPBaseTableViewController.swift */; };
 		4EA420102105D799007281BD /* CityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4200F2105D799007281BD /* CityTableViewController.swift */; };
 		4EA420122105D840007281BD /* CityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA420112105D840007281BD /* CityPresenter.swift */; };
@@ -185,6 +189,10 @@
 		4E7AF61E1F0B292E00B659DD /* FPTabbarContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPTabbarContoller.swift; sourceTree = "<group>"; };
 		4E7AF6241F0B831C00B659DD /* SpringController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringController.swift; sourceTree = "<group>"; };
 		4E7CBCC11F2AC6FD000A469D /* SoccerFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoccerFieldView.swift; sourceTree = "<group>"; };
+		4E8152512105FE3A00A594F5 /* CityInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
+		4E83DDB22106C53700FCC387 /* CityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailViewController.swift; sourceTree = "<group>"; };
+		4E83DDB92106C97400FCC387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MVP.storyboard; sourceTree = "<group>"; };
+		4E83DDBB2106CBFD00FCC387 /* CityDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailPresenter.swift; sourceTree = "<group>"; };
 		4EA4200C2105D68C007281BD /* FPBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPBaseTableViewController.swift; sourceTree = "<group>"; };
 		4EA4200F2105D799007281BD /* CityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewController.swift; sourceTree = "<group>"; };
 		4EA420112105D840007281BD /* CityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityPresenter.swift; sourceTree = "<group>"; };
@@ -382,11 +390,38 @@
 			path = Weex;
 			sourceTree = "<group>";
 		};
-		4EA4200E2105D779007281BD /* MVP */ = {
+		4E83DDB52106C5E800FCC387 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				4EA4200F2105D799007281BD /* CityTableViewController.swift */,
+				4E83DDB22106C53700FCC387 /* CityDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4E83DDB62106C5F400FCC387 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
 				4EA420112105D840007281BD /* CityPresenter.swift */,
+				4E83DDBB2106CBFD00FCC387 /* CityDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4E83DDB72106C60400FCC387 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E8152512105FE3A00A594F5 /* CityInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4EA4200E2105D779007281BD /* MVP */ = {
+			isa = PBXGroup;
+			children = (
+				4E83DDB72106C60400FCC387 /* Model */,
+				4E83DDB62106C5F400FCC387 /* Presenter */,
+				4E83DDB52106C5E800FCC387 /* View */,
 			);
 			path = MVP;
 			sourceTree = "<group>";
@@ -425,6 +460,7 @@
 				4E7AF61E1F0B292E00B659DD /* FPTabbarContoller.swift */,
 				860EB8AE1D24BCC10020736D /* Main.storyboard */,
 				4E7AF6111F0B208D00B659DD /* Common.storyboard */,
+				4E83DDB82106C97400FCC387 /* MVP.storyboard */,
 				4E7AF6131F0B208D00B659DD /* Weex.storyboard */,
 				864A9DD21E7D0E17001665B8 /* Reverse.storyboard */,
 				860EB8B11D24BCC10020736D /* Assets.xcassets */,
@@ -757,6 +793,7 @@
 				865BE2D81D251D6800D1AD83 /* Liekkas.mp3 in Resources */,
 				864A9E471E7D1151001665B8 /* FPNumberKeyboard.xib in Resources */,
 				864A9E481E7D1151001665B8 /* resign@2x.png in Resources */,
+				4E83DDBA2106C97500FCC387 /* MVP.storyboard in Resources */,
 				860EB8E21D24EF950020736D /* cowsound.mp3 in Resources */,
 				4E3277421EF96B8200BD341E /* FPRefresh.bundle in Resources */,
 				864A9E451E7D1151001665B8 /* delete@3x.png in Resources */,
@@ -863,9 +900,11 @@
 				864A9E1E1E7D1151001665B8 /* NSDate+Extension.swift in Sources */,
 				864A9DD11E7D0DE1001665B8 /* WidgetsController.swift in Sources */,
 				4E39607920D894EB007DA535 /* DHAddGuideView.swift in Sources */,
+				4E83DDBC2106CBFD00FCC387 /* CityDetailPresenter.swift in Sources */,
 				864A9DCD1E7D0DE1001665B8 /* CustomWidgetsController.swift in Sources */,
 				860EB8AD1D24BCC10020736D /* ViewController.swift in Sources */,
 				860EB8AB1D24BCC10020736D /* AppDelegate.swift in Sources */,
+				4E83DDB32106C53700FCC387 /* CityDetailViewController.swift in Sources */,
 				8651438A1EF79C34003D8995 /* FPRefreshDefine.swift in Sources */,
 				864A9E3B1E7D1151001665B8 /* PresentModallySegue.swift in Sources */,
 				864A9E241E7D1151001665B8 /* UIButton+PositionLabel.swift in Sources */,
@@ -885,6 +924,7 @@
 				864A9E291E7D1151001665B8 /* UINavigationController+Extenstion.swift in Sources */,
 				4E3EFBEE20D36BB20001A921 /* DHApGuideViewController.swift in Sources */,
 				864A9E1D1E7D1151001665B8 /* FPConstant.swift in Sources */,
+				4E8152522105FE3A00A594F5 /* CityInfo.swift in Sources */,
 				4E39607820D894EB007DA535 /* DHAddDeviceManager.swift in Sources */,
 				864A9E3E1E7D1151001665B8 /* FPTableViewCell.swift in Sources */,
 				4E2506A81F0F5FCD003117D7 /* WidgetsModule.swift in Sources */,
@@ -960,6 +1000,14 @@
 				4E7AF6141F0B208D00B659DD /* Base */,
 			);
 			name = Weex.storyboard;
+			sourceTree = "<group>";
+		};
+		4E83DDB82106C97400FCC387 /* MVP.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E83DDB92106C97400FCC387 /* Base */,
+			);
+			name = MVP.storyboard;
 			sourceTree = "<group>";
 		};
 		860EB8AE1D24BCC10020736D /* Main.storyboard */ = {
