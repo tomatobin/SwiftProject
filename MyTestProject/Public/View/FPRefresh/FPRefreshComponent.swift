@@ -86,8 +86,8 @@ class FPRefreshComponent: UIView {
     }
     
     func placeSubviews() {
-        self.loadingView.mas_makeConstraints { (make) in
-            make!.center.equalTo()(self)
+        self.loadingView.snp.makeConstraints { (make) in
+            make.center.equalTo(self)
         }
     }
     

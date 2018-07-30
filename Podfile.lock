@@ -6,6 +6,7 @@ PODS:
   - MGJRouter (0.9.3)
   - MOBFoundation (2.2.15)
   - pop (1.0.9)
+  - RAMAnimatedTabBarController (3.5.0)
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
@@ -35,6 +36,7 @@ DEPENDENCIES:
   - MGJRouter (~> 0.9.3)
   - MOBFoundation
   - pop
+  - RAMAnimatedTabBarController
   - SDWebImage (~> 3.8.1)
   - ShareSDK3 (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS.git`)
   - ShareSDK3/ShareSDKPlatforms/QQ (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS.git`)
@@ -54,6 +56,7 @@ SPEC REPOS:
     - MGJRouter
     - MOBFoundation
     - pop
+    - RAMAnimatedTabBarController
     - SDWebImage
     - SnapKit
     - SocketRocket
@@ -83,6 +86,7 @@ SPEC CHECKSUMS:
   MGJRouter: f65821e2aeffc8f9e84b254c8f1c0dd80f048aa9
   MOBFoundation: 4975874f74c991f562151f6a4549e9a6ad743fd8
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  RAMAnimatedTabBarController: 7e259e89b669c7bc833a6441c7d8fbfd6580f473
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   ShareSDK3: dea6a14cc4385fa6493e10895ba11d07ef34d149
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
@@ -91,6 +95,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   WeexSDK: f9cfe6adc91fba3ca5e36bc9808bf1b6e8be2106
 
-PODFILE CHECKSUM: 476b7d5bd4cfbb76f53abea70ab77a971b466a77
+PODFILE CHECKSUM: 61d072d617ba36788b9c52d8771d2517811f5a09
 
 COCOAPODS: 1.5.2

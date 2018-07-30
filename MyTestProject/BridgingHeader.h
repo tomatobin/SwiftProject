@@ -12,7 +12,6 @@
 #import <pop/POP.h>
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <SDWebImage/SDImageCache.h>
-#import <Masonry/Masonry.h>
 #import <CommonCrypto/CommonCrypto.h>
 #import <CommonCrypto/CommonDigest.h>
 

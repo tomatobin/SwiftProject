@@ -41,7 +41,6 @@
 		4E7AF6151F0B208D00B659DD /* Common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7AF6111F0B208D00B659DD /* Common.storyboard */; };
 		4E7AF6161F0B208D00B659DD /* Weex.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7AF6131F0B208D00B659DD /* Weex.storyboard */; };
 		4E7AF6191F0B20AC00B659DD /* FPWeexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7AF6181F0B20AC00B659DD /* FPWeexController.swift */; };
-		4E7AF61F1F0B292E00B659DD /* FPTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7AF61D1F0B292E00B659DD /* FPTabbar.swift */; };
 		4E7AF6201F0B292E00B659DD /* FPTabbarContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7AF61E1F0B292E00B659DD /* FPTabbarContoller.swift */; };
 		4E7AF6251F0B831C00B659DD /* SpringController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7AF6241F0B831C00B659DD /* SpringController.swift */; };
 		4E7CBCC21F2AC6FD000A469D /* SoccerFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7CBCC11F2AC6FD000A469D /* SoccerFieldView.swift */; };
@@ -52,6 +51,12 @@
 		4EA4200D2105D68C007281BD /* FPBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4200C2105D68C007281BD /* FPBaseTableViewController.swift */; };
 		4EA420102105D799007281BD /* CityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4200F2105D799007281BD /* CityTableViewController.swift */; };
 		4EA420122105D840007281BD /* CityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA420112105D840007281BD /* CityPresenter.swift */; };
+		4EF23162210EFA6D0003055A /* REServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF23161210EFA6D0003055A /* REServiceUtil.swift */; };
+		4EF23165210EFC5F0003055A /* REMobileAppApiListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF23164210EFC5F0003055A /* REMobileAppApiListController.swift */; };
+		4EF23167210F04470003055A /* REMobileApiResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF23166210F04470003055A /* REMobileApiResultViewController.swift */; };
+		4EF23169210F093A0003055A /* REServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF23168210F093A0003055A /* REServiceModel.swift */; };
+		4EF2316B210F111E0003055A /* String+Encryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2316A210F111E0003055A /* String+Encryption.swift */; };
+		4EF2316D210F23520003055A /* Data+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2316C210F23520003055A /* Data+HexString.swift */; };
 		4EF8638A20CE11B30078B7BD /* ErrorViewTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF8638920CE11B30078B7BD /* ErrorViewTransitionViewController.swift */; };
 		860777E51EF8A89300B08DA0 /* FPRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860777E41EF8A89300B08DA0 /* FPRefreshHeader.swift */; };
 		860EB8AB1D24BCC10020736D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860EB8AA1D24BCC10020736D /* AppDelegate.swift */; };
@@ -185,7 +190,6 @@
 		4E7AF6121F0B208D00B659DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Common.storyboard; sourceTree = "<group>"; };
 		4E7AF6141F0B208D00B659DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Weex.storyboard; sourceTree = "<group>"; };
 		4E7AF6181F0B20AC00B659DD /* FPWeexController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPWeexController.swift; sourceTree = "<group>"; };
-		4E7AF61D1F0B292E00B659DD /* FPTabbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPTabbar.swift; sourceTree = "<group>"; };
 		4E7AF61E1F0B292E00B659DD /* FPTabbarContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPTabbarContoller.swift; sourceTree = "<group>"; };
 		4E7AF6241F0B831C00B659DD /* SpringController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringController.swift; sourceTree = "<group>"; };
 		4E7CBCC11F2AC6FD000A469D /* SoccerFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoccerFieldView.swift; sourceTree = "<group>"; };
@@ -196,6 +200,12 @@
 		4EA4200C2105D68C007281BD /* FPBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPBaseTableViewController.swift; sourceTree = "<group>"; };
 		4EA4200F2105D799007281BD /* CityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewController.swift; sourceTree = "<group>"; };
 		4EA420112105D840007281BD /* CityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityPresenter.swift; sourceTree = "<group>"; };
+		4EF23161210EFA6D0003055A /* REServiceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REServiceUtil.swift; sourceTree = "<group>"; };
+		4EF23164210EFC5F0003055A /* REMobileAppApiListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REMobileAppApiListController.swift; sourceTree = "<group>"; };
+		4EF23166210F04470003055A /* REMobileApiResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REMobileApiResultViewController.swift; sourceTree = "<group>"; };
+		4EF23168210F093A0003055A /* REServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REServiceModel.swift; sourceTree = "<group>"; };
+		4EF2316A210F111E0003055A /* String+Encryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Encryption.swift"; sourceTree = "<group>"; };
+		4EF2316C210F23520003055A /* Data+HexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+HexString.swift"; sourceTree = "<group>"; };
 		4EF8638920CE11B30078B7BD /* ErrorViewTransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewTransitionViewController.swift; sourceTree = "<group>"; };
 		5EE5F991111B4F41E0289859 /* Pods-MyTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTestProject/Pods-MyTestProject.release.xcconfig"; sourceTree = "<group>"; };
 		6FCBB48DE8AF7BA6C1388AE1 /* Pods_MyTestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -426,6 +436,35 @@
 			path = MVP;
 			sourceTree = "<group>";
 		};
+		4EF2315F210EFA6D0003055A /* MobileApp */ = {
+			isa = PBXGroup;
+			children = (
+				4EF23163210EFC3F0003055A /* Controller */,
+				4EF23160210EFA6D0003055A /* Model */,
+			);
+			path = MobileApp;
+			sourceTree = "<group>";
+		};
+		4EF23160210EFA6D0003055A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4EF23161210EFA6D0003055A /* REServiceUtil.swift */,
+				4EF23168210F093A0003055A /* REServiceModel.swift */,
+				4EF2316A210F111E0003055A /* String+Encryption.swift */,
+				4EF2316C210F23520003055A /* Data+HexString.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4EF23163210EFC3F0003055A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4EF23164210EFC5F0003055A /* REMobileAppApiListController.swift */,
+				4EF23166210F04470003055A /* REMobileApiResultViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		860EB89E1D24BCC10020736D = {
 			isa = PBXGroup;
 			children = (
@@ -456,7 +495,6 @@
 				4EA4200C2105D68C007281BD /* FPBaseTableViewController.swift */,
 				860EB8BD1D24BD2B0020736D /* FPNavigaionController.swift */,
 				860EB8AC1D24BCC10020736D /* ViewController.swift */,
-				4E7AF61D1F0B292E00B659DD /* FPTabbar.swift */,
 				4E7AF61E1F0B292E00B659DD /* FPTabbarContoller.swift */,
 				860EB8AE1D24BCC10020736D /* Main.storyboard */,
 				4E7AF6111F0B208D00B659DD /* Common.storyboard */,
@@ -569,6 +607,7 @@
 		864A9DC31E7D0DE1001665B8 /* Reverse */ = {
 			isa = PBXGroup;
 			children = (
+				4EF2315F210EFA6D0003055A /* MobileApp */,
 				4E7AF60D1F0B1F3900B659DD /* FPReverseController.swift */,
 			);
 			path = Reverse;
@@ -880,6 +919,7 @@
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MGJRouter/MGJRouter.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SocketRocket/SocketRocket.framework",
@@ -894,6 +934,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MGJRouter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMAnimatedTabBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketRocket.framework",
@@ -933,6 +974,7 @@
 				860EB8BF1D24BD2B0020736D /* FPNavigaionController.swift in Sources */,
 				865143861EF77B2A003D8995 /* FPRefreshComponent.swift in Sources */,
 				864A9E411E7D1151001665B8 /* FPCircleProgress.swift in Sources */,
+				4EF2316D210F23520003055A /* Data+HexString.swift in Sources */,
 				864A9E2B1E7D1151001665B8 /* UITextField+Extension.swift in Sources */,
 				864A9E1E1E7D1151001665B8 /* NSDate+Extension.swift in Sources */,
 				864A9DD11E7D0DE1001665B8 /* WidgetsController.swift in Sources */,
@@ -964,6 +1006,7 @@
 				4E8152522105FE3A00A594F5 /* CityInfo.swift in Sources */,
 				4E39607820D894EB007DA535 /* DHAddDeviceManager.swift in Sources */,
 				864A9E3E1E7D1151001665B8 /* FPTableViewCell.swift in Sources */,
+				4EF23167210F04470003055A /* REMobileApiResultViewController.swift in Sources */,
 				4E2506A81F0F5FCD003117D7 /* WidgetsModule.swift in Sources */,
 				864A9DD01E7D0DE1001665B8 /* MBHUDController.swift in Sources */,
 				864A9E461E7D1151001665B8 /* FPNumberKeyboard.swift in Sources */,
@@ -989,6 +1032,7 @@
 				864A9DC71E7D0DE1001665B8 /* AVAudioSessionController.swift in Sources */,
 				864A9E301E7D1151001665B8 /* Configration.swift in Sources */,
 				864A9E231E7D1151001665B8 /* UIButton+CountDown.swift in Sources */,
+				4EF23162210EFA6D0003055A /* REServiceUtil.swift in Sources */,
 				4E5D7EAA20E70B38005A8C1E /* UITextField+LeChange.m in Sources */,
 				4E39607620D894EB007DA535 /* DHGuideBaseViewController.swift in Sources */,
 				864A9DCA1E7D0DE1001665B8 /* CommonRootController.swift in Sources */,
@@ -1003,20 +1047,22 @@
 				864A9E3C1E7D1151001665B8 /* FPRoomGridInfo.swift in Sources */,
 				864A9E2D1E7D1151001665B8 /* AESCipher.swift in Sources */,
 				860EB8BE1D24BD2B0020736D /* FPBaseController.swift in Sources */,
+				4EF23165210EFC5F0003055A /* REMobileAppApiListController.swift in Sources */,
 				864A9E541E7D1151001665B8 /* LCPanoTopView.swift in Sources */,
 				864A9DCE1E7D0DE1001665B8 /* FliterController.swift in Sources */,
 				4E2506AA1F0F60F5003117D7 /* WidgetsHudServiceProtocol.swift in Sources */,
 				864A9DC91E7D0DE1001665B8 /* CameraCaptureController.swift in Sources */,
 				864A9E2A1E7D1151001665B8 /* UITableView+Extension.swift in Sources */,
+				4EF23169210F093A0003055A /* REServiceModel.swift in Sources */,
 				4E28B10820D0AECD0041DEB7 /* DHWifiConnectFailureType.swift in Sources */,
 				4E0D915F20CFBB520070BACA /* DHLightButton.swift in Sources */,
 				4E0D916320CFBD780070BACA /* DHWifiConnectFailureView.swift in Sources */,
 				4E3EFBC220D3459F0001A921 /* DHSelectModelViewController.swift in Sources */,
 				864A9E531E7D1151001665B8 /* FPWKWebController.swift in Sources */,
-				4E7AF61F1F0B292E00B659DD /* FPTabbar.swift in Sources */,
 				864A9E561E7D1151001665B8 /* UINavigationBar+Awesome.m in Sources */,
 				860777E51EF8A89300B08DA0 /* FPRefreshHeader.swift in Sources */,
 				864A9E4E1E7D1151001665B8 /* FPShareView.swift in Sources */,
+				4EF2316B210F111E0003055A /* String+Encryption.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

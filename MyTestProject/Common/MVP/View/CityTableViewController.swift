@@ -77,11 +77,11 @@ class CityTableViewController: FPBaseTableViewController,CityViewProtocol {
 	}
 	
 	func showLoading() {
-		MBProgressHUD.showAdded(to: navigationController?.view, animated: true)
+		MBProgressHUD.showAdded(to: view, animated: true)
 	}
 	
 	func hideLoading() {
-		MBProgressHUD.hideAllHUDs(for: navigationController?.view, animated: true)
+		MBProgressHUD.hideAllHUDs(for: view, animated: true)
 	}
 	
 	func refreshCityView() {

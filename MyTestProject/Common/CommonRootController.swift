@@ -24,7 +24,6 @@ class CommonRootController: FPBaseController,UITableViewDelegate {
                 "Transition": "PushToTransition",
 				"Widgets": "PushToWidgets",
 				"MVP": "PushToMVP"]
-        self.title = "常用"
         self.configureTableView()
     }
 

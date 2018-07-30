@@ -8,14 +8,17 @@
 
 import UIKit
 
-class FPReverseController: FPBaseController {
+class FPReverseController: FPBaseTableViewController {
 
+	var dataSource: FPTableDataSource!
+	var data: Dictionary<String,String>!
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.title = "逆向"
-		self.testVC()
+		data = ["MobileApp": "PushToMobileApp",]
+		self.configureTableView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,26 +26,39 @@ class FPReverseController: FPBaseController {
         // Dispose of any resources that can be recreated.
     }
 	
-	private func testVC() {
-		let vc = DHInputSNViewController.storyboardInstance()
-		self.addChildViewController(vc)
+	func configureTableView() {
+		let identifier = FPTableViewCell.cellIdentifier()
 		
-		self.view.addSubview(vc.view)
+		var dataArray = [FPTableViewCellData]()
+		for key in Array(data.keys) {
+			let celldata = FPTableViewCellData(title: key, imageName: nil, detail: nil, type: .normal)
+			dataArray.append(celldata)
+		}
 		
-		vc.view.snp.makeConstraints { (make) in
-			make.edges.equalTo(self.view)
+		dataSource = FPTableDataSource.init(cellItems: dataArray, cellIdentifier: identifier, configureCell: {(cell, item) in
+			let testCell = cell as! FPTableViewCell
+			testCell.configureForCell(item: item)
+		})
+		
+		tableView.register(FPTableViewCell.self, forCellReuseIdentifier: identifier)
+		tableView.dataSource = dataSource
+		tableView.delegate = self
+		tableView.reloadData()
+		tableView.fp_setExtraRowsHidden()
+	}
+	
+	//MARK: - UITableViewDelegate
+	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return FPTableViewCell.cellHeight()
+	}
+	
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
+		let allValues = Array(data.values) as Array<String>
+		if indexPath.row < allValues.count {
+			let pushSegue = allValues[indexPath.row]
+			let keys = Array(data.keys) as Array<String>
+			self.performSegue(withIdentifier: pushSegue, sender: nil)
 		}
 	}
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

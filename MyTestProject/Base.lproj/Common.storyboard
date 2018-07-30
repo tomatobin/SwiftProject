@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--常用-->
+        <!--Common Root Controller-->
         <scene sceneID="AD5-21-reu">
             <objects>
-                <viewController title="常用" id="R29-ay-z9m" customClass="CommonRootController" customModule="MyTestProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="R29-ay-z9m" customClass="CommonRootController" customModule="MyTestProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ofd-O9-FZN"/>
                         <viewControllerLayoutGuide type="bottom" id="PH0-va-xZf"/>
@@ -35,7 +35,7 @@
                             <constraint firstItem="a2R-P5-mCk" firstAttribute="top" secondItem="Ofd-O9-FZN" secondAttribute="bottom" id="vQg-cp-RoM"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="常用" id="Nka-Jy-afz"/>
+                    <tabBarItem key="tabBarItem" title="" id="Nka-Jy-afz"/>
                     <navigationItem key="navigationItem" id="DVw-Sz-MEq"/>
                     <connections>
                         <outlet property="tableView" destination="a2R-P5-mCk" id="wo4-sX-V70"/>

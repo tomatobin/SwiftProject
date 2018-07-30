@@ -2,12 +2,14 @@ use_frameworks!
 target 'MyTestProject' do
     pod 'pop'
     pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift4'
+	pod 'RAMAnimatedTabBarController'
+	pod 'Alamofire', '~> 4.4'
+	pod 'SwiftyJSON', '~> 3.1.4'
+	pod 'SnapKit', '~> 4.0.0'
+	
     pod 'MBProgressHUD', '~> 0.9.2'
     pod 'SDWebImage', '~> 3.8.1'
     pod 'Masonry', '0.6.3'
-    pod 'Alamofire', '~> 4.4'
-    pod 'SwiftyJSON', '~> 3.1.4'
-    pod 'SnapKit', '~> 4.0.0'
     pod 'WeexSDK', '0.11.0'
     pod 'BeeHive', '~> 1.5.1'
     pod 'MGJRouter', '~> 0.9.3'

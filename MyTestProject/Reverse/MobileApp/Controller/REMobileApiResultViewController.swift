@@ -1,25 +1,40 @@
 //
-//  FPWeexController.swift
+//  REMobileApiResultViewController.swift
 //  MyTestProject
 //
-//  Created by iblue on 2017/7/4.
-//  Copyright © 2017年 iblue. All rights reserved.
+//  Created by iblue on 2018/7/30.
+//  Copyright © 2018年 iblue. All rights reserved.
 //
 
 import UIKit
 
-class FPWeexController: FPBaseController {
+class REMobileApiResultViewController: FPBaseController {
+	
+	public var function: String = ""
+	
+	public var jsonParams: String = ""
 
-    override func viewDidLoad() {
+	@IBOutlet weak var resultTextView: UITextView!
+	
+	override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+		request()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	func request() {
+		REServiceUtil.sharedInstance.post(funtion: function, encodeParams: jsonParams, success: { (result) in
+			self.resultTextView.text = result
+		}) { (error) in
+			self.resultTextView.text = error.localizedDescription
+		}
+	}
     
 
     /*

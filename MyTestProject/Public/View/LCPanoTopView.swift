@@ -64,17 +64,17 @@ class LCPanoTopView: UIView {
      - parameter position: 位置
      */
     func addConstrain(_ button:UIButton, position: ViewPosition) {
-        button.mas_makeConstraints({ make in
-            make!.height.equalTo()(self.fixedHeight)
-            make!.width.equalTo()(self.fixedHeight)
-            make!.centerY.equalTo()(self)
+        button.snp.makeConstraints ({ make in
+            make.height.equalTo(self.fixedHeight)
+            make.width.equalTo(self.fixedHeight)
+            make.centerY.equalTo(self)
             
             if position == .center {
-                make!.centerX.equalTo()(self)
+                make.centerX.equalTo(self)
             } else if position == .left {
-                make!.left.equalTo()(self)!.offset()(10)
+                make.left.equalTo(self).offset(10)
             } else {
-                make!.right.equalTo()(self)!.offset()(-10)
+                make.right.equalTo(self).offset(-10)
             }
         })
     }
@@ -112,15 +112,15 @@ class LCPanoTopView: UIView {
         view.backgroundColor = self.lineColor()
         self.addSubview(view)
         
-        view.mas_makeConstraints({ make in
-            _ = make?.height.equalTo()(10)
-            _ = make?.width.equalTo()(0.6)
-            _ = make?.centerY.equalTo()(self)
-            
+        view.snp.makeConstraints ({ make in
+           make.height.equalTo(10)
+           make.width.equalTo(0.6)
+           make.centerY.equalTo(self)
+			
             if position == .left {
-                _ = make?.left.equalTo()(self)?.offset()(47)
+				make.left.equalTo(self).offset(47)
             } else {
-                _ = make?.right.equalTo()(self)?.offset()(-47)
+				make.right.equalTo(self).offset(-47)
             }
         })
         return view

@@ -7,18 +7,12 @@
 //
 
 import UIKit
+import RAMAnimatedTabBarController
 
-class FPTabbarContoller: UITabBarController,FPTabbarDelegate {
+class FPTabbarContoller: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //以原始的图片渲染Tabbar的选中效果
-        if let items = self.tabBar.items {
-            for item in items {
-                item.selectedImage = item.selectedImage?.withRenderingMode(.alwaysOriginal)
-            }
-        }
     }
     
     //MARK: - Rotate
@@ -44,12 +38,5 @@ class FPTabbarContoller: UITabBarController,FPTabbarDelegate {
         }
       
         return .default
-    }
-}
-
-extension FPTabbarContoller{
-    //MARK: FPTabbarDelegate
-    func tabbarOnAction(_ tabbar: FPTabbar, centerButton: UIButton) {
-        ColorLog.green("Tabbar on center action!")
     }
 }
