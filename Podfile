@@ -3,7 +3,7 @@ target 'MyTestProject' do
     pod 'pop'
     pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift4'
 	pod 'RAMAnimatedTabBarController'
-	pod 'Alamofire', '~> 4.4'
+	pod 'Alamofire', '~> 4.7.3'
 	pod 'SwiftyJSON', '~> 3.1.4'
 	pod 'SnapKit', '~> 4.0.0'
 	

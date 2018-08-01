@@ -39,10 +39,6 @@ class REServiceModel: NSObject {
 	private func dicParams() -> [String: Any] {
 		var dic = [String: Any]()
 		
-		if FModuleId.count > 0 {
-			dic["FModuleId"] = FModuleId
-		}
-		
 		if FOSVersion.count > 0 {
 			dic["FOSVersion"] = FOSVersion
 		}
@@ -53,6 +49,10 @@ class REServiceModel: NSObject {
 		
 		if FAppVersion.count > 0 {
 			dic["FAppVersion"] = FAppVersion
+		}
+		
+		if FModuleId.count > 0 {
+			dic["FModuleId"] = FModuleId
 		}
 		
 		if FItemNumber.count > 0 {

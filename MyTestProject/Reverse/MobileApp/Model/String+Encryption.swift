@@ -33,7 +33,7 @@ extension String {
 		let ivBytes = iv?.data(using: .utf8)?.jm_toUnsafePointerUInt8()
 		
 		var bytesDecrypted: Int = 0
-		let cryptStatus = CCCrypt( CCOperation(kCCDecrypt),
+		let cryptStatus = CCCrypt( CCOperation(kCCEncrypt),
 								   CCAlgorithm(kCCAlgorithmDES),
 								   CCOptions(kCCOptionPKCS7Padding),
 								   keyBytes,
@@ -54,6 +54,7 @@ extension String {
 			print("Error in crypto operation: \(cryptStatus)")
 		}
 		
+		//print("🍎🍎🍎\(#function):: cipherText: \(cipherText ?? "")")
 		return cipherText
 	}
 }

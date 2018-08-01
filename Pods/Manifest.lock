@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (4.4.0)
+  - Alamofire (4.7.3)
   - BeeHive (1.5.1)
   - Masonry (0.6.3)
   - MBProgressHUD (0.9.2)
@@ -29,7 +29,7 @@ PODS:
     - SocketRocket
 
 DEPENDENCIES:
-  - Alamofire (~> 4.4)
+  - Alamofire (~> 4.7.3)
   - BeeHive (~> 1.5.1)
   - Masonry (= 0.6.3)
   - MBProgressHUD (~> 0.9.2)
@@ -79,7 +79,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
-  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   BeeHive: b135a33b3519814ec5d117318d205e10c997450f
   Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
@@ -95,6 +95,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   WeexSDK: f9cfe6adc91fba3ca5e36bc9808bf1b6e8be2106
 
-PODFILE CHECKSUM: 61d072d617ba36788b9c52d8771d2517811f5a09
+PODFILE CHECKSUM: 6d94da8c24efa7a75bcbe7eee4400668d655a820
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.5.3

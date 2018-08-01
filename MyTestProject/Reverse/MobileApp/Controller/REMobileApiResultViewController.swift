@@ -20,8 +20,14 @@ class REMobileApiResultViewController: FPBaseController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+		resultTextView.delegate = self
 		request()
     }
+	
+	override func viewDidDisappear(_ animated: Bool) {
+		super.viewDidDisappear(animated)
+		FPHudUtility.hideHuds(view)
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -29,22 +35,21 @@ class REMobileApiResultViewController: FPBaseController {
     }
 	
 	func request() {
+		_ = FPHudUtility.showGifLoading(view, gifName: "Loading_rabbit")
 		REServiceUtil.sharedInstance.post(funtion: function, encodeParams: jsonParams, success: { (result) in
 			self.resultTextView.text = result
+			FPHudUtility.hideHuds(self.view)
 		}) { (error) in
-			self.resultTextView.text = error.localizedDescription
+			self.resultTextView.text = error?.localizedDescription
+			FPHudUtility.hideHuds(self.view)
 		}
 	}
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+extension REMobileApiResultViewController: UITextViewDelegate {
+	
+	func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+		textView.resignFirstResponder()
+		return true
+	}
 }

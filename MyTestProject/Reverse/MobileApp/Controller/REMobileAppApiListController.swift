@@ -17,12 +17,15 @@ class REMobileAppApiListController: FPBaseTableViewController {
 	var dataSource: FPTableDataSource!
 	var data: [String] = REServiceFunction.functionList()
 	
+	private var itemNumberTxt: LCTextField!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		// Do any additional setup after loading the view.
 		self.title = "MobileApi"
 		self.configureTableView()
+		self.setupItemNumberView()
 	}
 	
 	override func didReceiveMemoryWarning() {
@@ -51,6 +54,35 @@ class REMobileAppApiListController: FPBaseTableViewController {
 		tableView.fp_setExtraRowsHidden()
 	}
 	
+	func setupItemNumberView() {
+		let headerView = UIView(frame: CGRect(x: 0, y: -50, width: view.bounds.width, height: 50))
+		tableView.tableHeaderView = headerView
+		
+		let label = UILabel()
+		label.text = "ItemNumber:"
+		headerView.addSubview(label)
+		
+		itemNumberTxt = LCTextField()
+		itemNumberTxt.delegate = self
+		itemNumberTxt.clearButtonMode = .whileEditing
+		itemNumberTxt.lc_setInputRule(withRegEx: "[0-9]", andInputLength: 10)
+		itemNumberTxt.placeholder = "eg:10651"
+		headerView.addSubview(itemNumberTxt)
+	
+		label.snp.makeConstraints { (make) in
+			make.left.equalTo(headerView).offset(15)
+			make.top.equalTo(headerView).offset(15)
+		}
+		
+		itemNumberTxt.snp.makeConstraints { (make) in
+			make.left.equalTo(label.snp.right).offset(5)
+			make.width.equalTo(120)
+			make.centerY.equalTo(label).offset(1.5)
+		}
+		
+		itemNumberTxt.text = loadItemNumber()
+	}
+	
 	//MARK: - UITableViewDelegate
 	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		return FPTableViewCell.cellHeight()
@@ -58,12 +90,16 @@ class REMobileAppApiListController: FPBaseTableViewController {
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		function = data[indexPath.row]
+		itemNumberTxt.resignFirstResponder()
+		saveItemNumber(itemNumber: itemNumberTxt.text)
 		
 		if data[indexPath.row] == REServiceFunction.getNewAmapListData.rawValue {
 			jsonParams = "16819fc29bbd0ec50afeddbc6c21aeff"
 		} else {
 			model.FModuleId = "3093"
-			jsonParams = model.jsonParams().jm_encryptUseDes(key: "02adfd5a", iv: "02adfd5a") ?? ""
+			model.FItemNumber = itemNumberTxt.text ?? ""
+			let jsonParam = model.jsonParams()
+			jsonParams = jsonParam.jm_encryptUseDes(key: "02adfd5a", iv: "02adfd5a") ?? ""
 		}
 		
 		performSegue(withIdentifier: "PushToMobileResult", sender: nil)
@@ -75,5 +111,26 @@ class REMobileAppApiListController: FPBaseTableViewController {
 			vc.function = function
 			vc.jsonParams = jsonParams
 		}
+	}
+}
+
+extension REMobileAppApiListController: UITextFieldDelegate {
+	
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		textField.resignFirstResponder()
+		saveItemNumber(itemNumber: textField.text)
+		return true
+	}
+}
+
+extension REMobileAppApiListController {
+	
+	func loadItemNumber() -> String? {
+		return UserDefaults.standard.string(forKey: "ReItemNumber")
+	}
+	
+	func saveItemNumber(itemNumber: String?) {
+		UserDefaults.standard.setValue(itemNumber, forKey: "ReItemNumber")
+		UserDefaults.standard.synchronize()
 	}
 }
