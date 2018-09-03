@@ -26,7 +26,8 @@ class WidgetsController: FPBaseController,UITableViewDelegate {
 				"LightButton": "PushToLightButton",
 				"ModelSelect": "PushToTypesSelect",
 				"ApGuide": "PushToApGuide",
-				"TestVC": "TestVC"]
+				"TestVC": "TestVC",
+				"NVRMiddlePage": "PushToNvrMiddlePage"]
         self.configureTableView()
     }
     

@@ -57,4 +57,13 @@ extension String {
 		//print("🍎🍎🍎\(#function):: cipherText: \(cipherText ?? "")")
 		return cipherText
 	}
+	
+	func jm_urlDecode() -> String {
+		let decode = (self as NSString).removingPercentEncoding
+		return decode ?? ""
+	}
+	
+	func jm_decodeUseDes(key: String, iv: String?) -> String? {
+		return ""
+	}
 }

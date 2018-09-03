@@ -42,5 +42,6 @@
 
 //Other
 #import "LCTextField.h"
+#import "UINavigationBar+Awesome.h"
 
 #endif /* BridgingHeader_h */

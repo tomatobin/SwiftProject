@@ -34,6 +34,7 @@
 		4E3EFBC220D3459F0001A921 /* DHSelectModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3EFBC120D3459E0001A921 /* DHSelectModelViewController.swift */; };
 		4E3EFBC420D345BF0001A921 /* AddDevice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E3EFBC320D345BF0001A921 /* AddDevice.storyboard */; };
 		4E3EFBEE20D36BB20001A921 /* DHApGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3EFBED20D36BB20001A921 /* DHApGuideViewController.swift */; };
+		4E5B35D0213CCA7E002E3DEE /* DHNvrMiddlePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B35CF213CCA7E002E3DEE /* DHNvrMiddlePageVC.swift */; };
 		4E5D7EA420E7095F005A8C1E /* DHInputSNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D7EA320E7095F005A8C1E /* DHInputSNViewController.swift */; };
 		4E5D7EA720E70A24005A8C1E /* LCTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D7EA520E70A24005A8C1E /* LCTextField.m */; };
 		4E5D7EAA20E70B38005A8C1E /* UITextField+LeChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D7EA920E70B38005A8C1E /* UITextField+LeChange.m */; };
@@ -51,6 +52,8 @@
 		4EA4200D2105D68C007281BD /* FPBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4200C2105D68C007281BD /* FPBaseTableViewController.swift */; };
 		4EA420102105D799007281BD /* CityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4200F2105D799007281BD /* CityTableViewController.swift */; };
 		4EA420122105D840007281BD /* CityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA420112105D840007281BD /* CityPresenter.swift */; };
+		4EDDF259213D58F3004AC8E8 /* DHNvrOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDDF258213D58F3004AC8E8 /* DHNvrOperationView.swift */; };
+		4EDDF262213D5C0F004AC8E8 /* DHNvrOperationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDDF260213D5C0E004AC8E8 /* DHNvrOperationItem.swift */; };
 		4EF23162210EFA6D0003055A /* REServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF23161210EFA6D0003055A /* REServiceUtil.swift */; };
 		4EF23165210EFC5F0003055A /* REMobileAppApiListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF23164210EFC5F0003055A /* REMobileAppApiListController.swift */; };
 		4EF23167210F04470003055A /* REMobileApiResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF23166210F04470003055A /* REMobileApiResultViewController.swift */; };
@@ -181,6 +184,7 @@
 		4E3EFBC120D3459E0001A921 /* DHSelectModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHSelectModelViewController.swift; sourceTree = "<group>"; };
 		4E3EFBC320D345BF0001A921 /* AddDevice.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddDevice.storyboard; sourceTree = "<group>"; };
 		4E3EFBED20D36BB20001A921 /* DHApGuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.swift; path = DHApGuideViewController.swift; sourceTree = "<group>"; };
+		4E5B35CF213CCA7E002E3DEE /* DHNvrMiddlePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHNvrMiddlePageVC.swift; sourceTree = "<group>"; };
 		4E5D7EA320E7095F005A8C1E /* DHInputSNViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHInputSNViewController.swift; sourceTree = "<group>"; };
 		4E5D7EA520E70A24005A8C1E /* LCTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCTextField.m; sourceTree = "<group>"; };
 		4E5D7EA620E70A24005A8C1E /* LCTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCTextField.h; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 		4EA4200C2105D68C007281BD /* FPBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPBaseTableViewController.swift; sourceTree = "<group>"; };
 		4EA4200F2105D799007281BD /* CityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewController.swift; sourceTree = "<group>"; };
 		4EA420112105D840007281BD /* CityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityPresenter.swift; sourceTree = "<group>"; };
+		4EDDF258213D58F3004AC8E8 /* DHNvrOperationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHNvrOperationView.swift; sourceTree = "<group>"; };
+		4EDDF260213D5C0E004AC8E8 /* DHNvrOperationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHNvrOperationItem.swift; sourceTree = "<group>"; };
 		4EF23161210EFA6D0003055A /* REServiceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REServiceUtil.swift; sourceTree = "<group>"; };
 		4EF23164210EFC5F0003055A /* REMobileAppApiListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REMobileAppApiListController.swift; sourceTree = "<group>"; };
 		4EF23166210F04470003055A /* REMobileApiResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REMobileApiResultViewController.swift; sourceTree = "<group>"; };
@@ -392,6 +398,13 @@
 			path = AddDevice;
 			sourceTree = "<group>";
 		};
+		4E5B35D1213CCE7B002E3DEE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		4E7AF6171F0B209700B659DD /* Weex */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,6 +447,16 @@
 				4E83DDB52106C5E800FCC387 /* View */,
 			);
 			path = MVP;
+			sourceTree = "<group>";
+		};
+		4EDDF257213D58D3004AC8E8 /* NVR */ = {
+			isa = PBXGroup;
+			children = (
+				4E5B35CF213CCA7E002E3DEE /* DHNvrMiddlePageVC.swift */,
+				4EDDF258213D58F3004AC8E8 /* DHNvrOperationView.swift */,
+				4EDDF260213D5C0E004AC8E8 /* DHNvrOperationItem.swift */,
+			);
+			path = NVR;
 			sourceTree = "<group>";
 		};
 		4EF2315F210EFA6D0003055A /* MobileApp */ = {
@@ -586,6 +609,7 @@
 		864A9DBD1E7D0DE1001665B8 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				4EDDF257213D58D3004AC8E8 /* NVR */,
 				4E3EFBD020D36A480001A921 /* AddDevice */,
 				864A9DBE1E7D0DE1001665B8 /* CustomWidgetsController.swift */,
 				864A9DBF1E7D0DE1001665B8 /* FliterController.swift */,
@@ -599,6 +623,7 @@
 				4E0D916020CFBBD40070BACA /* LightButtonController.swift */,
 				4E28B10320D0A6460041DEB7 /* LightFailureController.swift */,
 				4E3EFBC120D3459E0001A921 /* DHSelectModelViewController.swift */,
+				4E5B35D1213CCE7B002E3DEE /* Cell */,
 				4E3EFBC320D345BF0001A921 /* AddDevice.storyboard */,
 			);
 			path = Widgets;
@@ -991,6 +1016,7 @@
 				4E39607B20D894EB007DA535 /* DHAutoKeyboardView.swift in Sources */,
 				4E39607E20D894EB007DA535 /* DHCycleTimerView.swift in Sources */,
 				864A9E401E7D1151001665B8 /* FPAlert.swift in Sources */,
+				4EDDF262213D5C0F004AC8E8 /* DHNvrOperationItem.swift in Sources */,
 				864A9E501E7D1151001665B8 /* FPTextField.swift in Sources */,
 				864A9E2F1E7D1151001665B8 /* ColorLog.swift in Sources */,
 				4EF8638A20CE11B30078B7BD /* ErrorViewTransitionViewController.swift in Sources */,
@@ -1041,6 +1067,7 @@
 				864A9E4F1E7D1151001665B8 /* FPStarsView.swift in Sources */,
 				4E39607420D894EB007DA535 /* DHAddBaseViewController.swift in Sources */,
 				864A9E3D1E7D1151001665B8 /* FPTableDataSource.swift in Sources */,
+				4EDDF259213D58F3004AC8E8 /* DHNvrOperationView.swift in Sources */,
 				4E7AF60E1F0B1F3900B659DD /* FPReverseController.swift in Sources */,
 				864A9E551E7D1151001665B8 /* PlayButton.swift in Sources */,
 				4E39607C20D894EB007DA535 /* DHCommonErrorView.swift in Sources */,
@@ -1059,6 +1086,7 @@
 				4E0D916320CFBD780070BACA /* DHWifiConnectFailureView.swift in Sources */,
 				4E3EFBC220D3459F0001A921 /* DHSelectModelViewController.swift in Sources */,
 				864A9E531E7D1151001665B8 /* FPWKWebController.swift in Sources */,
+				4E5B35D0213CCA7E002E3DEE /* DHNvrMiddlePageVC.swift in Sources */,
 				864A9E561E7D1151001665B8 /* UINavigationBar+Awesome.m in Sources */,
 				860777E51EF8A89300B08DA0 /* FPRefreshHeader.swift in Sources */,
 				864A9E4E1E7D1151001665B8 /* FPShareView.swift in Sources */,
