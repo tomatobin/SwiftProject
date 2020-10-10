@@ -142,13 +142,13 @@ extension FPRefreshComponent {
     //MARK: Rotate
     func startRotateAnimation() {
         let animation = CABasicAnimation(keyPath: "transform.rotation.z")
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = CAMediaTimingFillMode.forwards
         animation.isRemovedOnCompletion = false
         animation.fromValue =  0
         animation.toValue  = -2 * Double.pi
         animation.duration  = 4 / (2 * Double.pi)
         animation.repeatCount = MAXFLOAT
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
         self.loadingView.layer.add(animation, forKey: "rotate")
     }
     

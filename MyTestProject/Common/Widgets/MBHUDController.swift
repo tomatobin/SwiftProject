@@ -49,8 +49,8 @@ class MBHUDController: FPBaseController,UITableViewDelegate,WidgetsHudServicePro
     override func initNaviRightItemFromButton() -> UIButton? {
         let button = UIButton(type: .system)
         button.frame = CGRect(x: 0, y: 0, width: 64, height: 44)
-        button.setTitle("Dismiss", for: UIControlState())
-        button.setTitleColor(UIColor.fp_mainRedColor(), for: UIControlState())
+        button.setTitle("Dismiss", for: UIControl.State())
+        button.setTitleColor(UIColor.fp_mainRedColor(), for: UIControl.State())
         button.addTarget(self, action: #selector(dismissHud), for: .touchUpInside)
         return button
     }

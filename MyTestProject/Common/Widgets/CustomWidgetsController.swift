@@ -71,7 +71,7 @@ class CustomWidgetsController: FPBaseController {
         animation.duration = 0.5
         animation.autoreverses = true
         animation.repeatCount = Float(INT_MAX)
-        animation.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseOut)
+        animation.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeOut)
         self.bazierButtoin.layer.add(animation, forKey: "rotate")
     }
     
@@ -96,8 +96,8 @@ class CustomWidgetsController: FPBaseController {
         
         let animation: CATransition = CATransition.init()
         animation.duration = 1.0
-        animation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseOut)
-        animation.type = "oglFlip"
+        animation.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeOut)
+        animation.type = CATransitionType(rawValue: "oglFlip")
         self.talkButtion.layer.add(animation, forKey: "Flip")
         
         self.popAnimation(view: self.talkButtion)
@@ -121,7 +121,7 @@ class CustomWidgetsController: FPBaseController {
         let scale4 =  CATransform3DMakeScale(1.0, 1.0, 1)
         keyframeAnimation.values = [scale1, scale2, scale3, scale4]
         keyframeAnimation.keyTimes = [0, 0.5, 0.9, 1.0]
-        keyframeAnimation.fillMode = kCAFillModeForwards
+        keyframeAnimation.fillMode = CAMediaTimingFillMode.forwards
         keyframeAnimation.duration = 3
         view.layer.add(keyframeAnimation, forKey: "KeyframeAnimation")
     }

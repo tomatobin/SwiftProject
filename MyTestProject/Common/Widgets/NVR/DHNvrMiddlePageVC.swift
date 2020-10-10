@@ -51,7 +51,7 @@ class DHNvrMiddlePageVC: FPBaseController,UITableViewDelegate,UITableViewDataSou
 		bgImageView.image = UIImage(named: "common_bg")
 		bgImageView.contentMode = .scaleAspectFill
 		view.insertSubview(bgImageView, belowSubview: tableView)
-		view.bringSubview(toFront: topView)
+        view.bringSubviewToFront(topView)
 	}
 	
 	func configTopView() {
@@ -106,11 +106,11 @@ class DHNvrMiddlePageVC: FPBaseController,UITableViewDelegate,UITableViewDataSou
 		return indexPath.row == 0 ? false : true
 	}
 	
-	func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+    internal func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
 		return .delete
 	}
 	
-	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    internal func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 		
 	}
 	

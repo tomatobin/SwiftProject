@@ -96,7 +96,7 @@ import UIKit
 	
 	private lazy var progressLayer : CAShapeLayer = {
 		let layer = CAShapeLayer()
-		layer.lineCap = kCALineCapRound
+        layer.lineCap = CAShapeLayerLineCap.round
 		layer.fillColor = UIColor.clear.cgColor
 		layer.lineWidth = progressWidth
 		layer.strokeColor = progressForegroundColor.cgColor
@@ -232,8 +232,8 @@ import UIKit
 		style.lineBreakMode = NSLineBreakMode.byCharWrapping
 		style.lineSpacing = 10
 		
-		let attributes = [NSAttributedStringKey.font: font,
-						  NSAttributedStringKey.paragraphStyle: style]
+        let attributes = [NSAttributedString.Key.font: font,
+                          NSAttributedString.Key.paragraphStyle: style]
 		
 		let text = "Test\nTest" as NSString
 		let rect = text.boundingRect(with: size,

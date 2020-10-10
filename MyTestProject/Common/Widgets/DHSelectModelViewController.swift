@@ -71,7 +71,7 @@ class DHSelectModelViewController: FPBaseController,UICollectionViewDataSource,U
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-		let headView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "DHSelectModelHeaderView", for: indexPath) as! DHSelectModelHeaderView
+        let headView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "DHSelectModelHeaderView", for: indexPath) as! DHSelectModelHeaderView
 		
 		return headView
 	}

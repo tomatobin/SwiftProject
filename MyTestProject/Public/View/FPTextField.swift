@@ -65,7 +65,7 @@ class FPTextField: UITextField,UITextFieldDelegate {
     }
     
     func checkByRegular(_ pattern: String) -> Bool {
-        if pattern.characters.count == 0 {
+        if pattern.count == 0 {
             return true
         }
         
@@ -92,7 +92,7 @@ class FPTextField: UITextField,UITextFieldDelegate {
         }
         
         //非法输入检验
-        if self.invalidChars?.characters.count > 0 {
+        if self.invalidChars?.count > 0 {
             let charSet = CharacterSet(charactersIn: self.invalidChars!)
             let range = originText.rangeOfCharacter(from: charSet)
             if range.length != 0 {

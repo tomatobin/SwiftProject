@@ -32,7 +32,7 @@ class TableHeaderController: FPBaseController,UITableViewDelegate,UITableViewDat
         imageView.layer.masksToBounds = true //裁剪超出的部分，scaleAspectFill的影响
         self.tableView.addSubview(imageView)
         
-        self.tableView.contentInset = UIEdgeInsetsMake(topHeight , 0, 0, 0)
+        self.tableView.contentInset = UIEdgeInsets(top: topHeight , left: 0, bottom: 0, right: 0)
         self.tableView.register(UITableViewCell.classForCoder(),forCellReuseIdentifier: "HeaderCell")
         
         let header = FPRefreshHeader()

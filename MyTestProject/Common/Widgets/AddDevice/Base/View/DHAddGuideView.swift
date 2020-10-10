@@ -107,9 +107,9 @@ class DHAddGuideView: UIView {
 		if useUnderline {
 			let attrString = NSMutableAttributedString(string: text!)
 			let range = NSMakeRange(0, text!.count)
-			let number = NSNumber(integerLiteral: NSUnderlineStyle.styleSingle.rawValue)
-			attrString.addAttributes([NSAttributedStringKey.underlineStyle: number,
-									  NSAttributedStringKey.foregroundColor: UIColor.orange], range: range)
+            let number = NSNumber(integerLiteral: NSUnderlineStyle.single.rawValue)
+            attrString.addAttributes([NSAttributedString.Key.underlineStyle: number,
+                                      NSAttributedString.Key.foregroundColor: UIColor.orange], range: range)
 			detailButton.setAttributedTitle(attrString, for: .normal)
 		} else {
 			detailButton.setTitle(text, for: .normal)

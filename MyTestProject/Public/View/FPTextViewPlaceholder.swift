@@ -18,12 +18,12 @@ class FPTextViewPlaceholder: UITextView {
     
     override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
-        NotificationCenter.default.addObserver(self, selector: #selector(textDidChanged), name: NSNotification.Name.UITextViewTextDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(textDidChanged), name: UITextField.textDidChangeNotification, object: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        NotificationCenter.default.addObserver(self, selector: #selector(textDidChanged), name: NSNotification.Name.UITextViewTextDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(textDidChanged), name: UITextField.textDidChangeNotification, object: nil)
     }
     
 	@objc func textDidChanged() {
@@ -37,10 +37,10 @@ class FPTextViewPlaceholder: UITextView {
             return
         }
         
-        var attrs = Dictionary<NSAttributedStringKey, Any>()
-		attrs[NSAttributedStringKey.foregroundColor] = UIColor.lightGray
+        var attrs = Dictionary<NSAttributedString.Key, Any>()
+        attrs[NSAttributedString.Key.foregroundColor] = UIColor.lightGray
         if self.font != nil {
-			attrs[NSAttributedStringKey.font] = self.font!
+            attrs[NSAttributedString.Key.font] = self.font!
         }
         
         self.placeholder?.draw(in: CGRect(x: 5, y: 8, width: self.bounds.width - 5, height: self.bounds.height - 5),

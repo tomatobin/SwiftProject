@@ -41,7 +41,7 @@ class AVAudioSessionController: FPBaseController,AVAudioPlayerDelegate {
     }
     
     func addNotifications(){
-        NotificationCenter.default.addObserver(self, selector: #selector(routeChanged), name: NSNotification.Name.AVAudioSessionRouteChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(routeChanged), name: AVAudioSession.routeChangeNotification, object: nil)
     }
     
     func removeNotifications(){
@@ -50,7 +50,7 @@ class AVAudioSessionController: FPBaseController,AVAudioPlayerDelegate {
     
     func initAudioSession(){
         let audioSession = AVAudioSession.sharedInstance()
-        try! audioSession.setCategory(AVAudioSessionCategoryPlayback) //AVAudioSessionCategorySoloAmbient AVAudioSessionCategoryPlayback
+        try! audioSession.setCategory(AVAudioSession.Category.playback) //AVAudioSessionCategorySoloAmbient AVAudioSessionCategoryPlayback
         try! audioSession.setActive(true)
     }
     

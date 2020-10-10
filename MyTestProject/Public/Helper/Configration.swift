@@ -35,7 +35,7 @@ class Configration: NSObject {
     }
     
     class func readConfig(forKey key: String) -> AnyObject? {
-        if key.characters.count == 0 {
+        if key.count == 0 {
             return nil
         }
         

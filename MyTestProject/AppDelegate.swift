@@ -20,7 +20,7 @@ class AppDelegate: BHAppDelegate {
     //var window: UIWindow?
 
 
-    override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         self.initLog()
         self.initWeexSDK()
@@ -68,7 +68,7 @@ class AppDelegate: BHAppDelegate {
     }
     
     //MARK: BeeHive
-    func initBeeHive(application: UIApplication, launchOptions: [UIApplicationLaunchOptionsKey: Any]?) {
+    func initBeeHive(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         BHContext.shareInstance().application = application
         BHContext.shareInstance().launchOptions = launchOptions
         BHContext.shareInstance().moduleConfigName = "ModuleList" //Module.plist，默认为BeeHive.bundle/BeeHive.plist

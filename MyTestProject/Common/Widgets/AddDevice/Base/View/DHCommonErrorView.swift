@@ -61,9 +61,9 @@ class DHCommonErrorView: UIView {
 		if animated {
 			let animation = CATransition()
 			animation.duration = 0.3
-			animation.type = kCATransitionFade
-			animation.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
-			self.superview?.layer.add(animation, forKey: kCATransitionFade)
+            animation.type = CATransitionType.fade
+            animation.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+            self.superview?.layer.add(animation, forKey: CATransitionType.fade.rawValue)
 		}
 		
 		self.removeFromSuperview()
@@ -73,9 +73,9 @@ class DHCommonErrorView: UIView {
 		if animated {
 			let animation = CATransition()
 			animation.duration = 0.3
-			animation.type = kCATransitionFade
-			animation.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
-			superView.layer.add(animation, forKey: kCATransitionFade)
+            animation.type = CATransitionType.fade
+            animation.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+            superView.layer.add(animation, forKey: CATransitionType.fade.rawValue)
 		}
 		
 		superView.addSubview(self)

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import RAMAnimatedTabBarController
+//import RAMAnimatedTabBarController
 
 class FPTabbarContoller: UITabBarController {
     

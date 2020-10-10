@@ -39,7 +39,7 @@ extension UIView {
      - parameter offset: 相对于中心点的偏移
      */
     func fp_showLoading(_ offset: CGPoint) {
-        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .white)
+        let indicator = UIActivityIndicatorView(style: .white)
         indicator.hidesWhenStopped = true
         indicator.startAnimating()
         indicator.tag = 0xFF

@@ -32,8 +32,9 @@ class DHAutoKeyboardView: UIView {
 	}
 	
 	func addObserver() {
-		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 	}
 	
 	func addTapGesture() {
@@ -51,7 +52,7 @@ class DHAutoKeyboardView: UIView {
 			return
 		}
 		
-		if let value = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
+        if let value = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
 			let keyboardFrame = value.cgRectValue
 			let distanceToBottom = self.frame.height - self.relatedView!.frame.maxY
 			

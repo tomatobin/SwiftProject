@@ -66,7 +66,7 @@ class FPCircleProgress: UIView {
     }
     
     func setupTextLabel() {
-        if self.centerText.characters.count > 0 {
+        if self.centerText.count > 0 {
             let label = UILabel(frame: self.bounds)
             label.text = self.centerText
             label.textColor = UIColor.white
@@ -147,7 +147,7 @@ class FPCircleProgress: UIView {
         let centerPoint = CGPoint(x: self.bounds.width / 2.0, y: self.bounds.height / 2.0)
 		let attr = [ kCTForegroundColorAttributeName: UIColor.white,
 					 kCTFontAttributeName: UIFont.systemFont(ofSize: 13)]
-		text.draw(at: centerPoint, withAttributes: attr as [NSAttributedStringKey : Any])
+        text.draw(at: centerPoint, withAttributes: attr as [NSAttributedString.Key : Any])
         //text.draw(in: self.bounds, withAttributes: attr)
     }
     

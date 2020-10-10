@@ -60,12 +60,12 @@ class AudioRecorderController: FPBaseController, AVAudioRecorderDelegate, AVAudi
     
     func setAudionSession(_ category: String){
         let audioSession = AVAudioSession.sharedInstance()
-        try! audioSession.setCategory(category)
+        try! audioSession.setCategory(AVAudioSession.Category(rawValue: category))
         try! audioSession.setActive(true)
     }
     
     func initAudioRecorder(){
-        self.setAudionSession(AVAudioSessionCategoryPlayAndRecord)
+        self.setAudionSession(AVAudioSession.Category.playAndRecord.rawValue)
         let pathURL = self.filePath() //创建录音文件保存路径
         let dicSettings = [AVFormatIDKey: NSNumber(value: kAudioFormatLinearPCM as UInt32), //格式
                            AVSampleRateKey: NSNumber(value: 16000 as UInt32),  //设置录音采样率
@@ -91,7 +91,7 @@ class AudioRecorderController: FPBaseController, AVAudioRecorderDelegate, AVAudi
         }
         
         do{
-            self.setAudionSession(AVAudioSessionCategoryPlayback) //播放时需要重新设置Category为Playback，否则会导致非常小
+            self.setAudionSession(AVAudioSession.Category.playback.rawValue) //播放时需要重新设置Category为Playback，否则会导致非常小
             audioPlayer = try AVAudioPlayer.init(contentsOf: fileURL)
             audioPlayer!.delegate = self
             audioPlayer!.volume = 1.0
@@ -120,13 +120,13 @@ class AudioRecorderController: FPBaseController, AVAudioRecorderDelegate, AVAudi
         if !self.audioRecorder!.isRecording  {
             ColorLog.green("Start recording....")
             self.audioRecorder!.record()
-            btnRecord.setImage(UIImage(named: "record_on"), for: UIControlState())
+            btnRecord.setImage(UIImage(named: "record_on"), for: UIControl.State())
             self.timer.fireDate = Date.distantPast
         }
         else{
             ColorLog.green("Pause recording....")
             self.audioRecorder!.pause()
-            btnRecord.setImage(UIImage(named: "record_off"), for: UIControlState())
+            btnRecord.setImage(UIImage(named: "record_off"), for: UIControl.State())
             self.timer.fireDate = Date.distantFuture
         }
     }
@@ -151,7 +151,7 @@ class AudioRecorderController: FPBaseController, AVAudioRecorderDelegate, AVAudi
         {
             //继续播放
             if self.audioPlayer!.play() {
-                btnPlay.setImage(UIImage(named: "pause"), for: UIControlState())
+                btnPlay.setImage(UIImage(named: "pause"), for: UIControl.State())
                 self.timer.fireDate = Date.distantPast
                 ColorLog.green("Play succeed....")
             }
@@ -162,7 +162,7 @@ class AudioRecorderController: FPBaseController, AVAudioRecorderDelegate, AVAudi
         else
         {
             //暂停播放
-            btnPlay.setImage(UIImage(named: "play"), for: UIControlState())
+            btnPlay.setImage(UIImage(named: "play"), for: UIControl.State())
             self.audioPlayer?.pause()
             self.timer.fireDate = Date.distantFuture
         }
@@ -184,7 +184,7 @@ class AudioRecorderController: FPBaseController, AVAudioRecorderDelegate, AVAudi
         }
         
         //Reset the button image
-        btnRecord.setImage(UIImage(named: "record_off"), for: UIControlState())
+        btnRecord.setImage(UIImage(named: "record_off"), for: UIControl.State())
     }
     
     func stopPlayer(){
@@ -194,7 +194,7 @@ class AudioRecorderController: FPBaseController, AVAudioRecorderDelegate, AVAudi
         }
         
         //Reset the button image
-        btnPlay.setImage(UIImage(named: "play"), for: UIControlState())
+        btnPlay.setImage(UIImage(named: "play"), for: UIControl.State())
     }
     
     //MARK: - Delegate

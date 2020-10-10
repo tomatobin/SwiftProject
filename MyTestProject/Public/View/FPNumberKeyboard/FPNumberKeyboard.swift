@@ -30,13 +30,13 @@ class FPNumberKeyboard: UIView {
         switch tag {
         case 1010: //小数点
             if let text = self.textInput?.text {
-                if text.characters.count > 0 && text.contains(".") == false  {
+                if text.count > 0 && text.contains(".") == false  {
                     self.textInput?.insertText(".")
                 }
             }
         case 1012: //删除
             if let text = self.textInput?.text {
-                if text.characters.count > 0 {
+                if text.count > 0 {
                     self.textInput?.deleteBackward()
                 }
             }

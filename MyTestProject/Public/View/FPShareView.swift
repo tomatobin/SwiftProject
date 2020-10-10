@@ -100,7 +100,7 @@ class FPShareView: UIView {
         self.shareItemView.center = center
         center.y = self.bounds.height - self.itemHeight / 2.0
         self.maskControl.alpha = 0.0;
-        UIView.animate(withDuration: 0.3, delay: 0, options: UIViewAnimationOptions(), animations: {
+        UIView.animate(withDuration: 0.3, delay: 0, options: UIView.AnimationOptions(), animations: {
             self.shareItemView.center = center
             self.maskControl.alpha = 0.3
             }, completion: { _ in
@@ -110,7 +110,7 @@ class FPShareView: UIView {
     func dismiss() {
         var center = self.shareItemView.center
         center.y = self.bounds.height + self.itemHeight / 2.0
-        UIView.animate(withDuration: 0.3, delay: 0, options: UIViewAnimationOptions(), animations: {
+        UIView.animate(withDuration: 0.3, delay: 0, options: UIView.AnimationOptions(), animations: {
             self.shareItemView.center = center
             self.maskControl.alpha = 0
             }, completion: { _ in

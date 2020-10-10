@@ -60,7 +60,7 @@ class AudioServicesController: FPBaseController {
         animation.repeatCount = 1
         animation.autoreverses = false
         animation.isRemovedOnCompletion = false
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = CAMediaTimingFillMode.forwards
         animation.beginTime = CACurrentMediaTime();
         view.layer.add(animation, forKey: "rotate")
     }

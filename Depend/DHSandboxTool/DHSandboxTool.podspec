@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
   s.author       = { "tomatobin" => "tomatobin@163.com" }
   s.platform     = :ios, "9.0"
 
-  s.source       = { :svn => "http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/iLeChange/Support/DHPayModule/DHPayModule" }
+  s.source       = { :svn => "http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/CommonModule/iCommonModule/ToolSet/Widgets/Trunk/DHSandboxTool"}
 
   s.source_files = "DHSandboxTool", "DHSandboxTool/*.{swift}"
   s.public_header_files = "DHSandboxTool/DHSandboxTool.h"
@@ -47,7 +47,7 @@ Pod::Spec.new do |s|
   s.resource    = "DHSandboxTool/DHSandboxTool.bundle"
 
   #配置Swift版本号
-  s.swift_version ='4.2'
+  s.swift_version ='5.0'
 
   #依赖添加：需要先在主工程中添加相应依赖
   #s.dependency "xxx"

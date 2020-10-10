@@ -156,8 +156,8 @@ class DHLightButton: UIButton {
 			animation.duration = 1
 			animation.repeatCount = MAXFLOAT
 			animation.isRemovedOnCompletion = false
-			animation.fillMode = kCAFillModeForwards
-			animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+            animation.fillMode = CAMediaTimingFillMode.forwards
+            animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
 			dotImageView.layer.add(animation, forKey: "BreathLight")
 		}
 	}

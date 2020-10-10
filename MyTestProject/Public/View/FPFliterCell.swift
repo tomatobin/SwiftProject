@@ -52,7 +52,7 @@ class FPFliterCell: UITableViewCell {
                 let button = UIButton(type: .custom)
                 
                 if titles.count > index {
-                    button.setTitle(titles[index], for: UIControlState())
+                    button.setTitle(titles[index], for: UIControl.State())
                 }
                 
                 button.tag = index
@@ -83,11 +83,11 @@ class FPFliterCell: UITableViewCell {
         if selected {
             button.layer.borderColor = UIColor.clear.cgColor
             button.backgroundColor = UIColor.fp_yellowColor()
-            button.setTitleColor(UIColor.white, for: UIControlState())
+            button.setTitleColor(UIColor.white, for: UIControl.State())
         } else{
             button.layer.borderColor = UIColor.fp_separatorColor().cgColor
             button.backgroundColor = UIColor.white
-            button.setTitleColor(UIColor.fp_darkTextColor(), for: UIControlState())
+            button.setTitleColor(UIColor.fp_darkTextColor(), for: UIControl.State())
         }
     }
     

@@ -27,7 +27,7 @@ class FPSetAuthorizationHelper: NSObject {
         }))
         
         alert.addAction(UIAlertAction(title: "确定", style: .destructive, handler: { action in
-            let urlString = URL(string: UIApplicationOpenSettingsURLString)
+            let urlString = URL(string: UIApplication.openSettingsURLString)
             if urlString != nil && UIApplication.shared.canOpenURL(urlString!) {
                 UIApplication.shared.openURL(urlString!)
             }

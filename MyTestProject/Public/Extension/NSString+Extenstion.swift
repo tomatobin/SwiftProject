@@ -12,7 +12,7 @@ extension NSString{
         let style = NSMutableParagraphStyle()
         style.lineBreakMode = .byWordWrapping
 		let attributes = [kCTFontAttributeName: font, kCTParagraphStyleAttributeName: style]
-		textSize = self.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes as [NSAttributedStringKey : Any], context: nil).size
+        textSize = self.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes as [NSAttributedString.Key : Any], context: nil).size
         
         return textSize
     }

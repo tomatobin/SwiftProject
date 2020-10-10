@@ -46,7 +46,7 @@ class FPBaseController: UIViewController {
         self.indicatorLine.backgroundColor = UIColor.fp_colorWithHexString("A7A7AA")
         self.indicatorLine.frame = CGRect(x: 0, y: FP_NAVI_HEIGHT, width: FP_SCREEN_WIDTH, height: 0.5)
         self.view.addSubview(self.indicatorLine)
-        self.view.bringSubview(toFront: self.indicatorLine)
+        self.view.bringSubviewToFront(self.indicatorLine)
     }
     
     fileprivate func configNaviLeftButton() {
@@ -56,7 +56,7 @@ class FPBaseController: UIViewController {
             //button.backgroundColor = UIColor.greenColor()
             button.contentHorizontalAlignment = .left
             button.addTarget(self, action: #selector(onBackAction), for: .touchUpInside)
-            button.setImage(UIImage(named: imageName), for: UIControlState())
+            button.setImage(UIImage(named: imageName), for: UIControl.State())
             
             let barItem = UIBarButtonItem(customView: button)
             self.navigationItem.setLeftBarButton(barItem, animated: true)
@@ -79,7 +79,7 @@ class FPBaseController: UIViewController {
                 button.tag = indexTag
                 indexTag += 1
                 button.addTarget(self, action: #selector(onNaviRightAction), for: .touchUpInside)
-                button.setImage(UIImage(named: imageName), for: UIControlState())
+                button.setImage(UIImage(named: imageName), for: UIControl.State())
                 button.sizeToFit()
                 
                 let barItem = UIBarButtonItem(customView: button)
@@ -134,7 +134,7 @@ class FPBaseController: UIViewController {
     func showIndicatorLine(showLine show: Bool) -> Void {
         self.indicatorLine.isHidden = !show
         if show {
-            self.view.bringSubview(toFront: self.indicatorLine)
+            self.view.bringSubviewToFront(self.indicatorLine)
         }
     }
     
@@ -143,15 +143,15 @@ class FPBaseController: UIViewController {
      */
     func setNeedaLayoutNavigationBar() {
         if let leftView = self.navigationItem.leftBarButtonItem?.customView {
-            self.navigationController?.navigationBar.bringSubview(toFront: leftView)
+            self.navigationController?.navigationBar.bringSubviewToFront(leftView)
         }
         
         if let rightView = self.navigationItem.rightBarButtonItem?.customView {
-            self.navigationController?.navigationBar.bringSubview(toFront: rightView)
+            self.navigationController?.navigationBar.bringSubviewToFront(rightView)
         }
         
         if let titleView = self.navigationItem.titleView {
-            self.navigationController?.navigationBar.bringSubview(toFront: titleView)
+            self.navigationController?.navigationBar.bringSubviewToFront(titleView)
         }
     }
     

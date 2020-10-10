@@ -20,7 +20,7 @@ extension UIButton{
                 timer.cancel()
                 DispatchQueue.main.async(execute: {
                     self.titleLabel?.text = title //这句去掉会实现闪烁的效果
-                    self.setTitle(title, for: UIControlState())
+                    self.setTitle(title, for: UIControl.State())
                     self.isUserInteractionEnabled = true
                     self.alpha = 1
                 })
@@ -30,7 +30,7 @@ extension UIButton{
                 let strTime = String(format: "%d秒后重新获取", seconds)
                 DispatchQueue.main.async(execute: {
                     self.titleLabel?.text = strTime
-                    self.setTitle(strTime, for: UIControlState())
+                    self.setTitle(strTime, for: UIControl.State())
                     self.isUserInteractionEnabled = false
                 })
                 

@@ -9,24 +9,24 @@
 extension String {
 
     func fp_count() -> Int {
-        return self.characters.count
+        return self.count
     }
     
     func fp_filterEmoji() -> String {
         let regex = try? NSRegularExpression(pattern: FP_EMOJI, options: .caseInsensitive)
-        let result = regex?.stringByReplacingMatches(in: self, options: .reportCompletion, range:  NSMakeRange(0, self.characters.count), withTemplate: "")
+        let result = regex?.stringByReplacingMatches(in: self, options: .reportCompletion, range:  NSMakeRange(0, self.count), withTemplate: "")
         return result!
     }
     
     func fp_filterSapce() -> String {
         let regex = try? NSRegularExpression(pattern: FP_SPACE, options: .caseInsensitive)
-        let result = regex?.stringByReplacingMatches(in: self, options: .reportCompletion, range:  NSMakeRange(0, self.characters.count), withTemplate: "")
+        let result = regex?.stringByReplacingMatches(in: self, options: .reportCompletion, range:  NSMakeRange(0, self.count), withTemplate: "")
         return result!
     }
     
     func fp_filterIllegalchar() -> String {
         let regex = try? NSRegularExpression(pattern: FP_ILLEGALCHAR, options: .caseInsensitive)
-        let result = regex?.stringByReplacingMatches(in: self, options: .reportCompletion, range:  NSMakeRange(0, self.characters.count), withTemplate: "")
+        let result = regex?.stringByReplacingMatches(in: self, options: .reportCompletion, range:  NSMakeRange(0, self.count), withTemplate: "")
         return result!
     }
     
@@ -113,7 +113,7 @@ extension String {
     ///
     /// - Returns: YES or NO
     func fp_validateIDCardNumber() -> Bool {
-        if self.characters.count != 18 {
+        if self.count != 18 {
             return false
         }
         

@@ -14,7 +14,6 @@ PODS:
   - MGJRouter (0.9.3)
   - MOBFoundation (2.2.15)
   - pop (1.0.9)
-  - RAMAnimatedTabBarController (3.5.0)
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
@@ -30,7 +29,7 @@ PODS:
   - ShareSDK3/ShareSDKPlatforms/WeChat (3.6.1):
     - MOBFoundation
   - SocketRocket (0.5.1)
-  - Spring (1.0.3)
+  - Spring (1.0.6)
   - WeexSDK (0.11.0):
     - SocketRocket
 
@@ -47,13 +46,12 @@ DEPENDENCIES:
   - MGJRouter (~> 0.9.3)
   - MOBFoundation
   - pop
-  - RAMAnimatedTabBarController (~> 3.5.0)
   - SDWebImage (~> 3.8.1)
   - ShareSDK3 (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS.git`)
   - ShareSDK3/ShareSDKPlatforms/QQ (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS.git`)
   - ShareSDK3/ShareSDKPlatforms/SinaWeibo (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS.git`)
   - ShareSDK3/ShareSDKPlatforms/WeChat (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS.git`)
-  - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift4`)
+  - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift5`)
   - WeexSDK (= 0.11.0)
 
 SPEC REPOS:
@@ -67,7 +65,6 @@ SPEC REPOS:
     - MGJRouter
     - MOBFoundation
     - pop
-    - RAMAnimatedTabBarController
     - SDWebImage
     - SocketRocket
     - WeexSDK
@@ -82,7 +79,7 @@ EXTERNAL SOURCES:
   ShareSDK3:
     :git: https://git.oschina.net/MobClub/ShareSDK-for-iOS.git
   Spring:
-    :branch: swift4
+    :branch: swift5
     :git: https://github.com/MengTo/Spring.git
 
 CHECKOUT OPTIONS:
@@ -96,7 +93,7 @@ CHECKOUT OPTIONS:
     :commit: 02f43072cfefcc5d97bdad4c33d4efb32c18afb8
     :git: https://git.oschina.net/MobClub/ShareSDK-for-iOS.git
   Spring:
-    :commit: 8d04081f4b27ff85161addee45b21c1156f0143f
+    :commit: 459b979c4335d4178fb05771019f6dda916f6998
     :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
@@ -104,7 +101,7 @@ SPEC CHECKSUMS:
   BeeHive: b135a33b3519814ec5d117318d205e10c997450f
   CocoaSecurity: d288a6f87e0f363823d2cb83e753814a6944f71a
   DHDateFormatter: 082cad648ae6b869736c892ee1f1ea48a4e0ea4f
-  DHSandboxTool: dd65485027dc3dd977c64fe625fc69e45802e40a
+  DHSandboxTool: 14c746fbbffe709c1c50585a3af4030d8fed64b1
   DoraemonKit: 8587e7a9aae0773dfc96707d2369d89d2a21b3d2
   LCLogManager: 1a44a4b94ef7419614294ccac338efcc40411f5d
   Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
@@ -112,13 +109,12 @@ SPEC CHECKSUMS:
   MGJRouter: f65821e2aeffc8f9e84b254c8f1c0dd80f048aa9
   MOBFoundation: 4975874f74c991f562151f6a4549e9a6ad743fd8
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
-  RAMAnimatedTabBarController: 7e259e89b669c7bc833a6441c7d8fbfd6580f473
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   ShareSDK3: dea6a14cc4385fa6493e10895ba11d07ef34d149
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
-  Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
+  Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
   WeexSDK: f9cfe6adc91fba3ca5e36bc9808bf1b6e8be2106
 
-PODFILE CHECKSUM: fdc695aef4acb0a06eec46ed419647297d1989ac
+PODFILE CHECKSUM: 63b93e034b894ad402f5496e67b83a114ecdef13
 
 COCOAPODS: 1.9.3

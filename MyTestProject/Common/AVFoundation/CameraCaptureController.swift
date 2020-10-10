@@ -152,7 +152,7 @@ class CameraCaptureController: FPBaseController {
     //MARK: - Animations
     func showCaptureImageViewAnimated(){
         self.captureImageView.alpha = 1
-        UIView.transition(with: self.captureImageView, duration: 1.0, options: UIViewAnimationOptions(), animations: {
+        UIView.transition(with: self.captureImageView, duration: 1.0, options: UIView.AnimationOptions(), animations: {
             self.captureImageView.alpha = 0
             self.captureImageView.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
         }, completion: {_ in

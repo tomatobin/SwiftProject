@@ -21,7 +21,7 @@ class DismissModallySegue: UIStoryboardSegue {
         secondVCView?.frame = CGRect(x: 0, y: 0, width: FP_SCREEN_WIDTH, height: FP_SCREEN_HEIGHT)
         
         // Animate the transition.
-        UIView.animate(withDuration: 0.35, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: UIViewAnimationOptions.curveEaseIn, animations: { () -> Void in
+        UIView.animate(withDuration: 0.35, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: UIView.AnimationOptions.curveEaseIn, animations: { () -> Void in
              firstVCView?.frame = (firstVCView?.frame.offsetBy(dx: 0.0, dy: FP_SCREEN_HEIGHT))!
         }) { (finished: Bool) -> Void in
             firstVCView?.removeFromSuperview() //以免旧的覆盖

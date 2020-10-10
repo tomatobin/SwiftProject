@@ -59,7 +59,7 @@ class FPWKWebController: FPBaseController,WKUIDelegate,WKNavigationDelegate {
     
     /// 加载WebView
     func loadWebView() {
-        if self.requestUrl?.characters.count == 0 || self.requestUrl == nil {
+        if self.requestUrl?.count == 0 || self.requestUrl == nil {
             return
         }
         

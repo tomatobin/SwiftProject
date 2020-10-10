@@ -73,7 +73,7 @@ class PlayButton: UIButton {
             }
             animation.fromValue = NSNumber(value: Float(self.animationValue) as Float)
             animation.toValue = NSNumber(value: Float(toValue) as Float)
-            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+            animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
             animation.duration = 0.25
             pop_add(animation, forKey: "percentage")
         } else {

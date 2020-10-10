@@ -21,7 +21,7 @@ class PresentModallySegue: UIStoryboardSegue {
         let window = UIApplication.shared.keyWindow
         window?.insertSubview(secondVCView!, aboveSubview: firstVCView!)
         
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: UIViewAnimationOptions.curveLinear, animations: { () -> Void in
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: UIView.AnimationOptions.curveLinear, animations: { () -> Void in
             secondVCView?.frame = (secondVCView?.frame.offsetBy(dx: 0.0, dy: -screenHeight))!
         }) { (finished: Bool) -> Void in
             self.source.navigationController?.pushViewController(self.destination, animated: false)

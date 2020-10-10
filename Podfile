@@ -9,7 +9,7 @@ commmon_module_path = 'http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/Mob
 
 target 'MyTestProject' do
   
-  platform :ios, '9.0'
+  platform :ios, '10.0'
   
   #指定Pods Target的架构
   post_install do |installer|
@@ -17,7 +17,7 @@ target 'MyTestProject' do
       target.build_configurations.each do |config|
         config.build_settings['ARCHS'] = 'arm64'
         config.build_settings['VALID_ARCHS'] = 'arm64'
-        config.build_settings['SWIFT_VERSION'] = '4.0'
+#        config.build_settings['SWIFT_VERSION'] = '4.0'
       end
     end
   end
@@ -26,8 +26,8 @@ target 'MyTestProject' do
   inhibit_all_warnings!
   
   pod 'pop'
-  pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift4'
-  pod 'RAMAnimatedTabBarController', '~> 3.5.0'
+  pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift5'
+#  pod 'RAMAnimatedTabBarController', '~> 3.5.0'
   pod 'Alamofire', '~> 4.7.3'
   
   pod 'MBProgressHUD', '~> 0.9.2'

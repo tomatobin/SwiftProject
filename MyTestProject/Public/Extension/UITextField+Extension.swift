@@ -8,7 +8,7 @@
 
 extension UITextField{
     func fp_setLeftImageView(_ imageName: String) {
-        let leftSize = self.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
+        let leftSize = self.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
         let leftView = UIView(frame: CGRect(x: 0, y: 0, width: leftSize - 5, height: leftSize))
         let imageView = UIImageView(image: UIImage(named: imageName))
         imageView.center = leftView.center
@@ -18,7 +18,7 @@ extension UITextField{
     }
     
     func fp_setRightView(_ customView: UIView) {
-        let height = self.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
+        let height = self.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
         let maxSize = CGFloat(100)
         let radius = self.bounds.height / 2.0
         let rightView = UIView(frame: CGRect(x: 0, y: 0, width: maxSize, height: height))

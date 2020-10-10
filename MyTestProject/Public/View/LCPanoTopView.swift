@@ -91,7 +91,7 @@ class LCPanoTopView: UIView {
     fileprivate func button(withImage imagename: String, action: Selector, postion: ViewPosition) -> UIButton {
         let button = UIButton(type: .custom)
         if let image = UIImage(named: imagename) {
-            button.setImage(image, for: UIControlState())
+            button.setImage(image, for: UIControl.State())
         }
         button.addTarget(self, action: action, for: .touchUpInside)
         self.addSubview(button)

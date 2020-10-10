@@ -44,9 +44,9 @@ class ErrorViewTransitionViewController: FPBaseController {
 		
 		let animation = CATransition()
 		animation.duration = 0.3
-		animation.type = kCATransitionFade
-		animation.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
-		self.view.layer.add(animation, forKey: kCATransitionFade)
+        animation.type = CATransitionType.fade
+        animation.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+        self.view.layer.add(animation, forKey: CATransitionType.fade.rawValue)
 		
 		self.view.addSubview(errorView2)
 	}
@@ -59,10 +59,10 @@ class ErrorViewTransitionViewController: FPBaseController {
 		
 		let animation = CATransition()
 		animation.duration = 0.3
-		animation.type = kCATransitionFade
-		animation.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
+        animation.type = CATransitionType.fade
+        animation.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
 		
-		self.view.layer.add(animation, forKey: kCATransitionFade)
+        self.view.layer.add(animation, forKey: CATransitionType.fade.rawValue)
 		
 		errorView2.removeFromSuperview()
 		

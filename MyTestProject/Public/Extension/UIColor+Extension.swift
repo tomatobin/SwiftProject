@@ -95,8 +95,8 @@ extension UIColor{
     }
     
     fileprivate static func fp_colorComponet(_ fromString: String, start: NSInteger, length: NSInteger)->CGFloat{
-        let startIndex = fromString.characters.index(fromString.startIndex, offsetBy: start)
-        let toIndex = fromString.characters.index(fromString.startIndex, offsetBy: (start + length))
+        let startIndex = fromString.index(fromString.startIndex, offsetBy: start)
+        let toIndex = fromString.index(fromString.startIndex, offsetBy: (start + length))
         var subString = fromString.substring(to: toIndex)
         subString = subString.substring(from: startIndex)
         let fullHex = length == 2 ? subString : String(format: "%@%@", subString, subString)

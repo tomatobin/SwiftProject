@@ -18,6 +18,10 @@ public class DHSandBoxViewController: UIViewController,UITableViewDelegate,UITab
     /// 根路径
     var rootNode: DHSanboxNodeModel!
     
+    deinit {
+        print("🍎🍎🍎 \(NSStringFromClass(self.classForCoder)):: deinit :)...")
+    }
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -68,8 +72,7 @@ public class DHSandBoxViewController: UIViewController,UITableViewDelegate,UITab
         } else if node.parentNode != nil {
             currentNode = node.parentNode
         }
-       
-        
+
         tableView.reloadData()
         updateVCTitle()
     }
@@ -127,7 +130,7 @@ public class DHSandBoxViewController: UIViewController,UITableViewDelegate,UITab
         return currentNode.parentNode != nil
     }
     
-    public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else {
             return
         }
