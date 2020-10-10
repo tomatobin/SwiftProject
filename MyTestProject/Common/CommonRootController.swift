@@ -23,7 +23,8 @@ class CommonRootController: FPBaseController,UITableViewDelegate {
 				"AudioToolbox" : "PushToAudioToolbox",
                 "Transition": "PushToTransition",
 				"Widgets": "PushToWidgets",
-				"MVP": "PushToMVP"]
+				"MVP": "PushToMVP",
+                "Sandbox": "PushToSandbox"]
         self.configureTableView()
     }
 
@@ -80,6 +81,7 @@ class CommonRootController: FPBaseController,UITableViewDelegate {
 	//MARK: Navigation
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		segue.destination.title = destiTitle
+        segue.destination.hidesBottomBarWhenPushed = true
 		if let vc = segue.destination as? CityTableViewController {
 			let presenter = CityPresenter(cityView: vc)
 			vc.presenter = presenter

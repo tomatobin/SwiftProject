@@ -8,6 +8,11 @@
 
 import UIKit
 import BeeHive
+import LCLogManager
+
+#if DEBUG
+import DoraemonKit
+#endif
 
 @UIApplicationMain
 class AppDelegate: BHAppDelegate {
@@ -17,8 +22,11 @@ class AppDelegate: BHAppDelegate {
 
     override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.initLog()
         self.initWeexSDK()
         self.initBeeHive(application: application, launchOptions: launchOptions)
+        self.initDoraemonKit()
+        
         super.application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
     }
@@ -44,6 +52,12 @@ class AppDelegate: BHAppDelegate {
     override func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    //MARK: - Log
+    func initLog() {
+        LCLogManager.shareInstance()?.startFileLog()
+        LCLogManager.shareInstance()?.maxLogSize = 1
+    }
 
     //MARK: WeexSDK
     func initWeexSDK() {
@@ -64,6 +78,13 @@ class AppDelegate: BHAppDelegate {
         //注册模块，并进行加载全部
         BeeHive.registerDynamicModule(WidgetsModule.classForCoder())
         BeeHive.shareInstance().context = BHContext.shareInstance()
+    }
+    
+    //MARK: DoraemonKit
+    func initDoraemonKit() {
+        #if DEBUG
+        DoraemonManager.shareInstance().install(withPid: "7a1157650580d4b3c0acdbfba439e243")
+        #endif
     }
 }
 

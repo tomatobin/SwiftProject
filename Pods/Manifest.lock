@@ -1,6 +1,14 @@
 PODS:
   - Alamofire (4.7.3)
   - BeeHive (1.5.1)
+  - CocoaSecurity (1.2.4)
+  - DHDateFormatter (1.0.2)
+  - DHSandboxTool (1.0.0)
+  - DoraemonKit (3.0.2):
+    - DoraemonKit/Core (= 3.0.2)
+  - DoraemonKit/Core (3.0.2)
+  - LCLogManager (0.0.1):
+    - DHDateFormatter
   - Masonry (0.6.3)
   - MBProgressHUD (0.9.2)
   - MGJRouter (0.9.3)
@@ -21,36 +29,39 @@ PODS:
     - MOBFoundation
   - ShareSDK3/ShareSDKPlatforms/WeChat (3.6.1):
     - MOBFoundation
-  - SnapKit (4.0.0)
   - SocketRocket (0.5.1)
   - Spring (1.0.3)
-  - SwiftyJSON (3.1.4)
   - WeexSDK (0.11.0):
     - SocketRocket
 
 DEPENDENCIES:
   - Alamofire (~> 4.7.3)
   - BeeHive (~> 1.5.1)
+  - CocoaSecurity (~> 1.2.4)
+  - DHDateFormatter (from `http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/CommonModule/iCommonModule/ToolSet/Utility/Trunk/DHDateFormatter`)
+  - DHSandboxTool (from `./Depend/DHSandboxTool`)
+  - DoraemonKit (~> 3.0.2)
+  - LCLogManager (from `http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/CommonModule/iCommonModule/ToolSet/Utility/Trunk/LCLogManager`)
   - Masonry (= 0.6.3)
   - MBProgressHUD (~> 0.9.2)
   - MGJRouter (~> 0.9.3)
   - MOBFoundation
   - pop
-  - RAMAnimatedTabBarController
+  - RAMAnimatedTabBarController (~> 3.5.0)
   - SDWebImage (~> 3.8.1)
   - ShareSDK3 (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS.git`)
   - ShareSDK3/ShareSDKPlatforms/QQ (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS.git`)
   - ShareSDK3/ShareSDKPlatforms/SinaWeibo (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS.git`)
   - ShareSDK3/ShareSDKPlatforms/WeChat (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS.git`)
-  - SnapKit (~> 4.0.0)
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift4`)
-  - SwiftyJSON (~> 3.1.4)
   - WeexSDK (= 0.11.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - BeeHive
+    - CocoaSecurity
+    - DoraemonKit
     - Masonry
     - MBProgressHUD
     - MGJRouter
@@ -58,12 +69,16 @@ SPEC REPOS:
     - pop
     - RAMAnimatedTabBarController
     - SDWebImage
-    - SnapKit
     - SocketRocket
-    - SwiftyJSON
     - WeexSDK
 
 EXTERNAL SOURCES:
+  DHDateFormatter:
+    :svn: http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/CommonModule/iCommonModule/ToolSet/Utility/Trunk/DHDateFormatter
+  DHSandboxTool:
+    :path: "./Depend/DHSandboxTool"
+  LCLogManager:
+    :svn: http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/CommonModule/iCommonModule/ToolSet/Utility/Trunk/LCLogManager
   ShareSDK3:
     :git: https://git.oschina.net/MobClub/ShareSDK-for-iOS.git
   Spring:
@@ -71,6 +86,12 @@ EXTERNAL SOURCES:
     :git: https://github.com/MengTo/Spring.git
 
 CHECKOUT OPTIONS:
+  DHDateFormatter:
+    :revision: '184985'
+    :svn: http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/CommonModule/iCommonModule/ToolSet/Utility/Trunk/DHDateFormatter
+  LCLogManager:
+    :revision: '184985'
+    :svn: http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/CommonModule/iCommonModule/ToolSet/Utility/Trunk/LCLogManager
   ShareSDK3:
     :commit: 02f43072cfefcc5d97bdad4c33d4efb32c18afb8
     :git: https://git.oschina.net/MobClub/ShareSDK-for-iOS.git
@@ -81,6 +102,11 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   BeeHive: b135a33b3519814ec5d117318d205e10c997450f
+  CocoaSecurity: d288a6f87e0f363823d2cb83e753814a6944f71a
+  DHDateFormatter: 082cad648ae6b869736c892ee1f1ea48a4e0ea4f
+  DHSandboxTool: dd65485027dc3dd977c64fe625fc69e45802e40a
+  DoraemonKit: 8587e7a9aae0773dfc96707d2369d89d2a21b3d2
+  LCLogManager: 1a44a4b94ef7419614294ccac338efcc40411f5d
   Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MGJRouter: f65821e2aeffc8f9e84b254c8f1c0dd80f048aa9
@@ -89,12 +115,10 @@ SPEC CHECKSUMS:
   RAMAnimatedTabBarController: 7e259e89b669c7bc833a6441c7d8fbfd6580f473
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   ShareSDK3: dea6a14cc4385fa6493e10895ba11d07ef34d149
-  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
-  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   WeexSDK: f9cfe6adc91fba3ca5e36bc9808bf1b6e8be2106
 
-PODFILE CHECKSUM: 6d94da8c24efa7a75bcbe7eee4400668d655a820
+PODFILE CHECKSUM: fdc695aef4acb0a06eec46ed419647297d1989ac
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.3

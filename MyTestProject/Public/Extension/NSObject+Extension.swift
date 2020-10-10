@@ -8,11 +8,11 @@
 
 public extension NSObject{
     
-    public class var fp_nameOfClass: String {
+    class var fp_nameOfClass: String {
         return NSStringFromClass(self).components(separatedBy: ".").last!
     }
     
-    public var fp_nameOfClass: String {
+    var fp_nameOfClass: String {
         return NSStringFromClass(type(of: self)).components(separatedBy: ".").last!
     }
 }

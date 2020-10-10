@@ -94,7 +94,7 @@ class CameraCaptureController: FPBaseController {
 		let cameras = AVCaptureDevice.devices(for: AVMediaType.video)
 		for camera in cameras {
             if (camera as AnyObject).position == position {
-                return camera as? AVCaptureDevice
+                return camera
             }
         }
         

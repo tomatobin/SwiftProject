@@ -84,7 +84,7 @@ extension String {
             hash.appendFormat("%02x", result[i])
         }
         
-        result.deallocate(capacity: digestLen)
+        result.deallocate()
         
         return String(format: hash as String)
     }
@@ -154,12 +154,47 @@ extension String {
     ///
     /// - Returns: 处理后的身份信息
     func fp_transparentCardId() -> String {
-        if self.characters.count >= 18 {
+        if self.count >= 18 {
             let subString = self.substring(to: self.index(self.startIndex, offsetBy: 3))
             let suffix = String(repeating: "*", count: 15)
             return subString + suffix
         }
         
         return "***"
+    }
+    
+    //MARK: - Base64
+    func fp_base64() -> String {
+        guard let data = self.data(using: .utf8) else {
+            return ""
+        }
+        
+        return data.base64EncodedString()
+    }
+    
+    //MARK: - SHA256
+    func fp_sha256() -> String {
+        guard let data = self.data(using: .utf8) else {
+            return ""
+        }
+        
+        let dataLength = CC_LONG(data.count)
+        let digestLength = Int(CC_SHA256_DIGEST_LENGTH)
+        let result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLength)
+        
+        let bytes = [UInt8](data)
+        CC_SHA256(bytes, dataLength, result)
+        let hash = stringFromBytes(bytes: result, length: digestLength)
+        return hash
+    }
+    
+    
+    func stringFromBytes(bytes: UnsafeMutablePointer<CUnsignedChar>, length: Int) -> String {
+        let hash = NSMutableString()
+        for i in 0..<length {
+            hash.appendFormat("%02x", bytes[i])
+        }
+        bytes.deinitialize(count: length)
+        return String(format: hash as String)
     }
 }
