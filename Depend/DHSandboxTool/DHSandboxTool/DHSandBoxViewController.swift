@@ -10,6 +10,9 @@ import QuickLook
 
 public class DHSandBoxViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
+    /// 标题变化回调
+    public var titleChanged: ((String?) -> (Void))?
+    
     var tableView: UITableView!
     
     /// 当前节点数据
@@ -51,17 +54,32 @@ public class DHSandBoxViewController: UIViewController,UITableViewDelegate,UITab
     
     //MARK: - Init Data
     func initData() {
-        rootNode = DHSandboxUtil.getSandboxNode(targetPath: NSHomeDirectory())
-        loadSubNodeData(node: rootNode)
+        self.tableView.isUserInteractionEnabled = false
+        DispatchQueue.global().async {
+            self.rootNode = DHSandboxUtil.getSandboxNode(targetPath: NSHomeDirectory())
+            self.currentNode = self.rootNode
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.updateVCTitle()
+                self.tableView.isUserInteractionEnabled = true
+            }
+        }
     }
     
     /// 加载子节点数据，并保存当前节点、父节点的信息
     /// - Parameter node: 节点
     func loadSubNodeData(node: DHSanboxNodeModel) {
-        currentNode = node
-        DHSandboxUtil.generateSubNodes(node: currentNode)
-        tableView.reloadData()
-        updateVCTitle()
+        self.tableView.isUserInteractionEnabled = false
+        DispatchQueue.global().async {
+            self.currentNode = node
+            DHSandboxUtil.generateSubNodes(node: self.currentNode)
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.updateVCTitle()
+                self.tableView.isUserInteractionEnabled = true
+            }
+        }
     }
     
     /// 加载父节点数据，并保存当前节点、父节点的信息
@@ -83,6 +101,10 @@ public class DHSandBoxViewController: UIViewController,UITableViewDelegate,UITab
         } else {
             title = "沙盒浏览器"
         }
+        
+        //设置父视图的标题
+        parent?.title = title
+        titleChanged?(title)
     }
     
     //MARK: - UITableViewDataSource
