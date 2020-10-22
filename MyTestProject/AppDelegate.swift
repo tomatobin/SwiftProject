@@ -19,9 +19,12 @@ class AppDelegate: BHAppDelegate {
 
     //var window: UIWindow?
 
-
+    //后台任务
+    var backgroundTask: UIBackgroundTaskIdentifier?
+    
     override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.registerBackgroundPlay()
         self.initLog()
         self.initWeexSDK()
         self.initBeeHive(application: application, launchOptions: launchOptions)
@@ -39,6 +42,19 @@ class AppDelegate: BHAppDelegate {
     override func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
+        //如果已存在后台任务，先将其设为完成
+        if self.backgroundTask != nil {
+            application.endBackgroundTask(self.backgroundTask!)
+            self.backgroundTask = UIBackgroundTaskIdentifier.invalid
+        }
+        
+        //注册后台任务
+        self.backgroundTask = application.beginBackgroundTask(expirationHandler: {
+            //如果没有调用endBackgroundTask，时间耗尽时应用程序将被终止
+            application.endBackgroundTask(self.backgroundTask!)
+            self.backgroundTask = UIBackgroundTaskIdentifier.invalid
+        })
     }
 
     override func applicationWillEnterForeground(_ application: UIApplication) {
@@ -51,6 +67,11 @@ class AppDelegate: BHAppDelegate {
 
     override func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    //MARK: - Background play
+    func registerBackgroundPlay() {
+        DHBackgroundRunnerManager.shared.openBackgroundAudioAutoPlay = true
     }
     
     //MARK: - Log

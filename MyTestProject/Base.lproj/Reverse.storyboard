@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="N8p-un-oyi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="N8p-un-oyi">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -34,6 +35,7 @@
                         <segue destination="Lgm-52-UHH" kind="show" identifier="PushToMobileApp" id="5Kf-HA-aBx"/>
                         <segue destination="wz5-yQ-QdF" kind="show" identifier="PushToIOT" id="PxS-lp-35y"/>
                         <segue destination="FWy-Qg-ugg" kind="show" identifier="PushToImou" id="mZO-Td-cFq"/>
+                        <segue destination="KDJ-S0-Xoz" kind="show" identifier="PushToStock" id="xKh-cn-PE9"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4xP-jO-Gel" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -174,6 +176,63 @@
             </objects>
             <point key="canvasLocation" x="-335" y="-991"/>
         </scene>
+        <!--Stock View Controller-->
+        <scene sceneID="rue-rz-DT4">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="KDJ-S0-Xoz" customClass="StockViewController" customModule="MyTestProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MqH-Qr-5HS"/>
+                        <viewControllerLayoutGuide type="bottom" id="7p3-ej-oEb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dTX-e1-OXD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yx8-JL-iIx">
+                                <rect key="frame" x="161" y="577" width="53" height="30"/>
+                                <state key="normal" title="Refresh"/>
+                                <connections>
+                                    <action selector="onRefreshAction:" destination="KDJ-S0-Xoz" eventType="touchUpInside" id="eux-L9-kS8"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KfQ-Mp-nta">
+                                <rect key="frame" x="16" y="106" width="343" height="378"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pd-rc-fAU">
+                                <rect key="frame" x="258" y="577" width="30" height="30"/>
+                                <state key="normal" title="hide"/>
+                                <connections>
+                                    <action selector="switchAction:" destination="KDJ-S0-Xoz" eventType="touchUpInside" id="yE5-KO-0Bb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4pd-rc-fAU" secondAttribute="trailing" constant="87" id="2GN-gl-Gjb"/>
+                            <constraint firstItem="KfQ-Mp-nta" firstAttribute="leading" secondItem="dTX-e1-OXD" secondAttribute="leading" constant="16" id="7FN-Nf-eu7"/>
+                            <constraint firstItem="4pd-rc-fAU" firstAttribute="centerY" secondItem="Yx8-JL-iIx" secondAttribute="centerY" id="J8X-fL-ug8"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Yx8-JL-iIx" secondAttribute="trailing" constant="20" symbolic="YES" id="Pxh-LE-K4d"/>
+                            <constraint firstItem="4pd-rc-fAU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Yx8-JL-iIx" secondAttribute="trailing" constant="8" symbolic="YES" id="Y2O-XP-zaJ"/>
+                            <constraint firstItem="Yx8-JL-iIx" firstAttribute="top" secondItem="KfQ-Mp-nta" secondAttribute="bottom" constant="93" id="be1-fa-K6p"/>
+                            <constraint firstItem="Yx8-JL-iIx" firstAttribute="centerX" secondItem="dTX-e1-OXD" secondAttribute="centerX" id="m33-XQ-HGC"/>
+                            <constraint firstItem="KfQ-Mp-nta" firstAttribute="top" secondItem="MqH-Qr-5HS" secondAttribute="bottom" constant="106" id="pKS-GP-094"/>
+                            <constraint firstItem="7p3-ej-oEb" firstAttribute="top" secondItem="Yx8-JL-iIx" secondAttribute="bottom" constant="40" id="tyG-SL-fgn"/>
+                            <constraint firstAttribute="trailing" secondItem="KfQ-Mp-nta" secondAttribute="trailing" constant="16" id="z01-QW-ilq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Epw-Mu-vwg"/>
+                    <connections>
+                        <outlet property="textView" destination="KfQ-Mp-nta" id="XtT-2x-rOK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fbs-st-MDN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1716" y="528.48575712143929"/>
+        </scene>
         <!--Imou Method List View Controller-->
         <scene sceneID="IKz-QM-3jq">
             <objects>
@@ -243,4 +302,12 @@
             <point key="canvasLocation" x="-335" y="-258"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

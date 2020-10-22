@@ -17,7 +17,7 @@ class FPReverseController: FPBaseTableViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        data = ["MobileApp": "PushToMobileApp", "IOT": "PushToIOT", "Imou": "PushToImou"]
+        data = ["MobileApp": "PushToMobileApp", "IOT": "PushToIOT", "Imou": "PushToImou", "Stock": "PushToStock"]
 		self.configureTableView()
     }
 
