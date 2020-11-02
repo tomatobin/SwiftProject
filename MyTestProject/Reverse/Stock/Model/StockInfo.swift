@@ -23,6 +23,8 @@ enum StockStateIndex: Int {
 }
 
 class StockInfo: NSObject {
+    
+    var openLog: Bool = true
 
     var name: String = ""
     
@@ -50,8 +52,10 @@ class StockInfo: NSObject {
     
     var localizedComparePrice: String = ""
     
+    var localizedComparePricePercent: String = ""
+    
     override var description: String {
-        let desc = "\(date) \(time)::\(code) \(name):  \(currentPrice)  [\(averagePrice) (\(minPrice) \(maxPrice))]"
+        let desc = "\(date) \(time)::\(code) \(name):  \(currentPrice) \(localizedComparePricePercent)  [\(averagePrice) (\(minPrice) \(maxPrice))]"
         return desc
     }
     
@@ -98,7 +102,9 @@ class StockInfo: NSObject {
         //计算
         calcuPrice()
         
-        print("🍎🍎🍎 \(date) \(time) \(name):: current:\(currentPrice) \(localizedComparePrice) open:\(openPrice), yesterday:\(yesterdayClosePrice), [\(averagePrice) (\(minPrice), \(maxPrice))] ")
+        if openLog {
+            print("🍎🍎🍎 \(date) \(time) \(name):: \(currentPrice) \(localizedComparePricePercent) \(localizedComparePrice) [open:\(openPrice), yesterday:\(yesterdayClosePrice), \(averagePrice) (\(minPrice), \(maxPrice))] ")
+        }
     }
     
     func fixPrice(price: String) -> String {
@@ -116,8 +122,9 @@ class StockInfo: NSObject {
         if let yestClose = Double(yesterdayClosePrice) {
             comparePrice = current - yestClose
             comparePercent = (current - yestClose) / yestClose
-            let prefix = comparePrice > 0 ? "+" : ""
-            localizedComparePrice = String(format: "\(prefix)%0.2f%%", comparePercent * 100)
+            let prefix = comparePrice >= 0 ? "🔴" : "💹"
+            localizedComparePricePercent = String(format: "\(prefix)%0.2f%%", comparePercent * 100)
+            localizedComparePrice = String(format: "\(prefix)%0.2f", comparePrice)
         }
     }
 }

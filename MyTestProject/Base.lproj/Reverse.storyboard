@@ -189,7 +189,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yx8-JL-iIx">
-                                <rect key="frame" x="161" y="577" width="53" height="30"/>
+                                <rect key="frame" x="111" y="577" width="53" height="30"/>
                                 <state key="normal" title="Refresh"/>
                                 <connections>
                                     <action selector="onRefreshAction:" destination="KDJ-S0-Xoz" eventType="touchUpInside" id="eux-L9-kS8"/>
@@ -203,29 +203,44 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pd-rc-fAU">
-                                <rect key="frame" x="258" y="577" width="30" height="30"/>
+                                <rect key="frame" x="290" y="572" width="55" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Nl1-BZ-NNJ"/>
+                                    <constraint firstAttribute="width" constant="55" id="blN-Ng-EXM"/>
+                                </constraints>
                                 <state key="normal" title="hide"/>
                                 <connections>
                                     <action selector="switchAction:" destination="KDJ-S0-Xoz" eventType="touchUpInside" id="yE5-KO-0Bb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoI-jD-tnB">
+                                <rect key="frame" x="220" y="577" width="55" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="8wm-oI-OAS"/>
+                                </constraints>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="onClearAction:" destination="KDJ-S0-Xoz" eventType="touchUpInside" id="jUj-UD-kYM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="4pd-rc-fAU" secondAttribute="trailing" constant="87" id="2GN-gl-Gjb"/>
+                            <constraint firstAttribute="trailing" secondItem="4pd-rc-fAU" secondAttribute="trailing" constant="30" id="2GN-gl-Gjb"/>
                             <constraint firstItem="KfQ-Mp-nta" firstAttribute="leading" secondItem="dTX-e1-OXD" secondAttribute="leading" constant="16" id="7FN-Nf-eu7"/>
                             <constraint firstItem="4pd-rc-fAU" firstAttribute="centerY" secondItem="Yx8-JL-iIx" secondAttribute="centerY" id="J8X-fL-ug8"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Yx8-JL-iIx" secondAttribute="trailing" constant="20" symbolic="YES" id="Pxh-LE-K4d"/>
-                            <constraint firstItem="4pd-rc-fAU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Yx8-JL-iIx" secondAttribute="trailing" constant="8" symbolic="YES" id="Y2O-XP-zaJ"/>
                             <constraint firstItem="Yx8-JL-iIx" firstAttribute="top" secondItem="KfQ-Mp-nta" secondAttribute="bottom" constant="93" id="be1-fa-K6p"/>
-                            <constraint firstItem="Yx8-JL-iIx" firstAttribute="centerX" secondItem="dTX-e1-OXD" secondAttribute="centerX" id="m33-XQ-HGC"/>
+                            <constraint firstItem="qoI-jD-tnB" firstAttribute="centerY" secondItem="Yx8-JL-iIx" secondAttribute="centerY" id="eZx-Tw-def"/>
+                            <constraint firstItem="Yx8-JL-iIx" firstAttribute="centerX" secondItem="dTX-e1-OXD" secondAttribute="centerX" constant="-50" id="m33-XQ-HGC"/>
                             <constraint firstItem="KfQ-Mp-nta" firstAttribute="top" secondItem="MqH-Qr-5HS" secondAttribute="bottom" constant="106" id="pKS-GP-094"/>
+                            <constraint firstItem="4pd-rc-fAU" firstAttribute="leading" secondItem="qoI-jD-tnB" secondAttribute="trailing" constant="15" id="swW-QR-mpi"/>
                             <constraint firstItem="7p3-ej-oEb" firstAttribute="top" secondItem="Yx8-JL-iIx" secondAttribute="bottom" constant="40" id="tyG-SL-fgn"/>
                             <constraint firstAttribute="trailing" secondItem="KfQ-Mp-nta" secondAttribute="trailing" constant="16" id="z01-QW-ilq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Epw-Mu-vwg"/>
                     <connections>
+                        <outlet property="btnHide" destination="4pd-rc-fAU" id="ajP-sp-kms"/>
                         <outlet property="textView" destination="KfQ-Mp-nta" id="XtT-2x-rOK"/>
                     </connections>
                 </viewController>

@@ -4,31 +4,38 @@
 //
 //  Created by iblue on 2020/10/22.
 //  Copyright © 2020 iblue. All rights reserved.
-//  后台运行管理类
+//  后台运行管理类：进入后台，开启定时器，播放无声音频；同时开启后台任备
 
 import AVFoundation
 import UIKit
 
-class DHBackgroundRunnerManager: NSObject {
+class DHBackgroundRunner: NSObject {
     
-    static let shared = DHBackgroundRunnerManager()
+    static let shared = DHBackgroundRunner()
     
     fileprivate let audioSession = AVAudioSession.sharedInstance()
     
     fileprivate var backgroundAudioPlayer: AVAudioPlayer?
     
-    fileprivate var backgroundTimeLength = 0
+    /// 后台持续播放时间
+    fileprivate var backgroundDuration = 0
     
+    /// 定时器
     fileprivate var timer: Timer?
     
+    /// 定时器时间间隔
+    fileprivate var timerInterval: TimeInterval = 1
+    
+    /// 无声音乐名称
     fileprivate var musicFilename: String = "Silence"
     
+    /// 无声音乐类型
     fileprivate var musicFiletype: String = "wav"
 
     // 是否开启后台自动播放无声音乐
-    var openBackgroundAudioAutoPlay = false {
+    var openRunner = false {
         didSet {
-            if self.openBackgroundAudioAutoPlay {
+            if self.openRunner {
                 self.setupAudioSession()
                 self.setupBackgroundAudioPlayer()
             } else {
@@ -38,7 +45,7 @@ class DHBackgroundRunnerManager: NSObject {
                     }
                 }
                 self.backgroundAudioPlayer = nil
-                try? self.audioSession.setActive(false, options: AVAudioSession.SetActiveOptions.notifyOthersOnDeactivation)
+                try? self.audioSession.setActive(false, options: .notifyOthersOnDeactivation)
             }
         }
     }
@@ -54,7 +61,7 @@ class DHBackgroundRunnerManager: NSObject {
 
     private func setupAudioSession() {
         do {
-            try audioSession.setCategory(AVAudioSession.Category.playback, options: AVAudioSession.CategoryOptions.mixWithOthers)
+            try audioSession.setCategory(.playback, options: .mixWithOthers)
             try audioSession.setActive(false)
         } catch let error {
             debugPrint("\(type(of: self)):\(error)")
@@ -62,34 +69,38 @@ class DHBackgroundRunnerManager: NSObject {
     }
 
     private func setupBackgroundAudioPlayer() {
+        guard let musiceFilePath =  Bundle.main.path(forResource: musicFilename, ofType: musicFiletype) else {
+            return
+        }
+        
         do {
-            backgroundAudioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: musicFilename, ofType: musicFiletype)!))
+            backgroundAudioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: musiceFilePath))
             debugPrint(Bundle.main.path(forResource: musicFilename, ofType: musicFiletype)!)
         } catch let error {
             debugPrint("\(type(of: self)):\(error)")
         }
+        
         backgroundAudioPlayer?.numberOfLoops = -1
         backgroundAudioPlayer?.volume = 0.0
         backgroundAudioPlayer?.delegate = self
     }
 
     private func setupListener() {
-        NotificationCenter.default.addObserver(self, selector: #selector(didEnterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(didBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(audioSessionInterruption(notification:)), name: AVAudioSession.interruptionNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didEnterBackgroundNotify), name: UIApplication.didEnterBackgroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didBecomeActiveNotify), name: UIApplication.didBecomeActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(audioSessionInterruptionNotify(notification:)), name: AVAudioSession.interruptionNotification, object: nil)
     }
 }
 
-// MARK: - 扩展 监听通知
-
-extension DHBackgroundRunnerManager {
-    /// 进入后台 播放无声音乐
-    @objc public func didEnterBackground() {
-        setupTimer()
-        
-        guard openBackgroundAudioAutoPlay else {
+// MARK: - Notification Process
+extension DHBackgroundRunner {
+    /// 进入后台: 播放无声音乐
+    @objc public func didEnterBackgroundNotify() {
+        guard openRunner else {
             return
         }
+        
+        setupTimer()
 
         do {
             try audioSession.setActive(true)
@@ -101,27 +112,27 @@ extension DHBackgroundRunnerManager {
         backgroundAudioPlayer?.play()
     }
 
-    /// 进入前台，暂停播放音乐
-    @objc public func didBecomeActive() {
-        removeTimer()
-        hintBackgroundTimeLength()
-        backgroundTimeLength = 0
-        guard openBackgroundAudioAutoPlay else {
+    /// 进入前台: 暂停播放音乐
+    @objc public func didBecomeActiveNotify() {
+        invalidateTimer()
+        hintBackgroundDuration()
+        backgroundDuration = 0
+        guard openRunner else {
             return
         }
 
         backgroundAudioPlayer?.pause()
         
         do {
-            try audioSession.setActive(false, options: AVAudioSession.SetActiveOptions.notifyOthersOnDeactivation)
+            try audioSession.setActive(false, options: .notifyOthersOnDeactivation)
         } catch let error {
             debugPrint("\(type(of: self)):\(error))")
         }
     }
 
     /// 音乐中断处理
-    @objc fileprivate func audioSessionInterruption(notification: NSNotification) {
-        guard openBackgroundAudioAutoPlay, let userinfo = notification.userInfo else {
+    @objc fileprivate func audioSessionInterruptionNotify(notification: NSNotification) {
+        guard openRunner, let userinfo = notification.userInfo else {
             return
         }
         
@@ -131,57 +142,58 @@ extension DHBackgroundRunnerManager {
         
         if interruptionType == AVAudioSession.InterruptionType.began.rawValue {
             // 中断开始，音乐被暂停
-            debugPrint("\(type(of: self)): 中断开始 userinfo:\(userinfo)")
+            print("🍎🍎🍎 \(Date()) \(NSStringFromClass(self.classForCoder)):: AVAudioSession.InterruptionType.began: \(userinfo)")
         } else if interruptionType == AVAudioSession.InterruptionType.ended.rawValue {
             // 中断结束，恢复播放
-            debugPrint("\(type(of: self)): 中断结束 userinfo:\(userinfo)")
-            guard let player = backgroundAudioPlayer else { return }
+            print("🍎🍎🍎 \(Date()) \(NSStringFromClass(self.classForCoder)):: AVAudioSession.InterruptionType.ended.rawValue: \(userinfo)")
+            
+            guard let player = backgroundAudioPlayer else {
+                return
+            }
+            
             if player.isPlaying == false {
-                debugPrint("\(type(of: self)): 音乐未播放，准备开始播放")
                 do {
                     try audioSession.setActive(true)
                 } catch let error {
                     debugPrint("\(type(of: self)):\(error)")
                 }
+                
                 player.prepareToPlay()
                 player.play()
-            } else {
-                debugPrint("\(type(of: self)): 音乐正在播放")
             }
         }
     }
 }
 
-// MARK: - 扩展 定时器任务
-extension DHBackgroundRunnerManager {
+// MARK: - Timer Operation
+extension DHBackgroundRunner {
     fileprivate func setupTimer() {
-        removeTimer()
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerTask), userInfo: nil, repeats: true)
+        invalidateTimer()
+        timer = Timer.scheduledTimer(timeInterval: timerInterval, target: self, selector: #selector(timerTask), userInfo: nil, repeats: true)
         RunLoop.main.add(timer!, forMode: RunLoop.Mode.common)
     }
 
-    fileprivate func removeTimer() {
+    fileprivate func invalidateTimer() {
         timer?.invalidate()
         timer = nil
     }
 
     @objc func timerTask() {
-        backgroundTimeLength += 1
+        backgroundDuration = backgroundDuration + Int(timerInterval)
     }
 
-    fileprivate func hintBackgroundTimeLength() {
-        let message = "本次后台持续时间:\(backgroundTimeLength)s"
-        print("🍎🍎🍎 \(Date()) \(NSStringFromClass(classForCoder))::\(message)")
+    fileprivate func hintBackgroundDuration() {
+        print("🍎🍎🍎 \(Date()) \(NSStringFromClass(self.classForCoder))::Background duration: \(backgroundDuration)s")
     }
 }
 
-// MARK: - 扩展 播放代理
-extension DHBackgroundRunnerManager: AVAudioPlayerDelegate {
+// MARK: - AVAudioPlayerDelegate
+extension DHBackgroundRunner: AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        
+        print("🍎🍎🍎 \(Date()) \(NSStringFromClass(self.classForCoder)):: Did finish play.")
     }
 
     func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: Error?) {
-        debugPrint("\(type(of: self))" + error.debugDescription)
+        print("🍎🍎🍎 \(Date()) \(NSStringFromClass(self.classForCoder)):: \(String(describing: error?.localizedDescription))")
     }
 }

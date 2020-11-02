@@ -31,13 +31,12 @@ class StockRequest: NSObject {
             var stockList: [StockInfo] = [StockInfo]()
             
             if result.isSuccess {
-                //print("🍎🍎🍎 \(#function):: Result:\(String(describing: result.value))")
                 //SWIFT GBK编码转换
                 let cfEncoding = CFStringEncodings.GB_18030_2000
                 let encoding = CFStringConvertEncodingToNSStringEncoding(CFStringEncoding(cfEncoding.rawValue))
                 
                 if let value = result.value, let listString = String(data: value, encoding: String.Encoding(rawValue: encoding)) {
-                    
+                    //print("🍎🍎🍎 \(#function):: Result:\(listString)")
                     let list = listString.components(separatedBy: ";")
                     list.forEach { (string ) in
                         guard string.count > StockStateIndex.enumEndFlag.rawValue else {

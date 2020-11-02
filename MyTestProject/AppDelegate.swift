@@ -71,7 +71,8 @@ class AppDelegate: BHAppDelegate {
     
     //MARK: - Background play
     func registerBackgroundPlay() {
-        DHBackgroundRunnerManager.shared.openBackgroundAudioAutoPlay = true
+        DHBackgroundRunner.shared.openRunner = true
+        DHBackgroundRunnerPlus.shared.openRunner = true
     }
     
     //MARK: - Log

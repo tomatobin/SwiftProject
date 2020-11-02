@@ -66,16 +66,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5CCF1530-F62D-4102-9AFE-157B18B6F490"
-            shouldBeEnabled = "No"
+            uuid = "4C445F89-C43A-4D60-A7A7-34D77BE7AD1C"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyTestProject/Reverse/Stock/Controller/StockViewController.swift"
+            filePath = "MyTestProject/Public/Helper/DHBackgroundRunnerPlus.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "switchAction(_:)"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "registerBackgroundTask()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

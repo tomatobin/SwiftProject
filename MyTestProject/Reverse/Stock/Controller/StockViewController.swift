@@ -12,17 +12,17 @@ class StockViewController: UIViewController {
     
     var model: StockRequest = StockRequest()
     
-//    var stockList: [String] = ["sz002236", "sh000001", "sh600827"]
+    var stockList: [String] = [String]()
     
-    var stockList: [String] = ["sz002236", "sh000001"]
-    
-    var enableShowText: Bool = true
+    var enableShowText: Bool = false
 
     var text: String = ""
     
     var timer: DispatchSourceTimer?
     
-    var timerInterval: TimeInterval = TimeInterval(5) * 1_000
+    var timerInterval: TimeInterval = TimeInterval(5.1) * 1_000
+    
+    @IBOutlet weak var btnHide: UIButton!
     
     @IBOutlet weak var textView: UITextView!
     
@@ -30,6 +30,8 @@ class StockViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        updateUI()
+        loadStockList()
         startTimer()
     }
     
@@ -37,16 +39,39 @@ class StockViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        stopTimer()
+    }
+    
+    func loadStockList() {
+        if let filePath = Bundle.main.path(forResource: "Stocks", ofType:"plist") {
+            let dicValues = FPFileHelper.readPropertyList(plistPath: filePath)
+            stockList.removeAll()
+            stockList.append(contentsOf: dicValues.keys.sorted())
+        }
+    }
+    
+    //MARK: - Update UI
+    func updateUI() {
+        let title = enableShowText ? "hide" : "show"
+        btnHide.setTitle(title, for: .normal)
+        textView.text = enableShowText ? text : ""
+    }
+    
     //MARK: - Action
     @IBAction func switchAction(_ sender: UIButton) {
         enableShowText = !enableShowText
-        let title = enableShowText ? "hide" : "show"
-        sender.setTitle(title, for: .normal)
-        textView.text = enableShowText ? text : ""
+        updateUI()
     }
     
     @IBAction func onRefreshAction(_ sender: Any) {
         request()
+    }
+    
+    @IBAction func onClearAction(_ sender: Any) {
+        text = ""
+        textView.text = ""
     }
     
     //MARK: - Timer
@@ -66,7 +91,6 @@ class StockViewController: UIViewController {
     
     //MARK: - Request
     func request() {
-        text = textView.text ?? ""
         model.request(stocks: stockList) { [unowned self] (stocks) in
             let reverse = stocks.reversed()
             reverse.forEach { (stockInfo) in
