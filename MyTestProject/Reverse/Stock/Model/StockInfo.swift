@@ -25,6 +25,9 @@ enum StockStateIndex: Int {
 class StockInfo: NSObject {
     
     var openLog: Bool = true
+    
+    /// 是否使用颜色标记
+    var useColor: Bool = false
 
     var name: String = ""
     
@@ -55,11 +58,11 @@ class StockInfo: NSObject {
     var localizedComparePricePercent: String = ""
     
     override var description: String {
-        let desc = "\(date) \(time)::\(code) \(name):  \(currentPrice) \(localizedComparePricePercent)  [\(averagePrice) (\(minPrice) \(maxPrice))]"
+        let desc = "\(time)::\(code) \(name):  \(currentPrice) \(localizedComparePricePercent) \(localizedComparePrice) | \(openPrice) [ \(averagePrice) (\(minPrice) \(maxPrice))]"
         return desc
     }
     
-    init(string: String) {
+    init(string: String, isShowColor: Bool = true, isShowLog: Bool = true) {
         super.init()
         let object = string.replacingOccurrences(of: "\n", with: "")
         let datas = object.components(separatedBy: ",")
@@ -81,7 +84,9 @@ class StockInfo: NSObject {
             name.append("*")
             name.append("*")
         }
-                            
+         
+        openLog = isShowLog
+        useColor = isShowColor
         currentPrice = datas[StockStateIndex.current.rawValue]
         openPrice = datas[StockStateIndex.open.rawValue]
         yesterdayClosePrice = datas[StockStateIndex.yesterdayClose.rawValue]
@@ -104,15 +109,17 @@ class StockInfo: NSObject {
         
         if openLog {
             print("🍎🍎🍎 \(date) \(time) \(name):: \(currentPrice) \(localizedComparePricePercent) \(localizedComparePrice) [open:\(openPrice), yesterday:\(yesterdayClosePrice), \(averagePrice) (\(minPrice), \(maxPrice))] ")
+        } else {
+            print("🍎🍎🍎 \(date) \(time) :: \(localizedComparePrice) p2p delay... testing...[\(currentPrice) (\(minPrice), \(maxPrice))]")
         }
     }
     
     func fixPrice(price: String) -> String {
-        if let last = price.split(separator: ".").last, last.count > 2 {
-            var fixPrice = price
-            fixPrice.removeLast()
-            return fixPrice
-        }
+//        if let last = price.split(separator: ".").last, last.count > 2 {
+//            var fixPrice = price
+//            fixPrice.removeLast()
+//            return fixPrice
+//        }
         
         return price
     }
@@ -120,9 +127,13 @@ class StockInfo: NSObject {
     func calcuPrice() {
         let current = Double(currentPrice) ?? 0
         if let yestClose = Double(yesterdayClosePrice) {
-            comparePrice = current - yestClose
-            comparePercent = (current - yestClose) / yestClose
-            let prefix = comparePrice >= 0 ? "🔴" : "💹"
+            comparePrice = current > 0 ? current - yestClose : 0
+            comparePercent = comparePrice / yestClose
+            var prefix = ""
+            if useColor {
+                prefix = comparePrice >= 0 ? "🔴+" : "💹"
+            }
+            
             localizedComparePricePercent = String(format: "\(prefix)%0.2f%%", comparePercent * 100)
             localizedComparePrice = String(format: "\(prefix)%0.2f", comparePrice)
         }

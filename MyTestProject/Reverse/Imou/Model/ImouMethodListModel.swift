@@ -119,6 +119,9 @@ class ImouMethodListModel: NSObject {
         let sha256 = CocoaSecurity.hmacSha256(saasSign, hmacKey: password)
         let base64SaasSign = sha256?.base64 ?? ""
         
+        print("🍎🍎🍎 \(Date()) \(NSStringFromClass(self.classForCoder)) sha256 ::\(String(describing: sha256))")
+        print("🍎🍎🍎 \(Date()) \(NSStringFromClass(self.classForCoder)) base64SaasSign ::\(base64SaasSign)")
+        
         var headers = [String: String]()
         headers["Content-MD5"] = md5Content
         headers["x-pcs-username"] = username
@@ -151,6 +154,14 @@ class ImouMethodListModel: NSObject {
         
         print("🍎🍎🍎 \(Date()) \(NSStringFromClass(self.classForCoder)):: randomNonce: \(nonce)")
         return nonce
+    }
+    
+    //MARK: - Decode
+    func decode(sign: String) {
+        let decoder = CocoaSecurityDecoder()
+        let debase64Data = decoder.base64(sign)!
+        
+        print("123")
     }
 }
 

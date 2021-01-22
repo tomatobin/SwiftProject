@@ -12,26 +12,12 @@ PODS:
   - Masonry (0.6.3)
   - MBProgressHUD (0.9.2)
   - MGJRouter (0.9.3)
-  - MOBFoundation (2.2.15)
   - pop (1.0.9)
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
-  - ShareSDK3 (3.6.1):
-    - MOBFoundation
-    - ShareSDK3/ShareSDK (= 3.6.1)
-  - ShareSDK3/ShareSDK (3.6.1):
-    - MOBFoundation
-  - ShareSDK3/ShareSDKPlatforms/QQ (3.6.1):
-    - MOBFoundation
-  - ShareSDK3/ShareSDKPlatforms/SinaWeibo (3.6.1):
-    - MOBFoundation
-  - ShareSDK3/ShareSDKPlatforms/WeChat (3.6.1):
-    - MOBFoundation
-  - SocketRocket (0.5.1)
+  - SnapKit (5.0.1)
   - Spring (1.0.6)
-  - WeexSDK (0.11.0):
-    - SocketRocket
 
 DEPENDENCIES:
   - Alamofire (~> 4.7.3)
@@ -44,15 +30,10 @@ DEPENDENCIES:
   - Masonry (= 0.6.3)
   - MBProgressHUD (~> 0.9.2)
   - MGJRouter (~> 0.9.3)
-  - MOBFoundation
   - pop
   - SDWebImage (~> 3.8.1)
-  - ShareSDK3 (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS.git`)
-  - ShareSDK3/ShareSDKPlatforms/QQ (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS.git`)
-  - ShareSDK3/ShareSDKPlatforms/SinaWeibo (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS.git`)
-  - ShareSDK3/ShareSDKPlatforms/WeChat (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS.git`)
+  - SnapKit
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift5`)
-  - WeexSDK (= 0.11.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -63,11 +44,9 @@ SPEC REPOS:
     - Masonry
     - MBProgressHUD
     - MGJRouter
-    - MOBFoundation
     - pop
     - SDWebImage
-    - SocketRocket
-    - WeexSDK
+    - SnapKit
 
 EXTERNAL SOURCES:
   DHDateFormatter:
@@ -76,8 +55,6 @@ EXTERNAL SOURCES:
     :path: "./Depend/DHSandboxTool"
   LCLogManager:
     :svn: http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/CommonModule/iCommonModule/ToolSet/Utility/Trunk/LCLogManager
-  ShareSDK3:
-    :git: https://git.oschina.net/MobClub/ShareSDK-for-iOS.git
   Spring:
     :branch: swift5
     :git: https://github.com/MengTo/Spring.git
@@ -89,9 +66,6 @@ CHECKOUT OPTIONS:
   LCLogManager:
     :revision: '184985'
     :svn: http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/CommonModule/iCommonModule/ToolSet/Utility/Trunk/LCLogManager
-  ShareSDK3:
-    :commit: 02f43072cfefcc5d97bdad4c33d4efb32c18afb8
-    :git: https://git.oschina.net/MobClub/ShareSDK-for-iOS.git
   Spring:
     :commit: 459b979c4335d4178fb05771019f6dda916f6998
     :git: https://github.com/MengTo/Spring.git
@@ -107,14 +81,11 @@ SPEC CHECKSUMS:
   Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MGJRouter: f65821e2aeffc8f9e84b254c8f1c0dd80f048aa9
-  MOBFoundation: 4975874f74c991f562151f6a4549e9a6ad743fd8
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
-  ShareSDK3: dea6a14cc4385fa6493e10895ba11d07ef34d149
-  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
-  WeexSDK: f9cfe6adc91fba3ca5e36bc9808bf1b6e8be2106
 
-PODFILE CHECKSUM: 63b93e034b894ad402f5496e67b83a114ecdef13
+PODFILE CHECKSUM: 35e49b36ffb3069fa393a9fa0700f3a92ff28298
 
 COCOAPODS: 1.9.3

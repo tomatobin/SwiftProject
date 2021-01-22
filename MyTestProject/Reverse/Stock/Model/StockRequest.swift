@@ -12,6 +12,10 @@ import Alamofire
 class StockRequest: NSObject {
     
     let urlPrefix = "https://hq.sinajs.cn/list="
+    
+    var showColor: Bool = false
+    
+    var showLog: Bool = true
 
     var sessionManager: Alamofire.SessionManager = {
         let configuration = URLSessionConfiguration.default
@@ -43,7 +47,7 @@ class StockRequest: NSObject {
                             return
                         }
                         
-                        let stockInfo = StockInfo(string: string)
+                        let stockInfo = StockInfo(string: string, isShowColor: self.showColor, isShowLog: self.showLog)
                         stockList.append(stockInfo)
                         //print(stockInfo)
                     }

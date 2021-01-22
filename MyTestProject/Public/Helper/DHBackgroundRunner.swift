@@ -135,7 +135,7 @@ extension DHBackgroundRunner {
         guard openRunner, let userinfo = notification.userInfo else {
             return
         }
-        
+         
         guard let interruptionType: UInt = userinfo[AVAudioSessionInterruptionTypeKey] as! UInt? else {
             return
         }

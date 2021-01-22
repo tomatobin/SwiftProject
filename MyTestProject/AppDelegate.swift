@@ -25,6 +25,7 @@ class AppDelegate: BHAppDelegate {
     override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         self.registerBackgroundPlay()
+        self.registerNotification()
         self.initLog()
         self.initWeexSDK()
         self.initBeeHive(application: application, launchOptions: launchOptions)
@@ -63,6 +64,7 @@ class AppDelegate: BHAppDelegate {
 
     override func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        application.applicationIconBadgeNumber = 0
     }
 
     override func applicationWillTerminate(_ application: UIApplication) {
@@ -72,21 +74,29 @@ class AppDelegate: BHAppDelegate {
     //MARK: - Background play
     func registerBackgroundPlay() {
         DHBackgroundRunner.shared.openRunner = true
-        DHBackgroundRunnerPlus.shared.openRunner = true
+        //DHBackgroundRunnerPlus.shared.openRunner = true
+    }
+    
+    //MARK: - Notification
+    func registerNotification() {
+        VKNotificationService.sharedInstance.requestAuthorization()
     }
     
     //MARK: - Log
     func initLog() {
+        //直连调试模式下不开启日志
+        
         LCLogManager.shareInstance()?.startFileLog()
-        LCLogManager.shareInstance()?.maxLogSize = 1
+        LCLogManager.shareInstance()?.maxLogSize = 10
+        LCLogManager.shareInstance()?.isCycle = true
     }
 
     //MARK: WeexSDK
     func initWeexSDK() {
-        WXAppConfiguration.setAppGroup("DemoApp")
-        WXSDKEngine.initSDKEnvironment()
-        
-        WXLog.setLogLevel(.off)
+//        WXAppConfiguration.setAppGroup("DemoApp")
+//        WXSDKEngine.initSDKEnvironment()
+//        
+//        WXLog.setLogLevel(.off)
     }
     
     //MARK: BeeHive

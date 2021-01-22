@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "DHSandBoxViewController.loadParentNodeData(node:):DHSandBoxViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "parentNode">
+            </PersistentString>
+            <PersistentString
+               value = "currentNode">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static NSBundle.dh_sandboxBundle():DHSanboxTool+Bundle.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "sandboxBundle">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

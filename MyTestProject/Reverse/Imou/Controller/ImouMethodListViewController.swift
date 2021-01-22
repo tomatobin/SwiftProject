@@ -28,6 +28,9 @@ class ImouMethodListViewController: FPBaseTableViewController {
         self.title = "MobileApi"
         self.configureTableView()
         self.setupHostView()
+        
+        
+        model.decode(sign: "t7W+h4q3J7+QPczd+VkdY0FRBiZroIsrYTEmugN2fnQ=")
     }
     
     override func didReceiveMemoryWarning() {
