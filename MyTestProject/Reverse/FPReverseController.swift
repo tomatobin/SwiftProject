@@ -17,7 +17,7 @@ class FPReverseController: FPBaseTableViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        data = ["MobileApp": "PushToMobileApp", "IOT": "PushToIOT", "Imou": "PushToImou", "Stock": "PushToStock"] //, "Stock": "PushToStock"
+        data = ["MobileApp": "PushToMobileApp", "IOT": "PushToIOT", "Imou": "PushToImou", "Stock": "PushToStockPrice"] //, "Stock": "PushToStock"
         //data = ["MobileApp": "PushToMobileApp", "IOT": "PushToIOT", "Imou": "PushToImou"] 
 		self.configureTableView()
     }
@@ -36,6 +36,7 @@ class FPReverseController: FPBaseTableViewController {
 			dataArray.append(celldata)
 		}
 		
+        dataArray.sort(by: { return $0.cellTitle ?? "" < $1.cellTitle ?? "" })
 		dataSource = FPTableDataSource.init(cellItems: dataArray, cellIdentifier: identifier, configureCell: {(cell, item) in
 			let testCell = cell as! FPTableViewCell
 			testCell.configureForCell(item: item)
@@ -55,11 +56,14 @@ class FPReverseController: FPBaseTableViewController {
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
-		let allValues = Array(data.values) as Array<String>
-		if indexPath.row < allValues.count {
-			let pushSegue = allValues[indexPath.row]
-			let keys = Array(data.keys) as Array<String>
-			self.performSegue(withIdentifier: pushSegue, sender: nil)
-		}
+        let cellData = dataSource.itemAtIndexPath(indexPath) as? FPTableViewCellData
+        if let key = cellData?.cellTitle, let segue = data[key] {
+            self.performSegue(withIdentifier: segue, sender: nil)
+        }
 	}
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        segue.destination.hidesBottomBarWhenPushed = true
+    }
 }

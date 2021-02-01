@@ -65,8 +65,20 @@
 		4EA4200D2105D68C007281BD /* FPBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4200C2105D68C007281BD /* FPBaseTableViewController.swift */; };
 		4EA420102105D799007281BD /* CityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4200F2105D799007281BD /* CityTableViewController.swift */; };
 		4EA420122105D840007281BD /* CityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA420112105D840007281BD /* CityPresenter.swift */; };
+		4EB4706325BE951800A00B3D /* StockPriceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4706225BE951800A00B3D /* StockPriceListViewController.swift */; };
+		4EB4706825BEA1AF00A00B3D /* StockPricePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4706725BEA1AF00A00B3D /* StockPricePresenter.swift */; };
+		4EB4706A25BEA23E00A00B3D /* IStockPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4706925BEA23E00A00B3D /* IStockPriceView.swift */; };
 		4EBFBCAE25B12EAD00E88C1D /* Stocks-bg.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFBCAD25B12EAD00E88C1D /* Stocks-bg.plist */; };
 		4EC725BA256F536A00E041E3 /* VKNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC725B9256F536900E041E3 /* VKNotificationService.swift */; };
+		4ECC3D8425C0493C0017E8AF /* sqliterk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECC3D7E25C045D40017E8AF /* sqliterk.framework */; };
+		4ECC3D8525C0493C0017E8AF /* sqliterk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECC3D7E25C045D40017E8AF /* sqliterk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4ECC3D8625C0493E0017E8AF /* sqlcipher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECC3D7D25C045D40017E8AF /* sqlcipher.framework */; };
+		4ECC3D8725C0493E0017E8AF /* sqlcipher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECC3D7D25C045D40017E8AF /* sqlcipher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4ECC3D8825C0493F0017E8AF /* WCDBSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECC3D7C25C045D40017E8AF /* WCDBSwift.framework */; };
+		4ECC3D8925C049400017E8AF /* WCDBSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECC3D7C25C045D40017E8AF /* WCDBSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4ECC3D8F25C049D60017E8AF /* ORMMonitorStockObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECC3D8C25C049D50017E8AF /* ORMMonitorStockObject.swift */; };
+		4ECC3D9025C049D60017E8AF /* StockMonitorDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECC3D8D25C049D50017E8AF /* StockMonitorDataHelper.swift */; };
+		4ECC3D9125C049D60017E8AF /* ORMStockDBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECC3D8E25C049D60017E8AF /* ORMStockDBHelper.swift */; };
 		4EDAAE302570CA9B0083420C /* MonitorWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAAE2B2570CA980083420C /* MonitorWidget.intentdefinition */; };
 		4EDDF259213D58F3004AC8E8 /* DHNvrOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDDF258213D58F3004AC8E8 /* DHNvrOperationView.swift */; };
 		4EDDF262213D5C0F004AC8E8 /* DHNvrOperationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDDF260213D5C0E004AC8E8 /* DHNvrOperationItem.swift */; };
@@ -179,6 +191,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				4ECC3D8725C0493E0017E8AF /* sqlcipher.framework in Embed Frameworks */,
+				4ECC3D8925C049400017E8AF /* WCDBSwift.framework in Embed Frameworks */,
+				4ECC3D8525C0493C0017E8AF /* sqliterk.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,8 +273,17 @@
 		4EA4200C2105D68C007281BD /* FPBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPBaseTableViewController.swift; sourceTree = "<group>"; };
 		4EA4200F2105D799007281BD /* CityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewController.swift; sourceTree = "<group>"; };
 		4EA420112105D840007281BD /* CityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityPresenter.swift; sourceTree = "<group>"; };
+		4EB4706225BE951800A00B3D /* StockPriceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPriceListViewController.swift; sourceTree = "<group>"; };
+		4EB4706725BEA1AF00A00B3D /* StockPricePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPricePresenter.swift; sourceTree = "<group>"; };
+		4EB4706925BEA23E00A00B3D /* IStockPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IStockPriceView.swift; sourceTree = "<group>"; };
 		4EBFBCAD25B12EAD00E88C1D /* Stocks-bg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Stocks-bg.plist"; sourceTree = "<group>"; };
 		4EC725B9256F536900E041E3 /* VKNotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKNotificationService.swift; sourceTree = "<group>"; };
+		4ECC3D7C25C045D40017E8AF /* WCDBSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WCDBSwift.framework; path = Depend/Frameworks/WCDBSwift.framework; sourceTree = "<group>"; };
+		4ECC3D7D25C045D40017E8AF /* sqlcipher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = sqlcipher.framework; path = Depend/Frameworks/sqlcipher.framework; sourceTree = "<group>"; };
+		4ECC3D7E25C045D40017E8AF /* sqliterk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = sqliterk.framework; path = Depend/Frameworks/sqliterk.framework; sourceTree = "<group>"; };
+		4ECC3D8C25C049D50017E8AF /* ORMMonitorStockObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ORMMonitorStockObject.swift; sourceTree = "<group>"; };
+		4ECC3D8D25C049D50017E8AF /* StockMonitorDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockMonitorDataHelper.swift; sourceTree = "<group>"; };
+		4ECC3D8E25C049D60017E8AF /* ORMStockDBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ORMStockDBHelper.swift; sourceTree = "<group>"; };
 		4EDAAE242570CA980083420C /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		4EDAAE262570CA980083420C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		4EDAAE292570CA980083420C /* MonitorWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorWidget.swift; sourceTree = "<group>"; };
@@ -386,8 +410,11 @@
 			files = (
 				866ED09E1D2A797C0098C40B /* Foundation.framework in Frameworks */,
 				865BE2D61D251A7100D1AD83 /* AVFoundation.framework in Frameworks */,
+				4ECC3D8625C0493E0017E8AF /* sqlcipher.framework in Frameworks */,
 				860EB8D21D24C6E00020736D /* AudioToolbox.framework in Frameworks */,
+				4ECC3D8825C0493F0017E8AF /* WCDBSwift.framework in Frameworks */,
 				860EB8D01D24C6D80020736D /* UIKit.framework in Frameworks */,
+				4ECC3D8425C0493C0017E8AF /* sqliterk.framework in Frameworks */,
 				FAF8542A080F4084102450BE /* Pods_MyTestProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,6 +497,7 @@
 		4E53364B2539514700E42D73 /* Stock */ = {
 			isa = PBXGroup;
 			children = (
+				4EB4706625BEA17300A00B3D /* Presenter */,
 				4E53364F2539882500E42D73 /* Model */,
 				4E53364C25396BDE00E42D73 /* Controller */,
 			);
@@ -481,6 +509,8 @@
 			children = (
 				4E53364D25396BF900E42D73 /* StockViewController.swift */,
 				4E053FA5257A0F1C004C70DD /* StockConfigViewController.swift */,
+				4EB4706225BE951800A00B3D /* StockPriceListViewController.swift */,
+				4EB4706925BEA23E00A00B3D /* IStockPriceView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -488,9 +518,12 @@
 		4E53364F2539882500E42D73 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4E533650253988BE00E42D73 /* StockRequest.swift */,
-				4E36C6F7253D683A0033E2E4 /* StockInfo.swift */,
+				4ECC3D8E25C049D60017E8AF /* ORMStockDBHelper.swift */,
+				4ECC3D8C25C049D50017E8AF /* ORMMonitorStockObject.swift */,
+				4ECC3D8D25C049D50017E8AF /* StockMonitorDataHelper.swift */,
 				4E053FA7257A1086004C70DD /* StockConfigManager.swift */,
+				4E36C6F7253D683A0033E2E4 /* StockInfo.swift */,
+				4E533650253988BE00E42D73 /* StockRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -586,6 +619,14 @@
 				4E83DDB52106C5E800FCC387 /* View */,
 			);
 			path = MVP;
+			sourceTree = "<group>";
+		};
+		4EB4706625BEA17300A00B3D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4EB4706725BEA1AF00A00B3D /* StockPricePresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		4EDAAE282570CA980083420C /* MonitorWidget */ = {
@@ -689,6 +730,9 @@
 		860EB8CE1D24C6C20020736D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4ECC3D7D25C045D40017E8AF /* sqlcipher.framework */,
+				4ECC3D7E25C045D40017E8AF /* sqliterk.framework */,
+				4ECC3D7C25C045D40017E8AF /* WCDBSwift.framework */,
 				866ED09D1D2A797C0098C40B /* Foundation.framework */,
 				861675A61D264F4A001EE809 /* AudioUnit.framework */,
 				8616759B1D264C30001EE809 /* libpop.a */,
@@ -1188,6 +1232,7 @@
 				864A9DCF1E7D0DE1001665B8 /* FPBlurController.swift in Sources */,
 				4E39607B20D894EB007DA535 /* DHAutoKeyboardView.swift in Sources */,
 				4E39607E20D894EB007DA535 /* DHCycleTimerView.swift in Sources */,
+				4EB4706325BE951800A00B3D /* StockPriceListViewController.swift in Sources */,
 				864A9E401E7D1151001665B8 /* FPAlert.swift in Sources */,
 				4EDDF262213D5C0F004AC8E8 /* DHNvrOperationItem.swift in Sources */,
 				864A9E501E7D1151001665B8 /* FPTextField.swift in Sources */,
@@ -1203,6 +1248,8 @@
 				4E3EFBEE20D36BB20001A921 /* DHApGuideViewController.swift in Sources */,
 				864A9E1D1E7D1151001665B8 /* FPConstant.swift in Sources */,
 				4E8152522105FE3A00A594F5 /* CityInfo.swift in Sources */,
+				4ECC3D8F25C049D60017E8AF /* ORMMonitorStockObject.swift in Sources */,
+				4EB4706825BEA1AF00A00B3D /* StockPricePresenter.swift in Sources */,
 				4E39607820D894EB007DA535 /* DHAddDeviceManager.swift in Sources */,
 				864A9E3E1E7D1151001665B8 /* FPTableViewCell.swift in Sources */,
 				4EF23167210F04470003055A /* REMobileApiResultViewController.swift in Sources */,
@@ -1220,6 +1267,7 @@
 				864A9E431E7D1151001665B8 /* FPFliterCell.swift in Sources */,
 				4E0D916120CFBBD40070BACA /* LightButtonController.swift in Sources */,
 				4EA4200D2105D68C007281BD /* FPBaseTableViewController.swift in Sources */,
+				4EB4706A25BEA23E00A00B3D /* IStockPriceView.swift in Sources */,
 				864A9E201E7D1151001665B8 /* NSObject+Extension.swift in Sources */,
 				4E36C6F8253D683A0033E2E4 /* StockInfo.swift in Sources */,
 				864A9DC61E7D0DE1001665B8 /* AudioRecorderController.swift in Sources */,
@@ -1234,11 +1282,13 @@
 				4E980D4124A1B9110009D927 /* IoTMethodListViewController.swift in Sources */,
 				864A9DC71E7D0DE1001665B8 /* AVAudioSessionController.swift in Sources */,
 				864A9E301E7D1151001665B8 /* Configration.swift in Sources */,
+				4ECC3D9125C049D60017E8AF /* ORMStockDBHelper.swift in Sources */,
 				864A9E231E7D1151001665B8 /* UIButton+CountDown.swift in Sources */,
 				4EF23162210EFA6D0003055A /* REServiceUtil.swift in Sources */,
 				4E5D7EAA20E70B38005A8C1E /* UITextField+LeChange.m in Sources */,
 				4E39607620D894EB007DA535 /* DHGuideBaseViewController.swift in Sources */,
 				4EDAAE302570CA9B0083420C /* MonitorWidget.intentdefinition in Sources */,
+				4ECC3D9025C049D60017E8AF /* StockMonitorDataHelper.swift in Sources */,
 				864A9DCA1E7D0DE1001665B8 /* CommonRootController.swift in Sources */,
 				865143881EF77B77003D8995 /* UIScrollView+Refresh.swift in Sources */,
 				4EC725BA256F536A00E041E3 /* VKNotificationService.swift in Sources */,
@@ -1442,7 +1492,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 849898BD5A042CF962BB3771 /* Pods-MyTestProject.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: 斌 江 (N5GXFD43BJ)";
 				CODE_SIGN_STYLE = Manual;
@@ -1479,7 +1528,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5EE5F991111B4F41E0289859 /* Pods-MyTestProject.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: 斌 江 (N5GXFD43BJ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 斌 江 (N5GXFD43BJ)";

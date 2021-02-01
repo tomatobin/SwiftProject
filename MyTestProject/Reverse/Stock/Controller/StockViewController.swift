@@ -134,7 +134,7 @@ class StockViewController: UIViewController {
                 if self?.isInTipTime() == true, monitorCode.count > 0, stockInfo.code.contains(monitorCode)  { //
                     if price < monitorMinPrice || price > monitorMaxPrice {
                         let content = "\(stockInfo.time) \(stockInfo.currentPrice)"
-                        VKNotificationService.sharedInstance.localNotificationRequest(title: "Attention...", body: content, logo: "dahua-logo")
+                        VKNotificationService.sharedInstance.localNotificationRequest(title: "Attention...", body: content, logo: "")
                         self?.lastNotifyTime = currentTime
                     }
                 }
@@ -146,6 +146,10 @@ class StockViewController: UIViewController {
             
             self?.text = "!=======更新\(Date().fp_string(FPDateFormat.Hour))=======!\n" + (self?.text ?? "")
             self?.textView.text = self?.text
+            
+            if self?.isInTipTime() == false {
+                self?.stopTimer()
+            }
         }
     }
     

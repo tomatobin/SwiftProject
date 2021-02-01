@@ -42,6 +42,7 @@ class CommonRootController: FPBaseController,UITableViewDelegate {
             dataArray.append(celldata)
         }
         
+        dataArray.sort(by: { return $0.cellTitle ?? "" < $1.cellTitle ?? "" })
         dataSource = FPTableDataSource.init(cellItems: dataArray, cellIdentifier: identifier, configureCell: {(cell, item) in
             let testCell = cell as! FPTableViewCell
             testCell.configureForCell(item: item)
@@ -61,12 +62,9 @@ class CommonRootController: FPBaseController,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let allValues = Array(data.values) as Array<String>
-        if indexPath.row < allValues.count {
-            let pushSegue = allValues[indexPath.row]
-			let keys = Array(data.keys) as Array<String>
-			destiTitle = keys[indexPath.row]
-            self.performSegue(withIdentifier: pushSegue, sender: nil)
+        let cellData = dataSource.itemAtIndexPath(indexPath) as? FPTableViewCellData
+        if let key = cellData?.cellTitle, let segue = data[key] {
+            self.performSegue(withIdentifier: segue, sender: nil)
         }
     }
     

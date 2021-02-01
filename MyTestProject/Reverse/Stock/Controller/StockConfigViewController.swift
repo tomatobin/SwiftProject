@@ -19,6 +19,12 @@ class StockConfigViewController: UIViewController {
     @IBOutlet weak var maxTxf: UITextField!
     @IBOutlet weak var timeTxf: UITextField!
     
+    static func storyboardInstance() -> StockConfigViewController {
+        let storyboard = UIStoryboard(name: "Reverse", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "StockConfigViewController")
+        return controller as! StockConfigViewController
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -115,11 +115,17 @@ class StockInfo: NSObject {
     }
     
     func fixPrice(price: String) -> String {
-//        if let last = price.split(separator: ".").last, last.count > 2 {
-//            var fixPrice = price
-//            fixPrice.removeLast()
-//            return fixPrice
-//        }
+        //5以下显示原始数据
+        if let doublePrice = Double(price), doublePrice < 5.0 {
+            return price
+        }
+        
+        //显示两位即可
+        if let last = price.split(separator: ".").last, last.count > 2 {
+            var fixPrice = price
+            fixPrice.removeLast()
+            return fixPrice
+        }
         
         return price
     }
@@ -129,13 +135,14 @@ class StockInfo: NSObject {
         if let yestClose = Double(yesterdayClosePrice) {
             comparePrice = current > 0 ? current - yestClose : 0
             comparePercent = comparePrice / yestClose
-            var prefix = ""
+            var prefixColor = ""
             if useColor {
-                prefix = comparePrice >= 0 ? "🔴+" : "💹"
+                prefixColor = comparePrice >= 0 ? "🔴" : "💹"
             }
             
-            localizedComparePricePercent = String(format: "\(prefix)%0.2f%%", comparePercent * 100)
-            localizedComparePrice = String(format: "\(prefix)%0.2f", comparePrice)
+            let prefix = comparePrice > 0 ? "+" : ""
+            localizedComparePricePercent = String(format: "\(prefixColor)\(prefix)%0.2f%%", comparePercent * 100)
+            localizedComparePrice = String(format: "\(prefixColor)\(prefix)%0.2f", comparePrice)
         }
     }
 }

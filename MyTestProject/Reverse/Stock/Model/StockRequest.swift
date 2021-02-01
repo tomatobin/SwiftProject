@@ -13,7 +13,7 @@ class StockRequest: NSObject {
     
     let urlPrefix = "https://hq.sinajs.cn/list="
     
-    var showColor: Bool = false
+    var showColor: Bool = true
     
     var showLog: Bool = true
 

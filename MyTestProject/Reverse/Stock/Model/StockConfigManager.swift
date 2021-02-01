@@ -14,7 +14,6 @@ class StockConfigManager: NSObject {
     
     var code: String = ""
     
-    /// 2236买入标准21.2
     var minPrice: Double = 0
     
     var maxPrice: Double = 0
