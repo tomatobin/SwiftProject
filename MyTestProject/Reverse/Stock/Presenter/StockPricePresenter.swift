@@ -69,12 +69,18 @@ class StockPricePresenter: NSObject,IStockPricePresenter {
         let monitorMinPrice = StockConfigManager.sharedInstance.minPrice
         let monitorMaxPrice = StockConfigManager.sharedInstance.maxPrice
         
+        var content = ""
         model.request(stocks: stockCodeList) { [weak self] (stocks) in
             stocks.forEach { (stockInfo) in
+                
+                if !monitorCode.contains("sh000001"), stockInfo.code.contains("sh000001") {
+                    content = stockInfo.currentPrice + " " + stockInfo.localizedComparePricePercent
+                }
+                
                 let price = Double(stockInfo.currentPrice) ?? 0
                 if self?.isInTipTime() == true, monitorCode.count > 0, stockInfo.code.contains(monitorCode) {
                     if price < monitorMinPrice || price > monitorMaxPrice {
-                        let content = "\(stockInfo.time) \(stockInfo.currentPrice)"
+                        content = "\(stockInfo.time) \(stockInfo.currentPrice) \(content)"
                         VKNotificationService.sharedInstance.localNotificationRequest(title: "Attention...", body: content, logo: "")
                     }
                 }

@@ -10,8 +10,6 @@
 		4E00B85225415DFA0044D870 /* DHBackgroundRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E00B85125415DFA0044D870 /* DHBackgroundRunner.swift */; };
 		4E00B855254162040044D870 /* Silence.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4E00B854254162040044D870 /* Silence.wav */; };
 		4E044B6020D23BF100EDB3E0 /* DHBlurViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E044B5F20D23BF100EDB3E0 /* DHBlurViewContainer.swift */; };
-		4E053FA6257A0F1C004C70DD /* StockConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E053FA5257A0F1C004C70DD /* StockConfigViewController.swift */; };
-		4E053FA8257A1086004C70DD /* StockConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E053FA7257A1086004C70DD /* StockConfigManager.swift */; };
 		4E0D915F20CFBB520070BACA /* DHLightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D915E20CFBB510070BACA /* DHLightButton.swift */; };
 		4E0D916120CFBBD40070BACA /* LightButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D916020CFBBD40070BACA /* LightButtonController.swift */; };
 		4E0D916320CFBD780070BACA /* DHWifiConnectFailureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D916220CFBD780070BACA /* DHWifiConnectFailureView.swift */; };
@@ -23,7 +21,6 @@
 		4E3277421EF96B8200BD341E /* FPRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4E3277411EF96B8200BD341E /* FPRefresh.bundle */; };
 		4E3277481EF96CB800BD341E /* FPRefresh@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3277461EF96CB800BD341E /* FPRefresh@3x.png */; };
 		4E3277491EF96CB800BD341E /* FPRresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3277471EF96CB800BD341E /* FPRresh@2x.png */; };
-		4E36C6F8253D683A0033E2E4 /* StockInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E36C6F7253D683A0033E2E4 /* StockInfo.swift */; };
 		4E39607320D894EB007DA535 /* DHAddBaseVCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39606520D894EB007DA535 /* DHAddBaseVCProtocol.swift */; };
 		4E39607420D894EB007DA535 /* DHAddBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39606620D894EB007DA535 /* DHAddBaseViewController.swift */; };
 		4E39607520D894EB007DA535 /* DHGuideBaseVCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39606720D894EB007DA535 /* DHGuideBaseVCProtocol.swift */; };
@@ -39,8 +36,6 @@
 		4E3EFBC220D3459F0001A921 /* DHSelectModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3EFBC120D3459E0001A921 /* DHSelectModelViewController.swift */; };
 		4E3EFBC420D345BF0001A921 /* AddDevice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E3EFBC320D345BF0001A921 /* AddDevice.storyboard */; };
 		4E3EFBEE20D36BB20001A921 /* DHApGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3EFBED20D36BB20001A921 /* DHApGuideViewController.swift */; };
-		4E53364E25396BF900E42D73 /* StockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E53364D25396BF900E42D73 /* StockViewController.swift */; };
-		4E533651253988BE00E42D73 /* StockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E533650253988BE00E42D73 /* StockRequest.swift */; };
 		4E58409E2574C9C1003EAFB5 /* dahua-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E58409D2574C9C1003EAFB5 /* dahua-logo.png */; };
 		4E5B35D0213CCA7E002E3DEE /* DHNvrMiddlePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B35CF213CCA7E002E3DEE /* DHNvrMiddlePageVC.swift */; };
 		4E5D7EA420E7095F005A8C1E /* DHInputSNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D7EA320E7095F005A8C1E /* DHInputSNViewController.swift */; };
@@ -49,6 +44,17 @@
 		4E5DFD7924B41340009DD091 /* ImouMethodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5DFD7824B41340009DD091 /* ImouMethodListViewController.swift */; };
 		4E5DFD7C24B415D4009DD091 /* ImouMethodListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5DFD7B24B415D4009DD091 /* ImouMethodListModel.swift */; };
 		4E628DE32542D56A004B5463 /* DHBackgroundRunnerPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E628DE22542D56A004B5463 /* DHBackgroundRunnerPlus.swift */; };
+		4E6B48F4260046B500146ED6 /* StockPricePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6B48E7260046B500146ED6 /* StockPricePresenter.swift */; };
+		4E6B48F5260046B500146ED6 /* StockConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6B48E9260046B500146ED6 /* StockConfigViewController.swift */; };
+		4E6B48F6260046B500146ED6 /* IStockPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6B48EA260046B500146ED6 /* IStockPriceView.swift */; };
+		4E6B48F7260046B500146ED6 /* StockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6B48EB260046B500146ED6 /* StockViewController.swift */; };
+		4E6B48F8260046B500146ED6 /* StockPriceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6B48EC260046B500146ED6 /* StockPriceListViewController.swift */; };
+		4E6B48F9260046B500146ED6 /* StockMonitorDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6B48EE260046B500146ED6 /* StockMonitorDataHelper.swift */; };
+		4E6B48FA260046B500146ED6 /* ORMStockDBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6B48EF260046B500146ED6 /* ORMStockDBHelper.swift */; };
+		4E6B48FB260046B500146ED6 /* ORMMonitorStockObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6B48F0260046B500146ED6 /* ORMMonitorStockObject.swift */; };
+		4E6B48FC260046B500146ED6 /* StockInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6B48F1260046B500146ED6 /* StockInfo.swift */; };
+		4E6B48FD260046B500146ED6 /* StockConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6B48F2260046B500146ED6 /* StockConfigManager.swift */; };
+		4E6B48FE260046B500146ED6 /* StockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6B48F3260046B500146ED6 /* StockRequest.swift */; };
 		4E7AF60E1F0B1F3900B659DD /* FPReverseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7AF60D1F0B1F3900B659DD /* FPReverseController.swift */; };
 		4E7AF6151F0B208D00B659DD /* Common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7AF6111F0B208D00B659DD /* Common.storyboard */; };
 		4E7AF6161F0B208D00B659DD /* Weex.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7AF6131F0B208D00B659DD /* Weex.storyboard */; };
@@ -65,9 +71,6 @@
 		4EA4200D2105D68C007281BD /* FPBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4200C2105D68C007281BD /* FPBaseTableViewController.swift */; };
 		4EA420102105D799007281BD /* CityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4200F2105D799007281BD /* CityTableViewController.swift */; };
 		4EA420122105D840007281BD /* CityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA420112105D840007281BD /* CityPresenter.swift */; };
-		4EB4706325BE951800A00B3D /* StockPriceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4706225BE951800A00B3D /* StockPriceListViewController.swift */; };
-		4EB4706825BEA1AF00A00B3D /* StockPricePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4706725BEA1AF00A00B3D /* StockPricePresenter.swift */; };
-		4EB4706A25BEA23E00A00B3D /* IStockPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4706925BEA23E00A00B3D /* IStockPriceView.swift */; };
 		4EBFBCAE25B12EAD00E88C1D /* Stocks-bg.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFBCAD25B12EAD00E88C1D /* Stocks-bg.plist */; };
 		4EC725BA256F536A00E041E3 /* VKNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC725B9256F536900E041E3 /* VKNotificationService.swift */; };
 		4ECC3D8425C0493C0017E8AF /* sqliterk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECC3D7E25C045D40017E8AF /* sqliterk.framework */; };
@@ -76,12 +79,11 @@
 		4ECC3D8725C0493E0017E8AF /* sqlcipher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECC3D7D25C045D40017E8AF /* sqlcipher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4ECC3D8825C0493F0017E8AF /* WCDBSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECC3D7C25C045D40017E8AF /* WCDBSwift.framework */; };
 		4ECC3D8925C049400017E8AF /* WCDBSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECC3D7C25C045D40017E8AF /* WCDBSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4ECC3D8F25C049D60017E8AF /* ORMMonitorStockObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECC3D8C25C049D50017E8AF /* ORMMonitorStockObject.swift */; };
-		4ECC3D9025C049D60017E8AF /* StockMonitorDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECC3D8D25C049D50017E8AF /* StockMonitorDataHelper.swift */; };
-		4ECC3D9125C049D60017E8AF /* ORMStockDBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECC3D8E25C049D60017E8AF /* ORMStockDBHelper.swift */; };
 		4EDAAE302570CA9B0083420C /* MonitorWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAAE2B2570CA980083420C /* MonitorWidget.intentdefinition */; };
 		4EDDF259213D58F3004AC8E8 /* DHNvrOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDDF258213D58F3004AC8E8 /* DHNvrOperationView.swift */; };
 		4EDDF262213D5C0F004AC8E8 /* DHNvrOperationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDDF260213D5C0E004AC8E8 /* DHNvrOperationItem.swift */; };
+		4EE95AAE25C78F9500829797 /* CallKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EE95AAD25C78F9500829797 /* CallKit.framework */; };
+		4EE95AB025C78FCF00829797 /* libswiftCallKit.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EE95AAF25C78FCF00829797 /* libswiftCallKit.tbd */; };
 		4EEF834B258AF70000BCE09D /* Stocks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EEF834A258AF70000BCE09D /* Stocks.plist */; };
 		4EF23162210EFA6D0003055A /* REServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF23161210EFA6D0003055A /* REServiceUtil.swift */; };
 		4EF23165210EFC5F0003055A /* REMobileAppApiListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF23164210EFC5F0003055A /* REMobileAppApiListController.swift */; };
@@ -216,8 +218,6 @@
 		4E00B85125415DFA0044D870 /* DHBackgroundRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHBackgroundRunner.swift; sourceTree = "<group>"; };
 		4E00B854254162040044D870 /* Silence.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Silence.wav; sourceTree = "<group>"; };
 		4E044B5F20D23BF100EDB3E0 /* DHBlurViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHBlurViewContainer.swift; sourceTree = "<group>"; };
-		4E053FA5257A0F1C004C70DD /* StockConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockConfigViewController.swift; sourceTree = "<group>"; };
-		4E053FA7257A1086004C70DD /* StockConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockConfigManager.swift; sourceTree = "<group>"; };
 		4E0D915E20CFBB510070BACA /* DHLightButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHLightButton.swift; sourceTree = "<group>"; };
 		4E0D916020CFBBD40070BACA /* LightButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightButtonController.swift; sourceTree = "<group>"; };
 		4E0D916220CFBD780070BACA /* DHWifiConnectFailureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHWifiConnectFailureView.swift; sourceTree = "<group>"; };
@@ -229,7 +229,6 @@
 		4E3277411EF96B8200BD341E /* FPRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FPRefresh.bundle; sourceTree = "<group>"; };
 		4E3277461EF96CB800BD341E /* FPRefresh@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FPRefresh@3x.png"; path = "FPRefresh.bundle/FPRefresh@3x.png"; sourceTree = "<group>"; };
 		4E3277471EF96CB800BD341E /* FPRresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FPRresh@2x.png"; path = "FPRefresh.bundle/FPRresh@2x.png"; sourceTree = "<group>"; };
-		4E36C6F7253D683A0033E2E4 /* StockInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockInfo.swift; sourceTree = "<group>"; };
 		4E39606520D894EB007DA535 /* DHAddBaseVCProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHAddBaseVCProtocol.swift; sourceTree = "<group>"; };
 		4E39606620D894EB007DA535 /* DHAddBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHAddBaseViewController.swift; sourceTree = "<group>"; };
 		4E39606720D894EB007DA535 /* DHGuideBaseVCProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHGuideBaseVCProtocol.swift; sourceTree = "<group>"; };
@@ -245,8 +244,6 @@
 		4E3EFBC120D3459E0001A921 /* DHSelectModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHSelectModelViewController.swift; sourceTree = "<group>"; };
 		4E3EFBC320D345BF0001A921 /* AddDevice.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddDevice.storyboard; sourceTree = "<group>"; };
 		4E3EFBED20D36BB20001A921 /* DHApGuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.swift; path = DHApGuideViewController.swift; sourceTree = "<group>"; };
-		4E53364D25396BF900E42D73 /* StockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewController.swift; sourceTree = "<group>"; };
-		4E533650253988BE00E42D73 /* StockRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRequest.swift; sourceTree = "<group>"; };
 		4E58409D2574C9C1003EAFB5 /* dahua-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dahua-logo.png"; sourceTree = "<group>"; };
 		4E5B35CF213CCA7E002E3DEE /* DHNvrMiddlePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHNvrMiddlePageVC.swift; sourceTree = "<group>"; };
 		4E5D7EA320E7095F005A8C1E /* DHInputSNViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHInputSNViewController.swift; sourceTree = "<group>"; };
@@ -257,6 +254,17 @@
 		4E5DFD7824B41340009DD091 /* ImouMethodListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImouMethodListViewController.swift; sourceTree = "<group>"; };
 		4E5DFD7B24B415D4009DD091 /* ImouMethodListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImouMethodListModel.swift; sourceTree = "<group>"; };
 		4E628DE22542D56A004B5463 /* DHBackgroundRunnerPlus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHBackgroundRunnerPlus.swift; sourceTree = "<group>"; };
+		4E6B48E7260046B500146ED6 /* StockPricePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockPricePresenter.swift; sourceTree = "<group>"; };
+		4E6B48E9260046B500146ED6 /* StockConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockConfigViewController.swift; sourceTree = "<group>"; };
+		4E6B48EA260046B500146ED6 /* IStockPriceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IStockPriceView.swift; sourceTree = "<group>"; };
+		4E6B48EB260046B500146ED6 /* StockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockViewController.swift; sourceTree = "<group>"; };
+		4E6B48EC260046B500146ED6 /* StockPriceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockPriceListViewController.swift; sourceTree = "<group>"; };
+		4E6B48EE260046B500146ED6 /* StockMonitorDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockMonitorDataHelper.swift; sourceTree = "<group>"; };
+		4E6B48EF260046B500146ED6 /* ORMStockDBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ORMStockDBHelper.swift; sourceTree = "<group>"; };
+		4E6B48F0260046B500146ED6 /* ORMMonitorStockObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ORMMonitorStockObject.swift; sourceTree = "<group>"; };
+		4E6B48F1260046B500146ED6 /* StockInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockInfo.swift; sourceTree = "<group>"; };
+		4E6B48F2260046B500146ED6 /* StockConfigManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockConfigManager.swift; sourceTree = "<group>"; };
+		4E6B48F3260046B500146ED6 /* StockRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockRequest.swift; sourceTree = "<group>"; };
 		4E7AF60D1F0B1F3900B659DD /* FPReverseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPReverseController.swift; sourceTree = "<group>"; };
 		4E7AF6121F0B208D00B659DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Common.storyboard; sourceTree = "<group>"; };
 		4E7AF6141F0B208D00B659DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Weex.storyboard; sourceTree = "<group>"; };
@@ -273,17 +281,11 @@
 		4EA4200C2105D68C007281BD /* FPBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPBaseTableViewController.swift; sourceTree = "<group>"; };
 		4EA4200F2105D799007281BD /* CityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewController.swift; sourceTree = "<group>"; };
 		4EA420112105D840007281BD /* CityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityPresenter.swift; sourceTree = "<group>"; };
-		4EB4706225BE951800A00B3D /* StockPriceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPriceListViewController.swift; sourceTree = "<group>"; };
-		4EB4706725BEA1AF00A00B3D /* StockPricePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPricePresenter.swift; sourceTree = "<group>"; };
-		4EB4706925BEA23E00A00B3D /* IStockPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IStockPriceView.swift; sourceTree = "<group>"; };
 		4EBFBCAD25B12EAD00E88C1D /* Stocks-bg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Stocks-bg.plist"; sourceTree = "<group>"; };
 		4EC725B9256F536900E041E3 /* VKNotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKNotificationService.swift; sourceTree = "<group>"; };
 		4ECC3D7C25C045D40017E8AF /* WCDBSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WCDBSwift.framework; path = Depend/Frameworks/WCDBSwift.framework; sourceTree = "<group>"; };
 		4ECC3D7D25C045D40017E8AF /* sqlcipher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = sqlcipher.framework; path = Depend/Frameworks/sqlcipher.framework; sourceTree = "<group>"; };
 		4ECC3D7E25C045D40017E8AF /* sqliterk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = sqliterk.framework; path = Depend/Frameworks/sqliterk.framework; sourceTree = "<group>"; };
-		4ECC3D8C25C049D50017E8AF /* ORMMonitorStockObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ORMMonitorStockObject.swift; sourceTree = "<group>"; };
-		4ECC3D8D25C049D50017E8AF /* StockMonitorDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockMonitorDataHelper.swift; sourceTree = "<group>"; };
-		4ECC3D8E25C049D60017E8AF /* ORMStockDBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ORMStockDBHelper.swift; sourceTree = "<group>"; };
 		4EDAAE242570CA980083420C /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		4EDAAE262570CA980083420C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		4EDAAE292570CA980083420C /* MonitorWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorWidget.swift; sourceTree = "<group>"; };
@@ -292,6 +294,8 @@
 		4EDAAE2E2570CA9B0083420C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EDDF258213D58F3004AC8E8 /* DHNvrOperationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHNvrOperationView.swift; sourceTree = "<group>"; };
 		4EDDF260213D5C0E004AC8E8 /* DHNvrOperationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHNvrOperationItem.swift; sourceTree = "<group>"; };
+		4EE95AAD25C78F9500829797 /* CallKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CallKit.framework; path = System/Library/Frameworks/CallKit.framework; sourceTree = SDKROOT; };
+		4EE95AAF25C78FCF00829797 /* libswiftCallKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftCallKit.tbd; path = usr/lib/swift/libswiftCallKit.tbd; sourceTree = SDKROOT; };
 		4EEF834A258AF70000BCE09D /* Stocks.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Stocks.plist; sourceTree = "<group>"; };
 		4EF23161210EFA6D0003055A /* REServiceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REServiceUtil.swift; sourceTree = "<group>"; };
 		4EF23164210EFC5F0003055A /* REMobileAppApiListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REMobileAppApiListController.swift; sourceTree = "<group>"; };
@@ -408,6 +412,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EE95AB025C78FCF00829797 /* libswiftCallKit.tbd in Frameworks */,
+				4EE95AAE25C78F9500829797 /* CallKit.framework in Frameworks */,
 				866ED09E1D2A797C0098C40B /* Foundation.framework in Frameworks */,
 				865BE2D61D251A7100D1AD83 /* AVFoundation.framework in Frameworks */,
 				4ECC3D8625C0493E0017E8AF /* sqlcipher.framework in Frameworks */,
@@ -494,40 +500,6 @@
 			path = AddDevice;
 			sourceTree = "<group>";
 		};
-		4E53364B2539514700E42D73 /* Stock */ = {
-			isa = PBXGroup;
-			children = (
-				4EB4706625BEA17300A00B3D /* Presenter */,
-				4E53364F2539882500E42D73 /* Model */,
-				4E53364C25396BDE00E42D73 /* Controller */,
-			);
-			path = Stock;
-			sourceTree = "<group>";
-		};
-		4E53364C25396BDE00E42D73 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				4E53364D25396BF900E42D73 /* StockViewController.swift */,
-				4E053FA5257A0F1C004C70DD /* StockConfigViewController.swift */,
-				4EB4706225BE951800A00B3D /* StockPriceListViewController.swift */,
-				4EB4706925BEA23E00A00B3D /* IStockPriceView.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		4E53364F2539882500E42D73 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				4ECC3D8E25C049D60017E8AF /* ORMStockDBHelper.swift */,
-				4ECC3D8C25C049D50017E8AF /* ORMMonitorStockObject.swift */,
-				4ECC3D8D25C049D50017E8AF /* StockMonitorDataHelper.swift */,
-				4E053FA7257A1086004C70DD /* StockConfigManager.swift */,
-				4E36C6F7253D683A0033E2E4 /* StockInfo.swift */,
-				4E533650253988BE00E42D73 /* StockRequest.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		4E5B35D1213CCE7B002E3DEE /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -556,6 +528,48 @@
 			isa = PBXGroup;
 			children = (
 				4E5DFD7B24B415D4009DD091 /* ImouMethodListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4E6B48E5260046B500146ED6 /* Stock */ = {
+			isa = PBXGroup;
+			children = (
+				4E6B48E6260046B500146ED6 /* Presenter */,
+				4E6B48E8260046B500146ED6 /* Controller */,
+				4E6B48ED260046B500146ED6 /* Model */,
+			);
+			path = Stock;
+			sourceTree = "<group>";
+		};
+		4E6B48E6260046B500146ED6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4E6B48E7260046B500146ED6 /* StockPricePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4E6B48E8260046B500146ED6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E6B48E9260046B500146ED6 /* StockConfigViewController.swift */,
+				4E6B48EA260046B500146ED6 /* IStockPriceView.swift */,
+				4E6B48EB260046B500146ED6 /* StockViewController.swift */,
+				4E6B48EC260046B500146ED6 /* StockPriceListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4E6B48ED260046B500146ED6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E6B48EE260046B500146ED6 /* StockMonitorDataHelper.swift */,
+				4E6B48EF260046B500146ED6 /* ORMStockDBHelper.swift */,
+				4E6B48F0260046B500146ED6 /* ORMMonitorStockObject.swift */,
+				4E6B48F1260046B500146ED6 /* StockInfo.swift */,
+				4E6B48F2260046B500146ED6 /* StockConfigManager.swift */,
+				4E6B48F3260046B500146ED6 /* StockRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -619,14 +633,6 @@
 				4E83DDB52106C5E800FCC387 /* View */,
 			);
 			path = MVP;
-			sourceTree = "<group>";
-		};
-		4EB4706625BEA17300A00B3D /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				4EB4706725BEA1AF00A00B3D /* StockPricePresenter.swift */,
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 		4EDAAE282570CA980083420C /* MonitorWidget */ = {
@@ -730,6 +736,8 @@
 		860EB8CE1D24C6C20020736D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4EE95AAF25C78FCF00829797 /* libswiftCallKit.tbd */,
+				4EE95AAD25C78F9500829797 /* CallKit.framework */,
 				4ECC3D7D25C045D40017E8AF /* sqlcipher.framework */,
 				4ECC3D7E25C045D40017E8AF /* sqliterk.framework */,
 				4ECC3D7C25C045D40017E8AF /* WCDBSwift.framework */,
@@ -834,7 +842,7 @@
 		864A9DC31E7D0DE1001665B8 /* Reverse */ = {
 			isa = PBXGroup;
 			children = (
-				4E53364B2539514700E42D73 /* Stock */,
+				4E6B48E5260046B500146ED6 /* Stock */,
 				4E5DFD7624B412B8009DD091 /* Imou */,
 				4E980D3E24A1B8E00009D927 /* IOT */,
 				4EF2315F210EFA6D0003055A /* MobileApp */,
@@ -1159,7 +1167,7 @@
 				"${BUILT_PRODUCTS_DIR}/MGJRouter/MGJRouter.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${PODS_ROOT}/SnapKit/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
@@ -1192,6 +1200,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E7AF6191F0B20AC00B659DD /* FPWeexController.swift in Sources */,
+				4E6B48FE260046B500146ED6 /* StockRequest.swift in Sources */,
+				4E6B48F8260046B500146ED6 /* StockPriceListViewController.swift in Sources */,
 				864A9E361E7D1151001665B8 /* FPHudUtility.swift in Sources */,
 				864A9E311E7D1151001665B8 /* DismissModallySegue.swift in Sources */,
 				864A9E371E7D1151001665B8 /* FPNetworkingMonitor.swift in Sources */,
@@ -1202,37 +1212,39 @@
 				864A9DC41E7D0DE1001665B8 /* AudioServicesController.swift in Sources */,
 				4EA420122105D840007281BD /* CityPresenter.swift in Sources */,
 				864A9DC51E7D0DE1001665B8 /* AudioToolboxRootController.swift in Sources */,
+				4E6B48FA260046B500146ED6 /* ORMStockDBHelper.swift in Sources */,
 				864A9E421E7D1151001665B8 /* FPDrawRoomSelectView.swift in Sources */,
 				864A9E391E7D1151001665B8 /* FPSetAuthorizationHelper.swift in Sources */,
 				4EA420102105D799007281BD /* CityTableViewController.swift in Sources */,
 				864A9E251E7D1151001665B8 /* UIColor+Extension.swift in Sources */,
 				4E7AF6251F0B831C00B659DD /* SpringController.swift in Sources */,
 				4E39607520D894EB007DA535 /* DHGuideBaseVCProtocol.swift in Sources */,
+				4E6B48F4260046B500146ED6 /* StockPricePresenter.swift in Sources */,
 				860EB8BF1D24BD2B0020736D /* FPNavigaionController.swift in Sources */,
 				4E00B85225415DFA0044D870 /* DHBackgroundRunner.swift in Sources */,
 				865143861EF77B2A003D8995 /* FPRefreshComponent.swift in Sources */,
-				4E053FA8257A1086004C70DD /* StockConfigManager.swift in Sources */,
-				4E53364E25396BF900E42D73 /* StockViewController.swift in Sources */,
 				864A9E411E7D1151001665B8 /* FPCircleProgress.swift in Sources */,
 				4E628DE32542D56A004B5463 /* DHBackgroundRunnerPlus.swift in Sources */,
 				4EF2316D210F23520003055A /* Data+HexString.swift in Sources */,
 				864A9E2B1E7D1151001665B8 /* UITextField+Extension.swift in Sources */,
+				4E6B48FC260046B500146ED6 /* StockInfo.swift in Sources */,
 				864A9E1E1E7D1151001665B8 /* NSDate+Extension.swift in Sources */,
 				864A9DD11E7D0DE1001665B8 /* WidgetsController.swift in Sources */,
 				4E5DFD7C24B415D4009DD091 /* ImouMethodListModel.swift in Sources */,
 				4E39607920D894EB007DA535 /* DHAddGuideView.swift in Sources */,
 				4E83DDBC2106CBFD00FCC387 /* CityDetailPresenter.swift in Sources */,
 				864A9DCD1E7D0DE1001665B8 /* CustomWidgetsController.swift in Sources */,
+				4E6B48FD260046B500146ED6 /* StockConfigManager.swift in Sources */,
 				860EB8AD1D24BCC10020736D /* ViewController.swift in Sources */,
 				860EB8AB1D24BCC10020736D /* AppDelegate.swift in Sources */,
 				4E83DDB32106C53700FCC387 /* CityDetailViewController.swift in Sources */,
 				8651438A1EF79C34003D8995 /* FPRefreshDefine.swift in Sources */,
 				864A9E3B1E7D1151001665B8 /* PresentModallySegue.swift in Sources */,
 				864A9E241E7D1151001665B8 /* UIButton+PositionLabel.swift in Sources */,
+				4E6B48FB260046B500146ED6 /* ORMMonitorStockObject.swift in Sources */,
 				864A9DCF1E7D0DE1001665B8 /* FPBlurController.swift in Sources */,
 				4E39607B20D894EB007DA535 /* DHAutoKeyboardView.swift in Sources */,
 				4E39607E20D894EB007DA535 /* DHCycleTimerView.swift in Sources */,
-				4EB4706325BE951800A00B3D /* StockPriceListViewController.swift in Sources */,
 				864A9E401E7D1151001665B8 /* FPAlert.swift in Sources */,
 				4EDDF262213D5C0F004AC8E8 /* DHNvrOperationItem.swift in Sources */,
 				864A9E501E7D1151001665B8 /* FPTextField.swift in Sources */,
@@ -1242,34 +1254,31 @@
 				865143801EF76D01003D8995 /* TableHeaderController.swift in Sources */,
 				864A9E341E7D1151001665B8 /* FPFileHelper.swift in Sources */,
 				864A9E1F1E7D1151001665B8 /* NSDictionary+Extension.swift in Sources */,
+				4E6B48F5260046B500146ED6 /* StockConfigViewController.swift in Sources */,
 				4E39607720D894EB007DA535 /* DHPowerGuideViewController.swift in Sources */,
 				864A9E4B1E7D1151001665B8 /* FPRoomSelectView.swift in Sources */,
 				864A9E291E7D1151001665B8 /* UINavigationController+Extenstion.swift in Sources */,
 				4E3EFBEE20D36BB20001A921 /* DHApGuideViewController.swift in Sources */,
 				864A9E1D1E7D1151001665B8 /* FPConstant.swift in Sources */,
 				4E8152522105FE3A00A594F5 /* CityInfo.swift in Sources */,
-				4ECC3D8F25C049D60017E8AF /* ORMMonitorStockObject.swift in Sources */,
-				4EB4706825BEA1AF00A00B3D /* StockPricePresenter.swift in Sources */,
+				4E6B48F9260046B500146ED6 /* StockMonitorDataHelper.swift in Sources */,
 				4E39607820D894EB007DA535 /* DHAddDeviceManager.swift in Sources */,
 				864A9E3E1E7D1151001665B8 /* FPTableViewCell.swift in Sources */,
 				4EF23167210F04470003055A /* REMobileApiResultViewController.swift in Sources */,
 				4E2506A81F0F5FCD003117D7 /* WidgetsModule.swift in Sources */,
 				864A9DD01E7D0DE1001665B8 /* MBHUDController.swift in Sources */,
-				4E533651253988BE00E42D73 /* StockRequest.swift in Sources */,
+				4E6B48F6260046B500146ED6 /* IStockPriceView.swift in Sources */,
 				864A9E461E7D1151001665B8 /* FPNumberKeyboard.swift in Sources */,
 				4E7AF6201F0B292E00B659DD /* FPTabbarContoller.swift in Sources */,
 				864A9DC81E7D0DE1001665B8 /* AVFoundationRootController.swift in Sources */,
 				864A9DCB1E7D0DE1001665B8 /* TransitionController.swift in Sources */,
 				4E5D7EA420E7095F005A8C1E /* DHInputSNViewController.swift in Sources */,
 				4E5D7EA720E70A24005A8C1E /* LCTextField.m in Sources */,
-				4E053FA6257A0F1C004C70DD /* StockConfigViewController.swift in Sources */,
 				864A9E221E7D1151001665B8 /* String+Extension.swift in Sources */,
 				864A9E431E7D1151001665B8 /* FPFliterCell.swift in Sources */,
 				4E0D916120CFBBD40070BACA /* LightButtonController.swift in Sources */,
 				4EA4200D2105D68C007281BD /* FPBaseTableViewController.swift in Sources */,
-				4EB4706A25BEA23E00A00B3D /* IStockPriceView.swift in Sources */,
 				864A9E201E7D1151001665B8 /* NSObject+Extension.swift in Sources */,
-				4E36C6F8253D683A0033E2E4 /* StockInfo.swift in Sources */,
 				864A9DC61E7D0DE1001665B8 /* AudioRecorderController.swift in Sources */,
 				864A9E2C1E7D1151001665B8 /* UIView+Extension.swift in Sources */,
 				864A9E281E7D1151001665B8 /* UIImageView+Store.swift in Sources */,
@@ -1282,14 +1291,13 @@
 				4E980D4124A1B9110009D927 /* IoTMethodListViewController.swift in Sources */,
 				864A9DC71E7D0DE1001665B8 /* AVAudioSessionController.swift in Sources */,
 				864A9E301E7D1151001665B8 /* Configration.swift in Sources */,
-				4ECC3D9125C049D60017E8AF /* ORMStockDBHelper.swift in Sources */,
 				864A9E231E7D1151001665B8 /* UIButton+CountDown.swift in Sources */,
 				4EF23162210EFA6D0003055A /* REServiceUtil.swift in Sources */,
 				4E5D7EAA20E70B38005A8C1E /* UITextField+LeChange.m in Sources */,
 				4E39607620D894EB007DA535 /* DHGuideBaseViewController.swift in Sources */,
 				4EDAAE302570CA9B0083420C /* MonitorWidget.intentdefinition in Sources */,
-				4ECC3D9025C049D60017E8AF /* StockMonitorDataHelper.swift in Sources */,
 				864A9DCA1E7D0DE1001665B8 /* CommonRootController.swift in Sources */,
+				4E6B48F7260046B500146ED6 /* StockViewController.swift in Sources */,
 				865143881EF77B77003D8995 /* UIScrollView+Refresh.swift in Sources */,
 				4EC725BA256F536A00E041E3 /* VKNotificationService.swift in Sources */,
 				4E7CBCC21F2AC6FD000A469D /* SoccerFieldView.swift in Sources */,
@@ -1493,7 +1501,7 @@
 			baseConfigurationReference = 849898BD5A042CF962BB3771 /* Pods-MyTestProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: 斌 江 (N5GXFD43BJ)";
+				CODE_SIGN_IDENTITY = "Apple Development: 波波 户 (G3TPSHRLWT)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = NE9RR4AYQ2;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1512,6 +1520,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/iosrender",
+					"$(SDKROOT)/usr/lib/swift",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zjfunday.myproject;
@@ -1529,7 +1538,7 @@
 			baseConfigurationReference = 5EE5F991111B4F41E0289859 /* Pods-MyTestProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: 斌 江 (N5GXFD43BJ)";
+				CODE_SIGN_IDENTITY = "Apple Development: 波波 户 (G3TPSHRLWT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 斌 江 (N5GXFD43BJ)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = NE9RR4AYQ2;
@@ -1549,6 +1558,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/iosrender",
+					"$(SDKROOT)/usr/lib/swift",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zjfunday.myproject;
 				PRODUCT_NAME = "$(TARGET_NAME)";

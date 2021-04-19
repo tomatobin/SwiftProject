@@ -16,7 +16,7 @@ PODS:
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
-  - SnapKit (5.0.1)
+  - SnapKit (0.1.0)
   - Spring (1.0.6)
 
 DEPENDENCIES:
@@ -32,7 +32,7 @@ DEPENDENCIES:
   - MGJRouter (~> 0.9.3)
   - pop
   - SDWebImage (~> 3.8.1)
-  - SnapKit
+  - SnapKit (= 0.1.0)
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift5`)
 
 SPEC REPOS:
@@ -46,6 +46,7 @@ SPEC REPOS:
     - MGJRouter
     - pop
     - SDWebImage
+  https://yfgitlab.dahuatech.com/PublicCloud/APP-Com/LCPrivateCocoaPods.git:
     - SnapKit
 
 EXTERNAL SOURCES:
@@ -83,9 +84,9 @@ SPEC CHECKSUMS:
   MGJRouter: f65821e2aeffc8f9e84b254c8f1c0dd80f048aa9
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
-  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SnapKit: ec11d3f5964694889f34c39c1d38459b3238f201
   Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
 
-PODFILE CHECKSUM: 35e49b36ffb3069fa393a9fa0700f3a92ff28298
+PODFILE CHECKSUM: 77af5b585bb8be38e5feb7aeca64ffb6717654a6
 
 COCOAPODS: 1.9.3

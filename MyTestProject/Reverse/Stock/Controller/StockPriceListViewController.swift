@@ -24,6 +24,8 @@ class StockPriceListViewController: UIViewController,IStockPriceView,UITableView
         setupTableView()
         initNaviRightItem()
         updateShowUI(show: showStockInfo)
+        
+        DHBackgroundRunner.shared.openRunner = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -34,6 +36,11 @@ class StockPriceListViewController: UIViewController,IStockPriceView,UITableView
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         presenter?.stopTimer()
+    }
+    
+    deinit {
+        DHBackgroundRunner.shared.openRunner = false
+        print("🍎🍎🍎 \(NSStringFromClass(self.classForCoder)):: deinit :)...")
     }
     
     func setupTableView() {

@@ -16,9 +16,9 @@ class FPBlurController: FPBaseController {
         self.addTapGesture()
         
         //Test Aescipher
-        let pwd = "123456"
+        let pwd = "q12345678"
         let md5 = pwd.fp_md5()
-        let aes = AESCipher.encrypt(content: md5, withKey: "qwertyuiop")
+        let aes = AESCipher.encrypt(content: pwd, withKey: "8d22415838638cbe579b1017c6f1738bc453b569ef38a23ddc08d56d357904a9")
         print("AES Result:\(aes)")
     }
     

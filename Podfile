@@ -1,4 +1,5 @@
-source 'https://github.com/CocoaPods/Specs.git'
+#source 'https://github.com/CocoaPods/Specs.git'
+source 'https://yfgitlab.dahuatech.com/PublicCloud/APP-Com/LCPrivateCocoaPods.git'
 use_frameworks!
 
 
@@ -29,7 +30,7 @@ target 'MyTestProject' do
   pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift5'
 #  pod 'RAMAnimatedTabBarController', '~> 3.5.0'
   pod 'Alamofire', '~> 4.7.3'
-  pod 'SnapKit'
+  pod 'SnapKit', '= 0.1.0' #指定Swift5.3.2版本
   
   pod 'MBProgressHUD', '~> 0.9.2'
   pod 'SDWebImage', '~> 3.8.1'

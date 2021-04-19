@@ -1,0 +1,6 @@
+framework module LCLogManager {
+  umbrella header "LCLogManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

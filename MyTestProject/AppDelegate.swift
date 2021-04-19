@@ -9,6 +9,8 @@
 import UIKit
 import BeeHive
 import LCLogManager
+import CallKit
+import CocoaSecurity
 
 #if DEBUG
 import DoraemonKit
@@ -30,8 +32,23 @@ class AppDelegate: BHAppDelegate {
         self.initWeexSDK()
         self.initBeeHive(application: application, launchOptions: launchOptions)
         self.initDoraemonKit()
-        
+        self.setupVoIP()
         super.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+//        let sha256 = CocoaSecurity.sha256("1imou-lechangeBG202102220001")
+//        let decoder = CocoaSecurityDecoder()
+//
+//        let contentData = "8d22415838638cbe579b1017c6f1738bc453b569ef38a23ddc08d56d357904a9".fp_hexData()
+//        let contentStr = String(data: contentData, encoding: String.Encoding.ascii)
+//        print("Contentstr:\(contentStr)")
+//
+//        let ivData = decoder.hex("00000000000000000000000000000000")
+//
+//        let aesRest = CocoaSecurity.aesEncrypt("q12345678", key: sha256!.data, iv: ivData)
+////        "q12345678".jm_encryptUseDes(key: "8d22415838638cbe579b1017c6f1738bc453b569ef38a23ddc08d56d357904a9", iv: nil)
+////
+////        let result = CocoaSecurity.aesEncrypt("q12345678", hexKey: "8d22415838638cbe579b1017c6f1738bc453b569ef38a23ddc08d56d357904a9", hexIv: "0000000000000000")
+        
         return true
     }
 
@@ -73,7 +90,7 @@ class AppDelegate: BHAppDelegate {
     
     //MARK: - Background play
     func registerBackgroundPlay() {
-        DHBackgroundRunner.shared.openRunner = true
+        //DHBackgroundRunner.shared.openRunner = true
         //DHBackgroundRunnerPlus.shared.openRunner = true
     }
     
@@ -118,6 +135,21 @@ class AppDelegate: BHAppDelegate {
         #if DEBUG
         DoraemonManager.shareInstance().install(withPid: "7a1157650580d4b3c0acdbfba439e243")
         #endif
+    }
+    
+    //MARK: VoIP
+    func setupVoIP() {
+        let configuration = CXProviderConfiguration(localizedName: "CallKit Quickstart")
+        configuration.maximumCallGroups = 1
+        configuration.maximumCallsPerCallGroup = 1
+        configuration.supportsVideo = true
+        configuration.supportedHandleTypes = [.generic, .phoneNumber, .emailAddress]
+        
+        if let callKitIcon = UIImage(named: "tabbar_cydia") {
+            configuration.iconTemplateImageData = callKitIcon.pngData()
+        }
+        
+        //let callKitProvider = CXProvider(configuration: configuration)
     }
 }
 

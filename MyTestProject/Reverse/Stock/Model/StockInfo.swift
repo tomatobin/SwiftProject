@@ -27,7 +27,7 @@ class StockInfo: NSObject {
     var openLog: Bool = true
     
     /// 是否使用颜色标记
-    var useColor: Bool = false
+    var useColor: Bool = true
 
     var name: String = ""
     
@@ -142,7 +142,12 @@ class StockInfo: NSObject {
             
             let prefix = comparePrice > 0 ? "+" : ""
             localizedComparePricePercent = String(format: "\(prefixColor)\(prefix)%0.2f%%", comparePercent * 100)
-            localizedComparePrice = String(format: "\(prefixColor)\(prefix)%0.2f", comparePrice)
+            
+            if current < 5.0 {
+                localizedComparePrice = String(format: "\(prefixColor)\(prefix)%0.3f", comparePrice)
+            } else {
+                localizedComparePrice = String(format: "\(prefixColor)\(prefix)%0.2f", comparePrice)
+            }
         }
     }
 }

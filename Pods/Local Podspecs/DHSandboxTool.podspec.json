@@ -1,0 +1,30 @@
+{
+  "name": "DHSandboxTool",
+  "version": "1.0.0",
+  "summary": "A short description of DHSandboxTool.",
+  "description": "1.1.0\n创建版本\n*************************",
+  "homepage": "http://EXAMPLE/DHSandboxTool",
+  "license": "MIT",
+  "authors": {
+    "tomatobin": "tomatobin@163.com"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source": {
+    "svn": "http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/CommonModule/iCommonModule/ToolSet/Widgets/Trunk/DHSandboxTool"
+  },
+  "source_files": [
+    "DHSandboxTool",
+    "DHSandboxTool/*.{swift}"
+  ],
+  "public_header_files": "DHSandboxTool/DHSandboxTool.h",
+  "static_framework": true,
+  "frameworks": [
+    "QuickLook",
+    "Foundation"
+  ],
+  "resources": "DHSandboxTool/DHSandboxTool.bundle",
+  "swift_versions": "5.0",
+  "swift_version": "5.0"
+}

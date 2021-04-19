@@ -1,0 +1,30 @@
+{
+  "name": "LCLogManager",
+  "version": "0.0.1",
+  "summary": "A short description of LCLogManager.",
+  "description": "jiangbin 测试利用SVN创建私用库",
+  "homepage": "https://www.dahuatech.com",
+  "license": "MIT",
+  "authors": {
+    "21589": "jiangbin@dahuatech.com"
+  },
+  "source": {
+    "svn": "http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/CommonModule/iCommonModule/ToolSet/Utility/Trunk/LCLogManager"
+  },
+  "source_files": [
+    "LCLogManager",
+    "LCLogManager/**/*.{h,m}"
+  ],
+  "public_header_files": "LCLogManager/**/*.h",
+  "dependencies": {
+    "DHDateFormatter": [
+
+    ]
+  },
+  "platforms": {
+    "osx": null,
+    "ios": null,
+    "tvos": null,
+    "watchos": null
+  }
+}

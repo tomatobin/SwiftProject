@@ -1,0 +1,25 @@
+{
+  "name": "DHDateFormatter",
+  "version": "1.0.2",
+  "summary": "A short description of DHDateFormatter.",
+  "description": "日期转换不跟随系统，默认公历\n1.0.1 ios13适配12小时制转换问题\n==================================\n1.0.2 增加License\n==================================",
+  "homepage": "https://www.dahuatech.com",
+  "license": "MIT",
+  "authors": {
+    "yaojiajun": "yao_jiajun1@dahuatech.com"
+  },
+  "source": {
+    "svn": "http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/CommonModule/iCommonModule/ToolSet/Utility/Trunk/DHDateFormatter"
+  },
+  "source_files": [
+    "DHDateFormatter",
+    "DHDateFormatter/**/*.{h,m}"
+  ],
+  "public_header_files": "DHDateFormatter/**/*.h",
+  "platforms": {
+    "osx": null,
+    "ios": null,
+    "tvos": null,
+    "watchos": null
+  }
+}

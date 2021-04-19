@@ -51,9 +51,9 @@ class StockConfigViewController: UIViewController {
     //MARK: - User Defalut Operation
     func loadConfig() {
         codeTxf.text = StockConfigManager.sharedInstance.code
-        minTxf.text = String(format: "%0.2f", StockConfigManager.sharedInstance.minPrice)
-        maxTxf.text = String(format: "%0.2f", StockConfigManager.sharedInstance.maxPrice)
-        timeTxf.text = String(format: "%0.2f", StockConfigManager.sharedInstance.time)
+        minTxf.text = String(format: "%0.3f", StockConfigManager.sharedInstance.minPrice)
+        maxTxf.text = String(format: "%0.3f", StockConfigManager.sharedInstance.maxPrice)
+        timeTxf.text = String(format: "%0.3f", StockConfigManager.sharedInstance.time)
     }
     
     func saveConfig() {

@@ -1,0 +1,27 @@
+{
+  "name": "DHSanboxTool",
+  "version": "1.0.0",
+  "summary": "A short description of DHSanboxTool.",
+  "description": "1.1.0\n创建版本\n*************************",
+  "homepage": "http://EXAMPLE/DHSanboxTool",
+  "license": "MIT",
+  "authors": {
+    "tomatobin": "tomatobin@163.com"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source": {
+    "svn": "http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/iLeChange/Support/DHPayModule/DHPayModule"
+  },
+  "source_files": [
+    "DHSanboxTool",
+    "DHSanboxTool/*.{swift}"
+  ],
+  "public_header_files": "DHSanboxTool/DHSanboxTool.h",
+  "frameworks": "Foundation",
+  "static_framework": true,
+  "resources": "DHSanboxTool/DHSanboxTool.bundle",
+  "swift_versions": "4.2",
+  "swift_version": "4.2"
+}

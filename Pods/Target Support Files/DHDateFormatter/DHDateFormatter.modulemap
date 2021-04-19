@@ -1,0 +1,6 @@
+framework module DHDateFormatter {
+  umbrella header "DHDateFormatter-umbrella.h"
+
+  export *
+  module * { export * }
+}

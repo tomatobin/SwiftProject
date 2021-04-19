@@ -126,14 +126,18 @@ class StockViewController: UIViewController {
             let monitorMinPrice = StockConfigManager.sharedInstance.minPrice
             let monitorMaxPrice = StockConfigManager.sharedInstance.maxPrice
             
+            var content = ""
             reverse.forEach { (stockInfo) in
                 self?.text = stockInfo.description + "\n" + (self?.text ?? "")
                 let currentTime = Date().timeIntervalSince1970
+                if stockInfo.code.contains("sh000001") {
+                    content = stockInfo.currentPrice
+                }
                 
                 let price = Double(stockInfo.currentPrice) ?? 0
                 if self?.isInTipTime() == true, monitorCode.count > 0, stockInfo.code.contains(monitorCode)  { //
                     if price < monitorMinPrice || price > monitorMaxPrice {
-                        let content = "\(stockInfo.time) \(stockInfo.currentPrice)"
+                        content = "\(stockInfo.time) \(stockInfo.currentPrice) \(content)"
                         VKNotificationService.sharedInstance.localNotificationRequest(title: "Attention...", body: content, logo: "")
                         self?.lastNotifyTime = currentTime
                     }
