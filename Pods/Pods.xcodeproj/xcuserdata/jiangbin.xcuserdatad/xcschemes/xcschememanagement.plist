@@ -8,218 +8,84 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>BeeHive.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>10</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>BeeHive.xcscheme_^#shared#^_</key>
+		<key>CocoaSecurity.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>15</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>CocoaSecurity.xcscheme_^#shared#^_</key>
+		<key>DHDateFormatter.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>13</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>DHDateFormatter.xcscheme_^#shared#^_</key>
+		<key>DHSandboxTool.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>17</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>DHSandboxTool.xcscheme_^#shared#^_</key>
+		<key>DoraemonKit-DoraemonKit.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>14</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>DoraemonKit-DoraemonKit.xcscheme_^#shared#^_</key>
+		<key>DoraemonKit.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>16</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>DoraemonKit.xcscheme_^#shared#^_</key>
+		<key>LC-SnapKit.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>12</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>LCLogManager.xcscheme_^#shared#^_</key>
+		<key>LCLogManager.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>9</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>MGJRouter.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>11</integer>
-		</dict>
-		<key>MGJRouter.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>11</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Masonry.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>Pods-MyTestProject.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
-		</dict>
-		<key>SnapKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>7</integer>
-		</dict>
-		<key>SocketRocket.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>8</integer>
 		</dict>
 		<key>Spring.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>12</integer>
-		</dict>
-		<key>Spring.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>10</integer>
-		</dict>
-		<key>SwiftyJSON.xcscheme</key>
-		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>8</integer>
 		</dict>
 		<key>pop.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>1D7CB33592399029BE3E09E0872BA087</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>242450A1E4612CEABD129AB8BBF8067E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>266EEAB96EC2221A977E533E792D856E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>309E81CD9959923FAEDC0C8A00DFC630</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>37D1EEDC98AF35396CA5F29D19AEBE88</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3B5070A49807CCD798E60E39C0D4163D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3DDBA9E6206A2A446C4B78EBFED98511</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3FA2B5B5242F2E0A55703F74F9E90554</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>61C6B597890BB65184830BA50CB1648A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6B1714E816AE794962516E2ECBB40A5A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8104D6C2BE26F1F51C05CE549F4997B3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8A578B1461229AA6ED3A10AF5DBC2F23</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B0497FB516B55EF3781080F4718F9DA8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D52144DE9D7255DE912490FF5A806573</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DB3B0A4429AE7E28EB7F525B914E07AF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E6BDE64D546139CA380FAABAAABF685D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F2A62C105999BBDF55FA41FE0A99BD59</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>

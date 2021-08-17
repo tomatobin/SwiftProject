@@ -7,6 +7,7 @@ PODS:
   - DoraemonKit (3.0.2):
     - DoraemonKit/Core (= 3.0.2)
   - DoraemonKit/Core (3.0.2)
+  - LC-SnapKit (5.4.0)
   - LCLogManager (0.0.1):
     - DHDateFormatter
   - Masonry (0.6.3)
@@ -16,7 +17,6 @@ PODS:
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
-  - SnapKit (0.1.0)
   - Spring (1.0.6)
 
 DEPENDENCIES:
@@ -26,13 +26,13 @@ DEPENDENCIES:
   - DHDateFormatter (from `http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/CommonModule/iCommonModule/ToolSet/Utility/Trunk/DHDateFormatter`)
   - DHSandboxTool (from `./Depend/DHSandboxTool`)
   - DoraemonKit (~> 3.0.2)
+  - LC-SnapKit (= 5.4)
   - LCLogManager (from `http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/CommonModule/iCommonModule/ToolSet/Utility/Trunk/LCLogManager`)
   - Masonry (= 0.6.3)
   - MBProgressHUD (~> 0.9.2)
   - MGJRouter (~> 0.9.3)
   - pop
   - SDWebImage (~> 3.8.1)
-  - SnapKit (= 0.1.0)
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift5`)
 
 SPEC REPOS:
@@ -47,7 +47,7 @@ SPEC REPOS:
     - pop
     - SDWebImage
   https://yfgitlab.dahuatech.com/PublicCloud/APP-Com/LCPrivateCocoaPods.git:
-    - SnapKit
+    - LC-SnapKit
 
 EXTERNAL SOURCES:
   DHDateFormatter:
@@ -78,15 +78,15 @@ SPEC CHECKSUMS:
   DHDateFormatter: 082cad648ae6b869736c892ee1f1ea48a4e0ea4f
   DHSandboxTool: 14c746fbbffe709c1c50585a3af4030d8fed64b1
   DoraemonKit: 8587e7a9aae0773dfc96707d2369d89d2a21b3d2
+  LC-SnapKit: 552e8e2fbacf8c8ef5a7a99b72ba9187397854c4
   LCLogManager: 1a44a4b94ef7419614294ccac338efcc40411f5d
   Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MGJRouter: f65821e2aeffc8f9e84b254c8f1c0dd80f048aa9
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
-  SnapKit: ec11d3f5964694889f34c39c1d38459b3238f201
   Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
 
-PODFILE CHECKSUM: 77af5b585bb8be38e5feb7aeca64ffb6717654a6
+PODFILE CHECKSUM: 0f68742c4429a6442aad297049981ab3e48c84e5
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1

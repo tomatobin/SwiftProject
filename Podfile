@@ -30,7 +30,6 @@ target 'MyTestProject' do
   pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift5'
 #  pod 'RAMAnimatedTabBarController', '~> 3.5.0'
   pod 'Alamofire', '~> 4.7.3'
-  pod 'SnapKit', '= 0.1.0' #指定Swift5.3.2版本
   
   pod 'MBProgressHUD', '~> 0.9.2'
   pod 'SDWebImage', '~> 3.8.1'
@@ -57,5 +56,7 @@ target 'MyTestProject' do
   
   #本地Pods模块
   pod 'DHSandboxTool', :path => './Depend/DHSandboxTool'
+  
+  pod 'LC-SnapKit', '= 5.4'
   
 end

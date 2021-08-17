@@ -532,14 +532,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		4E6B48E5260046B500146ED6 /* Stock */ = {
+		4E6B48E5260046B500146ED6 /* sk */ = {
 			isa = PBXGroup;
 			children = (
 				4E6B48E6260046B500146ED6 /* Presenter */,
 				4E6B48E8260046B500146ED6 /* Controller */,
 				4E6B48ED260046B500146ED6 /* Model */,
 			);
-			path = Stock;
+			path = sk;
 			sourceTree = "<group>";
 		};
 		4E6B48E6260046B500146ED6 /* Presenter */ = {
@@ -842,7 +842,7 @@
 		864A9DC31E7D0DE1001665B8 /* Reverse */ = {
 			isa = PBXGroup;
 			children = (
-				4E6B48E5260046B500146ED6 /* Stock */,
+				4E6B48E5260046B500146ED6 /* sk */,
 				4E5DFD7624B412B8009DD091 /* Imou */,
 				4E980D3E24A1B8E00009D927 /* IOT */,
 				4EF2315F210EFA6D0003055A /* MobileApp */,
@@ -1162,12 +1162,12 @@
 				"${BUILT_PRODUCTS_DIR}/CocoaSecurity/CocoaSecurity.framework",
 				"${BUILT_PRODUCTS_DIR}/DHDateFormatter/DHDateFormatter.framework",
 				"${BUILT_PRODUCTS_DIR}/DoraemonKit/DoraemonKit.framework",
+				"${PODS_ROOT}/LC-SnapKit/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/LCLogManager/LCLogManager.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MGJRouter/MGJRouter.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${PODS_ROOT}/SnapKit/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
@@ -1178,12 +1178,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaSecurity.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DHDateFormatter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoraemonKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LCLogManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MGJRouter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);

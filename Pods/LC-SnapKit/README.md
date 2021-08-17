@@ -18,7 +18,8 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 source 'https://yfgitlab.dahuatech.com/PublicCloud/APP-Com/LCPrivateCocoaPods.git'
-pod 'SnapKit'
+#5.3.2 表示使用Swift 5.3.2编译的版本
+pod 'SnapKit', '= 5.3.2'
 ```
 
 ## Author
