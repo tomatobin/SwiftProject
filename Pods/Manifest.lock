@@ -2,38 +2,45 @@ PODS:
   - Alamofire (4.7.3)
   - BeeHive (1.5.1)
   - CocoaSecurity (1.2.4)
-  - DHDateFormatter (1.0.2)
+  - DHDateFormatter (1.0.0)
   - DHSandboxTool (1.0.0)
   - DoraemonKit (3.0.2):
     - DoraemonKit/Core (= 3.0.2)
   - DoraemonKit/Core (3.0.2)
-  - LC-SnapKit (5.4.0)
-  - LCLogManager (0.0.1):
+  - LCLogManager (1.0.0):
     - DHDateFormatter
   - Masonry (0.6.3)
   - MBProgressHUD (0.9.2)
   - MGJRouter (0.9.3)
+  - OptimizedSQLCipher (1.2.2)
   - pop (1.0.9)
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
+  - SnapKit (5.0.1)
   - Spring (1.0.6)
+  - SQLiteRepair (1.2.2):
+    - OptimizedSQLCipher
+  - WCDBSwift (1.0.2):
+    - OptimizedSQLCipher
+    - SQLiteRepair
 
 DEPENDENCIES:
   - Alamofire (~> 4.7.3)
   - BeeHive (~> 1.5.1)
   - CocoaSecurity (~> 1.2.4)
-  - DHDateFormatter (from `http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/CommonModule/iCommonModule/ToolSet/Utility/Trunk/DHDateFormatter`)
-  - DHSandboxTool (from `./Depend/DHSandboxTool`)
+  - DHDateFormatter
+  - DHSandboxTool
   - DoraemonKit (~> 3.0.2)
-  - LC-SnapKit (= 5.4)
-  - LCLogManager (from `http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/CommonModule/iCommonModule/ToolSet/Utility/Trunk/LCLogManager`)
+  - LCLogManager
   - Masonry (= 0.6.3)
   - MBProgressHUD (~> 0.9.2)
   - MGJRouter (~> 0.9.3)
   - pop
   - SDWebImage (~> 3.8.1)
+  - SnapKit (~> 5.0.1)
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift5`)
+  - WCDBSwift (~> 1.0.2)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -44,29 +51,23 @@ SPEC REPOS:
     - Masonry
     - MBProgressHUD
     - MGJRouter
+    - OptimizedSQLCipher
     - pop
     - SDWebImage
+    - SnapKit
+    - SQLiteRepair
+    - WCDBSwift
   https://yfgitlab.dahuatech.com/PublicCloud/APP-Com/LCPrivateCocoaPods.git:
-    - LC-SnapKit
+    - DHDateFormatter
+    - DHSandboxTool
+    - LCLogManager
 
 EXTERNAL SOURCES:
-  DHDateFormatter:
-    :svn: http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/CommonModule/iCommonModule/ToolSet/Utility/Trunk/DHDateFormatter
-  DHSandboxTool:
-    :path: "./Depend/DHSandboxTool"
-  LCLogManager:
-    :svn: http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/CommonModule/iCommonModule/ToolSet/Utility/Trunk/LCLogManager
   Spring:
     :branch: swift5
     :git: https://github.com/MengTo/Spring.git
 
 CHECKOUT OPTIONS:
-  DHDateFormatter:
-    :revision: '184985'
-    :svn: http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/CommonModule/iCommonModule/ToolSet/Utility/Trunk/DHDateFormatter
-  LCLogManager:
-    :revision: '184985'
-    :svn: http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/CommonModule/iCommonModule/ToolSet/Utility/Trunk/LCLogManager
   Spring:
     :commit: 459b979c4335d4178fb05771019f6dda916f6998
     :git: https://github.com/MengTo/Spring.git
@@ -75,18 +76,21 @@ SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   BeeHive: b135a33b3519814ec5d117318d205e10c997450f
   CocoaSecurity: d288a6f87e0f363823d2cb83e753814a6944f71a
-  DHDateFormatter: 082cad648ae6b869736c892ee1f1ea48a4e0ea4f
-  DHSandboxTool: 14c746fbbffe709c1c50585a3af4030d8fed64b1
+  DHDateFormatter: 785210200c39280aa42a6e1f9605e6d9b42acc44
+  DHSandboxTool: e0defa8b7860dfe772b3504395f920f96fce2329
   DoraemonKit: 8587e7a9aae0773dfc96707d2369d89d2a21b3d2
-  LC-SnapKit: 552e8e2fbacf8c8ef5a7a99b72ba9187397854c4
-  LCLogManager: 1a44a4b94ef7419614294ccac338efcc40411f5d
+  LCLogManager: 5e32a45456d31ab050d35bf720173a0f4d1ee992
   Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MGJRouter: f65821e2aeffc8f9e84b254c8f1c0dd80f048aa9
+  OptimizedSQLCipher: 92a1bf5cc94139e1da49de9c883ff9891bcd2a37
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
+  SQLiteRepair: 65ac4472667ac8cdeb93c3765f2fcae4dd259204
+  WCDBSwift: 6687dc2d4bebce2b237017ca367730f5f8409e67
 
-PODFILE CHECKSUM: 0f68742c4429a6442aad297049981ab3e48c84e5
+PODFILE CHECKSUM: 56b743eb454f4c758f56f6963459455d7faf8c8a
 
 COCOAPODS: 1.10.1

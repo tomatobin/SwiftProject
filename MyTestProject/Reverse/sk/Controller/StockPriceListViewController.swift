@@ -118,8 +118,26 @@ class StockPirceTableViewCell: UITableViewCell {
     @IBOutlet weak var diffPriceLabel: UILabel!
     @IBOutlet weak var detailPrice: UILabel!
     
+    var showWithColor: Bool = true
+    
     static func identifier() -> String {
         return "StockPirceTableViewCell"
+    }
+    
+    func setDefaultConfig() {
+#if TARGET_IPHONE_SIMULATOR
+        showWithColor = false
+#endif
+    }
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setDefaultConfig()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setDefaultConfig()
     }
     
     func updateCellByStock(stock: StockInfo) {
@@ -129,11 +147,17 @@ class StockPirceTableViewCell: UITableViewCell {
         diffPriceLabel.text = stock.localizedComparePricePercent + " " + stock.localizedComparePrice
         detailPrice.text = "开:\(stock.openPrice) 昨:\(stock.yesterdayClosePrice) \n低:\(stock.minPrice) 高:\(stock.maxPrice) 均:\(stock.averagePrice)"
         
-        let stateImagename = stock.comparePrice < 0 ? "stock_drop" : "stock_rise"
-        stateImageView?.image = UIImage(named: stateImagename)
-        
-        let color = stock.comparePrice < 0 ? UIColor.systemGreen : UIColor.systemRed
-        currentPriceLabel.textColor = color
-        diffPriceLabel.textColor = color
+        if showWithColor {
+            let stateImagename = stock.comparePrice < 0 ? "stock_drop" : "stock_rise"
+            stateImageView?.image = UIImage(named: stateImagename)
+            
+            let color = stock.comparePrice < 0 ? UIColor.systemGreen : UIColor.systemRed
+            currentPriceLabel.textColor = color
+            diffPriceLabel.textColor = color
+        } else {
+            stateImageView.image = nil
+            currentPriceLabel.textColor = .black
+            diffPriceLabel.textColor = .black
+        }
     }
 }

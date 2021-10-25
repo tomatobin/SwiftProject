@@ -44,4 +44,6 @@
 #import "LCTextField.h"
 #import "UINavigationBar+Awesome.h"
 
+//#import <TBScanSDK/TBScanSDK.h>
+
 #endif /* BridgingHeader_h */

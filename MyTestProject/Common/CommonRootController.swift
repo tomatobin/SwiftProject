@@ -24,7 +24,8 @@ class CommonRootController: FPBaseController,UITableViewDelegate {
                 "Transition": "PushToTransition",
 				"Widgets": "PushToWidgets",
 				"MVP": "PushToMVP",
-                "Sandbox": "PushToSandbox"]
+                "Sandbox": "PushToSandbox",
+                "mPaaS扫一扫": "PushToScan"]
         self.configureTableView()
     }
 

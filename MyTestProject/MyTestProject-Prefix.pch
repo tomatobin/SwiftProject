@@ -1,0 +1,14 @@
+//
+//  MyTestProject-Prefix.pch
+//  MyTestProject
+//
+//  Created by jiangbin on 2021/09/15.
+
+// MPAAS HEADERS BEGIN
+// This part is maintained by MPaaS plugin automatically. 
+#ifdef __OBJC__
+
+//#import "MyTestProject-mPaaS-Headers.h"
+
+#endif
+// MPAAS HEADERS END

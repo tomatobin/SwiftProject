@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R29-ay-z9m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R29-ay-z9m">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -43,6 +43,7 @@
                         <segue destination="xNV-DV-qjF" kind="show" identifier="PushToWidgets" id="drS-Cr-gY4"/>
                         <segue destination="UCY-gh-ocH" kind="show" identifier="PushToMVP" id="bG0-WD-oEI"/>
                         <segue destination="bLb-Nl-V4P" kind="show" identifier="PushToSandbox" id="T9R-SG-2UB"/>
+                        <segue destination="KIx-tK-zfG" kind="show" identifier="PushToScan" id="4sg-za-11f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Um2-5c-6CN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -447,6 +448,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cx7-Zo-hkN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2924" y="304"/>
+        </scene>
+        <!--PaaS Scan View Controller-->
+        <scene sceneID="zJj-Au-UgF">
+            <objects>
+                <viewController id="KIx-tK-zfG" customClass="MPaaSScanViewController" customModule="MyTestProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X8z-ae-6xq"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bsm-yK-f7S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YkA-DP-sHf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="454-YN-jsV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QDu-jH-9ET" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5607" y="-396"/>
         </scene>
         <!--Sand Box View Controller-->
         <scene sceneID="dq0-tA-NeH">

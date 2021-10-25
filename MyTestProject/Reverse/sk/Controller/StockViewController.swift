@@ -41,7 +41,7 @@ class StockViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         timerInterval = TimeInterval(StockConfigManager.sharedInstance.time * 1_000)
-        startTimer()
+        //startTimer()
     }
     
     override func viewDidDisappear(_ animated: Bool) {

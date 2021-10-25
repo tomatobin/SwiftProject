@@ -1,12 +1,15 @@
-#source 'https://github.com/CocoaPods/Specs.git'
+## mPaaS Pods Begin
+#plugin "cocoapods-mPaaS"
+#source "https://code.aliyun.com/mpaas-public/podspecs.git"
+#mPaaS_baseline '10.1.32'  # 请将 x.x.x 替换成真实基线版本
+#mPaaS_version_code 20   # This line is maintained by MPaaS plugin automatically. Please don't modify.
+## mPaaS Pods End
+# ---------------------------------------------------------------------
+source 'https://github.com/CocoaPods/Specs.git'
 source 'https://yfgitlab.dahuatech.com/PublicCloud/APP-Com/LCPrivateCocoaPods.git'
+source "https://github.com/TuyaInc/TuyaPublicSpecs.git"
+
 use_frameworks!
-
-
-##SVN自定义组件路径
-utility_path = 'http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/CommonModule/iCommonModule/ToolSet/Utility/Trunk/'
-widgets_path = 'http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/CommonModule/iCommonModule/ToolSet/Widgets/Trunk/'
-commmon_module_path = 'http://10.6.5.2/svn/MobileMonitor/MobileDirectMonitor/MobileCommonModule/Trunk/ios/'
 
 target 'MyTestProject' do
   
@@ -51,12 +54,20 @@ target 'MyTestProject' do
 #  pod 'ShareSDK3/ShareSDKPlatforms/SinaWeibo', :git => 'https://git.oschina.net/MobClub/ShareSDK-for-iOS.git'
 #  pod 'ShareSDK3/ShareSDKPlatforms/WeChat', :git => 'https://git.oschina.net/MobClub/ShareSDK-for-iOS.git'
 
-  pod 'DHDateFormatter', :svn => utility_path + 'DHDateFormatter'
-  pod 'LCLogManager', :svn => utility_path + 'LCLogManager'
+  pod 'DHDateFormatter'
+  pod 'LCLogManager'
   
   #本地Pods模块
-  pod 'DHSandboxTool', :path => './Depend/DHSandboxTool'
+  pod 'DHSandboxTool'
   
-  pod 'LC-SnapKit', '= 5.4'
+#  pod 'LC-SnapKit', '= 5.4'
+  pod 'WCDBSwift', '~> 1.0.2'
+  pod 'SnapKit', '~> 5.0.1'
+  
+  
+  #阿里mPaaS
+  #mPaaS_pod "mPaaS_ScanCode"
+  
+#  pod 'TuyaSmartActivatorBizBundle'
   
 end

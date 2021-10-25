@@ -26,6 +26,8 @@ class AppDelegate: BHAppDelegate {
     
     override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        window?.backgroundColor = UIColor.white
+        
         self.registerBackgroundPlay()
         self.registerNotification()
         self.initLog()
@@ -86,6 +88,15 @@ class AppDelegate: BHAppDelegate {
 
     override func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    override func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let deviceTokenStr = deviceToken.map { String(format: "%02.2hhx", arguments: [$0]) }.joined()
+        print("🍎🍎🍎 \(#function):: Normal push register succeed: \(deviceTokenStr)")
+    }
+    
+    override func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("❌❌❌ \(Date()) \(NSStringFromClass(self.classForCoder))::\(error)")
     }
     
     //MARK: - Background play

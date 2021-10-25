@@ -10,7 +10,7 @@ import UIKit
 
 class ImouMethodListViewController: FPBaseTableViewController {
 
-    var defaultHost: String = "http://func.lechange.cn:80" //"http://app-testing-sz.easy4ipcloud.com
+    var defaultHost: String = "https://app-testing-sz.easy4ipcloud.com:443" //"http://app-testing-sz.easy4ipcloud.com
     var function: String = ""
     var jsonData: Data?
     var headers: [String: String] = [String : String]()
