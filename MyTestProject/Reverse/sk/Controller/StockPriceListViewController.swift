@@ -12,6 +12,7 @@ class StockPriceListViewController: UIViewController,IStockPriceView,UITableView
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var showButton: UIButton!
+    @IBOutlet weak var colorButton: UIButton!
     
     var presenter: IStockPricePresenter!
     var showStockInfo: Bool = false
@@ -108,6 +109,10 @@ class StockPriceListViewController: UIViewController,IStockPriceView,UITableView
         let title = show ? "Hide" : "Show"
         showButton.setTitle(title, for: .normal)
     }
+    
+    @IBAction func onColorAction(_ sender: Any) {
+        presenter.changeColor()
+    }
 }
 
 class StockPirceTableViewCell: UITableViewCell {
@@ -118,29 +123,19 @@ class StockPirceTableViewCell: UITableViewCell {
     @IBOutlet weak var diffPriceLabel: UILabel!
     @IBOutlet weak var detailPrice: UILabel!
     
-    var showWithColor: Bool = true
-    
     static func identifier() -> String {
         return "StockPirceTableViewCell"
     }
     
-    func setDefaultConfig() {
-#if TARGET_IPHONE_SIMULATOR
-        showWithColor = false
-#endif
-    }
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setDefaultConfig()
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setDefaultConfig()
     }
     
-    func updateCellByStock(stock: StockInfo) {
+    func updateCellByStock(stock: StockInfo, showWithColor: Bool = false) {
         nameLabel.text = stock.name
         codeLabel.text = stock.code
         currentPriceLabel.text = stock.currentPrice

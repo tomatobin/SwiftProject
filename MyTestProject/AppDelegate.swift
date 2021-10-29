@@ -115,9 +115,9 @@ class AppDelegate: BHAppDelegate {
         //直连调试模式下不开启日志
   
         //不开启日志，即时写会有性能损耗
-//        LCLogManager.shareInstance()?.startFileLog()
-//        LCLogManager.shareInstance()?.maxLogSize = 10
-//        LCLogManager.shareInstance()?.isCycle = true
+        LCLogManager.shareInstance()?.startFileLog()
+        LCLogManager.shareInstance()?.maxLogSize = 10
+        LCLogManager.shareInstance()?.isCycle = true
     }
 
     //MARK: WeexSDK

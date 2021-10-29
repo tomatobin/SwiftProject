@@ -6,6 +6,16 @@
 //  Copyright © 2016年 iblue. All rights reserved.
 //
 
+struct Platform {
+    static let isSimulator: Bool = {
+        if TARGET_OS_SIMULATOR == 1 {
+            return true
+        }
+        
+        return false
+    }()
+}
+
 extension UIDevice {
     
     /// 手机型号

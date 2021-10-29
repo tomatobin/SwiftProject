@@ -17,6 +17,8 @@ protocol IStockPricePresenter: class {
     func numberOfRowsInSection(section: Int) -> Int
     
     func updateCell(cell: UITableViewCell, indexPath: IndexPath)
+    
+    func changeColor()
 }
 
 class StockPricePresenter: NSObject,IStockPricePresenter {
@@ -40,10 +42,14 @@ class StockPricePresenter: NSObject,IStockPricePresenter {
     
     var logInfo: String? = ""
     
+    var showColor: Bool = true
+    
     required init(view: IStockPriceView) {
         super.init()
         priceView = view
         loadStockList()
+        
+        showColor = Platform.isSimulator ? false : true
     }
     
     //MARK: - Timer
@@ -61,6 +67,12 @@ class StockPricePresenter: NSObject,IStockPricePresenter {
     
     func stopTimer() {
         timer?.cancel()
+    }
+    
+    //MARK: - Color
+    func changeColor() {
+        showColor = !showColor
+        priceView?.updateTableView()
     }
     
     //MARK: - Request
@@ -125,7 +137,7 @@ class StockPricePresenter: NSObject,IStockPricePresenter {
         }
         
         let stock = stockInfoList[indexPath.row]
-        priceCell.updateCellByStock(stock: stock)
+        priceCell.updateCellByStock(stock: stock, showWithColor: showColor)
     }
     
     //MARK: - Private
