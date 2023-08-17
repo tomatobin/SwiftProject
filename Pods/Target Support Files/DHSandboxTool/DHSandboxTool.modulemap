@@ -1,6 +1,0 @@
-framework module DHSandboxTool {
-  umbrella header "DHSandboxTool-umbrella.h"
-
-  export *
-  module * { export * }
-}
